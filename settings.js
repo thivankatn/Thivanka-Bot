@@ -34,7 +34,7 @@ global.INBOX_BLOCK =  'off'
 //👇 Auto react 
 global.AUTO_REACT =  'false'
 //👇 Bad word Auto delete ( you must add bad words )
-global.ANTI_BADWORD =  'on'
+global.ANTI_BADWORD =  'true'
 //👇 Your Bot Name
 global.botnma =  '𝐓𝐡𝐢𝐯𝐚𝐧𝐤𝐚 𝐁𝐨𝐭' 
 //👇 Your name
@@ -75,7 +75,7 @@ global.TIME_ZONE = process.env.TIME_ZONE || 'Asia/Colombo'
 //👇 Removebg Api key
 global.REMOVE_BG_API = ''
 //👇 Pron Video Download 
-global.SEX_VIDEO_DOWNLOAD = process.env.SEX_VIDEO_DOWNLOAD || 'true'
+global.SEX_VIDEO_DOWNLOAD = process.env.SEX_VIDEO_DOWNLOAD || 'false'
 //👇 Change Bot Language 
 global.LANG = 'EN'
 //Alive logo
@@ -160,7 +160,7 @@ global.APIKeys = {
 }
 
 global.thumb = fs.readFileSync('./Media/image/Elisa.jpg')
-global.alivelogo = `https://telegra.ph/file/b3f17c16eedf99731a52d.jpg`
+global.alivelogo = `https://telegra.ph/file/30ec9e93fa99d8d79bf53.jpg`
 global.imgalive = fs.readFileSync('./Media/image/Elisa.jpg')
 let file = require.resolve(__filename)
 fs.watchFile(file, () => {
