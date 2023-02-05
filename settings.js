@@ -34,7 +34,7 @@ global.INBOX_BLOCK =  'off'
 //👇 Auto react 
 global.AUTO_REACT =  'false'
 //👇 Bad word Auto delete ( you must add bad words )
-global.ANTI_BADWORD =  'true'
+global.ANTI_BADWORD =  'on'
 //👇 Your Bot Name
 global.botnma =  '𝐓𝐡𝐢𝐯𝐚𝐧𝐤𝐚 𝐁𝐨𝐭' 
 //👇 Your name
