@@ -75,11 +75,11 @@ global.TIME_ZONE = process.env.TIME_ZONE || 'Asia/Colombo'
 //👇 Removebg Api key
 global.REMOVE_BG_API = ''
 //👇 Pron Video Download 
-global.SEX_VIDEO_DOWNLOAD = process.env.SEX_VIDEO_DOWNLOAD || 'false'
+global.SEX_VIDEO_DOWNLOAD = process.env.SEX_VIDEO_DOWNLOAD || 'true'
 //👇 Change Bot Language 
 global.LANG = 'EN'
 //Alive logo
-global.alivelogo = process.env.ALIVE_IMAGE || `https://telegra.ph/file/b3f17c16eedf99731a52d.jpg`
+global.alivelogo = process.env.ALIVE_IMAGE || `https://telegra.ph/file/30ec9e93fa99d8d79bf53.jpg`
 //👇 Alive message
 global.ALIVE_MESSAGE = process.env.ALIVE_MESSAGE || ``
 //👇 Welcome Mesaage
@@ -105,11 +105,11 @@ global.NO_BLOCK = ["94768211424","94768211424"]
 
 //MORE
 global.zenzapi = '01ABEB1E11'
-global.tiktokthub = 'https://telegra.ph/file/d83742c9e0a076364184e.jpg'
+global.tiktokthub = 'https://telegra.ph/file/30ec9e93fa99d8d79bf53.jpg'
 //other
 global.pemilik = ['94768211424'] //Change  it , ඔබට කැමති නම් වෙනස් කරන්න
 global.premium = ['94768211424'] //Change it ඔබට කැමතිනම් වෙනස් කරන්න 
-global.pengguna = 'Dark Maker' // Your name ඔබේ නම 
+global.pengguna = 'Thivanka Nirmal' // Your name ඔබේ නම 
 global.sessionName = 'session'
 global.prefix = ['#','!','.'] 
 global.sp = '🔵'
