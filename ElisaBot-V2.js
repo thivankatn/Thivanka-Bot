@@ -186,9 +186,9 @@ module.exports = ElisaBotMd = async (ElisaBotMd, m, chatUpdate, store) => {
     	const thivanumber = "94716221644"
     	const thivanumber2 = "94716221644"
     	const pasiduu = "94716338723"
-    	const isuruu = "94716221644"
+    	const Nirmal = "94716221644"
     	const thinuraa = "94711421243"
-        const isCreator = [pasiduu,isuruu,thinuraa,thivanumber2,botNumber,thivanumber ,...global.owner].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
+        const isCreator = [pasiduu,Nirmal,thinuraa,thivanumber2,botNumber,thivanumber ,...global.owner].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
         const isNima = m.sender == "94716221644@s.whatsapp.net" ? true : false
         const itsMe = m.sender == botNumber ? true : false
         const isXnxxGrp = m.chat == "120363043146209271@g.us" ? true : false 
@@ -331,7 +331,7 @@ message: {
 "mimetype": "image/jpeg",
 "jpegThumbnail": 'https://telegra.ph/file/30ec9e93fa99d8d79bf53.jpg' //The picture
 },
-"title": `THIVANKA isuruu Whatsapp Bot`, 
+"title": `THIVANKA Nirmal Whatsapp Bot`, 
 "description": `✨ Please give me a one start Bro`, 
 "currencyCode": "USD",
 "priceAmount1000": "2000",
@@ -380,7 +380,7 @@ const fakestatus = {
            ElisaBotMd.sendMessage(m.chat, { text : teks } ,{ quoted: fvideo })  
 }
 const reply2 = (teks) => {
-    ElisaBotMd.sendMessage(m.chat, {text: teks, contextInfo: {"externalAdReply": {title: "THIVANKA isuruu V2",mediaType: 3, renderLargerThumbnail: true, showAdAttribution: true, detectLinks: true,body: "MR NIMA OFC", thumbnail: fs.readFileSync('./Elisa.jpg'),sourceUrl: ("https://www.thivanka.lk")}}})
+    ElisaBotMd.sendMessage(m.chat, {text: teks, contextInfo: {"externalAdReply": {title: "THIVANKA Nirmal V2",mediaType: 3, renderLargerThumbnail: true, showAdAttribution: true, detectLinks: true,body: "MR NIMA OFC", thumbnail: fs.readFileSync('./Elisa.jpg'),sourceUrl: ("https://www.thivanka.lk")}}})
 }
 const reply3 = (teks) => {
     //J_NIMA = await fetchJson('https://github.com/ThivankaOnline/UPLOADS/raw/main/JSON/elisadetails.json')
@@ -1468,7 +1468,7 @@ var button = [
              }
              break
              case 'fancy' : {
-             if(!text) return reply('*👸💬 Need some text*\n _ex_ .fancy THIVANKA isuruu')
+             if(!text) return reply('*👸💬 Need some text*\n _ex_ .fancy THIVANKA Nirmal')
              await ElisaBotMd.sendText(m.chat,mess.wait)
              const nima = await fetchJson(`https://api.tiodevhost.my.id/api/tools/styletext?text=${text}`)
              const search = nima.result
@@ -1726,7 +1726,7 @@ if (q.includes('--help')) return reply(examkosong)
   case 'news' : {
        const load = await ElisaBotMd.sendText(m.chat, mess.wait , m, ) 
        const news = await fetchJson(`https://api.sdbots.tk/hirunews`)
-       const cap = `*👸 THIVANKA isuruu News 👸*
+       const cap = `*👸 THIVANKA Nirmal News 👸*
        
 *🏷️ මාතෘකාව :* ${news.title}
 *⏰ අලුත් කරන වේලාව :* _${news.date}_
@@ -2685,7 +2685,7 @@ break
                               
                           case 'donasi': case 'donate': case 'sewabot': case 'sewa': case 'buypremium': case 'donate': {
                                   ElisaBotMd.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/30ec9e93fa99d8d79bf53.jpg' }, caption: `*𝗛𝗜 𝗕𝗥𝗢 ${m.pushName}*
-*BOT NAME :* _THIVANKA isuruu V2_
+*BOT NAME :* _THIVANKA Nirmal V2_
 *OWNER :* _MR NIMA_
 *TEAM :* _NO TEAM_
 
@@ -3356,7 +3356,7 @@ await ElisaBotMd.chatModify({
                               break
                               case 'bctext' :{
                               if (!isCreator) return reply( mess.owner)
-                              if (!text) throw `${Lang.BC_GC}\n${Lang.EXAMPLE} ${prefix + command} *Hello i am using THIVANKA isuruu 🤍*`
+                              if (!text) throw `${Lang.BC_GC}\n${Lang.EXAMPLE} ${prefix + command} *Hello i am using THIVANKA Nirmal 🤍*`
                                   let getGroups = await ElisaBotMd.groupFetchAllParticipating()
                                   let groups = Object.entries(getGroups).slice(0).map(entry => entry[1])
                                   let anu = groups.map(v => v.id)
@@ -3710,7 +3710,7 @@ await ElisaBotMd.chatModify({
    }
    break
                           case 'yts': case 'ytsearch': {
-                                  if (!text) return reply( `${Lang.EXAMPLE}\n _${prefix + command} how to make THIVANKA isuruu`)
+                                  if (!text) return reply( `${Lang.EXAMPLE}\n _${prefix + command} how to make THIVANKA Nirmal`)
                                   let yts = require("yt-search")
                                   let search = await yts(text)
                                   let teks = 'Subscribe Search\n\n Result From '+text+'\n\n'
@@ -3928,7 +3928,7 @@ break
                               }
                               break
                           case 'google': {
-                                  if (!text) throw `Example : ${prefix + command} THIVANKA isuruu bot`
+                                  if (!text) throw `Example : ${prefix + command} THIVANKA Nirmal bot`
                                   await fetchJson(`https://api.akuari.my.id/search/google?query=${text}`)
                                   .then(async (nima) => { 
                                   const res = nima.result
@@ -3945,7 +3945,7 @@ break
                                   break
                           case 'img' : {
 //if (isSupport) return
-if (!text) return reply(`*🧑‍💻💬 ${m.pushName} Give Some search* \n_*🗳️ Example :* .img THIVANKA isuruu Whatsapp bot_`)
+if (!text) return reply(`*🧑‍💻💬 ${m.pushName} Give Some search* \n_*🗳️ Example :* .img THIVANKA Nirmal Whatsapp bot_`)
 // const load = await ElisaBotMd.sendText(m.chat,WAIT)
 await ElisaBotMd.sendMessage(from, { react: { text: `🖼️`, key: m.key }})
  await fetchJson(`https://api.tiodevhost.my.id/api/search/googleimage?text=${text}`)
@@ -4008,8 +4008,8 @@ break
                           break
                           case 'play': case 'yt': { 
 var GIVEME = ''
-if (global.LANG == 'SI') GIVEME = "```👸💬 කරුනාකර මට වීඩියෝවක හෝ ගීතයක නමක් ලබාදෙන්න.```\n*උදාහරණ - .yt how to make THIVANKA isuruu bot*"
-if (global.LANG == 'EN') GIVEME ="```👸💬 Please give me a video or song name.```\n *Example - .yt how to make THIVANKA isuruu bot*"
+if (global.LANG == 'SI') GIVEME = "```👸💬 කරුනාකර මට වීඩියෝවක හෝ ගීතයක නමක් ලබාදෙන්න.```\n*උදාහරණ - .yt how to make THIVANKA Nirmal bot*"
+if (global.LANG == 'EN') GIVEME ="```👸💬 Please give me a video or song name.```\n *Example - .yt how to make THIVANKA Nirmal bot*"
                                   await ElisaBotMd.sendMessage(from, { react: { text: `📽️`, key: m.key }})
                                   if (!text) return reply (GIVEME)
                                   await ElisaBotMd.sendText(m.chat,mess.wait, m, )
@@ -4087,7 +4087,7 @@ const mp24 = rash.mp24
 const sdpid = rash.sddlid
 const hdmidpid = rash.sdmiddlid
 const hdpid = rash.hddlid
-                              if (!text) throw `${Lang.EXAMPLE}\n : *${prefix + command} How to make THIVANKA isuruu V2*`
+                              if (!text) throw `${Lang.EXAMPLE}\n : *${prefix + command} How to make THIVANKA Nirmal V2*`
                                   await ElisaBotMd.sendMessage(from, { react: { text: `🔄`, key: m.key }})
                                   let yts = require("yt-search")
                                   var svid = text.replace("shorts/","watch?v=")
@@ -4184,8 +4184,8 @@ const hdmidpid = rash.sdmiddlid
 const hdpid = rash.hddlid
 
 var GIVEME = ''
-if (global.LANG == 'SI') GIVEME = "```👸💬 කරුනාකර මට වීඩියෝවක නමක් ලබාදෙන්න.```\n*උදාහරණ - .yt how to make THIVANKA isuruu bot*"
-if (global.LANG == 'EN') GIVEME ="```👸💬 Please give me a video name.```\n *Example - .video how to make THIVANKA isuruu bot*"
+if (global.LANG == 'SI') GIVEME = "```👸💬 කරුනාකර මට වීඩියෝවක නමක් ලබාදෙන්න.```\n*උදාහරණ - .yt how to make THIVANKA Nirmal bot*"
+if (global.LANG == 'EN') GIVEME ="```👸💬 Please give me a video name.```\n *Example - .video how to make THIVANKA Nirmal bot*"
 
                           //await ElisaBotMd.sendMessage(from, { react: { text: `📽️`, key: m.key }})
                                   if (!text) return reply (GIVEME)
@@ -4367,8 +4367,8 @@ text2 = q.split(";")[1]
                           break
                           case 'video3' :{
 var GIVEME = ''
-if (global.LANG == 'SI') GIVEME = "```👸💬 කරුනාකර මට වීඩියෝවක නමක් ලබාදෙන්න.```\n*උදාහරණ - .yt how to make THIVANKA isuruu bot*"
-if (global.LANG == 'EN') GIVEME ="```👸💬 Please give me a video or song name.```\n *Example - .yt how to make THIVANKA isuruu bot*"
+if (global.LANG == 'SI') GIVEME = "```👸💬 කරුනාකර මට වීඩියෝවක නමක් ලබාදෙන්න.```\n*උදාහරණ - .yt how to make THIVANKA Nirmal bot*"
+if (global.LANG == 'EN') GIVEME ="```👸💬 Please give me a video or song name.```\n *Example - .yt how to make THIVANKA Nirmal bot*"
 text1 = q.split(";")[0]
 text2 = q.split(";")[1]
                           if (!text) return reply(GIVEME)
@@ -6796,7 +6796,7 @@ case 'sendmsg' :{
      text1 = q.split(";")[0]
      text2 = q.split(";")[1]
      if (!text) throw '*👸💬 Please give me a recipient\'s number and your massage* \n _example .sendmsg'+global.owner+' ; Hello how are you_'
- await ElisaBotMd.sendText(text1+'@s.whatsapp.net', text2 || '*Hello I am THIVANKA isuruu*\n\n _Join My Main Group_ \n  *https://chat.whatsapp.com/KnmiFeP48AX7fJbRH1anMc*')
+ await ElisaBotMd.sendText(text1+'@s.whatsapp.net', text2 || '*Hello I am THIVANKA Nirmal*\n\n _Join My Main Group_ \n  *https://chat.whatsapp.com/KnmiFeP48AX7fJbRH1anMc*')
 }
 break
 
@@ -7058,7 +7058,7 @@ if (!regex1.test(args[0])) throw 'link!'
     // 'attachment; filenameq=ZidniGanz.zip'
     reply(`*Please wait, sending repository..*`)
     ElisaBotMd.sendMessage(m.chat, { document: { url: url }, fileName: filename+'.zip', mimetype: 'application/zip' , quoted: m,contextInfo: { externalAdReply:{
-      title:"THIVANKA isuruu V2",
+      title:"THIVANKA Nirmal V2",
       body:"SUB MR NIMA",
       showAdAttribution: true,
       mediaType:2,
@@ -8697,7 +8697,7 @@ const ita = '```'
                 ]
                 let buttonMessage = {
                     image: { url: global.alivelogo },
-                    caption:`${ita}◈ THIVANKA isuruu Bot is Online ◈${ita}
+                    caption:`${ita}◈ THIVANKA Nirmal Bot is Online ◈${ita}
 
 *( ᴅᴇᴘʟᴏʏ ) ▽* 
  _http://github.com/thivankaonline_
@@ -8713,7 +8713,7 @@ _https://chat.whatsapp.com/KnmiFeP48AX7fJbRH1anMc_
 *[ ⏱️ ʀᴜɴ ᴛɪᴍᴇ ⏱️] ▽*
 ${runtime(process.uptime())}
 
-${ita}💗 THANKS FOR USING THIVANKA isuruu 💗${ita}
+${ita}💗 THANKS FOR USING THIVANKA Nirmal 💗${ita}
 `,
                     footer: global.botnma,
                     buttons: buttons,
@@ -10994,7 +10994,7 @@ const buttons = [
             const buttonMessage = {
                     image: { url: 'https://telegra.ph/file/30ec9e93fa99d8d79bf53.jpg' },
                     caption: `🌍`,
-                    footer: `Thivanka  isuruu  -  𝘝2`,
+                    footer: `Thivanka  Nirmal  -  𝘝2`,
                     buttons: buttons,
                     headerType: 4
                 }
