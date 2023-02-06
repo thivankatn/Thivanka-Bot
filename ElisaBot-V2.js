@@ -383,7 +383,7 @@ const reply2 = (teks) => {
     ElisaBotMd.sendMessage(m.chat, {text: teks, contextInfo: {"externalAdReply": {title: "THIVANKA isuruu V2",mediaType: 3, renderLargerThumbnail: true, showAdAttribution: true, detectLinks: true,body: "MR NIMA OFC", thumbnail: fs.readFileSync('./Elisa.jpg'),sourceUrl: ("https://www.thivanka.lk")}}})
 }
 const reply3 = (teks) => {
-    //J_NIMA = await fetchJson('https://github.com/DarkMakerofc/UPLOADS/raw/main/JSON/elisadetails.json')
+    //J_NIMA = await fetchJson('https://github.com/ThivankaOnline/UPLOADS/raw/main/JSON/elisadetails.json')
      ElisaBotMd.sendMessage(m.chat, { text : teks } ,{ quoted: ftoko })  
 }
 const m_reply = (teks) => {
@@ -680,7 +680,7 @@ ElisaBotMd.updateBlockStatus(m.sender,'block')
          if (global.ANTI_BADWORD == 'true' && m.isGroup && !isAdmins && !isCreator) {
          
          const bad = JSON.parse(fs.readFileSync('./database/BAD_WORD.json'))
-         //await fetchJson(`https://github.com/DarkMakerofc/UPLOADS/raw/main/JSON/BADWORD.json`)
+         //await fetchJson(`https://github.com/ThivankaOnline/UPLOADS/raw/main/JSON/BADWORD.json`)
          for (any in bad){
          if (budy.toLowerCase().includes(bad[any])){
          if (!isBotAdmins) return 
@@ -1501,7 +1501,7 @@ ${global.botnma} Fancy Text List
              case 'hi': case 'hai' : case 'හායි': {
              
              if (global.VOICE_REPLY == 'true') {
-             await ElisaBotMd.sendMessage(m.chat, { audio: {url:'https://github.com/DarkMakerofc/UPLOADS/raw/main/VOICE/hi.mp3'}, mimetype: 'audio/mp4', ptt: true }, { quoted: m })   
+             await ElisaBotMd.sendMessage(m.chat, { audio: {url:'https://github.com/ThivankaOnline/UPLOADS/raw/main/VOICE/hi.mp3'}, mimetype: 'audio/mp4', ptt: true }, { quoted: m })   
              }
              }
              break
@@ -1512,35 +1512,35 @@ ${global.botnma} Fancy Text List
              break
              case 'mk': case 'මොකද කරන්නේ' :{
              if (global.VOICE_REPLY == 'true') {
-             await ElisaBotMd.sendMessage(m.chat, { audio: {url:'https://github.com/DarkMakerofc/UPLOADS/raw/main/VOICE/mk.mp3'}, mimetype: 'audio/mp4', ptt: true }, { quoted: m })   
+             await ElisaBotMd.sendMessage(m.chat, { audio: {url:'https://github.com/ThivankaOnline/UPLOADS/raw/main/VOICE/mk.mp3'}, mimetype: 'audio/mp4', ptt: true }, { quoted: m })   
              }
              }
              break
              
              case 'gn': case 'night' :{
              if (global.VOICE_REPLY == 'true') {
-             await ElisaBotMd.sendMessage(m.chat, { audio: {url:'https://github.com/DarkMakerofc/UPLOADS/raw/main/VOICE/bs.mp3'}, mimetype: 'audio/mp4', ptt: true }, { quoted: m })   
+             await ElisaBotMd.sendMessage(m.chat, { audio: {url:'https://github.com/ThivankaOnline/UPLOADS/raw/main/VOICE/bs.mp3'}, mimetype: 'audio/mp4', ptt: true }, { quoted: m })   
              }
              }
              break
              
              case 'bs': {
              if (global.VOICE_REPLY == 'true') {
-             await ElisaBotMd.sendMessage(m.chat, { audio: {url:'https://github.com/DarkMakerofc/UPLOADS/raw/main/VOICE/bs.mp3'}, mimetype: 'audio/mp4', ptt: true }, { quoted: m })   
+             await ElisaBotMd.sendMessage(m.chat, { audio: {url:'https://github.com/ThivankaOnline/UPLOADS/raw/main/VOICE/bs.mp3'}, mimetype: 'audio/mp4', ptt: true }, { quoted: m })   
              }
              }
              break
              
              case 'gm': case 'morning' :{
              if (global.VOICE_REPLY == 'true') {
-             await ElisaBotMd.sendMessage(m.chat, { audio: {url:'https://github.com/DarkMakerofc/UPLOADS/raw/main/VOICE/gm.mp3'}, mimetype: 'audio/mp4', ptt: true }, { quoted: m })   
+             await ElisaBotMd.sendMessage(m.chat, { audio: {url:'https://github.com/ThivankaOnline/UPLOADS/raw/main/VOICE/gm.mp3'}, mimetype: 'audio/mp4', ptt: true }, { quoted: m })   
              }
              }
              break
              
              case 'bye' :case 'බායි' :{
              if (global.VOICE_REPLY == 'true') {
-             await ElisaBotMd.sendMessage(m.chat, { audio: {url:'https://github.com/DarkMakerofc/UPLOADS/raw/main/VOICE/bye.mp3'}, mimetype: 'audio/mp4', ptt: true }, { quoted: m })   
+             await ElisaBotMd.sendMessage(m.chat, { audio: {url:'https://github.com/ThivankaOnline/UPLOADS/raw/main/VOICE/bye.mp3'}, mimetype: 'audio/mp4', ptt: true }, { quoted: m })   
              }
              }
              break
@@ -1912,7 +1912,7 @@ const templateMessage = {
   case 'tiktok2' : {
    
 if (!isUrl(args[0]) && !args[0].includes('tiktok.com')) return reply ( '*The link you provided is not valid*')
-const thub = await fetchJson('https://github.com/DarkMakerofc/UPLOADS/raw/main/JSON/elisadetails.json')
+const thub = await fetchJson('https://github.com/ThivankaOnline/UPLOADS/raw/main/JSON/elisadetails.json')
 buf = await getBuffer(thub.TIKTOK_THUB)
 const cyber = await fetchJson(`https://api.sdbots.tk/tiktok?url=${text}`)
 const down = await ElisaBotMd.sendText(m.chat, '*📥 DOWNLOADING YOUR TIKTOK VIDEO ...*')
@@ -2055,7 +2055,7 @@ case 'mining': case 'mine':{
   }   
   break  
  /* case 'testehi' : {
-  const ehinima = await fetchJson ('https://github.com/DarkMakerofc/UPLOADS/raw/main/JSON/EHIJSON.json')
+  const ehinima = await fetchJson ('https://github.com/ThivankaOnline/UPLOADS/raw/main/JSON/EHIJSON.json')
   msg = ehinima.EHI_FILES[0].SG_FILE1
   msg2 = ehinima.EHI_FILES[0].SG_FILE2
   msg3 = ehinima.EHI_FILES[0].SG_FILE3
@@ -2190,7 +2190,7 @@ break
 case 'httpinjector' : {
        
        const load = await ElisaBotMd.sendText(m.chat,'*📤 Uploading...*' )
-       await ElisaBotMd.sendMessage(m.chat, { document: { url: 'https://github.com/DarkMakerofc/UPLOADS/raw/main/APK/HTTP%20Injector%20(SSHProxyV2Ray)%20VPN.apk' }, mimetype: 'application/vnd.android.package-archive', fileName: `HTTP Injector Qᵁᴱᴱᴺ Eᴸᴵˢᴬ (SSHProxyV2Ray) VPN.apk`}, { quoted: m })
+       await ElisaBotMd.sendMessage(m.chat, { document: { url: 'https://github.com/ThivankaOnline/UPLOADS/raw/main/APK/HTTP%20Injector%20(SSHProxyV2Ray)%20VPN.apk' }, mimetype: 'application/vnd.android.package-archive', fileName: `HTTP Injector Qᵁᴱᴱᴺ Eᴸᴵˢᴬ (SSHProxyV2Ray) VPN.apk`}, { quoted: m })
        const app = await ElisaBotMd.sendMessage(m.chat, { delete: load.key })
        await ElisaBotMd.sendMessage(from, { react: { text: `🚀`, key: app.key }})
 }
@@ -2281,7 +2281,7 @@ if (global.LANG == 'EN') MAASS = '```⚠️ This prevents your phone from gettin
 break
 case 'elisaehi': {
     
-    const ehinima = await fetchJson ('https://github.com/DarkMakerofc/UPLOADS/raw/main/JSON/EHIJSON.json')
+    const ehinima = await fetchJson ('https://github.com/ThivankaOnline/UPLOADS/raw/main/JSON/EHIJSON.json')
   ehi = ehinima.EHI_FILES[0].SG_FILE1
   ehi2 = ehinima.EHI_FILES[0].SG_FILE2
   ehi3 = ehinima.EHI_FILES[0].SG_FILE3
@@ -4403,7 +4403,7 @@ text2 = q.split(";")[1]
                           }     
                           break 
                           case 'video2' :{
-                          const thub = await fetchJson('https://github.com/DarkMakerofc/UPLOADS/raw/main/JSON/elisadetails.json')
+                          const thub = await fetchJson('https://github.com/ThivankaOnline/UPLOADS/raw/main/JSON/elisadetails.json')
                           buf = await getBuffer(thub.YT_THUB)
                           if (!text) return reply('*👸💬 Need video name or url*')
                           if (text.includes('https://youtu')){
@@ -4775,7 +4775,7 @@ var UPLOAD = ''
 if (global.LANG == 'SI' ) UPLOAD = '*📤 ඔබගේ විඩියෝව ඔබවෙත එවමින් පවතී...*'
 if (global.LANG == 'EN' ) UPLOAD = '*📤 UPLOADING YOUR VIDEO...*'
        const down = await ElisaBotMd.sendText(m.chat,DOWNLOAD, m, )
-       const thub = await fetchJson('https://github.com/DarkMakerofc/UPLOADS/raw/main/JSON/elisadetails.json')
+       const thub = await fetchJson('https://github.com/ThivankaOnline/UPLOADS/raw/main/JSON/elisadetails.json')
        buf = await getBuffer(thub.SF_THUB)
        const up = await ElisaBotMd.sendText(m.chat,UPLOAD, m, )
        await ElisaBotMd.sendMessage(m.chat,{delete : down.key })  
@@ -4787,7 +4787,7 @@ break
 case 'directaudiodown' : {
 
        const down = await ElisaBotMd.sendText(m.chat,global.SONG_DOWN, m, )
-     //  const thub = await fetchJson('https://github.com/DarkMakerofc/UPLOADS/raw/main/JSON/elisadetails.json')
+     //  const thub = await fetchJson('https://github.com/ThivankaOnline/UPLOADS/raw/main/JSON/elisadetails.json')
        buf = await getBuffer(thub.SF_THUB)
        const up = await ElisaBotMd.sendText(m.chat,global.SONG_UP, m, )
        await ElisaBotMd.sendMessage(m.chat,{delete : down.key })  
@@ -5001,7 +5001,7 @@ const docidd = rash.doccmd
                                   }
                                   break
                                   case 'ytmp4' : {
-                                  const thub = await fetchJson('https://github.com/DarkMakerofc/UPLOADS/raw/main/JSON/elisadetails.json')
+                                  const thub = await fetchJson('https://github.com/ThivankaOnline/UPLOADS/raw/main/JSON/elisadetails.json')
                               const buf = await getBuffer(thub.YT_THUB)
                           if(!text) return reply('*👸💬 Need youtube url* \n'+'```ℹ️ Example .ytmp4 https://youtube.com/watch?v=WoWlWb6vbzA```')
                           if (!text.includes('https://youtu')) return reply('*👸💬 Need youtube url* \n'+'```ℹ️ Example .ytmp4 https://youtube.com/watch?v=WoWlWb6vbzA```')
@@ -5050,7 +5050,7 @@ const docidd = rash.doccmd
                               
                               case '22ytmp4': case '22ytvideo': {  
                               await ElisaBotMd.sendMessage(from, { react: { text: `📽️`, key: m.key }})
-                              const thub = await fetchJson('https://github.com/DarkMakerofc/UPLOADS/raw/main/JSON/elisadetails.json')
+                              const thub = await fetchJson('https://github.com/ThivankaOnline/UPLOADS/raw/main/JSON/elisadetails.json')
                               buf = await getBuffer(thub.YT_THUB)
 
                                   let { ytv } = require('./lib/y2mate')
@@ -6650,7 +6650,7 @@ break
 //https://cakrayp.herokuapp.com/api/tiktok/video?url=https://www.tiktok.com/@imalka_venroy/video/7132747469271616794?is_from_webapp=1&sender_device=mobile&sender_web_id=7135844111252964866&apikey=cakrayp24Q6
 }*/
 case 'nowmtiktok': case 'nowm' : {
-const thub = await fetchJson('https://github.com/DarkMakerofc/UPLOADS/raw/main/JSON/elisadetails.json')
+const thub = await fetchJson('https://github.com/ThivankaOnline/UPLOADS/raw/main/JSON/elisadetails.json')
   // //if 
    if (!text) throw '*Enter a Link Query!*'            
 //  var buf = await getBuffer('https://telegra.ph/file/30ec9e93fa99d8d79bf53.jpg') 
@@ -6710,7 +6710,7 @@ break
 case 'tiktokwm' : {
 if (!text) return reply('Need tiktok url')
 const down = await ElisaBotMd.sendText(m.chat, '*📥 DOWNLOADING YOUR TIKTOK VIDEO ...*')
-await fetchJson('https://github.com/DarkMakerofc/UPLOADS/raw/main/JSON/elisadetails.json').then(async (thub) => { 
+await fetchJson('https://github.com/ThivankaOnline/UPLOADS/raw/main/JSON/elisadetails.json').then(async (thub) => { 
 buf = await getBuffer(thub.TIKTOK_THUB)
    //  await ElisaBotMd.sendMessage(m.chat,{delete : down.key })
      const viddd = await getBuffer(`https://api.akuari.my.id/downloader/tiktokwithwm?link=${text}`)
@@ -6820,7 +6820,7 @@ break
 
 case 'vid2': {
 themeemoji ='📽️'
-const thub = await fetchJson('https://github.com/DarkMakerofc/UPLOADS/raw/main/JSON/elisadetails.json')
+const thub = await fetchJson('https://github.com/ThivankaOnline/UPLOADS/raw/main/JSON/elisadetails.json')
 let { ytv } = require('./lib/y2mate')
 if (!text) return reply(`${Lang.EXAMPLE}\n : ${prefix + command} https://youtube.com/watch?v=RNa4thokVJ4 360p`)
 if (!isUrl(args[0]) && !args[0].includes('youtube.com')) return reply(`The link you provided is invalid!`)
@@ -7756,7 +7756,7 @@ if (command == 'fb') rimogi = '🪀'
 if (command == 'get') rimogi = '🧸'
 
 const seccap = args[1] || '😍💗'
-    const thub = await fetchJson('https://github.com/DarkMakerofc/UPLOADS/raw/main/JSON/elisadetails.json')
+    const thub = await fetchJson('https://github.com/ThivankaOnline/UPLOADS/raw/main/JSON/elisadetails.json')
                           await ElisaBotMd.sendMessage(from, { react: { text: `⬇️`, key: m.key }})
     
     if (!text) {
@@ -8334,7 +8334,7 @@ break
                                       })
                                       break
 case 'menu': case 'panel':{
-  const anu = await fetchJson ('https://github.com/DarkMakerofc/UPLOADS/raw/main/JSON/elisadetails.json')
+  const anu = await fetchJson ('https://github.com/ThivankaOnline/UPLOADS/raw/main/JSON/elisadetails.json')
   const NIMAMSG = anu.MENU_NOTE
   const start = new Date().getTime()
   await ElisaBotMd.sendMessage(from, { react: { text: `📃`, key: m.key }})
@@ -8663,7 +8663,7 @@ let buttonMessage = {
 case 'alive' : {
 ElisaBotMd.readMessages([m.key])
 await ElisaBotMd.sendPresenceUpdate('recording', m.chat) 
-await ElisaBotMd.sendMessage(m.chat, { audio: {url :'https://github.com/DarkMakerofc/UPLOADS/raw/main/VOICE/alive.mp3'}, mimetype: 'audio/mp4', ptt: true }, { quoted: m }) 
+await ElisaBotMd.sendMessage(m.chat, { audio: {url :'https://github.com/ThivankaOnline/UPLOADS/raw/main/VOICE/alive.mp3'}, mimetype: 'audio/mp4', ptt: true }, { quoted: m }) 
            
 if (global.db.data.settings[botNumber].alive){
 await ElisaBotMd.sendMessage(from, { react: { text: `👋`, key: m.key }})
@@ -8961,7 +8961,7 @@ break
                 // await ElisaBotMd.sendReadReceipt(from, m.sender, [m.key.id])
                           ElisaBotMd.readMessages([m.key])
                           await ElisaBotMd.sendPresenceUpdate('recording', m.chat) 
-                          await ElisaBotMd.sendMessage(m.chat, { audio: {url :'https://github.com/DarkMakerofc/UPLOADS/raw/main/VOICE/alive.mp3'}, mimetype: 'audio/mp4', ptt: true }, { quoted: m }) 
+                          await ElisaBotMd.sendMessage(m.chat, { audio: {url :'https://github.com/ThivankaOnline/UPLOADS/raw/main/VOICE/alive.mp3'}, mimetype: 'audio/mp4', ptt: true }, { quoted: m }) 
               if (global.alive === 'default') {
               
  
@@ -11017,9 +11017,9 @@ const sendMsg = await ElisaBotMd.sendMessage(m.chat, buttonMessage)
     
       }     */ 
                   case 'about': {
-                  anu = await fetchJson('https://github.com/DarkMakerofc/UPLOADS/raw/main/JSON/elisadetails.json')
+                  anu = await fetchJson('https://github.com/ThivankaOnline/UPLOADS/raw/main/JSON/elisadetails.json')
                     G_LINK = anu.PUBLIC_GROUP
-                 //const anu2 = await axios.get(`https://github.com/DarkMakerofc/UPLOADS/raw/main/JSON/elisadetails.json`)
+                 //const anu2 = await axios.get(`https://github.com/ThivankaOnline/UPLOADS/raw/main/JSON/elisadetails.json`)
                  
                  
 const msg = `*👸 𝑄𝑈𝐸𝐸𝑁 𝐸𝐿𝐼𝑆𝐴 𝑉2 👸*
@@ -11084,7 +11084,7 @@ await ElisaBotMd.sendMessage(from, { react: { text: `💖`, key: m.key }})
                   }
                   break
                   case 'publicgroup' : {
-                   const anu = await fetchJson ('https://github.com/DarkMakerofc/UPLOADS/raw/main/JSON/elisadetails.json')
+                   const anu = await fetchJson ('https://github.com/ThivankaOnline/UPLOADS/raw/main/JSON/elisadetails.json')
 const msg =  `*👸 𝚃𝙷𝙸𝚅𝙰𝙽𝙺𝙰 𝙽𝙸𝚁𝙼𝙰𝙻 𝙿𝚄𝙱𝙻𝙸𝙲 𝙶𝚁𝙾𝚄𝙿 👸*
 
 ${anu.PUBLIC_GROUP_RULES}
