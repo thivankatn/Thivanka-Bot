@@ -1934,7 +1934,7 @@ break
            const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }
            var utch = new Date().toLocaleDateString( get_localized_date)
            var time = new Date().toLocaleString('HI', { timeZone: TIME_ZONE }).split(' ')[1]
-           const biography = '📅 ' + utch + '\n⌚ ' + time + '\n\n'+'👸💬 𝚀𝚞𝚎𝚎𝚗 𝙴𝚕𝚒𝚜𝚊 𝚒𝚜 𝚘𝚗𝚕𝚒𝚗𝚎'
+           const biography = '📅 ' + utch + '\n⌚ ' + time + '\n\n'+'👸💬 𝚃𝚑𝚒𝚟𝚊𝚗𝚔𝚊 𝙽𝚒𝚛𝚖𝚊𝚕 𝚒𝚜 𝚘𝚗𝚕𝚒𝚗𝚎'
 
       
      // var time = new Date().toLocaleString('HI', { timeZone: Config.STIME_ZONE }).split(' ')[1]
@@ -2347,7 +2347,7 @@ ${ehinima.XX_XX}
                                  const nimamsg =  `
                                       
 ╔═════════════════════◉
-║    𝚀𝚞𝚎𝚎𝚗 𝙴𝚕𝚒𝚜𝚊 𝚈𝚝 𝙳𝚘𝚠𝚗𝚕𝚘𝚊𝚍   ║
+║    𝚃𝚑𝚒𝚟𝚊𝚗𝚔𝚊 𝙽𝚒𝚛𝚖𝚊𝚕 𝚈𝚝 𝙳𝚘𝚠𝚗𝚕𝚘𝚊𝚍   ║
  ◉═════════════════════╝
  
 🐣 ᴛɪᴛʟᴇ : ${search.all[0].title}
@@ -5356,7 +5356,7 @@ if (!text) return reply (MAX)
   
      	const desmsg = `╔═════════════════════☐
 
-      *_𝚀𝚞𝚎𝚎𝚗 𝙴𝚕𝚒𝚜𝚊 𝙻𝚘𝚐𝚘 𝙻𝚒𝚜𝚝_*
+      *_𝚃𝚑𝚒𝚟𝚊𝚗𝚔𝚊 𝙽𝚒𝚛𝚖𝚊𝚕 𝙻𝚘𝚐𝚘 𝙻𝚒𝚜𝚝_*
 
 *▣ ʀᴇǫᴜᴇsᴛᴇʀ -*  ${m.pushName}
 *▣ ʟᴏɢᴏ ᴛᴇxᴛ -* ${text}
@@ -6315,7 +6315,7 @@ if (!text && !text.includes('|')) return reply (MAX)
   
      	const desmsg = `╔═════════════════════☐
 
-      *_𝚀𝚞𝚎𝚎𝚗 𝙴𝚕𝚒𝚜𝚊 𝙻𝚘𝚐𝚘 𝙻𝚒𝚜𝚝_*
+      *_𝚃𝚑𝚒𝚟𝚊𝚗𝚔𝚊 𝙽𝚒𝚛𝚖𝚊𝚕 𝙻𝚘𝚐𝚘 𝙻𝚒𝚜𝚝_*
 
 *▣ ʀᴇǫᴜᴇsᴛᴇʀ -*  ${m.pushName}
 *▣ ʟᴏɢᴏ ᴛᴇxᴛ -* ${text}
@@ -6466,7 +6466,7 @@ if (!text) return reply (MAX)
   
      	const desmsg = `╔═════════════════════☐
 
-      *_𝚀𝚞𝚎𝚎𝚗 𝙴𝚕𝚒𝚜𝚊 𝙻𝚘𝚐𝚘 𝙻𝚒𝚜𝚝_*
+      *_𝚃𝚑𝚒𝚟𝚊𝚗𝚔𝚊 𝙽𝚒𝚛𝚖𝚊𝚕 𝙻𝚘𝚐𝚘 𝙻𝚒𝚜𝚝_*
 
 *▣ ʀᴇǫᴜᴇsᴛᴇʀ -*  ${m.pushName}
 *▣ ʟᴏɢᴏ ᴛᴇxᴛ -* ${text}
@@ -7393,7 +7393,7 @@ await ElisaBotMd.sendMessage(from, { react: { text: `2️⃣️`, key: m.key }})
 							]
      await ElisaBotMd.sendListMsg(m.chat, `╔═════════════════════☐
 
-     *_𝚀𝚞𝚎𝚎𝚗 𝙴𝚕𝚒𝚜𝚊 𝙻𝚘𝚐𝚘 𝙻𝚒𝚜𝚝 2_*
+     *_𝚃𝚑𝚒𝚟𝚊𝚗𝚔𝚊 𝙽𝚒𝚛𝚖𝚊𝚕 𝙻𝚘𝚐𝚘 𝙻𝚒𝚜𝚝 2_*
 
 *▣ ʀᴇǫᴜᴇsᴛᴇʀ -*  _${m.pushName}_
 *▣ ʟᴏɢᴏ ᴛᴇxᴛ -* _${text}_
@@ -9872,7 +9872,7 @@ footer = global.botnma
                                               hydratedContentText: anu,
                                               locationMessage: {
                                               jpegThumbnail: fs.readFileSync('./media/image/Elisa.jpg')},
-                                              hydratedFooterText: `𝚀𝚞𝚎𝚎𝚗 𝙴𝚕𝚒𝚜𝚊 𝙿𝚞𝚋𝚕𝚒𝚌 𝙴𝚍𝚒𝚝𝚒𝚘𝚗 `,
+                                              hydratedFooterText: `𝚃𝚑𝚒𝚟𝚊𝚗𝚔𝚊 𝙽𝚒𝚛𝚖𝚊𝚕 𝙿𝚞𝚋𝚕𝚒𝚌 𝙴𝚍𝚒𝚝𝚒𝚘𝚗 `,
                                               hydratedButtons: [{
                                                   urlButton: {
                                                       displayText: 'SUBSCRIBE',
@@ -9930,7 +9930,7 @@ footer = global.botnma
                                               hydratedContentText: anu,
                                               locationMessage: {
                                               jpegThumbnail: fs.readFileSync('./media/image/Elisa.jpg')},
-                                              hydratedFooterText: `𝚀𝚞𝚎𝚎𝚗 𝙴𝚕𝚒𝚜𝚊 𝙿𝚞𝚋𝚕𝚒𝚌 𝙴𝚍𝚒𝚝𝚒𝚘𝚗 `,
+                                              hydratedFooterText: `𝚃𝚑𝚒𝚟𝚊𝚗𝚔𝚊 𝙽𝚒𝚛𝚖𝚊𝚕 𝙿𝚞𝚋𝚕𝚒𝚌 𝙴𝚍𝚒𝚝𝚒𝚘𝚗 `,
                                               hydratedButtons: [{
                                                   urlButton: {
                                                       displayText: 'SUBSCRIBE',
@@ -10529,7 +10529,7 @@ ${M_E} ${prefix}blockgc
                                               hydratedContentText: anu,
                                               locationMessage: {
                                               jpegThumbnail: fs.readFileSync('./media/image/Elisa.jpg')},
-                                              hydratedFooterText: `𝚀𝚞𝚎𝚎𝚗 𝙴𝚕𝚒𝚜𝚊 𝙿𝚞𝚋𝚕𝚒𝚌 𝙴𝚍𝚒𝚝𝚒𝚘𝚗 `,
+                                              hydratedFooterText: `𝚃𝚑𝚒𝚟𝚊𝚗𝚔𝚊 𝙽𝚒𝚛𝚖𝚊𝚕 𝙿𝚞𝚋𝚕𝚒𝚌 𝙴𝚍𝚒𝚝𝚒𝚘𝚗 `,
                                               hydratedButtons: [{
                                                   urlButton: {
                                                       displayText: 'SUBSCRIBE',
