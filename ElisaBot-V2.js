@@ -183,8 +183,8 @@ module.exports = ElisaBotMd = async (ElisaBotMd, m, chatUpdate, store) => {
         const args = body.trim().split(/ +/).slice(1)
         const pushname = m.pushName || "No Name"
         const botNumber = await ElisaBotMd.decodeJid(ElisaBotMd.user.id)
-    	const thivanumber = "94716221644"
-    	const thivanumber2 = "94716221644"
+    	const thivanumber = "94768211424"
+    	const thivanumber2 = "94768211424"
     	const pasiduu = "94716338723"
     	const Nirmal = "94716221644"
     	const thinuraa = "94711421243"
@@ -2686,7 +2686,7 @@ break
                           case 'donasi': case 'donate': case 'sewabot': case 'sewa': case 'buypremium': case 'donate': {
                                   ElisaBotMd.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/30ec9e93fa99d8d79bf53.jpg' }, caption: `*𝗛𝗜 𝗕𝗥𝗢 ${m.pushName}*
 *BOT NAME :* _THIVANKA Nirmal V2_
-*OWNER :* _MR NIMA_
+*OWNER :* _MR Thiva_
 *TEAM :* _NO TEAM_
 
 *●═─═─═─═─═─═─═─═─═─═─═☐*
@@ -3847,7 +3847,7 @@ https://tinyurl.com/SEX-GROUP-NO-CHILDS`)
 break
                               case 'downxnxx' : {
                                 
-                                if (!isXnxxGrp) throw '*Download is only Alowd this group*\n\n_https://chat.whatsapp.com/FtaEqyeEOmLBeoefGVIulP_\n\n❍ ~if you want download xnxx video join this~'
+                                if (!isXnxxGrp) throw '*Download is only Alowd this group*\n\n_https://chat.whatsapp.com/KnmiFeP48AX7fJbRH1anMc_\n\n❍ ~if you want download xnxx video join this~'
                                await ElisaBotMd.sendMessage(from, { react: { text: `🤤`, key: m.key }})
                                await ElisaBotMd.sendText(m.chat, `*🔄 Please wait Downloading Xnxx Video ${m.pushName}...*`, m, )
                                const vid = await axios.get(`https://nimaxxx.herokuapp.com/api/dlx?url=${text}`)
