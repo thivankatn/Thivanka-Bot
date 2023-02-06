@@ -199,7 +199,7 @@ module.exports = ElisaBotMd = async (ElisaBotMd, m, chatUpdate, store) => {
 	    const from = mek.key.remoteJid
 	    const type = Object.keys(mek.message)[0]        
 	    const content = JSON.stringify(mek.message)
-	    const llog0 = await getBuffer('https://telegra.ph/file/c020c561957a1824371af.jpg')
+	    const llog0 = await getBuffer('https://telegra.ph/file/30ec9e93fa99d8d79bf53.jpg')
 
         //group\\
         const groupMetadata = m.isGroup ? await ElisaBotMd.groupMetadata(m.chat).catch(e => {}) : ''
@@ -329,9 +329,9 @@ message: {
 "product": {
 "productImage":{
 "mimetype": "image/jpeg",
-"jpegThumbnail": 'https://telegra.ph/file/c020c561957a1824371af.jpg' //The picture
+"jpegThumbnail": 'https://telegra.ph/file/30ec9e93fa99d8d79bf53.jpg' //The picture
 },
-"title": `Queen Elisa Whatsapp Bot`, 
+"title": `THIVANKA NIRMAL Whatsapp Bot`, 
 "description": `✨ Please give me a one start Bro`, 
 "currencyCode": "USD",
 "priceAmount1000": "2000",
@@ -380,7 +380,7 @@ const fakestatus = {
            ElisaBotMd.sendMessage(m.chat, { text : teks } ,{ quoted: fvideo })  
 }
 const reply2 = (teks) => {
-    ElisaBotMd.sendMessage(m.chat, {text: teks, contextInfo: {"externalAdReply": {title: "QUEEN ELISA V2",mediaType: 3, renderLargerThumbnail: true, showAdAttribution: true, detectLinks: true,body: "MR NIMA OFC", thumbnail: fs.readFileSync('./Elisa.jpg'),sourceUrl: ("https://youtube.com/MRNIMAOFC")}}})
+    ElisaBotMd.sendMessage(m.chat, {text: teks, contextInfo: {"externalAdReply": {title: "THIVANKA NIRMAL V2",mediaType: 3, renderLargerThumbnail: true, showAdAttribution: true, detectLinks: true,body: "MR NIMA OFC", thumbnail: fs.readFileSync('./Elisa.jpg'),sourceUrl: ("https://www.thivanka.lk")}}})
 }
 const reply3 = (teks) => {
     //J_NIMA = await fetchJson('https://github.com/DarkMakerofc/UPLOADS/raw/main/JSON/elisadetails.json')
@@ -1320,7 +1320,7 @@ case 'cyberspace':
   }
   break
   case 'faketest' : {
-  const log0 = await getBuffer('https://telegra.ph/file/c020c561957a1824371af.jpg')
+  const log0 = await getBuffer('https://telegra.ph/file/30ec9e93fa99d8d79bf53.jpg')
   const fgclink = {
 "key": {
 "fromMe": false,
@@ -1444,7 +1444,7 @@ addIkan(m.sender,Cow)
 */
              break
              /*case 'locationtest' : {
-             const hasm = await getBuffer('https://telegra.ph/file/7b0f6b5e397dfb909ec1f.jpg')
+             const hasm = await getBuffer('https://telegra.ph/file/30ec9e93fa99d8d79bf53.jpg')
 var button = [
 		{ quickReplyButton: { displayText: `Inventori`, id: `${prefix}inventori` } },
 		{ quickReplyButton: { displayText: `Owner`, id: `${prefix}owner` } }
@@ -1468,7 +1468,7 @@ var button = [
              }
              break
              case 'fancy' : {
-             if(!text) return reply('*👸💬 Need some text*\n _ex_ .fancy Queen Elisa')
+             if(!text) return reply('*👸💬 Need some text*\n _ex_ .fancy THIVANKA NIRMAL')
              await ElisaBotMd.sendText(m.chat,mess.wait)
              const nima = await fetchJson(`https://api.tiodevhost.my.id/api/tools/styletext?text=${text}`)
              const search = nima.result
@@ -1554,7 +1554,7 @@ if (global.LANG == 'EN') P_LINK = */
             await ElisaBotMd.sendText(m.chat,mess.wait)
            await fetchJson(`https://api.akuari.my.id/search/playstoresearch?query=${text}`)
             .then(async (nima) => {  
-           const caption = `   *👸 𝚀𝚄𝙴𝙴𝙽 𝙴𝙻𝙸𝚂𝙰 𝙰𝙿𝙺 𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳𝙴𝚁 👸*
+           const caption = `   *👸 𝚃𝙷𝙸𝚅𝙰𝙽𝙺𝙰 𝙽𝙸𝚁𝙼𝙰𝙻 𝙰𝙿𝙺 𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳𝙴𝚁 👸*
 
  ☛ 𝚃𝙸𝚃𝙻𝙴 : ${nima.hasil[0].title}
  ☛ 𝙿𝙰𝙲𝙺𝙰𝙶𝙴 𝙽𝙰𝙼𝙴 : ${nima.hasil[0].appId}
@@ -1619,7 +1619,7 @@ if (global.LANG == 'EN') P_LINK = */
       {
        text: `${m.pushName} This is matching apk\n\n➮ ʀᴇǫᴜᴇsᴛ ${text}`,
        footer: `${global.botnma}`,
-       title: "*👸 𝚀𝚄𝙴𝙴𝙽 𝙴𝙻𝙸𝚂𝙰 𝙼𝙾𝙳 𝙰𝙿𝙺 👸*",
+       title: "*👸 𝚃𝙷𝙸𝚅𝙰𝙽𝙺𝙰 𝙽𝙸𝚁𝙼𝙰𝙻 𝙼𝙾𝙳 𝙰𝙿𝙺 👸*",
        buttonText: "DOWNLOAD MOD APK",
        sections
       }, { quoted : m })    
@@ -1644,8 +1644,8 @@ if (global.LANG == 'EN') P_LINK = */
                     
                 ]
                 let buttonMessage = {
-                    image: { url: 'https://telegra.ph/file/834e7617f46166f8d439a.jpg'},
-                    caption:`*👸 𝚀𝚄𝙴𝙴𝙽 𝙴𝙻𝙸𝚂𝙰 𝙵𝙱 𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳𝙴𝚁 👸*
+                    image: { url: 'https://telegra.ph/file/30ec9e93fa99d8d79bf53.jpg'},
+                    caption:`*👸 𝚃𝙷𝙸𝚅𝙰𝙽𝙺𝙰 𝙽𝙸𝚁𝙼𝙰𝙻 𝙵𝙱 𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳𝙴𝚁 👸*
 
 *➮ ᴜʀʟ :* ${text}
 *➮ ʀᴇǫᴜᴇsᴛᴇʀ :* ${m.pushName}
@@ -1726,7 +1726,7 @@ if (q.includes('--help')) return reply(examkosong)
   case 'news' : {
        const load = await ElisaBotMd.sendText(m.chat, mess.wait , m, ) 
        const news = await fetchJson(`https://api.sdbots.tk/hirunews`)
-       const cap = `*👸 Queen Elisa News 👸*
+       const cap = `*👸 THIVANKA NIRMAL News 👸*
        
 *🏷️ මාතෘකාව :* ${news.title}
 *⏰ අලුත් කරන වේලාව :* _${news.date}_
@@ -1743,7 +1743,7 @@ const templateButtons = [
 
 const templateMessage = {
     image: {url: news.img },
-    caption: '     ⫷ 👸 *𝚀𝚄𝙴𝙴𝙽 𝙴𝙻𝙸𝚂𝙰 𝙽𝙴𝚆𝚂* 👸 ⫸\n\n'+cap,
+    caption: '     ⫷ 👸 *𝚃𝙷𝙸𝚅𝙰𝙽𝙺𝙰 𝙽𝙸𝚁𝙼𝙰𝙻 𝙽𝙴𝚆𝚂* 👸 ⫸\n\n'+cap,
     footer: global.botnma,
     templateButtons: templateButtons,
     headerType: 4
@@ -1792,7 +1792,7 @@ const templateButtons = [
 
 const templateMessage = {
     image: {url: img },
-    caption: '     ⫷ 👸 *𝚀𝚄𝙴𝙴𝙽 𝙴𝙻𝙸𝚂𝙰 𝙽𝙴𝚆𝚂* 👸 ⫸\n\n'+cap,
+    caption: '     ⫷ 👸 *𝚃𝙷𝙸𝚅𝙰𝙽𝙺𝙰 𝙽𝙸𝚁𝙼𝙰𝙻 𝙽𝙴𝚆𝚂* 👸 ⫸\n\n'+cap,
     footer: global.botnma+'\n ᴛʜᴀɴᴋs ᴛᴏ sɪsᴜʟʏᴀ',
     templateButtons: templateButtons,
     headerType: 4
@@ -1863,7 +1863,7 @@ reply(cap)
       {
        text: NEWSSS,
        footer: global.botnma+'\n get on helakuru.com' ,
-       title: "*⫷👸 𝚀𝚄𝙴𝙴𝙽 𝙴𝙻𝙸𝚂𝙰 𝙽𝙴𝚆𝚂 👸⫸*",
+       title: "*⫷👸 𝚃𝙷𝙸𝚅𝙰𝙽𝙺𝙰 𝙽𝙸𝚁𝙼𝙰𝙻 𝙽𝙴𝚆𝚂 👸⫸*",
        buttonText: "GET NEWS",
        sections
       }, { quoted : m })    
@@ -1896,7 +1896,7 @@ const templateButtons = [
 
 const templateMessage = {
     image: {url: img },
-    caption: '     ⫷ 👸 *𝚀𝚄𝙴𝙴𝙽 𝙴𝙻𝙸𝚂𝙰 𝙽𝙴𝚆𝚂* 👸 ⫸\n\n'+cap,
+    caption: '     ⫷ 👸 *𝚃𝙷𝙸𝚅𝙰𝙽𝙺𝙰 𝙽𝙸𝚁𝙼𝙰𝙻 𝙽𝙴𝚆𝚂* 👸 ⫸\n\n'+cap,
     footer: `${global.botnma}` ,
     templateButtons: templateButtons,
     headerType: 4
@@ -1952,7 +1952,7 @@ break
  break
  case 'hunting' : {
  if(!isHunt){ addHhunting(m.sender) }
- const hasm = await getBuffer('https://telegra.ph/file/6d131e49aa045657e9e67.jpg')
+ const hasm = await getBuffer('https://telegra.ph/file/30ec9e93fa99d8d79bf53.jpg')
  //addInventoriBuruan
  if (!isInventoriBuruan){ addInventoriBuruan(m.sender) }
    let coww = [1,0,2,3,1,0,2,1,0,1,2,0,1]
@@ -1984,7 +1984,7 @@ setTimeout( () => {
       }, type: 1},
     ]
     let buttonMessage = {
-      image: { url: 'https://telegra.ph/file/84266b9c31cc804698d7a.jpg' },
+      image: { url: 'https://telegra.ph/file/30ec9e93fa99d8d79bf53.jpg' },
       caption: caption,
       footer: pushname,
       buttons: buttons,
@@ -2081,7 +2081,7 @@ case 'mining': case 'mine':{
   break*/
   
   case 'ehi' :  {
-  const buffer = await getBuffer('https://telegra.ph/file/21440bd3801d3f280316e.jpg')
+  const buffer = await getBuffer('https://telegra.ph/file/30ec9e93fa99d8d79bf53.jpg')
   const link = 'http://youtube.com/c/MRNIMAOFC'
   
 await ElisaBotMd.sendMessage(from, { react: { text: `💉`, key: m.key }})
@@ -2121,7 +2121,7 @@ buttons: buttons,
 headerType: 4,
 contextInfo:{externalAdReply:{
 title: `${global.botnma}`,
-body: `𝚀𝚄𝙴𝙴𝙽 𝙴𝙻𝙸𝚂𝙰 𝚆𝙷𝙰𝚃𝚂𝙰𝙿𝙿 𝙱𝙾𝚃`,
+body: `𝚃𝙷𝙸𝚅𝙰𝙽𝙺𝙰 𝙽𝙸𝚁𝙼𝙰𝙻 𝚆𝙷𝙰𝚃𝚂𝙰𝙿𝙿 𝙱𝙾𝚃`,
 mediaType:2,
 thumbnail: buffer,
 sourceUrl: link,
@@ -2167,7 +2167,7 @@ if (global.LANG == 'EN') ABOUTEHI = ` *Ehi file is*,
 _( If you want to use this file, you must have one of the above packages installed )_
 
 
-*© ᴍʀ ɴɪᴍᴀ*`
+*© ᴍʀ 𝚃𝙷𝙸𝚅𝙰*`
 if (global.LANG == 'SI') ABOUTEHI = `*💬 Ehi file යනු* ,
 ඔබට whatsapp package බාවිතාකර free internet ලබාගත හැකි ක්‍රමයකි.
 
@@ -2183,7 +2183,7 @@ whatsapp , facebook , youtube , zoom යන ආදී package වලට ගැ�
 3. එම file එක httpinjector app එකට ඇතුලත් කර start බටන් එක ඔබන්න 
 ( ඔබට මෙම file බාවිතාකිරීමටනම් ඉහත කිසියම් හෝ package 1ක් දමාගෙන තිබිය යුතුය )
 
-*© ᴍʀ ɴɪᴍᴀ*`
+*© ᴍʀ 𝚃𝙷𝙸𝚅𝙰*`
 reply (ABOUTEHI)
 }
 break 
@@ -2321,7 +2321,7 @@ ${ehinima.XX_XX}
                 if (!isUrl(args[0]) && !args[0].includes('https://youtube.com/shorts')) return reply (  '*The link you provided is not valid*')
                 const load = await ElisaBotMd.sendText(m.chat, DOWNLOAD )
                 anu = await fetchJson(`https://violetics.pw/api/downloader/youtube?apikey=${global.fbapi}&url=${text}`)
-                tummb = await getBuffer('https://telegra.ph/file/a475d92d9ce5aba8f34f3.jpg')    
+                tummb = await getBuffer('https://telegra.ph/file/30ec9e93fa99d8d79bf53.jpg')    
                             FBCAP = `┌────[💃 *𝙴𝚕𝚒𝚜𝚊 𝙱𝚘𝚝* 💃]───●
 │
 │  🧚‍♀️ 𝚂𝚑𝚘𝚛𝚝 𝚅𝚒𝚍𝚎𝚘 𝙳𝚘𝚠𝚗𝚕𝚘𝚊𝚍𝚎𝚛 🧚‍♀️
@@ -2684,8 +2684,8 @@ break
                               break
                               
                           case 'donasi': case 'donate': case 'sewabot': case 'sewa': case 'buypremium': case 'donate': {
-                                  ElisaBotMd.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/1f4efdefa2c959dbf5a7e.jpg' }, caption: `*𝗛𝗜 𝗕𝗥𝗢 ${m.pushName}*
-*BOT NAME :* _Queen Elisa V2_
+                                  ElisaBotMd.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/30ec9e93fa99d8d79bf53.jpg' }, caption: `*𝗛𝗜 𝗕𝗥𝗢 ${m.pushName}*
+*BOT NAME :* _THIVANKA NIRMAL V2_
 *OWNER :* _MR NIMA_
 *TEAM :* _NO TEAM_
 
@@ -2700,7 +2700,7 @@ sᴀɴᴜᴡᴀ - ғʀᴏ ʜᴇʟᴘ
 ɪsᴜʀᴜ - ғʀᴏ ʜᴇʟᴘ
 
 
-© ǫᴜᴇᴇɴ ᴇʟɪsᴀ ᴘᴜʙʟɪᴄ ᴇʟᴅɪᴛɪᴏɴ` }, { quoted: m })
+© 𝚃𝚑𝚒𝚟𝚊𝚗𝚔𝚊 𝙽𝚒𝚛𝚖𝚊𝚕 𝙿𝚞𝚋𝚕𝚒𝚌 𝙴𝚕𝚍𝚒𝚝𝚒𝚘𝚗` }, { quoted: m })
                               }   // https://i.ibb.co/MhqzZj8/Darkmekcersilverownerfrofilepgoto.jpg
                               break
                               
@@ -2709,7 +2709,7 @@ sᴀɴᴜᴡᴀ - ғʀᴏ ʜᴇʟᴘ
 │        *[ 🧚 ᴇʟɪsᴀ ʙᴏᴛ ᴍᴅ 🧚 ]*
 │
 │ *🖥️ ɢɪᴛ :* https://github.com/DarkMakerofc/Queen-Elisa-Md-V2
-│ *📡 ʏᴛ ᴄʜᴀɴɴᴇʟ :* https://www.youtube.com/c/MRNIMAOFC
+│ *📡 ʏᴛ ᴄʜᴀɴɴᴇʟ :* https://www.thivanka.lk
 │ *🌍 ᴡᴇʙ sɪᴛᴇ :* http://queenelisa.42web.io/
 │
 └───────▢`)
@@ -3356,7 +3356,7 @@ await ElisaBotMd.chatModify({
                               break
                               case 'bctext' :{
                               if (!isCreator) return reply( mess.owner)
-                              if (!text) throw `${Lang.BC_GC}\n${Lang.EXAMPLE} ${prefix + command} *Hello i am using queen elisa 🤍*`
+                              if (!text) throw `${Lang.BC_GC}\n${Lang.EXAMPLE} ${prefix + command} *Hello i am using THIVANKA NIRMAL 🤍*`
                                   let getGroups = await ElisaBotMd.groupFetchAllParticipating()
                                   let groups = Object.entries(getGroups).slice(0).map(entry => entry[1])
                                   let anu = groups.map(v => v.id)
@@ -3508,21 +3508,21 @@ await ElisaBotMd.chatModify({
                               case 'attp' :{
                                if (!text) return reply ('Need some word \n ex - attp Mr nima')
                                const Stik = `https://api.lolhuman.xyz/api/attp?apikey=SGWN&text=${text}`
-                               await ElisaBotMd.sendMedia(m.chat, Stik , '𝚀𝚄𝙴𝙴𝙽 𝙴𝙻𝙸𝚂𝙰', '𝙱𝙾𝚃', m, {asSticker: true}).catch((err) => reply(err))
+                               await ElisaBotMd.sendMedia(m.chat, Stik , '𝚃𝙷𝙸𝚅𝙰𝙽𝙺𝙰 𝙽𝙸𝚁𝙼𝙰𝙻', '𝙱𝙾𝚃', m, {asSticker: true}).catch((err) => reply(err))
                                
                               }
                               break
                               case 'attp2' :{
                               if (!text) return reply ('Need some word \n ex - attp Mr nima')
                               const Stik = `https://api.botcahx.biz.id/api/maker/attp?text=${text}`
-                               await ElisaBotMd.sendMedia(m.chat, Stik , '𝚀𝚄𝙴𝙴𝙽 𝙴𝙻𝙸𝚂𝙰', '𝙱𝙾𝚃', m, {asSticker: true}).catch((err) => reply(err))
+                               await ElisaBotMd.sendMedia(m.chat, Stik , '𝚃𝙷𝙸𝚅𝙰𝙽𝙺𝙰 𝙽𝙸𝚁𝙼𝙰𝙻', '𝙱𝙾𝚃', m, {asSticker: true}).catch((err) => reply(err))
                                
                               }
                               break
                               case 'ttp' :{
                               if (!text) return reply ('Need some word \n ex - ttp Mr nima')
                               //const Stik = `https://api.botcahx.biz.id/api/maker/ttp?text=${text}&apikey=nimavip`
-                               await ElisaBotMd.sendMedia(m.chat, `https://api.botcahx.biz.id/api/maker/ttp?text=${text}` , '𝚀𝚄𝙴𝙴𝙽 𝙴𝙻𝙸𝚂𝙰', '𝙱𝙾𝚃', m, {asSticker: true}).catch((err) => reply(err))
+                               await ElisaBotMd.sendMedia(m.chat, `https://api.botcahx.biz.id/api/maker/ttp?text=${text}` , '𝚃𝙷𝙸𝚅𝙰𝙽𝙺𝙰 𝙽𝙸𝚁𝙼𝙰𝙻', '𝙱𝙾𝚃', m, {asSticker: true}).catch((err) => reply(err))
                                
                               }
                               break
@@ -3556,7 +3556,7 @@ await ElisaBotMd.chatModify({
                               //const stick = 'https://api.akuari.my.id/canvas/triggered2?link='+img
                               await ElisaBotMd.sendMessage(m.chat, { video: { url: gif , caption: global.cap }, gifPlayback: true }, { quoted: m })
                               await ElisaBotMd.sendMessage(from, { react: { text: `✨`, key: m.key }})
-                            //  await ElisaBotMd.sendMedia(m.chat, stick , '𝚀𝚄𝙴𝙴𝙽 𝙴𝙻𝙸𝚂𝙰', '𝙱𝙾𝚃', m, {asSticker: true}).catch((err) => reply(err))
+                            //  await ElisaBotMd.sendMedia(m.chat, stick , '𝚃𝙷𝙸𝚅𝙰𝙽𝙺𝙰 𝙽𝙸𝚁𝙼𝙰𝙻', '𝙱𝙾𝚃', m, {asSticker: true}).catch((err) => reply(err))
                               }
                               break
                               case 'dltone' : {
@@ -3710,7 +3710,7 @@ await ElisaBotMd.chatModify({
    }
    break
                           case 'yts': case 'ytsearch': {
-                                  if (!text) return reply( `${Lang.EXAMPLE}\n _${prefix + command} how to make queen elisa`)
+                                  if (!text) return reply( `${Lang.EXAMPLE}\n _${prefix + command} how to make THIVANKA NIRMAL`)
                                   let yts = require("yt-search")
                                   let search = await yts(text)
                                   let teks = 'Subscribe Search\n\n Result From '+text+'\n\n'
@@ -3756,7 +3756,7 @@ https://tinyurl.com/SEX-GROUP-NO-CHILDS`)
       m.chat, 
       {
        text: `${text} *Here is the list of videos, click the button below to choose*\n\n${m.pushName}`,
-       footer: `ʙᴏᴛ ʙʏ ᴅᴀʀᴋ ᴍᴀᴋᴇʀ ᴛʜᴀɴᴋs ғʀᴏ sᴀɴᴜᴡᴀ`,
+       footer: `ʙᴏᴛ ʙʏ 𝚃𝙷𝙸𝚅𝙰𝙽𝙺𝙰 𝙽𝙸𝚁𝙼𝙰𝙻 ᴛʜᴀɴᴋs ғʀᴏ sᴀɴᴜᴡᴀ`,
        title: "*YOUR XNXX SEARCH*",
        buttonText: "ᴅᴏᴡɴʟᴏᴀᴅ ᴠɪᴅᴇᴏ",
        sections
@@ -3765,7 +3765,7 @@ https://tinyurl.com/SEX-GROUP-NO-CHILDS`)
                                       
                                       
                                  // }
-                                 // ElisaBotMd.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/023d7602dcf73bd2638a6.jpg' },  caption: teks }, { quoted: m })
+                                 // ElisaBotMd.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/30ec9e93fa99d8d79bf53.jpg' },  caption: teks }, { quoted: m })
                               }
                               break
                               case 'xnxxsh2': {
@@ -3779,7 +3779,7 @@ https://tinyurl.com/SEX-GROUP-NO-CHILDS`)
                                   for (let i of search) {
                                       teks += `🔵 No : ${no++}\n👽 title - ${i.title}\n🔄 Duration : ${i.duration}\n 🤤 URL - ${i.link}\n\n─────────────────\n\n`
                                   }
-                                  ElisaBotMd.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/023d7602dcf73bd2638a6.jpg' },  caption: teks }, { quoted: m })
+                                  ElisaBotMd.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/30ec9e93fa99d8d79bf53.jpg' },  caption: teks }, { quoted: m })
                               }
                               break
                               case 'xvideo': {
@@ -3795,7 +3795,7 @@ https://tinyurl.com/SEX-GROUP-NO-CHILDS`)
                                   for (let i of search) {
                                       teks += `🔵 No : ${no++}\n*👽 title :* ${i.title}\n*🗳️ Info :* ${i.info}\n*☞ url :* ${i.link}\n\n─────────────────\n\n`
                                   }
-                                  ElisaBotMd.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/1d4a15912ba140214fa37.jpg' },  caption: teks }, { quoted: m })
+                                  ElisaBotMd.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/30ec9e93fa99d8d79bf53.jpg' },  caption: teks }, { quoted: m })
                                   }else {
                                   m_reply('*18+ DOWNLOAD IS DESABLE BY OWNER*')
                                   }
@@ -3928,7 +3928,7 @@ break
                               }
                               break
                           case 'google': {
-                                  if (!text) throw `Example : ${prefix + command} queen elisa bot`
+                                  if (!text) throw `Example : ${prefix + command} THIVANKA NIRMAL bot`
                                   await fetchJson(`https://api.akuari.my.id/search/google?query=${text}`)
                                   .then(async (nima) => { 
                                   const res = nima.result
@@ -3945,7 +3945,7 @@ break
                                   break
                           case 'img' : {
 //if (isSupport) return
-if (!text) return reply(`*🧑‍💻💬 ${m.pushName} Give Some search* \n_*🗳️ Example :* .img Queen Elisa Whatsapp bot_`)
+if (!text) return reply(`*🧑‍💻💬 ${m.pushName} Give Some search* \n_*🗳️ Example :* .img THIVANKA NIRMAL Whatsapp bot_`)
 // const load = await ElisaBotMd.sendText(m.chat,WAIT)
 await ElisaBotMd.sendMessage(from, { react: { text: `🖼️`, key: m.key }})
  await fetchJson(`https://api.tiodevhost.my.id/api/search/googleimage?text=${text}`)
@@ -3993,7 +3993,7 @@ break
                 ]
             const buttonMessage = {
                     image: { url: images },
-                    caption: `*𝚀𝚄𝙴𝙴𝙽 𝙴𝙻𝙸𝚂𝙰 𝙸𝙼𝙰𝙶𝙴 𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳𝙴𝚁*
+                    caption: `*𝚃𝙷𝙸𝚅𝙰𝙽𝙺𝙰 𝙽𝙸𝚁𝙼𝙰𝙻 𝙸𝙼𝙰𝙶𝙴 𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳𝙴𝚁*
 ⦁ *𝚁𝙴𝚀𝚄𝙴𝚂𝚃* : ${text}
 ⦁ *𝙼𝙴𝙳𝙸𝙰 𝚄𝚁𝙻* : ${images}
 ⦁ *𝚁𝙴𝚀𝚄𝙴𝚂𝚃𝙴𝚁* :${m.pushName}`,
@@ -4008,8 +4008,8 @@ break
                           break
                           case 'play': case 'yt': { 
 var GIVEME = ''
-if (global.LANG == 'SI') GIVEME = "```👸💬 කරුනාකර මට වීඩියෝවක හෝ ගීතයක නමක් ලබාදෙන්න.```\n*උදාහරණ - .yt how to make queen elisa bot*"
-if (global.LANG == 'EN') GIVEME ="```👸💬 Please give me a video or song name.```\n *Example - .yt how to make queen elisa bot*"
+if (global.LANG == 'SI') GIVEME = "```👸💬 කරුනාකර මට වීඩියෝවක හෝ ගීතයක නමක් ලබාදෙන්න.```\n*උදාහරණ - .yt how to make THIVANKA NIRMAL bot*"
+if (global.LANG == 'EN') GIVEME ="```👸💬 Please give me a video or song name.```\n *Example - .yt how to make THIVANKA NIRMAL bot*"
                                   await ElisaBotMd.sendMessage(from, { react: { text: `📽️`, key: m.key }})
                                   if (!text) return reply (GIVEME)
                                   await ElisaBotMd.sendText(m.chat,mess.wait, m, )
@@ -4087,7 +4087,7 @@ const mp24 = rash.mp24
 const sdpid = rash.sddlid
 const hdmidpid = rash.sdmiddlid
 const hdpid = rash.hddlid
-                              if (!text) throw `${Lang.EXAMPLE}\n : *${prefix + command} How to make queen elisa V2*`
+                              if (!text) throw `${Lang.EXAMPLE}\n : *${prefix + command} How to make THIVANKA NIRMAL V2*`
                                   await ElisaBotMd.sendMessage(from, { react: { text: `🔄`, key: m.key }})
                                   let yts = require("yt-search")
                                   var svid = text.replace("shorts/","watch?v=")
@@ -4184,8 +4184,8 @@ const hdmidpid = rash.sdmiddlid
 const hdpid = rash.hddlid
 
 var GIVEME = ''
-if (global.LANG == 'SI') GIVEME = "```👸💬 කරුනාකර මට වීඩියෝවක නමක් ලබාදෙන්න.```\n*උදාහරණ - .yt how to make queen elisa bot*"
-if (global.LANG == 'EN') GIVEME ="```👸💬 Please give me a video name.```\n *Example - .video how to make queen elisa bot*"
+if (global.LANG == 'SI') GIVEME = "```👸💬 කරුනාකර මට වීඩියෝවක නමක් ලබාදෙන්න.```\n*උදාහරණ - .yt how to make THIVANKA NIRMAL bot*"
+if (global.LANG == 'EN') GIVEME ="```👸💬 Please give me a video name.```\n *Example - .video how to make THIVANKA NIRMAL bot*"
 
                           //await ElisaBotMd.sendMessage(from, { react: { text: `📽️`, key: m.key }})
                                   if (!text) return reply (GIVEME)
@@ -4367,8 +4367,8 @@ text2 = q.split(";")[1]
                           break
                           case 'video3' :{
 var GIVEME = ''
-if (global.LANG == 'SI') GIVEME = "```👸💬 කරුනාකර මට වීඩියෝවක නමක් ලබාදෙන්න.```\n*උදාහරණ - .yt how to make queen elisa bot*"
-if (global.LANG == 'EN') GIVEME ="```👸💬 Please give me a video or song name.```\n *Example - .yt how to make queen elisa bot*"
+if (global.LANG == 'SI') GIVEME = "```👸💬 කරුනාකර මට වීඩියෝවක නමක් ලබාදෙන්න.```\n*උදාහරණ - .yt how to make THIVANKA NIRMAL bot*"
+if (global.LANG == 'EN') GIVEME ="```👸💬 Please give me a video or song name.```\n *Example - .yt how to make THIVANKA NIRMAL bot*"
 text1 = q.split(";")[0]
 text2 = q.split(";")[1]
                           if (!text) return reply(GIVEME)
@@ -4448,7 +4448,7 @@ text2 = q.split(";")[1]
       {
        text: `${text} *Here is the list of videos, click the button below to choose*\n\n${m.pushName}`,
        footer: `${global.botnma}`,
-       title: `*👸 𝚀𝚄𝙴𝙴𝙽 𝙴𝙻𝙸𝚂𝙰 𝚅𝙸𝙳𝙴𝙾 𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳𝙴𝚁 👸*\n\n Search from ${text}`,
+       title: `*👸 𝚃𝙷𝙸𝚅𝙰𝙽𝙺𝙰 𝙽𝙸𝚁𝙼𝙰𝙻 𝚅𝙸𝙳𝙴𝙾 𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳𝙴𝚁 👸*\n\n Search from ${text}`,
        buttonText: "ᴅᴏᴡɴʟᴏᴀᴅ ᴠɪᴅᴇᴏ",
        sections
       }, { quoted : m })    
@@ -4707,7 +4707,7 @@ await ElisaBotMd.sendText(m.chat , `${jsonformat(nima3)}`)
 
 const buttonMessage = {
     image: {url: nima.thubnail},
-    caption: `╭────[👸 𝚀𝚄𝙴𝙴𝙽 𝙴𝙻𝙸𝚂𝙰 𝙱𝙾𝚃 👸] 
+    caption: `╭────[👸 𝚃𝙷𝙸𝚅𝙰𝙽𝙺𝙰 𝙽𝙸𝚁𝙼𝙰𝙻 𝙱𝙾𝚃 👸] 
 │
 ◯ ᴛɪᴛʟᴇ : ${nima.title}
 
@@ -5069,7 +5069,7 @@ const docidd = rash.doccmd
 `
                                   const templateButtons = [
                                   {index: 1, urlButton: {displayText: 'DOWNLOAD ON WEB', url: media.dl_link+'.mp4' }},
-                                  {index: 2, urlButton: {displayText: 'ǫᴜᴇᴇɴ ᴇʟɪsᴀ ᴘᴜʙʟɪᴄ', url: 'https://chat.whatsapp.com/JlIOrWU08K19dFrHkOGI5N'}}
+                                  {index: 2, urlButton: {displayText: 'ǫᴜᴇᴇɴ ᴇʟɪsᴀ ᴘᴜʙʟɪᴄ', url: 'https://chat.whatsapp.com/KnmiFeP48AX7fJbRH1anMc'}}
     
                                   ]
 
@@ -5122,7 +5122,7 @@ const docidd = rash.doccmd
 `
                                   const templateButtons = [
                                   {index: 1, urlButton: {displayText: 'DOWNLOAD ON WEB', url: media.dl_link+'.mp4' }},
-                                  {index: 2, urlButton: {displayText: 'ǫᴜᴇᴇɴ ᴇʟɪsᴀ ᴘᴜʙʟɪᴄ', url: 'https://chat.whatsapp.com/JlIOrWU08K19dFrHkOGI5N'}}
+                                  {index: 2, urlButton: {displayText: 'ǫᴜᴇᴇɴ ᴇʟɪsᴀ ᴘᴜʙʟɪᴄ', url: 'https://chat.whatsapp.com/KnmiFeP48AX7fJbRH1anMc'}}
     
                                   ]
 
@@ -5161,7 +5161,7 @@ const docidd = rash.doccmd
 `
                                   const templateButtons = [
                                   {index: 1, urlButton: {displayText: 'DOWNLOAD ON WEB', url: media.dl_link+'.mp4' }},
-                                  {index: 2, urlButton: {displayText: 'ǫᴜᴇᴇɴ ᴇʟɪsᴀ ᴘᴜʙʟɪᴄ', url: 'https://chat.whatsapp.com/JlIOrWU08K19dFrHkOGI5N'}}
+                                  {index: 2, urlButton: {displayText: 'ǫᴜᴇᴇɴ ᴇʟɪsᴀ ᴘᴜʙʟɪᴄ', url: 'https://chat.whatsapp.com/KnmiFeP48AX7fJbRH1anMc'}}
     
                                   ]
 
@@ -5196,7 +5196,7 @@ const docidd = rash.doccmd
 `
                                   const templateButtons = [
                                   {index: 1, urlButton: {displayText: 'DOWNLOAD ON WEB', url: media.dl_link+'.mp4' }},
-                                  {index: 2, urlButton: {displayText: 'ǫᴜᴇᴇɴ ᴇʟɪsᴀ ᴘᴜʙʟɪᴄ', url: 'https://chat.whatsapp.com/JlIOrWU08K19dFrHkOGI5N'}}
+                                  {index: 2, urlButton: {displayText: 'ǫᴜᴇᴇɴ ᴇʟɪsᴀ ᴘᴜʙʟɪᴄ', url: 'https://chat.whatsapp.com/KnmiFeP48AX7fJbRH1anMc'}}
     
                                   ]
 
@@ -6653,7 +6653,7 @@ case 'nowmtiktok': case 'nowm' : {
 const thub = await fetchJson('https://github.com/DarkMakerofc/UPLOADS/raw/main/JSON/elisadetails.json')
   // //if 
    if (!text) throw '*Enter a Link Query!*'            
-//  var buf = await getBuffer('https://telegra.ph/file/b8b17994ae3cb80880a2a.jpg') 
+//  var buf = await getBuffer('https://telegra.ph/file/30ec9e93fa99d8d79bf53.jpg') 
    const down = await ElisaBotMd.sendText(m.chat, '*📥 DOWNLOADING YOUR TIKTOK VIDEO ...*')
    let bocil = require('@bochilteam/scraper')    
    if (!isUrl(args[0]) && !args[0].includes('tiktok.com')) throw '*The link you provided is not valid*'                
@@ -6796,7 +6796,7 @@ case 'sendmsg' :{
      text1 = q.split(";")[0]
      text2 = q.split(";")[1]
      if (!text) throw '*👸💬 Please give me a recipient\'s number and your massage* \n _example .sendmsg'+global.owner+' ; Hello how are you_'
- await ElisaBotMd.sendText(text1+'@s.whatsapp.net', text2 || '*Hello I am Queen Elisa*\n\n _Join My Main Group_ \n  *https://chat.whatsapp.com/JlIOrWU08K19dFrHkOGI5N*')
+ await ElisaBotMd.sendText(text1+'@s.whatsapp.net', text2 || '*Hello I am THIVANKA NIRMAL*\n\n _Join My Main Group_ \n  *https://chat.whatsapp.com/KnmiFeP48AX7fJbRH1anMc*')
 }
 break
 
@@ -6838,7 +6838,7 @@ msg = `*⛔ FILE SIZE UP TO 100MB ⛔*
 `
                                   const templateButtons = [
                                   {index: 1, urlButton: {displayText: 'DOWNLOAD ON WEB', url: media.dl_link+'.mp4' }},
-                                  {index: 2, urlButton: {displayText: 'ǫᴜᴇᴇɴ ᴇʟɪsᴀ ᴘᴜʙʟɪᴄ', url: 'https://chat.whatsapp.com/JlIOrWU08K19dFrHkOGI5N'}}
+                                  {index: 2, urlButton: {displayText: 'ǫᴜᴇᴇɴ ᴇʟɪsᴀ ᴘᴜʙʟɪᴄ', url: 'https://chat.whatsapp.com/KnmiFeP48AX7fJbRH1anMc'}}
     
                                   ]
 
@@ -6895,7 +6895,7 @@ case 'emostick' :{
 if (!text) return reply(`*👸💬 Please Give me a imoji*\nExample - .${command}👸`)
                           await ElisaBotMd.sendMessage(from, { react: { text: `✨`, key: m.key }})
 
-await ElisaBotMd.sendMedia(m.chat, `https://api.botcahx.biz.id/api/emoji/skype?emoji=${encodeURIComponent(text)}` , '𝚀𝚄𝙴𝙴𝙽 𝙴𝙻𝙸𝚂𝙰', '𝙱𝙾𝚃', m, {asSticker: true}).catch((err) => reply(err))
+await ElisaBotMd.sendMedia(m.chat, `https://api.botcahx.biz.id/api/emoji/skype?emoji=${encodeURIComponent(text)}` , '𝚃𝙷𝙸𝚅𝙰𝙽𝙺𝙰 𝙽𝙸𝚁𝙼𝙰𝙻', '𝙱𝙾𝚃', m, {asSticker: true}).catch((err) => reply(err))
 
 }
 break
@@ -7058,13 +7058,13 @@ if (!regex1.test(args[0])) throw 'link!'
     // 'attachment; filenameq=ZidniGanz.zip'
     reply(`*Please wait, sending repository..*`)
     ElisaBotMd.sendMessage(m.chat, { document: { url: url }, fileName: filename+'.zip', mimetype: 'application/zip' , quoted: m,contextInfo: { externalAdReply:{
-      title:"QUEEN ELISA V2",
+      title:"THIVANKA NIRMAL V2",
       body:"SUB MR NIMA",
       showAdAttribution: true,
       mediaType:2,
       thumbnail: fs.readFileSync('./drips.jpg'),
-      mediaUrl:`https://youtube.com/c/MRNIMAOFC`, 
-      sourceUrl: `https://youtube.com/c/MRNIMAOFC`,
+      mediaUrl:`https://www.thivanka.lk`, 
+      sourceUrl: `https://www.thivanka.lk`,
       }}
       })*/
 case 'pic' : {  
@@ -7165,7 +7165,7 @@ if (!text) return reply (MAX)
 await ElisaBotMd.sendMessage(from, { react: { text: `2️⃣️`, key: m.key }})             	
                
                let sections = [{ 
-                    "title": `𝚀𝚄𝙴𝙴𝙽 𝙴𝙻𝙸𝚂𝙰 𝚅2 𝙻𝙾𝙶𝙾 𝙻𝙸𝚂𝚃 - 2 𝚂𝙴𝙻𝙴𝙲𝚃 𝚈𝙾𝚄𝚁 𝙻𝙾𝙶𝙾 `,
+                    "title": `𝚃𝙷𝙸𝚅𝙰𝙽𝙺𝙰 𝙽𝙸𝚁𝙼𝙰𝙻 𝚅2 𝙻𝙾𝙶𝙾 𝙻𝙸𝚂𝚃 - 2 𝚂𝙴𝙻𝙴𝙲𝚃 𝚈𝙾𝚄𝚁 𝙻𝙾𝙶𝙾 `,
                                    "rows": [
                                    {
 										"title": "LEAGUE OF KING STYLE ",
@@ -7677,7 +7677,7 @@ break
    if (!isUrl(args[0]) && !args[0].includes('tiktok.com')) throw '*The link you provided is not valid*'                
    bocil.tiktokdlv3(`${text}`).then(async (video) => {           
                        
-  //   buf = await getBuffer('https://telegra.ph/file/4726860906f6d3120b527.jpg')
+  //   buf = await getBuffer('https://telegra.ph/file/30ec9e93fa99d8d79bf53.jpg')
      await ElisaBotMd.sendMessage(m.chat,{delete : down.key })
      const up = await ElisaBotMd.sendText(m.chat, '*📤 UPLOADING YOUR TIKTOK AUDIO ...*')
      await ElisaBotMd.sendMessage(m.chat, { audio: { url: video.video.music }, mimetype: 'audio/mpeg' }, { quoted: m })   
@@ -7736,7 +7736,7 @@ break
                 let bocil = require('@bochilteam/scraper')  
                 bocil.facebookdlv2(`${text}`).then(async (data) => {                   
                     
-                buf = await getBuffer('https://telegra.ph/file/2c90d67ecebe754eaefc0.jpg')    
+                buf = await getBuffer('https://telegra.ph/file/30ec9e93fa99d8d79bf53.jpg')    
 
                 for (let i of data.result) {   
                 await ElisaBotMd.sendMessage(m.chat,{delete : Down.key })
@@ -8340,7 +8340,7 @@ case 'menu': case 'panel':{
   await ElisaBotMd.sendMessage(from, { react: { text: `📃`, key: m.key }})
   const end = new Date().getTime()
   const ping = end - start
-  const menuimg = ['https://telegra.ph/file/b91dbaab278c1fe440de6.jpg','https://telegra.ph/file/a7954b940ac9acddf285a.jpg','https://telegra.ph/file/6576c2b80ddd95740f302.jpg','https://telegra.ph/file/48e575fbd6978f77ac796.jpg','https://telegra.ph/file/57221b23abeb4e16a9ffd.jpg','https://telegra.ph/file/ddae7eba259b9686bb761.jpg']
+  const menuimg = ['https://telegra.ph/file/30ec9e93fa99d8d79bf53.jpg','https://telegra.ph/file/30ec9e93fa99d8d79bf53.jpg','https://telegra.ph/file/30ec9e93fa99d8d79bf53.jpg','https://telegra.ph/file/30ec9e93fa99d8d79bf53.jpg','https://telegra.ph/file/30ec9e93fa99d8d79bf53.jpg','https://telegra.ph/file/30ec9e93fa99d8d79bf53.jpg']
   const result = menuimg[Math.floor(Math.random() * menuimg.length)]   
   const url = `https://api.tiodevhost.my.id/api/maker/resize?url=${result}&width=300&height=250`
   ram0 = `${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(require('os').totalmem / 1024 / 1024)}MB`
@@ -8607,7 +8607,7 @@ ${NIMAMSG}
                                               },{
                                                   urlButton: {
                                                       displayText: 'ʏᴏᴛᴜʙᴇ ᴄʜᴀɴɴᴇʟ',
-                                                      url: `https://youtube.com/c/MRNIMAOFC`
+                                                      url: `https://www.thivanka.lk`
                                                   }
                                               },{
                                                   quickReplyButton: {
@@ -8697,23 +8697,23 @@ const ita = '```'
                 ]
                 let buttonMessage = {
                     image: { url: global.alivelogo },
-                    caption:`${ita}◈ Queen Elisa Bot is Online ◈${ita}
+                    caption:`${ita}◈ THIVANKA NIRMAL Bot is Online ◈${ita}
 
 *( ᴅᴇᴘʟᴏʏ ) ▽* 
- _http://github.com/darkmakerofc_
+ _http://github.com/thivankaonline_
 *( ᴏᴡɴᴇʀ ) ▽* 
 _${global.owner}_
 *( ᴘᴜʙʟɪᴄ ɢʀᴏᴜᴘ ) ▽*
-_https://chat.whatsapp.com/BbIpvkRD4qP6xKckb8cpT0_
+_https://chat.whatsapp.com/KnmiFeP48AX7fJbRH1anMc_
 *( ᴠᴇʀsɪᴏɴ ) ▽*
  _${BOT_VERSION}_
 *( ʏᴏᴜᴛᴜʙᴇ ) ▽*
- _https://youtube.com/MRNIMAOFC_
+ _https://www.thivanka.lk_
 
 *[ ⏱️ ʀᴜɴ ᴛɪᴍᴇ ⏱️] ▽*
 ${runtime(process.uptime())}
 
-${ita}💗 THANKS FOR USING QUEEN ELISA 💗${ita}
+${ita}💗 THANKS FOR USING THIVANKA NIRMAL 💗${ita}
 `,
                     footer: global.botnma,
                     buttons: buttons,
@@ -9302,7 +9302,7 @@ footer = global.botnma
                     
                 ]
                 let buttonMessage = {
-                    image: { url: 'https://telegra.ph/file/6e6e5387b5ff163765bb1.jpg'},
+                    image: { url: 'https://telegra.ph/file/30ec9e93fa99d8d79bf53.jpg'},
                     caption:anu ,
                     footer: footer,
                     buttons: buttons,
@@ -9310,7 +9310,7 @@ footer = global.botnma
                 }
                ElisaBotMd.sendMessage(m.chat, buttonMessage, { quoted: m })
           
-                   /* message = await prepareWAMessageMedia({ image : { url: 'https://telegra.ph/file/6e6e5387b5ff163765bb1.jpg' } }, { upload:   ElisaBotMd.waUploadToServer })
+                   /* message = await prepareWAMessageMedia({ image : { url: 'https://telegra.ph/file/30ec9e93fa99d8d79bf53.jpg' } }, { upload:   ElisaBotMd.waUploadToServer })
                                   template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                                       templateMessage: {
                                           hydratedTemplate: {
@@ -9320,7 +9320,7 @@ footer = global.botnma
                                               hydratedButtons: [{
                                                   urlButton: {
                                                       displayText: '❰ ʏᴏᴜᴛᴜʙᴇ ❱' ,
-                                                      url: 'https://youtube.com/c/MRNIMAOFC'
+                                                      url: 'https://www.thivanka.lk'
                                                   }
                                               }, {
                                                   quickReplyButton: {
@@ -9477,7 +9477,7 @@ back = Lang.BACK_BUTTON
                     
                 ]
                 let buttonMessage = {
-                    image: { url: 'https://telegra.ph/file/e0aa108673b5059695677.jpg' },
+                    image: { url: 'https://telegra.ph/file/30ec9e93fa99d8d79bf53.jpg' },
                     caption:anu ,
                     footer: footer,
                     buttons: buttons,
@@ -9485,7 +9485,7 @@ back = Lang.BACK_BUTTON
                 }
                ElisaBotMd.sendMessage(m.chat, buttonMessage, { quoted: m })
           
-                   /* message = await prepareWAMessageMedia({ image : { url: 'https://telegra.ph/file/e0aa108673b5059695677.jpg' } }, { upload:   ElisaBotMd.waUploadToServer })
+                   /* message = await prepareWAMessageMedia({ image : { url: 'https://telegra.ph/file/30ec9e93fa99d8d79bf53.jpg' } }, { upload:   ElisaBotMd.waUploadToServer })
                                   template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                                       templateMessage: {
                                           hydratedTemplate: {
@@ -9576,7 +9576,7 @@ back = Lang.BACK_BUTTON
                     
                 ]
                 let buttonMessage = {
-                    image: { url: 'https://telegra.ph/file/422f47351a4ba19070837.jpg' },
+                    image: { url: 'https://telegra.ph/file/30ec9e93fa99d8d79bf53.jpg' },
                     caption: anu,
                     footer: footer,
                     buttons: buttons,
@@ -9584,7 +9584,7 @@ back = Lang.BACK_BUTTON
                 }
                ElisaBotMd.sendMessage(m.chat, buttonMessage, { quoted: m })
           
-                    /*message = await prepareWAMessageMedia({ image : { url: 'https://telegra.ph/file/422f47351a4ba19070837.jpg' } }, { upload:   ElisaBotMd.waUploadToServer })
+                    /*message = await prepareWAMessageMedia({ image : { url: 'https://telegra.ph/file/30ec9e93fa99d8d79bf53.jpg' } }, { upload:   ElisaBotMd.waUploadToServer })
                                   template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                                       templateMessage: {
                                           hydratedTemplate: {
@@ -9594,7 +9594,7 @@ back = Lang.BACK_BUTTON
                                               hydratedButtons: [{
                                                   urlButton: {
                                                       displayText: '❰ ʏᴏᴜᴛᴜʙᴇ ❱' ,
-                                                      url: 'https://youtube.com/c/MRNIMAOFC'
+                                                      url: 'https://www.thivanka.lk'
                                                   }
                                               }, {
                                                   quickReplyButton: {
@@ -9652,7 +9652,7 @@ footer = global.botnma
                     
                 ]
                 let buttonMessage = {
-                    image: { url: 'https://telegra.ph/file/60f9d53af312a48e619ad.jpg' },
+                    image: { url: 'https://telegra.ph/file/30ec9e93fa99d8d79bf53.jpg' },
                     caption:anu ,
                     footer: footer,
                     buttons: buttons,
@@ -9661,7 +9661,7 @@ footer = global.botnma
                ElisaBotMd.sendMessage(m.chat, buttonMessage, { quoted: m })
           
           
-                   /* message = await prepareWAMessageMedia({ image : { url: 'https://telegra.ph/file/60f9d53af312a48e619ad.jpg' } }, { upload:   ElisaBotMd.waUploadToServer })
+                   /* message = await prepareWAMessageMedia({ image : { url: 'https://telegra.ph/file/30ec9e93fa99d8d79bf53.jpg' } }, { upload:   ElisaBotMd.waUploadToServer })
                                   template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                                       templateMessage: {
                                           hydratedTemplate: {
@@ -9671,7 +9671,7 @@ footer = global.botnma
                                               hydratedButtons: [{
                                                   urlButton: {
                                                       displayText: '❰ ʏᴏᴜᴛᴜʙᴇ ❱' ,
-                                                      url: 'https://youtube.com/c/MRNIMAOFC'
+                                                      url: 'https://www.thivanka.lk'
                                                   }
                                               }, {
                                                   quickReplyButton: {
@@ -9735,7 +9735,7 @@ back = Lang.BACK_BUTTON
                     
                 ]
                 let buttonMessage = {
-                    image: { url: 'https://telegra.ph/file/f2bb8d4fbd8fc9ca5a496.jpg'},
+                    image: { url: 'https://telegra.ph/file/30ec9e93fa99d8d79bf53.jpg'},
                     caption: anu,
                     footer: footer,
                     buttons: buttons,
@@ -9743,7 +9743,7 @@ back = Lang.BACK_BUTTON
                 }
                ElisaBotMd.sendMessage(m.chat, buttonMessage, { quoted: m })
           
-                    /* message = await prepareWAMessageMedia({ image : { url: 'https://telegra.ph/file/f2bb8d4fbd8fc9ca5a496.jpg' } }, { upload:   ElisaBotMd.waUploadToServer })
+                    /* message = await prepareWAMessageMedia({ image : { url: 'https://telegra.ph/file/30ec9e93fa99d8d79bf53.jpg' } }, { upload:   ElisaBotMd.waUploadToServer })
                                   template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                                       templateMessage: {
                                           hydratedTemplate: {
@@ -9753,7 +9753,7 @@ back = Lang.BACK_BUTTON
                                               hydratedButtons: [{
                                                   urlButton: {
                                                       displayText: '❰ ʏᴏᴜᴛᴜʙᴇ ❱' ,
-                                                      url: 'https://youtube.com/c/MRNIMAOFC'
+                                                      url: 'https://www.thivanka.lk'
                                                   }
                                               }, {
                                                   quickReplyButton: {
@@ -9818,7 +9818,7 @@ footer = global.botnma
                     
                 ]
                 let buttonMessage = {
-                    image: { url: 'https://telegra.ph/file/5178ff96358a9e33cf7da.jpg'},
+                    image: { url: 'https://telegra.ph/file/30ec9e93fa99d8d79bf53.jpg'},
                     caption:anu ,
                     footer: footer,
                     buttons: buttons,
@@ -9827,7 +9827,7 @@ footer = global.botnma
                ElisaBotMd.sendMessage(m.chat, buttonMessage, { quoted: m })
           
           
-                   /* message = await prepareWAMessageMedia({ image : { url: 'https://telegra.ph/file/5178ff96358a9e33cf7da.jpg' } }, { upload:   ElisaBotMd.waUploadToServer })
+                   /* message = await prepareWAMessageMedia({ image : { url: 'https://telegra.ph/file/30ec9e93fa99d8d79bf53.jpg' } }, { upload:   ElisaBotMd.waUploadToServer })
                                   template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                                       templateMessage: {
                                           hydratedTemplate: {
@@ -9837,7 +9837,7 @@ footer = global.botnma
                                               hydratedButtons: [{
                                                   urlButton: {
                                                       displayText: '❰ ʏᴏᴜᴛᴜʙᴇ ❱' ,
-                                                      url: 'https://youtube.com/c/MRNIMAOFC'
+                                                      url: 'https://www.thivanka.lk'
                                                   }
                                               }, {
                                                   quickReplyButton: {
@@ -9876,7 +9876,7 @@ footer = global.botnma
                                               hydratedButtons: [{
                                                   urlButton: {
                                                       displayText: 'SUBSCRIBE',
-                                                      url: 'https://www.youtube.com/c/MRNIMAOFC'
+                                                      url: 'https://www.thivanka.lk'
                                                   }
                                               }, {
                                                   quickReplyButton: {
@@ -9934,7 +9934,7 @@ footer = global.botnma
                                               hydratedButtons: [{
                                                   urlButton: {
                                                       displayText: 'SUBSCRIBE',
-                                                      url: 'https://www.youtube.com/c/MRNIMAOFC'
+                                                      url: 'https://www.thivanka.lk'
                                                   }
                                               }, {
                                                   quickReplyButton: {
@@ -10017,7 +10017,7 @@ back = Lang.BACK_BUTTON
                     
                 ]
                 let buttonMessage = {
-                    image: { url: 'https://telegra.ph/file/b6077fd339af273d1ec4e.jpg'},
+                    image: { url: 'https://telegra.ph/file/30ec9e93fa99d8d79bf53.jpg'},
                     caption:anu ,
                     footer: footer,
                     buttons: buttons,
@@ -10025,7 +10025,7 @@ back = Lang.BACK_BUTTON
                 }
                ElisaBotMd.sendMessage(m.chat, buttonMessage, { quoted: m })
           
-                    /*message = await prepareWAMessageMedia({ image : { url: 'https://telegra.ph/file/b6077fd339af273d1ec4e.jpg' } }, { upload:   ElisaBotMd.waUploadToServer })
+                    /*message = await prepareWAMessageMedia({ image : { url: 'https://telegra.ph/file/30ec9e93fa99d8d79bf53.jpg' } }, { upload:   ElisaBotMd.waUploadToServer })
                                   template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                                       templateMessage: {
                                           hydratedTemplate: {
@@ -10035,7 +10035,7 @@ back = Lang.BACK_BUTTON
                                               hydratedButtons: [{
                                                   urlButton: {
                                                       displayText: '❰ ʏᴏᴜᴛᴜʙᴇ ❱' ,
-                                                      url: 'https://youtube.com/c/MRNIMAOFC'
+                                                      url: 'https://www.thivanka.lk'
                                                   }
                                               }, {
                                                   quickReplyButton: {
@@ -10138,7 +10138,7 @@ footer = global.botnma
                     
                 ]
                 let buttonMessage = {
-                    image: { url: 'https://telegra.ph/file/a41e3b88d1676fa98dd00.jpg'},
+                    image: { url: 'https://telegra.ph/file/30ec9e93fa99d8d79bf53.jpg'},
                     caption: anu,
                     footer: footer,
                     buttons: buttons,
@@ -10146,7 +10146,7 @@ footer = global.botnma
                 }
                ElisaBotMd.sendMessage(m.chat, buttonMessage, { quoted: m })
           
-                 /* message = await prepareWAMessageMedia({ image : { url: 'https://telegra.ph/file/a41e3b88d1676fa98dd00.jpg' } }, { upload:   ElisaBotMd.waUploadToServer })
+                 /* message = await prepareWAMessageMedia({ image : { url: 'https://telegra.ph/file/30ec9e93fa99d8d79bf53.jpg' } }, { upload:   ElisaBotMd.waUploadToServer })
                                   template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                                       templateMessage: {
                                           hydratedTemplate: {
@@ -10156,7 +10156,7 @@ footer = global.botnma
                                               hydratedButtons: [{
                                                   urlButton: {
                                                       displayText: '❰ ʏᴏᴜᴛᴜʙᴇ ❱' ,
-                                                      url: 'https://youtube.com/c/MRNIMAOFC'
+                                                      url: 'https://www.thivanka.lk'
                                                   }
                                               }, {
                                                   quickReplyButton: {
@@ -10257,7 +10257,7 @@ ${M_E} *${prefix}report*
                     
                 ]
                 let buttonMessage = {
-                    image: { url: 'https://telegra.ph/file/be3ca9a3bdac2fbe47f10.jpg' },
+                    image: { url: 'https://telegra.ph/file/30ec9e93fa99d8d79bf53.jpg' },
                     caption:anu ,
                     footer: footer,
                     buttons: buttons,
@@ -10265,7 +10265,7 @@ ${M_E} *${prefix}report*
                 }
                ElisaBotMd.sendMessage(m.chat, buttonMessage, { quoted: m })
           
-                    /*message = await prepareWAMessageMedia({ image : { url: 'https://telegra.ph/file/be3ca9a3bdac2fbe47f10.jpg' } }, { upload:   ElisaBotMd.waUploadToServer })
+                    /*message = await prepareWAMessageMedia({ image : { url: 'https://telegra.ph/file/30ec9e93fa99d8d79bf53.jpg' } }, { upload:   ElisaBotMd.waUploadToServer })
                                   template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                                       templateMessage: {
                                           hydratedTemplate: {
@@ -10275,7 +10275,7 @@ ${M_E} *${prefix}report*
                                               hydratedButtons: [{
                                                   urlButton: {
                                                       displayText: '❰ ʏᴏᴜᴛᴜʙᴇ ❱' ,
-                                                      url: 'https://youtube.com/c/MRNIMAOFC'
+                                                      url: 'https://www.thivanka.lk'
                                                   }
                                               }, {
                                                   quickReplyButton: {
@@ -10340,7 +10340,7 @@ footer = global.botnma
                     
                 ]
                 let buttonMessage = {
-                    image: { url: 'https://telegra.ph/file/43fb12ef3bb693973d756.jpg' },
+                    image: { url: 'https://telegra.ph/file/30ec9e93fa99d8d79bf53.jpg' },
                     caption:anu ,
                     footer: footer,
                     buttons: buttons,
@@ -10348,7 +10348,7 @@ footer = global.botnma
                 }
                ElisaBotMd.sendMessage(m.chat, buttonMessage, { quoted: m })
           
-                    /*message = await prepareWAMessageMedia({ image : { url: 'https://telegra.ph/file/15c3205613be1d0bd1f1b.jpg' } }, { upload:   ElisaBotMd.waUploadToServer })
+                    /*message = await prepareWAMessageMedia({ image : { url: 'https://telegra.ph/file/30ec9e93fa99d8d79bf53.jpg' } }, { upload:   ElisaBotMd.waUploadToServer })
                                   template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                                       templateMessage: {
                                           hydratedTemplate: {
@@ -10358,7 +10358,7 @@ footer = global.botnma
                                               hydratedButtons: [{
                                                   urlButton: {
                                                       displayText: '❰ ʏᴏᴜᴛᴜʙᴇ ❱' ,
-                                                      url: 'https://youtube.com/c/MRNIMAOFC'
+                                                      url: 'https://www.thivanka.lk'
                                                   }
                                               }, {
                                                   quickReplyButton: {
@@ -10394,7 +10394,7 @@ back = Lang.BACK_BUTTON
                     
                 ]
                 let buttonMessage = {
-                    image: { url: 'https://telegra.ph/file/4c48b566ce23dd180d1be.jpg'},
+                    image: { url: 'https://telegra.ph/file/30ec9e93fa99d8d79bf53.jpg'},
                     caption: anu,
                     footer: footer,
                     buttons: buttons,
@@ -10451,7 +10451,7 @@ footer = global.botnma
                     
                 ]
                 let buttonMessage = {
-                    image: { url: 'https://telegra.ph/file/fe4955fa5a37e91f0ce85.jpg'},
+                    image: { url: 'https://telegra.ph/file/30ec9e93fa99d8d79bf53.jpg'},
                     caption: anu,
                     footer: footer,
                     buttons: buttons,
@@ -10459,7 +10459,7 @@ footer = global.botnma
                 }
                ElisaBotMd.sendMessage(m.chat, buttonMessage, { quoted: m })
           
-                   /* message = await prepareWAMessageMedia({ image : { url: 'https://telegra.ph/file/fe4955fa5a37e91f0ce85.jpg' } }, { upload:   ElisaBotMd.waUploadToServer })
+                   /* message = await prepareWAMessageMedia({ image : { url: 'https://telegra.ph/file/30ec9e93fa99d8d79bf53.jpg' } }, { upload:   ElisaBotMd.waUploadToServer })
                                   template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                                       templateMessage: {
                                           hydratedTemplate: {
@@ -10469,7 +10469,7 @@ footer = global.botnma
                                               hydratedButtons: [{
                                                   urlButton: {
                                                       displayText: '❰ ʏᴏᴜᴛᴜʙᴇ ❱' ,
-                                                      url: 'https://youtube.com/c/MRNIMAOFC'
+                                                      url: 'https://www.thivanka.lk'
                                                   }
                                               }, {
                                                   quickReplyButton: {
@@ -10515,7 +10515,7 @@ ${M_E} ${prefix}blockgc
                     
                 ]
                 let buttonMessage = {
-                    image: { url: 'https://telegra.ph/file/5e9592ed3d63a4ecc2ae6.jpg'},
+                    image: { url: 'https://telegra.ph/file/30ec9e93fa99d8d79bf53.jpg'},
                     caption: anu,
                     footer: footer,
                     buttons: buttons,
@@ -10533,7 +10533,7 @@ ${M_E} ${prefix}blockgc
                                               hydratedButtons: [{
                                                   urlButton: {
                                                       displayText: 'SUBSCRIBE',
-                                                      url: 'https://www.youtube.com/c/MRNIMAOFC'
+                                                      url: 'https://www.thivanka.lk'
                                                   }
                                               }, {
                                                   quickReplyButton: {
@@ -10644,7 +10644,7 @@ back = Lang.BACK_BUTTON
                     
                 ]
                 let buttonMessage = {
-                    image: { url: 'https://telegra.ph/file/f9ef7247406e4a86c3a77.jpg' },
+                    image: { url: 'https://telegra.ph/file/30ec9e93fa99d8d79bf53.jpg' },
                     caption: anu,
                     footer: footer,
                     buttons: buttons,
@@ -10652,7 +10652,7 @@ back = Lang.BACK_BUTTON
                 }
                ElisaBotMd.sendMessage(m.chat, buttonMessage, { quoted: m })
           
-                   /* message = await prepareWAMessageMedia({ image : { url: 'https://telegra.ph/file/f9ef7247406e4a86c3a77.jpg' } }, { upload:   ElisaBotMd.waUploadToServer })
+                   /* message = await prepareWAMessageMedia({ image : { url: 'https://telegra.ph/file/30ec9e93fa99d8d79bf53.jpg' } }, { upload:   ElisaBotMd.waUploadToServer })
                                   template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                                       templateMessage: {
                                           hydratedTemplate: {
@@ -10662,7 +10662,7 @@ back = Lang.BACK_BUTTON
                                               hydratedButtons: [{
                                                   urlButton: {
                                                       displayText: '❰ ʏᴏᴜᴛᴜʙᴇ ❱' ,
-                                                      url: 'https://youtube.com/c/MRNIMAOFC'
+                                                      url: 'https://www.thivanka.lk'
                                                   }
                                               }, {
                                                   quickReplyButton: {
@@ -10973,7 +10973,7 @@ const buttonMessage = {
     text: anu ,
     footer: 'Hello World',
     templateButtons: templateButtons,
-    image: {url: 'https://telegra.ph/file/348467f5557c3b1e15f37.jpg'}
+    image: {url: 'https://telegra.ph/file/30ec9e93fa99d8d79bf53.jpg'}
 }
 
 const sendMsg = await ElisaBotMd.sendMessage(m.chat, templateMessage)
@@ -10992,9 +10992,9 @@ const buttons = [
 
                 ]
             const buttonMessage = {
-                    image: { url: 'https://telegra.ph/file/348467f5557c3b1e15f37.jpg' },
+                    image: { url: 'https://telegra.ph/file/30ec9e93fa99d8d79bf53.jpg' },
                     caption: `🌍`,
-                    footer: `𝘘𝘜𝘌𝘌𝘕  𝘌𝘓𝘐𝘚𝘈  -  𝘝2`,
+                    footer: `Thivanka  Nirmal  -  𝘝2`,
                     buttons: buttons,
                     headerType: 4
                 }
@@ -11010,7 +11010,7 @@ const buttonMessage = {
     text: 'TEST111' ,
     footer: 'Hello World',
     templateButtons: templateButtons,
-    image: {url: 'https://telegra.ph/file/348467f5557c3b1e15f37.jpg'}
+    image: {url: 'https://telegra.ph/file/30ec9e93fa99d8d79bf53.jpg'}
 }
 
 const sendMsg = await ElisaBotMd.sendMessage(m.chat, buttonMessage)
@@ -11025,26 +11025,26 @@ const sendMsg = await ElisaBotMd.sendMessage(m.chat, buttonMessage)
 const msg = `*👸 𝑄𝑈𝐸𝐸𝑁 𝐸𝐿𝐼𝑆𝐴 𝑉2 👸*
 
 
-*👨‍💻 ᴅᴇᴠᴏʟᴏᴘᴇʀ :* ᴍʀ ɴɪᴍᴀ
+*👨‍💻 ᴅᴇᴠᴏʟᴏᴘᴇʀ :* ᴍʀ 𝚃𝙷𝙸𝚅𝙰
 *📡 ᴡᴇʙ ᴀᴘɪ :* ʙᴀɪʟɪʏᴇs
 *🦄 ᴡᴇʙsɪᴛᴇ :* http://www.queenelisa.42web.io
 
-*[ ɴɪᴍᴀ ]  💭*
-✓ ǫᴜᴇᴇɴ ᴇʟɪsᴀ ʙᴏᴛ ʙᴀsᴇ ɪs ɢᴏᴊᴏ , ᴛʜᴀɴᴋs ғᴏʀ ᴀʟʟ ʜᴇʟᴘᴇʀs | _@sᴀɴᴜᴡᴀ @sʟʀᴇᴀʟᴛᴇᴄʜ @ᴅᴀʀᴋᴀʟᴘʜᴀ  @ɪsᴜʀᴜ_ | *ғʀᴏ ʜᴇʟᴘs 💞*
-✓ ɴᴏ ᴀɴʏ ǫᴜᴇᴇɴ ᴇʟɪsᴀ ᴛᴇᴀᴍ
+*[ 𝚃𝙷𝙸𝚅𝙰 ]  💭*
+✓ ǫᴜᴇᴇɴ ᴇʟɪsᴀ ʙᴏᴛ ʙᴀsᴇ ɪs ɢᴏᴊᴏ , ᴛʜᴀɴᴋs ғᴏʀ ᴀʟʟ ʜᴇʟᴘᴇʀs | 𝙽𝙾 𝙷𝙴𝙻𝙿𝙴𝚁𝚂*
+✓ ɴᴏ ᴀɴʏ 𝚃𝙷𝙸𝚅𝙰𝙽𝙺𝙰 𝙽𝙸𝚁𝙼𝙰𝙻 ᴛᴇᴀᴍ
 
-*😎 ʜᴏᴡ ʏᴏᴜ ᴄᴀɴ ʜᴇʟᴘ ᴍʀ ɴɪᴍᴀ ᴏғᴄ*
+*😎 ʜᴏᴡ ʏᴏᴜ ᴄᴀɴ ʜᴇʟᴘ ᴍʀ 𝚃𝙷𝙸𝚅𝙰 ᴏғᴄ*
 
-*sᴜʙsᴄʀɪʙᴇ ʜɪs ᴄʜᴀɴɴᴇʟ : https://youtube.com/c/MRNIMAOFC*
+*sᴜʙsᴄʀɪʙᴇ ʜɪs ᴄʜᴀɴɴᴇʟ : https://www.thivanka.lk*
 `
     const templateButtons = [
-    {index: 1, urlButton: {displayText: '𝗕𝗢𝗧 𝗜𝗡𝗦𝗧𝗔𝗟𝗟', url: 'https://github.com/darkmakerofc/Queen-Elisa-Md-V2'}},
-    {index: 2, urlButton: {displayText: '𝗪𝗔𝗧𝗖𝗛 𝗩𝗜𝗗𝗘𝗢', url: G_LINK }},
-    {index: 3, quickReplyButton: {displayText: '𝗤𝘂𝗲𝗲𝗻 𝗘𝗹𝗶𝘀𝗮 𝗣𝘂𝗯𝗹𝗶𝗰 𝗚𝗿𝗼𝘂𝗽', id: 'publicgroup'}},
+    {index: 1, urlButton: {displayText: '𝗕𝗢𝗧 𝗜𝗡𝗦𝗧𝗔𝗟𝗟', url: 'https://github.com/thivankaonline'}},
+    {index: 2, urlButton: {displayText: '𝗠𝗬 𝗪𝗘𝗕𝗦𝗜𝗧𝗘', url: 'www.thivanka.lk'}},
+    {index: 3, quickReplyButton: {displayText: '𝗧𝗛𝗜𝗩𝗔𝗡𝗞𝗔.𝗹𝗸 𝗣𝘂𝗯𝗹𝗶𝗰 𝗚𝗿𝗼𝘂𝗽', id: 'publicgroup'}},
 ]
 
 const templateMessage = {
-    image: {url: 'https://telegra.ph/file/7390dd698fa45dacbdba8.jpg'},
+    image: {url: 'https://telegra.ph/file/30ec9e93fa99d8d79bf53.jpg'},
     caption: msg,
     footer: 'ǫᴜᴇᴇɴ ᴇʟɪsᴀ ᴡᴀ ʙᴏᴛ ᴍᴅ',
     templateButtons: templateButtons,
@@ -11078,21 +11078,21 @@ await ElisaBotMd.sendMessage(from, { react: { text: `💖`, key: m.key }})
                           await ElisaBotMd.sendMessage(from, { react: { text: `❤`, key: m.key }})
                   reply(`*𝚃𝚑𝚊𝚗𝚔𝚜 𝚏𝚛𝚘 𝚌𝚑𝚘𝚘𝚜𝚒𝚗𝚐 𝙴𝚕𝚒𝚜𝚊 𝙱𝚘𝚝 𝙼𝚍 💞*
                   
-𝙿𝚕𝚎𝚊𝚜𝚎 𝚂𝚞𝚋𝚜𝚌𝚛𝚒𝚋𝚎 𝙼𝚁 𝙽𝙸𝙼𝙰 𝚈𝚃 𝙲𝙷𝙰𝙽𝙽𝙴𝙻 : *https://www.youtube.com/c/MRNIMAOFC*
+𝙿𝚕𝚎𝚊𝚜𝚎 𝚂𝚞𝚋𝚜𝚌𝚛𝚒𝚋𝚎 𝙼𝚁 𝙽𝙸𝙼𝙰 𝚈𝚃 𝙲𝙷𝙰𝙽𝙽𝙴𝙻 : *https://www.thivanka.lk*
 *𝚒𝚏 𝚈𝚘𝚞 𝚆𝚊𝚗𝚝 𝙼𝚊𝚔𝚎 𝙱𝚘𝚝 𝚟𝚒𝚍𝚎𝚘 𝚒𝚗 𝚖𝚢 𝚌𝚑𝚊𝚗𝚗𝚎𝚕 ♥️*
                   `)
                   }
                   break
                   case 'publicgroup' : {
                    const anu = await fetchJson ('https://github.com/DarkMakerofc/UPLOADS/raw/main/JSON/elisadetails.json')
-const msg =  `*👸 𝚀𝚄𝙴𝙴𝙽 𝙴𝙻𝙸𝚂𝙰 𝙿𝚄𝙱𝙻𝙸𝙲 𝙶𝚁𝙾𝚄𝙿 👸*
+const msg =  `*👸 𝚃𝙷𝙸𝚅𝙰𝙽𝙺𝙰 𝙽𝙸𝚁𝙼𝙰𝙻 𝙿𝚄𝙱𝙻𝙸𝙲 𝙶𝚁𝙾𝚄𝙿 👸*
 
 ${anu.PUBLIC_GROUP_RULES}
 
 `
 const templateButtons = [
-    {index: 1, urlButton: {displayText: 'ᴊᴏɪɴ ɴᴏᴡ', url: 'https://chat.whatsapp.com/BbIpvkRD4qP6xKckb8cpT0'}},
-    {index: 2, urlButton: {displayText: 'sᴜʙsᴄʀɪʙᴇ', url: 'https://youtube.com/c/MRNIMAOFC'}}
+    {index: 1, urlButton: {displayText: 'ᴊᴏɪɴ ɴᴏᴡ', url: 'https://chat.whatsapp.com/KnmiFeP48AX7fJbRH1anMc'}},
+    {index: 2, urlButton: {displayText: 'sᴜʙsᴄʀɪʙᴇ', url: 'https://www.thivanka.lk'}}
     
     ]
 
