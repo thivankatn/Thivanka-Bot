@@ -4026,7 +4026,7 @@ if (search.all[0].type == 'channel') {
  ]
             const buttonMessage = {
                     image: { url: search.all[1].thumbnail },
-                    caption: `⫷⦁[ *👸 𝙴𝙻𝙸𝚂𝙰 𝚈𝚃 𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳𝙴𝚁 👸* ]⦁⫸
+                    caption: `⫷⦁[ *👸 𝚃𝙷𝙸𝚅𝙰𝙽𝙺𝙰 𝚈𝚃 𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳𝙴𝚁 👸* ]⦁⫸
 
 *ᴀʙᴏᴜᴛ ʏᴏᴜʀ ʀᴇsᴜʟᴛ...*
 
@@ -4054,7 +4054,7 @@ if (search.all[0].type == 'channel') {
 ]
             const buttonMessage = {
                     image: { url: search.all[0].thumbnail },
-                    caption:   `⫷⦁[ *👸 𝙴𝙻𝙸𝚂𝙰 𝚈𝚃 𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳𝙴𝚁 👸* ]⦁⫸
+                    caption:   `⫷⦁[ *👸 𝚃𝙷𝙸𝚅𝙰𝙽𝙺𝙰 𝚈𝚃 𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳𝙴𝚁 👸* ]⦁⫸
 
 *ᴀʙᴏᴜᴛ ʏᴏᴜʀ ʀᴇsᴜʟᴛ...*
 
@@ -4095,7 +4095,7 @@ const hdpid = rash.hddlid
                                   yts(s2vid).then(async (search) => {  
                                   for (let i of search.all)   
                                   views = search.all[0].views
-                                      ngen = '⫷⦁[ *👸 𝙴𝙻𝙸𝚂𝙰 𝚅𝙸𝙳𝙴𝙾 𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳𝙴𝚁 👸* ]⦁⫸\n\n*ᴀʙᴏᴜᴛ ʏᴏᴜʀ ʀᴇsᴜʟᴛ...*\n\n ➥ ᴛɪᴛʟᴇ - '+search.all[0].title+'\n\n ➥ ᴠɪᴇᴡs - '+views+'\n\n ➥ ᴅᴜʀᴀᴛɪᴏɴ - '+search.all[0].timestamp+'\n\n ➥ ᴜᴘʟᴏᴀᴅ ᴏɴ - '+search.all[0].ago+'\n\n ➥ ᴜʀʟ - '+search.all[0].url
+                                      ngen = '⫷⦁[ *👸 𝚃𝙷𝙸𝚅𝙰𝙽𝙺𝙰 𝚅𝙸𝙳𝙴𝙾 𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳𝙴𝚁 👸* ]⦁⫸\n\n*ᴀʙᴏᴜᴛ ʏᴏᴜʀ ʀᴇsᴜʟᴛ...*\n\n ➥ ᴛɪᴛʟᴇ - '+search.all[0].title+'\n\n ➥ ᴠɪᴇᴡs - '+views+'\n\n ➥ ᴅᴜʀᴀᴛɪᴏɴ - '+search.all[0].timestamp+'\n\n ➥ ᴜᴘʟᴏᴀᴅ ᴏɴ - '+search.all[0].ago+'\n\n ➥ ᴜʀʟ - '+search.all[0].url
 
             	
                 
@@ -4155,7 +4155,7 @@ const docidd = rash.doccmd
                 ]
             const buttonMessage = {
                     image: { url: search.all[0].thumbnail },
-                    caption: `⫷⦁[ *👸 𝙴𝙻𝙸𝚂𝙰 𝚂𝙾𝙽𝙶 𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳𝙴𝚁 👸* ]⦁⫸
+                    caption: `⫷⦁[ *👸 𝚃𝙷𝙸𝚅𝙰𝙽𝙺𝙰 𝚂𝙾𝙽𝙶 𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳𝙴𝚁 👸* ]⦁⫸
 
 *ᴀʙᴏᴜᴛ ʏᴏᴜʀ ʀᴇsᴜʟᴛ...*
 
@@ -4204,7 +4204,7 @@ if (search.all[0].type == 'channel') {
                 ]
             const buttonMessage = {
                     image: { url: search.all[1].thumbnail },
-                    caption: `⫷⦁[ *👸 𝙴𝙻𝙸𝚂𝙰 𝚅𝙸𝙳𝙴𝙾 𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳𝙴𝚁 👸* ]⦁⫸
+                    caption: `⫷⦁[ *👸 𝚃𝙷𝙸𝚅𝙰𝙽𝙺𝙰 𝚅𝙸𝙳𝙴𝙾 𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳𝙴𝚁 👸* ]⦁⫸
 
 *ᴀʙᴏᴜᴛ ʏᴏᴜʀ ʀᴇsᴜʟᴛ...*
 
@@ -4237,7 +4237,7 @@ const hdpid = rash.hddlid
                 ]
             const buttonMessage = {
                     image: { url: search.all[0].thumbnail },
-                    caption:   `⫷⦁[ *👸 𝙴𝙻𝙸𝚂𝙰 𝚅𝙸𝙳𝙴𝙾 𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳𝙴𝚁 👸* ]⦁⫸
+                    caption:   `⫷⦁[ *👸 𝚃𝙷𝙸𝚅𝙰𝙽𝙺𝙰 𝚅𝙸𝙳𝙴𝙾 𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳𝙴𝚁 👸* ]⦁⫸
 
 *ᴀʙᴏᴜᴛ ʏᴏᴜʀ ʀᴇsᴜʟᴛ...*
 
@@ -4973,7 +4973,7 @@ const hdpid = rash.hddlid
                                           { buttonId: `${hdpid} ${text}`, buttonText: { displayText: '720p' }, type: 1 }
                                       
                                       ]
-                                      await ElisaBotMd.sendButtonText(m.chat, buttons, YTMASS, `𝙶𝙴𝙽𝙴𝚁𝙰𝚃𝙴𝙳 𝙱𝚈 𝙴𝙻𝙸𝚂𝙰 𝙱𝙾𝚃 ` ,m)
+                                      await ElisaBotMd.sendButtonText(m.chat, buttons, YTMASS, `𝙶𝙴𝙽𝙴𝚁𝙰𝚃𝙴𝙳 𝙱𝚈 𝚃𝙷𝙸𝚅𝙰𝙽𝙺𝙰 𝙱𝙾𝚃 ` ,m)
                                   }
                                   break
                                   case 'audioselecttypebutton': {  
@@ -4997,7 +4997,7 @@ const docidd = rash.doccmd
                                           { buttonId: `${docidd} ${text}`, buttonText: { displayText: '📁 DOCUMENT 📁' }, type: 1 },
                                           { buttonId: `${audidd} ${text}`, buttonText: { displayText: '🎧 AUDIO 🎧' }, type: 1 }
                                       ]
-                                      await ElisaBotMd.sendButtonText(m.chat, buttons, YTMASS, `𝙶𝙴𝙽𝙴𝚁𝙰𝚃𝙴𝙳 𝙱𝚈 𝙴𝙻𝙸𝚂𝙰 𝙱𝙾𝚃 ` ,m)
+                                      await ElisaBotMd.sendButtonText(m.chat, buttons, YTMASS, `𝙶𝙴𝙽𝙴𝚁𝙰𝚃𝙴𝙳 𝙱𝚈 𝚃𝙷𝙸𝚅𝙰𝙽𝙺𝙰 𝙱𝙾𝚃 ` ,m)
                                   }
                                   break
                                   case 'ytmp4' : {
@@ -8979,7 +8979,7 @@ break
                                       
 👋 𝗛𝗶  ${pushname}
 
-╭──────[ 𝙴𝙻𝙸𝚂𝙰 𝙱𝙾𝚃 𝙼𝙳 ]
+╭──────[ 𝚃𝙷𝙸𝚅𝙰𝙽𝙺𝙰 𝙱𝙾𝚃 𝙼𝙳 ]
 │
 │ *𝙱𝙾𝚃 𝙽𝙰𝙼𝙴* : ${global.botnma}
 │
