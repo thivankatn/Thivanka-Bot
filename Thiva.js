@@ -8336,10 +8336,7 @@ break
 case 'menu': case 'panel':{
   const anu = await fetchJson ('https://github.com/ThivankaOnline/UPLOADS/raw/main/JSON/elisadetails.json')
   const NIMAMSG = anu.MENU_NOTE
-  const start = new Date().getTime()
   await ElisaBotMd.sendMessage(from, { react: { text: `📃`, key: m.key }})
-  const end = new Date().getTime()
-  const ping = end - start
   const menuimg = ['https://telegra.ph/file/30ec9e93fa99d8d79bf53.jpg','https://telegra.ph/file/30ec9e93fa99d8d79bf53.jpg','https://telegra.ph/file/30ec9e93fa99d8d79bf53.jpg','https://telegra.ph/file/30ec9e93fa99d8d79bf53.jpg','https://telegra.ph/file/30ec9e93fa99d8d79bf53.jpg','https://telegra.ph/file/30ec9e93fa99d8d79bf53.jpg']
   const result = menuimg[Math.floor(Math.random() * menuimg.length)]   
   const url = `https://api.tiodevhost.my.id/api/maker/resize?url=${result}&width=300&height=250`
