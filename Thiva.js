@@ -8646,52 +8646,8 @@ ElisaBotMd.readMessages([m.key])
 await ElisaBotMd.sendPresenceUpdate('recording', m.chat) 
 await ElisaBotMd.sendMessage(m.chat, { audio: {url :'https://github.com/ThivankaOnline/UPLOADS/raw/main/VOICE/alive.mp3'}, mimetype: 'audio/mp4', ptt: true }, { quoted: m }) 
            
-if (global.db.data.settings[botNumber].alive){
-await ElisaBotMd.sendMessage(from, { react: { text: `👋`, key: m.key }})
-                 
-                                 let buttons = [
-                    {buttonId: `menu`, buttonText: {displayText: '𝙼𝙴𝙽𝚄'}, type: 1},
-                    {buttonId: `status`, buttonText: {displayText: '𝚂𝚃𝙰𝚃𝚄𝚂'}, type: 1},
-                    {buttonId: `owner`, buttonText: {displayText: '𝙾𝚆𝙽𝙴𝚁'}, type: 1}
-                    
-                ]
-                let buttonMessage = {
-                    image: { url: global.db.data.settings[botNumber].LOGO },
-                    caption: global.db.data.settings[botNumber].MASSAGE,
-                    footer: global.botnma,
-                    buttons: buttons,
-                    headerType: 4
-                }
-              await ElisaBotMd.sendMessage(m.chat, buttonMessage, { quoted: m })
-      
-//reply(global.db.data.settings[botNumber].MASSAGE + '\n' + global.db.data.settings[botNumber].LOGO)
-} else {
-//reply('Default Alive')
-const ita = '```'
-              await ElisaBotMd.sendMessage(from, { react: { text: `👋`, key: m.key }})
-              
-                 let buttons = [
-                    {buttonId: `menu`, buttonText: {displayText: 'menu'}, type: 1},
-                    {buttonId: `status`, buttonText: {displayText: 'Connection'}, type: 1},
-                    {buttonId: `owner`, buttonText: {displayText: 'my number'}, type: 1}
-                    
-                ]
-                let buttonMessage = {
-                    image: { url: global.alivelogo },
-                    caption:`${ita} Hi... THIVANKA Bot is Online ${ita}
 
-Please inform your problem via info@thivanka.lk or you can solve your problem using www.thivanka.lk.
 
-${ita}💗 welcome again 💗${ita}
-`,
-                    footer: global.botnma,
-                    buttons: buttons,
-                    headerType: 4
-                }
-              await ElisaBotMd.sendMessage(m.chat, buttonMessage, { quoted: m })
-         
-
-}
 }
 break
 case 'deletemessage' : {
