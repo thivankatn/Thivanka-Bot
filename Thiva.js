@@ -9037,15 +9037,15 @@ const sendListMsg = require('@adiwajshing/baileys')
   const menuimg = ['https://telegra.ph/file/30ec9e93fa99d8d79bf53.jpg','https://telegra.ph/file/30ec9e93fa99d8d79bf53.jpg','https://telegra.ph/file/30ec9e93fa99d8d79bf53.jpg','https://telegra.ph/file/30ec9e93fa99d8d79bf53.jpg','https://telegra.ph/file/30ec9e93fa99d8d79bf53.jpg','https://telegra.ph/file/30ec9e93fa99d8d79bf53.jpg']
   
  
- 
-    
-*Hi... I am digitel assistent.*
+ desmsg = `
+Hi... I am digitel assistent
 
 Please inform your problem via info@thivanka.lk or you can solve your problem using www.thivanka.lk.
 
 *Visit my website*:-www.thivanka.lk
 Use This Menu Fix your Problems 👇
-            
+        `
+    
           let sections = [{
 
          "title": "ʙᴏᴛ ʟɪsᴛ ᴍᴇɴᴜ ᴄʟɪᴄᴋ ᴀɴᴅ sᴇʟᴇᴄᴛ ʏᴏᴜʀ ᴏᴡɴ",
