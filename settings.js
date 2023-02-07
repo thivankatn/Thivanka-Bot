@@ -30,7 +30,7 @@ global.cap = '𝙏𝙃𝙄𝙑𝘼𝙉𝙆𝘼 𝙉𝙄𝙍𝙈𝘼𝙇'
 //👇 Do you want show time on your bio use "on" want desable use "off"
 global.AUTO_BIO =  'on'
 //👇 Inbox massage block PM block
-global.INBOX_BLOCK =  'off'
+global.INBOX_BLOCK =  'on'
 //👇 Auto react 
 global.AUTO_REACT =  'false'
 //👇 Bad word Auto delete ( you must add bad words )
