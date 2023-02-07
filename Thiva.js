@@ -2684,23 +2684,16 @@ break
                               break
                               
                           case 'donasi': case 'donate': case 'sewabot': case 'sewa': case 'buypremium': case 'donate': {
-                                  ElisaBotMd.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/30ec9e93fa99d8d79bf53.jpg' }, caption: `*𝗛𝗜 𝗕𝗥𝗢 ${m.pushName}*
-*BOT NAME :* _THIVANKA Nirmal V2_
+                                  ElisaBotMd.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/30ec9e93fa99d8d79bf53.jpg' }, caption: `*𝗛i.. ${m.pushName}*
+*BOT NAME :* _THIVANKA Nirmal_
 *OWNER :* _MR Thiva_
 *TEAM :* _NO TEAM_
 
-*●═─═─═─═─═─═─═─═─═─═─═☐*
+*●═─═─═─═─═─═─═─═─═☐*
 
-*ᴛʜᴀᴋs ᴛᴏ  💞*
+This is Free service
 
-ɢᴏᴊᴏ  -  ғʀᴏ sᴄʀɪᴘᴛ
-sʟ ʀᴇᴀʟ ᴛᴇᴀᴄʜ - ғʀᴏ ʜᴇʟᴘ
-ᴅᴀʀᴋ ᴀʟᴘʜᴀ - ғʀᴏ ʜᴇʟᴘ
-sᴀɴᴜᴡᴀ - ғʀᴏ ʜᴇʟᴘ
-ɪsᴜʀᴜ - ғʀᴏ ʜᴇʟᴘ
-
-
-© 𝚃𝚑𝚒𝚟𝚊𝚗𝚔𝚊 𝙽𝚒𝚛𝚖𝚊𝚕 𝙿𝚞𝚋𝚕𝚒𝚌 𝙴𝚕𝚍𝚒𝚝𝚒𝚘𝚗` }, { quoted: m })
+© Thivanka Nirmal` }, { quoted: m })
                               }   // https://i.ibb.co/MhqzZj8/Darkmekcersilverownerfrofilepgoto.jpg
                               break
                               
@@ -2742,7 +2735,7 @@ sᴀɴᴜᴡᴀ - ғʀᴏ ʜᴇʟᴘ
                               break
                           
                           
-                              case 'ping' : case 'ping2' : {
+                              case 'ping5' : case 'ping6' : {
                               const start = new Date().getTime()
   await ElisaBotMd.sendText(m.chat, '*📡  ʀᴜɴɪɴɢ ʀᴇsᴘᴏɴᴅ...*')
   const end = new Date().getTime()
@@ -2757,7 +2750,7 @@ sᴀɴᴜᴡᴀ - ғʀᴏ ʜᴇʟᴘ
                 m_reply(`${m.pushName} *Already Afk*${text ? ': ' + text : ''}`)
             }
             break	
-  case 'botstatus' : case 'status' : {
+  case 'botstatus1' : case 'status1' : {
  const start = new Date().getTime()
  await ElisaBotMd.sendMessage(from, { react: { text: `⚧️`, key: m.key }})
  const end = new Date().getTime()
@@ -8333,7 +8326,7 @@ break
                                       ElisaBotMd.sendImage(m.chat, data.url, mess.success, m)
                                       })
                                       break
-case 'menu': case 'panel':{
+case 'menu1': case 'panel':{
   const anu = await fetchJson ('https://github.com/ThivankaOnline/UPLOADS/raw/main/JSON/elisadetails.json')
   const NIMAMSG = anu.MENU_NOTE
   await ElisaBotMd.sendMessage(from, { react: { text: `📃`, key: m.key }})
@@ -8641,7 +8634,7 @@ let buttonMessage = {
                               }
                               break
 
-case 'alive' : {
+case 'alive1' : {
 ElisaBotMd.readMessages([m.key])
 await ElisaBotMd.sendPresenceUpdate('recording', m.chat) 
 await ElisaBotMd.sendMessage(m.chat, { audio: {url :'https://github.com/ThivankaOnline/UPLOADS/raw/main/VOICE/alive.mp3'}, mimetype: 'audio/mp4', ptt: true }, { quoted: m }) 
@@ -10941,38 +10934,26 @@ const buttonMessage = {
 const sendMsg = await ElisaBotMd.sendMessage(m.chat, buttonMessage)
     
       }     */ 
-                  case 'about': {
+                  case 'info': {
                   anu = await fetchJson('https://github.com/ThivankaOnline/UPLOADS/raw/main/JSON/elisadetails.json')
                     G_LINK = anu.PUBLIC_GROUP
                  //const anu2 = await axios.get(`https://github.com/ThivankaOnline/UPLOADS/raw/main/JSON/elisadetails.json`)
                  
                  
-const msg = `*👸 My About 👸*
+const msg = `*My About*
 
 
 My name :- thivankaonline
 Contact No :- 0768211424
 
-    const templateButtons = [
-    {index: 1, urlButton: {displayText: 'Github', url: 'https://github.com/thivankaonline'}},
-    {index: 2, urlButton: {displayText: 'Website', url: 'www.thivanka.lk'}},
-    {index: 3, quickReplyButton: {displayText: 'Group', id: 'publicgroup'}},
-]
 
-const templateMessage = {
-    image: {url: 'https://telegra.ph/file/30ec9e93fa99d8d79bf53.jpg'},
-    caption: msg,
-    footer: 'ǫᴜᴇᴇɴ ᴇʟɪsᴀ ᴡᴀ ʙᴏᴛ ᴍᴅ',
-    templateButtons: templateButtons,
-    headerType: 4
-}
-     
-     
-${anu.PUBLIC_GROUP_RULES}
+About:-
 
-`
+Thivanka Nirmal (Sinhalese: තිවංක නිර්මාල්) is a famous Information Technology Journalist, Web developer, Music Composer, Singer, Music Producer, Digital Media / Social Media Consultant & Analyst, and Social Media Strategist in Sri Lanka.
+     
+
 const templateButtons = [
-    {index: 1, urlButton: {displayText: 'ᴊᴏɪɴ ɴᴏᴡ', url: 'https://chat.whatsapp.com/KnmiFeP48AX7fJbRH1anMc'}},
+    {index: 1, urlButton: {displayText: '𝙼𝚘𝚛𝚎 𝙰𝚋𝚘𝚞𝚝', url: 'https://www.thivanka.lk/thivankaonline'}},
     {index: 2, urlButton: {displayText: 'sᴜʙsᴄʀɪʙᴇ', url: 'https://www.thivanka.lk'}}
     
     ]
