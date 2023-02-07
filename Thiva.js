@@ -8333,7 +8333,7 @@ break
                                       ElisaBotMd.sendImage(m.chat, data.url, mess.success, m)
                                       })
                                       break
-case 'menu1': case 'panel1':{
+case 'thiva': case 'panel1':{
   const anu = await fetchJson ('https://github.com/ThivankaOnline/UPLOADS/raw/main/JSON/elisadetails.json')
   const NIMAMSG = anu.MENU_NOTE
   const start = new Date().getTime()
@@ -9082,7 +9082,7 @@ break
                               ElisaBotMd.relayMessage(m.chat, template.message, { messageId: template.key.id })
                               }
                               break*/
-case 'command': case 'thiva' : case 'cmd' : { 
+case 'command': case 'list1' : case 'cmd' : { 
 const sendListMsg = require('@adiwajshing/baileys')
  await ElisaBotMd.sendMessage(from, { react: { text: `🗒️`, key: m.key }})
                   const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }
