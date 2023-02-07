@@ -9034,8 +9034,7 @@ const sendListMsg = require('@adiwajshing/baileys')
                   ram0 = `${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(require('os').totalmem / 1024 / 1024)}MB`
                   
  
-  const menuimg = ['https://telegra.ph/file/30ec9e93fa99d8d79bf53.jpg','https://telegra.ph/file/30ec9e93fa99d8d79bf53.jpg','https://telegra.ph/file/30ec9e93fa99d8d79bf53.jpg','https://telegra.ph/file/30ec9e93fa99d8d79bf53.jpg','https://telegra.ph/file/30ec9e93fa99d8d79bf53.jpg','https://telegra.ph/file/30ec9e93fa99d8d79bf53.jpg']
-  
+image: { url: 'https://telegra.ph/file/30ec9e93fa99d8d79bf53.jpg'}
  
  desmsg = `
 Hi... I am digitel assistent
