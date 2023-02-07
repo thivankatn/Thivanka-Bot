@@ -9034,23 +9034,17 @@ const sendListMsg = require('@adiwajshing/baileys')
                   ram0 = `${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(require('os').totalmem / 1024 / 1024)}MB`
                   
  
-desmsg = `╭╌┄┄『 *USER DETAILS* 』
-┊ ▢ 𝙽𝚄𝙼𝙱𝙴𝚁 :  ${m.sender.split('@')[0]}
-┊ ▢ 𝙽𝙰𝙼𝙴 :  ${m.pushName}
-╰ ┄┬┄┄┄◯
-╭┄ ┴┄『 *BOT DETAILS* 』
-┊ ▢  𝙽𝙰𝙼𝙴 : ${global.botnma}
-┊ ▢  𝙽𝚄𝙼𝙱𝙴𝚁 : ${botNumber.split('@')[0]}
-┊ ▢  𝙷𝙾𝚂𝚃 𝙾𝙽 : heroku 
-┊ ▢  𝚆𝙴𝙱 : opera
-╰┄┬┄╌╌╌┄◯
-╭┄┴┄┄『 *ABOUT SYSTEM* 』
-┊ ▢  𝙿𝚁𝙴𝙵𝙸𝚇 : ${prefix}
-┊ ▢  𝚃𝙸𝙼𝙴 : ${time}
-┊ ▢  𝙳𝙰𝚃𝙴 : ${date}
-┊ ▢  𝚁𝙰𝙼 𝚄𝚂𝙰𝙶𝙴 : ${ram0}
-╰┄┄┄┄┄┄┄┄┄◯`
+  const menuimg = ['https://telegra.ph/file/30ec9e93fa99d8d79bf53.jpg','https://telegra.ph/file/30ec9e93fa99d8d79bf53.jpg','https://telegra.ph/file/30ec9e93fa99d8d79bf53.jpg','https://telegra.ph/file/30ec9e93fa99d8d79bf53.jpg','https://telegra.ph/file/30ec9e93fa99d8d79bf53.jpg','https://telegra.ph/file/30ec9e93fa99d8d79bf53.jpg']
+  
+ 
+ 
     
+*Hi... I am digitel assistent.*
+
+Please inform your problem via info@thivanka.lk or you can solve your problem using www.thivanka.lk.
+
+*Visit my website*:-www.thivanka.lk
+Use This Menu Fix your Problems 👇
             
           let sections = [{
 
@@ -10941,7 +10935,7 @@ const buttonMessage = {
 const sendMsg = await ElisaBotMd.sendMessage(m.chat, buttonMessage)
     
       }     */ 
-                  case 'about': {
+                  case 'about1': {
                   anu = await fetchJson('https://github.com/ThivankaOnline/UPLOADS/raw/main/JSON/elisadetails.json')
                     G_LINK = anu.PUBLIC_GROUP
                  //const anu2 = await axios.get(`https://github.com/ThivankaOnline/UPLOADS/raw/main/JSON/elisadetails.json`)
