@@ -11027,7 +11027,6 @@ const templateMessage = {
      
                  break
                   case 'thank':   {
-                          await ElisaBotMd.sendMessage(from, { react: { text: `❤`, key: m.key }})
                   reply(`*𝚃𝚑𝚊𝚗𝚔𝚜 𝚏𝚛𝚘 𝚌𝚑𝚘𝚘𝚜𝚒𝚗g Thivanka bot 💞*
                   
 𝙿𝚕𝚎𝚊𝚜𝚎 𝚂𝚞𝚋𝚜𝚌𝚛𝚒𝚋𝚎 𝙼𝚁 Thivanka 𝚈𝚃 𝙲𝙷𝙰𝙽𝙽𝙴𝙻 : *https://www.thivanka.lk*
