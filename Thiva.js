@@ -424,34 +424,7 @@ if (m.message) {
 
       
 
-	//reset limit every 12 hours\\
-        let cron = require('node-cron')
-        cron.schedule('00 12 * * *', () => {
-            let user = Object.keys(global.db.data.users)
-            let limitUser = isPremium ? global.limitawal.premium : global.limitawal.free
-            for (let jid of user) global.db.data.users[jid].limit = limitUser
-            console.log('Limit Reseted')
-        }, {
-            scheduled: true,
-            timezone: "Asia/Kolkata"
-        })
-        
-	//auto set bio\\
-	if (global.db.data.settings[botNumber].autobio && global.AUTO_BIO == 'on') {
-	    let setting = global.db.data.settings[botNumber]
-	    if (new Date() * 1 - setting.status > 1000) {
-		let uptime = await runtime(process.uptime())
-		
-		const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }
-           var utch = new Date().toLocaleDateString( get_localized_date)
-           var time = new Date().toLocaleString('HI', { timeZone: 'Asia/Colombo' }).split(' ')[1]
-           const biography = '📅 ' + utch + '\n⌚ ' + time + '\n\n'+ElisaBotMd.user.name
 
-      
-		await ElisaBotMd.setStatus(biography)
-		setting.status = new Date() * 1
-	    }
-	}
 
 	   
 /// AUTO STICKER COSTEM SEND \\\
