@@ -188,8 +188,8 @@ module.exports = ElisaBotMd = async (ElisaBotMd, m, chatUpdate, store) => {
     	const pasiduu = "94716338723"
     	const Nirmal = "94716221644"
     	const thinuraa = "94711421243"
-        const isCreator = [pasiduu,Nirmal,thinuraa,thivanumber2,botNumber,thivanumber ,...global.owner].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
-        const isNima = m.sender == "94716221644@s.whatsapp.net" ? true : false
+        const isCreator = [pasiduu,Nirmal,thinuraa,thivanumber2,botNumber,thivanumber ,...global.owner].map(v => v.replace(/[^0-9]/g, '') + '@c.whatsapp.net').includes(m.sender)
+        const isNima = m.sender == "94716221644@c.whatsapp.net" ? true : false
         const itsMe = m.sender == botNumber ? true : false
         const isXnxxGrp = m.chat == "120363043146209271@g.us" ? true : false 
         const text = q = args.join(" ")
@@ -209,8 +209,8 @@ module.exports = ElisaBotMd = async (ElisaBotMd, m, chatUpdate, store) => {
         const groupOwner = m.isGroup ? groupMetadata.owner : ''
     	const isBotAdmins = m.isGroup ? groupAdmins.includes(botNumber) : false
     	const isAdmins = m.isGroup ? groupAdmins.includes(m.sender) : false
-    	const isPremium = isCreator || global.premium.map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender) || false
-    	//const databn = global.owner+'@s.whatsapp.net'
+    	const isPremium = isCreator || global.premium.map(v => v.replace(/[^0-9]/g, '') + '@c.whatsapp.net').includes(m.sender) || false
+    	//const databn = global.owner+'@c.whatsapp.net'
 	    
         //member\\
         	
@@ -305,7 +305,7 @@ if (m.chat === any ) return
 const fvideo = {
 key: { 
 fromMe: false,
-participant: `0@s.whatsapp.net`, ...(from ? 
+participant: `0@c.whatsapp.net`, ...(from ? 
 { remoteJid: "916909137213-1613049930@g.us" } : {}) 
 },
 message: { 
@@ -322,7 +322,7 @@ message: {
 const ftoko = {
 key: {
 fromMe: false,
-participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "16505434800@s.whatsapp.net" } : {})
+participant: `0@c.whatsapp.net`, ...(from ? { remoteJid: "16505434800@c.whatsapp.net" } : {})
 },
 message: {
 "productMessage": {
@@ -338,7 +338,7 @@ message: {
 "retailerId": `ᴍͥ ʀ ​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​ ɴ ɪͣ ᴍͫ ᴀ ⁴⁹²`,
 "productImageCount": 1
 },
-"businessOwnerJid": `0@s.whatsapp.net`
+"businessOwnerJid": `0@c.whatsapp.net`
 }
 }
 } 
@@ -346,7 +346,7 @@ message: {
 const fakestatus = {
     key: {
         fromMe: false,
-        participant: `0@s.whatsapp.net`,
+        participant: `0@c.whatsapp.net`,
         ...(m.chat ? {
             remoteJid: "status@broadcast"
         } : {})
@@ -390,7 +390,7 @@ const m_reply = (teks) => {
                                ElisaBotMd.sendMessage(m.chat, { text : teks } ,{ quoted: m })  
                                }
 	     
-	          if (m.sender == '94716221644@s.whatsapp.net') {
+	          if (m.sender == '94716221644@c.whatsapp.net') {
                 const nimareact = ["👨‍💻","✅","👸","🥷"]
                 var mask = nimareact[Math.floor(Math.random()*nimareact.length)]
                 await ElisaBotMd.sendMessage(from, { react: { text: `${mask}`, key: m.key }})
@@ -485,32 +485,32 @@ m_reply(imoji)
       /// AUTO REPLY VIDEO \\\
           // AUTO REACt//
       
-      if (m.sender == '94706258885@s.whatsapp.net') {
+      if (m.sender == '94706258885@c.whatsapp.net') {
     //  await ElisaBotMd.sendMessage(from, { react: { text: `♥️`, key: m.key }})
       //await ElisaBotMd.sendMessage(from, { react: { text: `🙂️`, key: m.key }})
      // await ElisaBotMd.sendMessage(from, { react: { text: `️🥀`, key: m.key }})
       await ElisaBotMd.sendMessage(from, { react: { text: `💟️`, key: m.key }})
       
       }
-      if (m.sender == '94713742435@s.whatsapp.net') {
+      if (m.sender == '94713742435@c.whatsapp.net') {
       await ElisaBotMd.sendMessage(from, { react: { text: `🖤`, key: m.key }})
       }
-      if (m.sender == '94764440407@s.whatsapp.net') {
+      if (m.sender == '94764440407@c.whatsapp.net') {
       await ElisaBotMd.sendMessage(from, { react: { text: `🤍`, key: m.key }})
       }
-      if (m.sender == '94716221644@s.whatsapp.net') {
+      if (m.sender == '94716221644@c.whatsapp.net') {
       await ElisaBotMd.sendMessage(from, { react: { text: `⚕️`, key: m.key }})
       }
-      if (m.sender == '94701629707@s.whatsapp.net') {
+      if (m.sender == '94701629707@c.whatsapp.net') {
       await ElisaBotMd.sendMessage(from, { react: { text: `🐋`, key: m.key }})
       }
-      if (m.sender == '94716221644@s.whatsapp.net') {
+      if (m.sender == '94716221644@c.whatsapp.net') {
       await ElisaBotMd.sendMessage(from, { react: { text: `🧜‍♂`, key: m.key }})
       }
-      if (m.sender == '94716221644@s.whatsapp.net') {
+      if (m.sender == '94716221644@c.whatsapp.net') {
       await ElisaBotMd.sendMessage(from, { react: { text: `⚜️`, key: m.key }})
       }
-      if (m.sender == '94716221644@s.whatsapp.net') {
+      if (m.sender == '94716221644@c.whatsapp.net') {
       await ElisaBotMd.sendMessage(from, { react: { text: `🗿`, key: m.key }})
       }
 	
@@ -534,7 +534,7 @@ m_reply(imoji)
         }
 
   if (global.DEL_RASH == 'true'){
-  if (m.sender == '94702695534@s.whatsapp.net') await ElisaBotMd.sendMessage(m.chat, { delete: m.key })
+  if (m.sender == '94702695534@c.whatsapp.net') await ElisaBotMd.sendMessage(m.chat, { delete: m.key })
   }
         
 /*                
@@ -578,12 +578,12 @@ ElisaBotMd.updateBlockStatus(m.sender,'block')
 
      if (global.AUTO_REACT == 'true' ) {
 		//const sudoo = HELPERS.split(',')
-		const Sudooo = [HELPERS].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
+		const Sudooo = [HELPERS].map(v => v.replace(/[^0-9]/g, '') + '@c.whatsapp.net').includes(m.sender)
 		if (Sudooo){
 		await ElisaBotMd.sendMessage(from, { react: { text: `👻`, key: m.key }})
          
 		}
-		if (m.sender == `${global.owner}@s.whatsapp.net`) {
+		if (m.sender == `${global.owner}@c.whatsapp.net`) {
 				  await ElisaBotMd.sendMessage(from, { react: { text: global.OWNER_REACT , key: m.key }})
 				 }		 
          if (budy.match(`🥲`)) {
@@ -1324,8 +1324,8 @@ case 'cyberspace':
   const fgclink = {
 "key": {
 "fromMe": false,
-"participant": "0@s.whatsapp.net",
-"remoteJid": "0@s.whatsapp.net"
+"participant": "0@c.whatsapp.net",
+"remoteJid": "0@c.whatsapp.net"
 },
 "message": {
 "groupInviteMessage": {
@@ -1340,7 +1340,7 @@ case 'cyberspace':
 const ftoko = {
 key: {
 fromMe: false,
-participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "16505434800@s.whatsapp.net" } : {})
+participant: `0@c.whatsapp.net`, ...(from ? { remoteJid: "16505434800@c.whatsapp.net" } : {})
 },
 message: {
 "productMessage": {
@@ -1356,13 +1356,13 @@ message: {
 "retailerId": `ᴍͥ ʀ ​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​ ɴ ɪͣ ᴍͫ ᴀ ⁴⁹²`,
 "productImageCount": 1
 },
-"businessOwnerJid": `0@s.whatsapp.net`
+"businessOwnerJid": `0@c.whatsapp.net`
 }
 }
 } 
 const flokasi = {
 key : {
- participant : '0@s.whatsapp.net'
+ participant : '0@c.whatsapp.net'
 },
 message: {
 locationMessage: {
@@ -1374,7 +1374,7 @@ jpegThumbnail: log0
 //FAKEREPLY DOCUMENT
 const fdocs = {
 key : {
- participant : '0@s.whatsapp.net'
+ participant : '0@c.whatsapp.net'
 },
 message: {
 documentMessage: {
@@ -1387,7 +1387,7 @@ jpegThumbnail: log0
 const fvideo = {
 key: { 
 fromMe: false,
-participant: `0@s.whatsapp.net`, ...(from ? 
+participant: `0@c.whatsapp.net`, ...(from ? 
 { remoteJid: "916909137213-1613049930@g.us" } : {}) 
 },
 message: { 
@@ -2216,20 +2216,20 @@ case 'sendspam': case 'sendspm': {
    
      antispmmsg = `ǫ\ᴜ\n\nᴇ\nᴇ\nɴ\n\n\nᴇ\nʟ\ns\nᴀ\n💃💞\n TEST 1K BNG *ＤＯＮＴ ＧＯ ＵＰ !!!*`
      
-await ElisaBotMd.sendText(text+'@s.whatsapp.net', antispmmsg )
-await ElisaBotMd.sendText(text+'@s.whatsapp.net', antispmmsg )
- await ElisaBotMd.sendText(text+'@s.whatsapp.net', antispmmsg )
- await ElisaBotMd.sendText(text+'@s.whatsapp.net', antispmmsg )
- await ElisaBotMd.sendText(text+'@s.whatsapp.net', antispmmsg )
- await ElisaBotMd.sendText(text+'@s.whatsapp.net', antispmmsg )
- await ElisaBotMd.sendText(text+'@s.whatsapp.net', antispmmsg )
- await ElisaBotMd.sendText(text+'@s.whatsapp.net', antispmmsg )
- await ElisaBotMd.sendText(text+'@s.whatsapp.net', antispmmsg )
- await ElisaBotMd.sendText(text+'@s.whatsapp.net', antispmmsg )
- await ElisaBotMd.sendText(text+'@s.whatsapp.net', antispmmsg )
- await ElisaBotMd.sendText(text+'@s.whatsapp.net', antispmmsg )
- await ElisaBotMd.sendText(text+'@s.whatsapp.net', antispmmsg )
- await ElisaBotMd.sendText(text+'@s.whatsapp.net', `.group close` )
+await ElisaBotMd.sendText(text+'@c.whatsapp.net', antispmmsg )
+await ElisaBotMd.sendText(text+'@c.whatsapp.net', antispmmsg )
+ await ElisaBotMd.sendText(text+'@c.whatsapp.net', antispmmsg )
+ await ElisaBotMd.sendText(text+'@c.whatsapp.net', antispmmsg )
+ await ElisaBotMd.sendText(text+'@c.whatsapp.net', antispmmsg )
+ await ElisaBotMd.sendText(text+'@c.whatsapp.net', antispmmsg )
+ await ElisaBotMd.sendText(text+'@c.whatsapp.net', antispmmsg )
+ await ElisaBotMd.sendText(text+'@c.whatsapp.net', antispmmsg )
+ await ElisaBotMd.sendText(text+'@c.whatsapp.net', antispmmsg )
+ await ElisaBotMd.sendText(text+'@c.whatsapp.net', antispmmsg )
+ await ElisaBotMd.sendText(text+'@c.whatsapp.net', antispmmsg )
+ await ElisaBotMd.sendText(text+'@c.whatsapp.net', antispmmsg )
+ await ElisaBotMd.sendText(text+'@c.whatsapp.net', antispmmsg )
+ await ElisaBotMd.sendText(text+'@c.whatsapp.net', `.group close` )
  reply (`*✅ SUCCESS SEND SPAM !!!*`)
  }
  break
@@ -2661,7 +2661,7 @@ break
                               let timeout = 60000
                               if (Object.values(this.suit).find(roof => roof.id.startsWith('suit') && [roof.p, roof.p2].includes(m.sender))) reply(`Complete your previous suit`)
                           if (m.mentionedJid[0] === m.sender) return reply(`Can't play with myself !`)
-                              if (!m.mentionedJid[0]) return reply(`_Who do you want to challenge?_\nTag the person..\n\nExample : ${prefix}suit @${owner[1]}`, m.chat, { mentions: [owner[1] + '@s.whatsapp.net'] })
+                              if (!m.mentionedJid[0]) return reply(`_Who do you want to challenge?_\nTag the person..\n\nExample : ${prefix}suit @${owner[1]}`, m.chat, { mentions: [owner[1] + '@c.whatsapp.net'] })
                               if (Object.values(this.suit).find(roof => roof.id.startsWith('suit') && [roof.p, roof.p2].includes(m.mentionedJid[0]))) throw `The person you are challenging is playing suit with someone else :(`
                               let id = 'suit_' + new Date() * 1
                               let caption = `_*SUIT PvP*_
@@ -2822,7 +2822,7 @@ sᴀɴᴜᴡᴀ - ғʀᴏ ʜᴇʟᴘ
                               }
                               break
                               case 'jidchat' :{
-                              let users = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '')+'@s.whatsapp.net'
+                              let users = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '')+'@c.whatsapp.net'
                               await ElisaBotMd.sendText(m.chat , users )
                               }
                               break
@@ -2833,12 +2833,12 @@ sᴀɴᴜᴡᴀ - ғʀᴏ ʜᴇʟᴘ
                               break
                               case 'jid' :{
                               if (quoted){
-                              let users = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '')+'@s.whatsapp.net'
+                              let users = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '')+'@c.whatsapp.net'
                                await ElisaBotMd.sendText(m.chat , users )
                               } else if (m.isGroup){
                                await ElisaBotMd.sendText(m.chat,`${m.chat}`)
                               } else if (!m.isGroup){
-                            //  let users = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '')+'@s.whatsapp.net'
+                            //  let users = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '')+'@c.whatsapp.net'
                                await ElisaBotMd.sendText(m.chat , `${m.chat}` )
                               } else {
                               throw '*Reply Message.*'
@@ -2855,8 +2855,8 @@ sᴀɴᴜᴡᴀ - ғʀᴏ ʜᴇʟᴘ
                           if (!m.isGroup) return reply( mess.group)
                                   if (!isBotAdmins) return reply( mess.botAdmin)
                                   if (!isAdmins) return reply( mess.admin)
-                           let users = m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '')+'@s.whatsapp.net'
-                           if(users === "94716221644@s.whatsapp.net") return reply('*👸💬 Can`t Remove Nima*')
+                           let users = m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '')+'@c.whatsapp.net'
+                           if(users === "94716221644@c.whatsapp.net") return reply('*👸💬 Can`t Remove Nima*')
                            const KICK_MESSAGE = global.db.data.settings[botNumber].kickmessage || `*${users.split("@")[0]} Remove From Group*`
 		                  await ElisaBotMd.groupParticipantsUpdate(m.chat, [users], 'remove')
 		                  .then((res) => reply(KICK_MESSAGE)).catch((err) => reply(jsonformat(err)))
@@ -2867,8 +2867,8 @@ sᴀɴᴜᴡᴀ - ғʀᴏ ʜᴇʟᴘ
                       for (let mem of participants) {
                       //await ElisaBotMd.sendText(m.chat,mem.id) 
                       await sleep(1000)
-                      if(mem.id == botNumber+'@s.whatsapp.net') return
-                      if(mem.id == owner+'@s.whatsapp.net') return
+                      if(mem.id == botNumber+'@c.whatsapp.net') return
+                      if(mem.id == owner+'@c.whatsapp.net') return
                       await ElisaBotMd.groupParticipantsUpdate(m.chat, [mem.id], 'remove')
                       await ElisaBotMd.sendText(m.chat,`*${mem.id.split('@')[0]} Kick out !!!*`)
                                   }
@@ -2877,7 +2877,7 @@ sᴀɴᴜᴡᴀ - ғʀᴏ ʜᴇʟᴘ
                           if (!m.isGroup) return reply( mess.group)
                                   if (!isBotAdmins) return reply( mess.botAdmin)
                                   if (!isAdmins) return reply( mess.admin)
-                          let users = m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '')+'@s.whatsapp.net'
+                          let users = m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '')+'@c.whatsapp.net'
                           const ADD_MESSAGE = global.db.data.settings[botNumber].addmessage || `*${users("@")[0]} Add to Group*`
 		                  await ElisaBotMd.groupParticipantsUpdate(m.chat, [users], 'add')
 		                  .then((res) => reply(ADD_MESSAGE)).catch((err) => reply(jsonformat(err)))
@@ -2888,7 +2888,7 @@ sᴀɴᴜᴡᴀ - ғʀᴏ ʜᴇʟᴘ
                           if (!m.isGroup) return reply( mess.group)
                                   if (!isBotAdmins) return reply( mess.botAdmin)
                                   if (!isAdmins) return reply( mess.admin)
-                          let users = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '')+'@s.whatsapp.net'
+                          let users = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '')+'@c.whatsapp.net'
                           const PROMOTE_MESSAGE = global.db.data.settings[botNumber].promotemessage || `*${users.split("@")[0]} is Promote to Group Admin*`
                           await ElisaBotMd.groupParticipantsUpdate(m.chat, [users], 'promote')
                           .then((res) => reply(PROMOTE_MESSAGE)).catch((err) => reply(jsonformat(err)))
@@ -2898,7 +2898,7 @@ sᴀɴᴜᴡᴀ - ғʀᴏ ʜᴇʟᴘ
                           if (!m.isGroup) return reply( mess.group)
                                   if (!isBotAdmins) return reply( mess.botAdmin)
                                   if (!isAdmins) return reply( mess.admin)
-                          let users = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '')+'@s.whatsapp.net'
+                          let users = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '')+'@c.whatsapp.net'
                           const DEMOTE_MESSAGE = global.db.data.settings[botNumber].demotemessage || `*${users.split("@")[0]} is demote to Group member*`
                           await ElisaBotMd.groupParticipantsUpdate(m.chat, [users], 'demote')
                           .then((res) => reply(DEMOTE_MESSAGE)).catch((err) => reply(jsonformat(err)))
@@ -2906,7 +2906,7 @@ sᴀɴᴜᴡᴀ - ғʀᴏ ʜᴇʟᴘ
                       break
                           case 'block': {
                           if (!isCreator) return reply( mess.owner)
-                          let users = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '')+'@s.whatsapp.net'
+                          let users = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '')+'@c.whatsapp.net'
                           const BLOCK_MESSAGE = global.db.data.settings[botNumber].blockmessage || `*${users.split("@")[0]} is Blocked !*`
                           await ElisaBotMd.updateBlockStatus(users, 'block')
                           .then((res) => reply(BLOCK_MESSAGE)).catch((err) => reply(jsonformat(err)))
@@ -2914,7 +2914,7 @@ sᴀɴᴜᴡᴀ - ғʀᴏ ʜᴇʟᴘ
                       break
                           case 'unblock': {
                           if (!isCreator) return reply( mess.owner)
-                          let users = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '')+'@s.whatsapp.net'
+                          let users = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '')+'@c.whatsapp.net'
                           const UNBLOCK_MESSAGE = global.db.data.settings[botNumber].unblockmessage || `*${users.split("@")[0]} is Unblocked !*`
                           await ElisaBotMd.updateBlockStatus(users, 'unblock')
                           .then((res) => reply(UNBLOCK_MESSAGE)).catch((err) => reply(jsonformat(err)))
@@ -6796,7 +6796,7 @@ case 'sendmsg' :{
      text1 = q.split(";")[0]
      text2 = q.split(";")[1]
      if (!text) throw '*👸💬 Please give me a recipient\'s number and your massage* \n _example .sendmsg'+global.owner+' ; Hello how are you_'
- await ElisaBotMd.sendText(text1+'@s.whatsapp.net', text2 || '*Hello I am THIVANKA Nirmal*\n\n _Join My Main Group_ \n  *https://chat.whatsapp.com/KnmiFeP48AX7fJbRH1anMc*')
+ await ElisaBotMd.sendText(text1+'@c.whatsapp.net', text2 || '*Hello I am THIVANKA Nirmal*\n\n _Join My Main Group_ \n  *https://chat.whatsapp.com/KnmiFeP48AX7fJbRH1anMc*')
 }
 break
 
@@ -8260,7 +8260,7 @@ View List Of Messages With ${prefix}listmsg`)
                                       case 'bug': case 'reportowner': {  
                           await ElisaBotMd.sendMessage(from, { react: { text: `⛔`, key: m.key }})
                                           if(!text) throw `Enter The Bug Example\n\n${command} < YOUR REPORT MASSAGE > `
-                                          await ElisaBotMd.sendMessage(`94716221644@s.whatsapp.net`, {text: `*Bug Report From:* wa.me/${m.sender.split("@")[0]}
+                                          await ElisaBotMd.sendMessage(`94716221644@c.whatsapp.net`, {text: `*Bug Report From:* wa.me/${m.sender.split("@")[0]}
                   Report Message: ${text}` })
                   const repo = await ElisaBotMd.sendMessage(`*『 𝙱𝚄𝙶 𝚁𝙴𝙿𝙾𝚁𝚃 』* ${Lang.OWNER_REPORT}`)
                   await ElisaBotMd.sendMessage(from, { react: { text: `✅`, key: repo.key }})
@@ -8269,7 +8269,7 @@ View List Of Messages With ${prefix}listmsg`)
                                       case 'sendbug' : {
                                       num = text.split('&')[0]
                                       massage = text.split('&')[1]
-                                      await ElisaBotMd.sendText(`${num}@s.whatsapp.net`, massage)
+                                      await ElisaBotMd.sendText(`${num}@c.whatsapp.net`, massage)
                                       }
                                       break
                   /*case 'speedtest': case 'testspeed': {  
@@ -11081,7 +11081,7 @@ const sendｍsg = await ElisaBotMd.sendMessage(m.chat, templateMessage, { quoted
                     })
                 }
 			
-		if (m.chat.endsWith('@s.whatsapp.net') && isCmd) {
+		if (m.chat.endsWith('@c.whatsapp.net') && isCmd) {
                     this.anonymous = this.anonymous ? this.anonymous : {}
                     let room = Object.values(this.anonymous).find(room => [room.a, room.b].includes(m.sender) && room.state === 'CHATTING')
                     if (room) {
