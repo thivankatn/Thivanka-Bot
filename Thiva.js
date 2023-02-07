@@ -8571,71 +8571,7 @@ Use This Menu Fix your Problems 👇
 │ ${prefix}technology
 ╰─────────────⦁`
 
-                                  /*template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
-                                      templateMessage: {
-                                          hydratedTemplate: {
-                                              imageMessage: message.imageMessage,
-                                              hydratedContentText: MENUMSG  ,
-                                              hydratedFooterText: global.botnma ,
-                                              hydratedButtons: [{
-                                                  urlButton: {
-                                                      displayText: 'ɢɪᴛʜᴜʙ',
-                                                      url: `https://github.com/ThivankaOnline/Thivanka-Bot`
-                                                  }
-                                              },{
-                                                  urlButton: {
-                                                      displayText: 'ʏᴏᴛᴜʙᴇ ᴄʜᴀɴɴᴇʟ',
-                                                      url: `https://www.thivanka.lk`
-                                                  }
-                                              },{
-                                                  quickReplyButton: {
-                                                      displayText: 'ʟɪsᴛ ᴍᴇɴᴜ',
-                                                      id: `list`
-                                                      }
-                                                  },  {
-                                                  quickReplyButton: {
-                                                      displayText: 'ᴏᴡɴᴇʀ',
-                                                      id: `owner`
-                                                      }
-                                                  }, {
-                                                  quickReplyButton: {
-                                                      displayText: 'sʏsᴛᴇᴍ ᴀʙᴏᴜᴛ',
-                                                      id: `ping`
-                                                      }
-                                                  
-                                              }]
-{buttonId: `command`, buttonText: {displayText: '☰ ʟɪsᴛ ᴍᴇɴᴜ ☰'}, type: 1},
-{buttonId: `owner`, buttonText: {displayText: '🧑‍💻 ᴏᴡɴᴇʀ 🧑‍💻️'}, type: 1},
-{buttonId: `elisaallmenu`, buttonText: {displayText: '⚙ ᴀʟʟ ᴍᴇɴᴜ ️⚙️'}, type: 1}
-            
-  {quickReplyButton: {displayText: 'ʟɪsᴛ ᴍᴇɴᴜ', id: 'list'}},
-    {quickReplyButton: {displayText: 'ᴏᴡɴᴇʀ', id: 'owner'}},
-    {quickReplyButton: {displayText: 'sᴛᴇᴛᴜs', id: 'stetus'}},
-                                        }
-                                      }
-                                  }), { userJid: m.chat, quoted: m })
-                                  ElisaBotMd.send5ButImg(m.chat, template.message, { messageId: template.key.id })*/
-const templateButtons = [
-  {buttonId: `list`, buttonText: {displayText: 'ʟɪsᴛ ᴍᴇɴᴜ'}, type: 1},
-  {buttonId: `owner`, buttonText: {displayText: 'ᴏᴡɴᴇʀ‍️'}, type: 1},
-  {buttonId: `status`, buttonText: {displayText: 'sᴛᴀᴛᴜs'}, type: 1},
 
-    ]
-
-
-let buttonMessage = {
-                    image: { url: result },
-                    caption: MENUMSG ,
-                    footer: global.botnma,
-                    buttons: templateButtons,
-                    headerType: 4
-                }
-               ElisaBotMd.sendMessage(m.chat, buttonMessage, { quoted: fakestatus })
-         
-     
-     //await ElisaBotMd.sendMessage(m.chat, templateMessage, { quoted: fakestatus })   
-
-                              }
                               break
 
 case 'alive' : {
