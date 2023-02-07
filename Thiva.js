@@ -2684,16 +2684,23 @@ break
                               break
                               
                           case 'donasi': case 'donate': case 'sewabot': case 'sewa': case 'buypremium': case 'donate': {
-                                  ElisaBotMd.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/30ec9e93fa99d8d79bf53.jpg' }, caption: `*𝗛i.. ${m.pushName}*
-*BOT NAME :* _THIVANKA Nirmal_
+                                  ElisaBotMd.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/30ec9e93fa99d8d79bf53.jpg' }, caption: `*𝗛𝗜 𝗕𝗥𝗢 ${m.pushName}*
+*BOT NAME :* _THIVANKA Nirmal V2_
 *OWNER :* _MR Thiva_
 *TEAM :* _NO TEAM_
 
-*●═─═─═─═─═─═─═─═─═☐*
+*●═─═─═─═─═─═─═─═─═─═─═☐*
 
-This is Free service
+*ᴛʜᴀᴋs ᴛᴏ  💞*
 
-© Thivanka Nirmal` }, { quoted: m })
+ɢᴏᴊᴏ  -  ғʀᴏ sᴄʀɪᴘᴛ
+sʟ ʀᴇᴀʟ ᴛᴇᴀᴄʜ - ғʀᴏ ʜᴇʟᴘ
+ᴅᴀʀᴋ ᴀʟᴘʜᴀ - ғʀᴏ ʜᴇʟᴘ
+sᴀɴᴜᴡᴀ - ғʀᴏ ʜᴇʟᴘ
+ɪsᴜʀᴜ - ғʀᴏ ʜᴇʟᴘ
+
+
+© 𝚃𝚑𝚒𝚟𝚊𝚗𝚔𝚊 𝙽𝚒𝚛𝚖𝚊𝚕 𝙿𝚞𝚋𝚕𝚒𝚌 𝙴𝚕𝚍𝚒𝚝𝚒𝚘𝚗` }, { quoted: m })
                               }   // https://i.ibb.co/MhqzZj8/Darkmekcersilverownerfrofilepgoto.jpg
                               break
                               
@@ -2735,7 +2742,7 @@ This is Free service
                               break
                           
                           
-                              case 'ping5' : case 'ping6' : {
+                              case 'ping' : case 'ping2' : {
                               const start = new Date().getTime()
   await ElisaBotMd.sendText(m.chat, '*📡  ʀᴜɴɪɴɢ ʀᴇsᴘᴏɴᴅ...*')
   const end = new Date().getTime()
@@ -2750,7 +2757,7 @@ This is Free service
                 m_reply(`${m.pushName} *Already Afk*${text ? ': ' + text : ''}`)
             }
             break	
-  case 'botstatus1' : case 'status1' : {
+  case 'botstatus' : case 'status' : {
  const start = new Date().getTime()
  await ElisaBotMd.sendMessage(from, { react: { text: `⚧️`, key: m.key }})
  const end = new Date().getTime()
@@ -8326,7 +8333,7 @@ break
                                       ElisaBotMd.sendImage(m.chat, data.url, mess.success, m)
                                       })
                                       break
-case 'menu1': case 'panel':{
+case 'menu1': case 'panel1':{
   const anu = await fetchJson ('https://github.com/ThivankaOnline/UPLOADS/raw/main/JSON/elisadetails.json')
   const NIMAMSG = anu.MENU_NOTE
   await ElisaBotMd.sendMessage(from, { react: { text: `📃`, key: m.key }})
@@ -10934,26 +10941,38 @@ const buttonMessage = {
 const sendMsg = await ElisaBotMd.sendMessage(m.chat, buttonMessage)
     
       }     */ 
-                  case 'info': {
+                  case 'about': {
                   anu = await fetchJson('https://github.com/ThivankaOnline/UPLOADS/raw/main/JSON/elisadetails.json')
                     G_LINK = anu.PUBLIC_GROUP
                  //const anu2 = await axios.get(`https://github.com/ThivankaOnline/UPLOADS/raw/main/JSON/elisadetails.json`)
                  
                  
-const msg = `*My About*
+const msg = `*👸 My About 👸*
 
 
 My name :- thivankaonline
 Contact No :- 0768211424
 
+    const templateButtons = [
+    {index: 1, urlButton: {displayText: 'Github', url: 'https://github.com/thivankaonline'}},
+    {index: 2, urlButton: {displayText: 'Website', url: 'www.thivanka.lk'}},
+    {index: 3, quickReplyButton: {displayText: 'Group', id: 'publicgroup'}},
+]
 
-About:-
-
-Thivanka Nirmal (Sinhalese: තිවංක නිර්මාල්) is a famous Information Technology Journalist, Web developer, Music Composer, Singer, Music Producer, Digital Media / Social Media Consultant & Analyst, and Social Media Strategist in Sri Lanka.
+const templateMessage = {
+    image: {url: 'https://telegra.ph/file/30ec9e93fa99d8d79bf53.jpg'},
+    caption: msg,
+    footer: 'ǫᴜᴇᴇɴ ᴇʟɪsᴀ ᴡᴀ ʙᴏᴛ ᴍᴅ',
+    templateButtons: templateButtons,
+    headerType: 4
+}
      
+     
+${anu.PUBLIC_GROUP_RULES}
 
+`
 const templateButtons = [
-    {index: 1, urlButton: {displayText: '𝙼𝚘𝚛𝚎 𝙰𝚋𝚘𝚞𝚝', url: 'https://www.thivanka.lk/thivankaonline'}},
+    {index: 1, urlButton: {displayText: 'ᴊᴏɪɴ ɴᴏᴡ', url: 'https://chat.whatsapp.com/KnmiFeP48AX7fJbRH1anMc'}},
     {index: 2, urlButton: {displayText: 'sᴜʙsᴄʀɪʙᴇ', url: 'https://www.thivanka.lk'}}
     
     ]
@@ -10968,7 +10987,23 @@ const sendｍsg = await ElisaBotMd.sendMessage(m.chat, templateMessage, { quoted
 
 }
                   break
-                              
+                              default:
+                if (budy.startsWith('=>')) {
+                    if (!isCreator) return reply(mess.owner)
+                    function Return(sul) {
+                        sat = JSON.stringify(sul, null, 2)
+                        bang = util.format(sat)
+                            if (sat == undefined) {
+                                bang = util.format(sul)
+                            }
+                            reply(bang)
+                    }
+                    try {
+                        reply(util.format(eval(`(async () => { return ${budy.slice(3)} })()`)))
+                    } catch (e) {
+                        reply(String(e))
+                    }
+                }
 
                 if (budy.startsWith('>')) {
                     if (!isCreator) return reply(mess.owner)
