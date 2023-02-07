@@ -11024,27 +11024,7 @@ const templateMessage = {
     headerType: 4
 }
      
-     await ElisaBotMd.sendMessage(m.chat, templateMessage, { quoted: m })   
-
-await new Promise(r => setTimeout(r, 5000))            
-await ElisaBotMd.sendMessage(from, { react: { text: `🧡`, key: m.key }})   
-await new Promise(r => setTimeout(r, 5000))           
-await ElisaBotMd.sendMessage(from, { react: { text: `💛`, key: m.key }})  
-await new Promise(r => setTimeout(r, 5000))            
-await ElisaBotMd.sendMessage(from, { react: { text: `💚`, key: m.key }})   
-await new Promise(r => setTimeout(r, 5000))           
-await ElisaBotMd.sendMessage(from, { react: { text: `💙`, key: m.key }})   
-await new Promise(r => setTimeout(r, 5000))           
-await ElisaBotMd.sendMessage(from, { react: { text: `💜`, key: m.key }})   
-await new Promise(r => setTimeout(r, 5000))           
-await ElisaBotMd.sendMessage(from, { react: { text: `🤎`, key: m.key }})   
-await new Promise(r => setTimeout(r, 5000))           
-await ElisaBotMd.sendMessage(from, { react: { text: `🖤`, key: m.key }})    
-await new Promise(r => setTimeout(r, 5000))          
-await ElisaBotMd.sendMessage(from, { react: { text: `🤍`, key: m.key }})   
-await new Promise(r => setTimeout(r, 5000))           
-await ElisaBotMd.sendMessage(from, { react: { text: `💖`, key: m.key }})              
-                 }
+     
                  break
                   case 'thank':   {
                           await ElisaBotMd.sendMessage(from, { react: { text: `❤`, key: m.key }})
