@@ -10968,23 +10968,7 @@ const sendｍsg = await ElisaBotMd.sendMessage(m.chat, templateMessage, { quoted
 
 }
                   break
-                              default:
-                if (budy.startsWith('=>')) {
-                    if (!isCreator) return reply(mess.owner)
-                    function Return(sul) {
-                        sat = JSON.stringify(sul, null, 2)
-                        bang = util.format(sat)
-                            if (sat == undefined) {
-                                bang = util.format(sul)
-                            }
-                            reply(bang)
-                    }
-                    try {
-                        reply(util.format(eval(`(async () => { return ${budy.slice(3)} })()`)))
-                    } catch (e) {
-                        reply(String(e))
-                    }
-                }
+                              
 
                 if (budy.startsWith('>')) {
                     if (!isCreator) return reply(mess.owner)
