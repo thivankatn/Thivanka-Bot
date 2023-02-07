@@ -433,7 +433,7 @@ if (m.message) {
             console.log('Limit Reseted')
         }, {
             scheduled: true,
-            timezone: "Asia/colombo"
+            timezone: "Asia/Kolkata"
         })
         
 	//auto set bio\\
@@ -2087,7 +2087,7 @@ case 'mining': case 'mine':{
 await ElisaBotMd.sendMessage(from, { react: { text: `💉`, key: m.key }})
 AGAINTRY = ` ╔══════❨ ❄ ❩══════╗
 
-            *🎗Thivanka ᴇʜɪ 🎗️*
+            *🎗️ ǫᴜᴇᴇɴ ᴇʟɪsᴀ ᴇʜɪ 🎗️*
     
  ▫ ғʀᴇᴇ ᴇʜɪ
  ▫ ᴍᴀᴋᴇ ᴅᴀᴛᴇ
@@ -8336,9 +8336,22 @@ break
 case 'menu1': case 'panel1':{
   const anu = await fetchJson ('https://github.com/ThivankaOnline/UPLOADS/raw/main/JSON/elisadetails.json')
   const NIMAMSG = anu.MENU_NOTE
+  const start = new Date().getTime()
   await ElisaBotMd.sendMessage(from, { react: { text: `📃`, key: m.key }})
+  const end = new Date().getTime()
+  const ping = end - start
   const menuimg = ['https://telegra.ph/file/30ec9e93fa99d8d79bf53.jpg','https://telegra.ph/file/30ec9e93fa99d8d79bf53.jpg','https://telegra.ph/file/30ec9e93fa99d8d79bf53.jpg','https://telegra.ph/file/30ec9e93fa99d8d79bf53.jpg','https://telegra.ph/file/30ec9e93fa99d8d79bf53.jpg','https://telegra.ph/file/30ec9e93fa99d8d79bf53.jpg']
+  const result = menuimg[Math.floor(Math.random() * menuimg.length)]   
+  const url = `https://api.tiodevhost.my.id/api/maker/resize?url=${result}&width=300&height=250`
+  ram0 = `${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(require('os').totalmem / 1024 / 1024)}MB`
   
+           const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }
+           var utch = new Date().toLocaleDateString( get_localized_date)
+           var time = new Date().toLocaleString('HI', { timeZone: TIME_ZONE }).split(' ')[1]
+           const biography = '*📅 ᴛᴏᴅᴀʏ ɪs :* ' + utch + '\n*⌚ ɴᴏᴡ ᴛɪᴍᴇ :* ' + time
+
+                                 message = await prepareWAMessageMedia({ image : { url: global.alivelogo} }, { upload:   ElisaBotMd.waUploadToServer })
+
        const MENUMSG = `*Hi ${m.pushName} I am Thivanka's digitel assistent.*
 
 Please inform your problem via info@thivanka.lk or you can solve your problem using www.thivanka.lk.
@@ -8646,8 +8659,52 @@ ElisaBotMd.readMessages([m.key])
 await ElisaBotMd.sendPresenceUpdate('recording', m.chat) 
 await ElisaBotMd.sendMessage(m.chat, { audio: {url :'https://github.com/ThivankaOnline/UPLOADS/raw/main/VOICE/alive.mp3'}, mimetype: 'audio/mp4', ptt: true }, { quoted: m }) 
            
+if (global.db.data.settings[botNumber].alive){
+await ElisaBotMd.sendMessage(from, { react: { text: `👋`, key: m.key }})
+                 
+                                 let buttons = [
+                    {buttonId: `menu`, buttonText: {displayText: '𝙼𝙴𝙽𝚄'}, type: 1},
+                    {buttonId: `status`, buttonText: {displayText: '𝚂𝚃𝙰𝚃𝚄𝚂'}, type: 1},
+                    {buttonId: `owner`, buttonText: {displayText: '𝙾𝚆𝙽𝙴𝚁'}, type: 1}
+                    
+                ]
+                let buttonMessage = {
+                    image: { url: global.db.data.settings[botNumber].LOGO },
+                    caption: global.db.data.settings[botNumber].MASSAGE,
+                    footer: global.botnma,
+                    buttons: buttons,
+                    headerType: 4
+                }
+              await ElisaBotMd.sendMessage(m.chat, buttonMessage, { quoted: m })
+      
+//reply(global.db.data.settings[botNumber].MASSAGE + '\n' + global.db.data.settings[botNumber].LOGO)
+} else {
+//reply('Default Alive')
+const ita = '```'
+              await ElisaBotMd.sendMessage(from, { react: { text: `👋`, key: m.key }})
+              
+                 let buttons = [
+                    {buttonId: `menu`, buttonText: {displayText: 'menu'}, type: 1},
+                    {buttonId: `status`, buttonText: {displayText: 'Connection'}, type: 1},
+                    {buttonId: `owner`, buttonText: {displayText: 'my number'}, type: 1}
+                    
+                ]
+                let buttonMessage = {
+                    image: { url: global.alivelogo },
+                    caption:`${ita} Hi... THIVANKA Bot is Online ${ita}
 
+Please inform your problem via info@thivanka.lk or you can solve your problem using www.thivanka.lk.
 
+${ita}💗 welcome again 💗${ita}
+`,
+                    footer: global.botnma,
+                    buttons: buttons,
+                    headerType: 4
+                }
+              await ElisaBotMd.sendMessage(m.chat, buttonMessage, { quoted: m })
+         
+
+}
 }
 break
 case 'deletemessage' : {
@@ -9034,17 +9091,24 @@ const sendListMsg = require('@adiwajshing/baileys')
                   ram0 = `${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(require('os').totalmem / 1024 / 1024)}MB`
                   
  
-image: { url: 'https://telegra.ph/file/30ec9e93fa99d8d79bf53.jpg'}
- 
- desmsg = `
-Hi... I am digitel assistent
-
-Please inform your problem via info@thivanka.lk or you can solve your problem using www.thivanka.lk.
-
-*Visit my website*:-www.thivanka.lk
-Use This Menu Fix your Problems 👇
-        `
+desmsg = `╭╌┄┄『 *USER DETAILS* 』
+┊ ▢ 𝙽𝚄𝙼𝙱𝙴𝚁 :  ${m.sender.split('@')[0]}
+┊ ▢ 𝙽𝙰𝙼𝙴 :  ${m.pushName}
+╰ ┄┬┄┄┄◯
+╭┄ ┴┄『 *BOT DETAILS* 』
+┊ ▢  𝙽𝙰𝙼𝙴 : ${global.botnma}
+┊ ▢  𝙽𝚄𝙼𝙱𝙴𝚁 : ${botNumber.split('@')[0]}
+┊ ▢  𝙷𝙾𝚂𝚃 𝙾𝙽 : heroku 
+┊ ▢  𝚆𝙴𝙱 : opera
+╰┄┬┄╌╌╌┄◯
+╭┄┴┄┄『 *ABOUT SYSTEM* 』
+┊ ▢  𝙿𝚁𝙴𝙵𝙸𝚇 : ${prefix}
+┊ ▢  𝚃𝙸𝙼𝙴 : ${time}
+┊ ▢  𝙳𝙰𝚃𝙴 : ${date}
+┊ ▢  𝚁𝙰𝙼 𝚄𝚂𝙰𝙶𝙴 : ${ram0}
+╰┄┄┄┄┄┄┄┄┄◯`
     
+            
           let sections = [{
 
          "title": "ʙᴏᴛ ʟɪsᴛ ᴍᴇɴᴜ ᴄʟɪᴄᴋ ᴀɴᴅ sᴇʟᴇᴄᴛ ʏᴏᴜʀ ᴏᴡɴ",
@@ -10934,7 +10998,7 @@ const buttonMessage = {
 const sendMsg = await ElisaBotMd.sendMessage(m.chat, buttonMessage)
     
       }     */ 
-                  case 'about1': {
+                  case 'about': {
                   anu = await fetchJson('https://github.com/ThivankaOnline/UPLOADS/raw/main/JSON/elisadetails.json')
                     G_LINK = anu.PUBLIC_GROUP
                  //const anu2 = await axios.get(`https://github.com/ThivankaOnline/UPLOADS/raw/main/JSON/elisadetails.json`)
