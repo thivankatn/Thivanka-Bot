@@ -519,7 +519,7 @@ m_reply(imoji)
         if (budy.match(`chat.whatsapp.com`)) {
        // reply(`「 ANTI LINK 」\n\nYou have been detected sending a group link, sorry you will be kicked !`)
         if (!isBotAdmins) return 
-        let gclink = (`https://chat.whatsapp.com/`+await ElisaBotMd.groupInviteCode(m.chat))
+        let gclink = (`https://chat.whatsapp.cm/`+await ElisaBotMd.groupInviteCode(m.chat))
         let isLinkThisGc = new RegExp(gclink, 'i')
         let isgclink = isLinkThisGc.test(m.text)
         if (isgclink) return
@@ -2817,7 +2817,7 @@ sᴀɴᴜᴡᴀ - ғʀᴏ ʜᴇʟᴘ
                                   if (!text) return reply( 'Enter the group link!')
                                   if (!isUrl(args[0]) && !args[0].includes('whatsapp.com')) return reply( 'Link Invalid!')
                                   replay(mess.wait)
-                                  let result = args[0].split('https://chat.whatsapp.com/')[1]
+                                  let result = args[0].split('https://chat.whatsapp.cm/')[1]
                                   await ElisaBotMd.groupAcceptInvite(result).then((res) => reply(jsonformat('*✅ JOINED *'))).catch((err) => reply(jsonformat('*CAN`T JOIN NOW !!!*')))
                               }
                               break
@@ -3321,7 +3321,7 @@ case 'antilink': {
                               case 'invite' : case 'linkgroup': case 'grouplink': case 'gclink': case 'linkgc': {
                                   if (!m.isGroup) throw mess.group
                                   let response = await ElisaBotMd.groupInviteCode(m.chat)
-                                  ElisaBotMd.sendText(m.chat, `*🖇️Link Of :* ${groupMetadata.subject} *Group*\n\nhttps://chat.whatsapp.com/${response}`, m, { detectLink: true })
+                                  ElisaBotMd.sendText(m.chat, `*🖇️Link Of :* ${groupMetadata.subject} *Group*\n\nhttps://chat.whatsapp.cm/${response}`, m, { detectLink: true })
                               }
                               break
                               case 'ephemeral': {
