@@ -95,11 +95,11 @@ global.mess = {
     success: '✅ Done!',
     admin: 'you must be admin to use this cmd!',
     botAdmin: 'Bot must be admin !',
-    owner: 'This cmd is for Elisa bot owner only',
+    owner: 'This cmd is for Thiva bot owner only',
     group: 'oooh sorry this cmd is for groups only!',
     private: 'it can only used in dms!',
     bot: 'This cmd  its only for the bot host',
-    wait: 'Wait Elisa bot processing ',
+    wait: 'Wait Thiva is processing ',
     endLimit: 'Your Daily Limit Has Expired, The Limit Will Be Reset Every 12 Hours',
 }
 global.limitawal = {
