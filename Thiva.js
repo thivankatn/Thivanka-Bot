@@ -8338,17 +8338,7 @@ case 'menu': case 'panel':{
   const NIMAMSG = anu.MENU_NOTE
   await ElisaBotMd.sendMessage(from, { react: { text: `📃`, key: m.key }})
   const menuimg = ['https://telegra.ph/file/30ec9e93fa99d8d79bf53.jpg','https://telegra.ph/file/30ec9e93fa99d8d79bf53.jpg','https://telegra.ph/file/30ec9e93fa99d8d79bf53.jpg','https://telegra.ph/file/30ec9e93fa99d8d79bf53.jpg','https://telegra.ph/file/30ec9e93fa99d8d79bf53.jpg','https://telegra.ph/file/30ec9e93fa99d8d79bf53.jpg']
-  const result = menuimg[Math.floor(Math.random() * menuimg.length)]   
-  const url = `https://api.tiodevhost.my.id/api/maker/resize?url=${result}&width=300&height=250`
-  ram0 = `${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(require('os').totalmem / 1024 / 1024)}MB`
   
-           const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }
-           var utch = new Date().toLocaleDateString( get_localized_date)
-           var time = new Date().toLocaleString('HI', { timeZone: TIME_ZONE }).split(' ')[1]
-           const biography = '*📅 ᴛᴏᴅᴀʏ ɪs :* ' + utch + '\n*⌚ ɴᴏᴡ ᴛɪᴍᴇ :* ' + time
-
-                                 message = await prepareWAMessageMedia({ image : { url: global.alivelogo} }, { upload:   ElisaBotMd.waUploadToServer })
-
        const MENUMSG = `*Hi ${m.pushName} I am Thivanka's digitel assistent.*
 
 Please inform your problem via info@thivanka.lk or you can solve your problem using www.thivanka.lk.
