@@ -9069,7 +9069,7 @@ break
                               ElisaBotMd.relayMessage(m.chat, template.message, { messageId: template.key.id })
                               }
                               break*/
-case 'command': case 'list' : case 'cmd' : { 
+case 'command': case 'thiva' : case 'cmd' : { 
 const sendListMsg = require('@adiwajshing/baileys')
  await ElisaBotMd.sendMessage(from, { react: { text: `🗒️`, key: m.key }})
                   const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }
