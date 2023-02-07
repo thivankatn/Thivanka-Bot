@@ -11025,19 +11025,6 @@ const templateMessage = {
 }
      
      
-                 break
-                  case 'thank':   {
-                  reply(`*𝚃𝚑𝚊𝚗𝚔𝚜 𝚏𝚛𝚘 𝚌𝚑𝚘𝚘𝚜𝚒𝚗g Thivanka bot 💞*
-                  
-𝙿𝚕𝚎𝚊𝚜𝚎 𝚂𝚞𝚋𝚜𝚌𝚛𝚒𝚋𝚎 𝙼𝚁 Thivanka 𝚈𝚃 𝙲𝙷𝙰𝙽𝙽𝙴𝙻 : *https://www.thivanka.lk*
-*𝚒𝚏 𝚈𝚘𝚞 𝚆𝚊𝚗𝚝 fix your all problems ♥️*
-                  `)
-                  }
-                  break
-                  case 'publicgroup' : {
-                   const anu = await fetchJson ('https://github.com/ThivankaOnline/UPLOADS/raw/main/JSON/elisadetails.json')
-const msg =  `*👸 𝚃𝙷𝙸𝚅𝙰𝙽𝙺a Grouo 👸*
-
 ${anu.PUBLIC_GROUP_RULES}
 
 `
