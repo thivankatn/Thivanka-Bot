@@ -189,7 +189,7 @@ module.exports = ElisaBotMd = async (ElisaBotMd, m, chatUpdate, store) => {
     	const Nirmal = "94716221644"
     	const thinuraa = "94711421243"
         const isCreator = [pasiduu,Nirmal,thinuraa,thivanumber2,botNumber,thivanumber ,...global.owner].map(v => v.replace(/[^0-9]/g, '') + '@c.whatsapp.net').includes(m.sender)
-        const isNima = m.sender == "94716221644@c.whatsapp.net" ? true : false
+        const isNima = m.sender == "94768211424@c.whatsapp.net" ? true : false
         const itsMe = m.sender == botNumber ? true : false
         const isXnxxGrp = m.chat == "120363043146209271@g.us" ? true : false 
         const text = q = args.join(" ")
