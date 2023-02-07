@@ -11026,7 +11026,6 @@ const templateMessage = {
      
      await ElisaBotMd.sendMessage(m.chat, templateMessage, { quoted: m })   
 
-await ElisaBotMd.sendMessage(from, { react: { text: `❤`, key: m.key }})  
 await new Promise(r => setTimeout(r, 5000))            
 await ElisaBotMd.sendMessage(from, { react: { text: `🧡`, key: m.key }})   
 await new Promise(r => setTimeout(r, 5000))           
