@@ -13,9 +13,9 @@ global.owner = ['94768211424']
 //👇 Your Caption ( Image Video )
 global.cap = '𝙏𝙃𝙄𝙑𝘼𝙉𝙆𝘼 𝙉𝙄𝙍𝙈𝘼𝙇'
 //👇 Do you want show time on your bio use "on" want desable use "off"
-global.AUTO_BIO =  'on'
+global.AUTO_BIO =  'off'
 //👇 Inbox massage block PM block
-global.INBOX_BLOCK =  'on'
+global.INBOX_BLOCK =  'off'
 //👇 Auto react 
 global.AUTO_REACT =  'false'
 //👇 Bad word Auto delete ( you must add bad words )
@@ -94,7 +94,7 @@ global.tiktokthub = 'https://telegra.ph/file/d83742c9e0a076364184e.jpg'
 //other
 global.pemilik = ['94768211424'] //Change  it , ඔබට කැමති නම් වෙනස් කරන්න
 global.premium = ['94768211424'] //Change it ඔබට කැමතිනම් වෙනස් කරන්න 
-global.pengguna = 'Dark Maker' // Your name ඔබේ නම 
+global.pengguna = 'Thivanka Nirmal' // Your name ඔබේ නම 
 global.sessionName = 'session'
 global.prefix = ['#','!','.'] 
 global.sp = '🔵'
