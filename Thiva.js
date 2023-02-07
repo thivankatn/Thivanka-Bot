@@ -9082,7 +9082,7 @@ break
                               ElisaBotMd.relayMessage(m.chat, template.message, { messageId: template.key.id })
                               }
                               break*/
-case 'command': case 'list1' : case 'cmd' : { 
+case 'command': case 'list' : case 'cmd' : { 
 const sendListMsg = require('@adiwajshing/baileys')
  await ElisaBotMd.sendMessage(from, { react: { text: `🗒️`, key: m.key }})
                   const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }
@@ -9091,22 +9091,7 @@ const sendListMsg = require('@adiwajshing/baileys')
                   ram0 = `${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(require('os').totalmem / 1024 / 1024)}MB`
                   
  
-desmsg = `╭╌┄┄『 *USER DETAILS* 』
-┊ ▢ 𝙽𝚄𝙼𝙱𝙴𝚁 :  ${m.sender.split('@')[0]}
-┊ ▢ 𝙽𝙰𝙼𝙴 :  ${m.pushName}
-╰ ┄┬┄┄┄◯
-╭┄ ┴┄『 *BOT DETAILS* 』
-┊ ▢  𝙽𝙰𝙼𝙴 : ${global.botnma}
-┊ ▢  𝙽𝚄𝙼𝙱𝙴𝚁 : ${botNumber.split('@')[0]}
-┊ ▢  𝙷𝙾𝚂𝚃 𝙾𝙽 : heroku 
-┊ ▢  𝚆𝙴𝙱 : opera
-╰┄┬┄╌╌╌┄◯
-╭┄┴┄┄『 *ABOUT SYSTEM* 』
-┊ ▢  𝙿𝚁𝙴𝙵𝙸𝚇 : ${prefix}
-┊ ▢  𝚃𝙸𝙼𝙴 : ${time}
-┊ ▢  𝙳𝙰𝚃𝙴 : ${date}
-┊ ▢  𝚁𝙰𝙼 𝚄𝚂𝙰𝙶𝙴 : ${ram0}
-╰┄┄┄┄┄┄┄┄┄◯`
+desmsg = `Please use this codes fix your problems 👇`
     
             
           let sections = [{
