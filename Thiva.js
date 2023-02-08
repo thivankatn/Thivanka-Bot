@@ -9090,24 +9090,6 @@ const sendListMsg = require('@adiwajshing/baileys')
                   var time = new Date().toLocaleString('HI', { timeZone: TIME_ZONE }).split(' ')[1]
                   ram0 = `${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(require('os').totalmem / 1024 / 1024)}MB`
                   
-                  
-        👋 𝗛𝗶  ${pushname}
-
-╭──────[ 𝚃𝙷𝙸𝚅𝙰𝙽𝙺𝙰 𝙱𝙾𝚃 𝙼𝙳 ]
-│
-│ *𝙱𝙾𝚃 𝙽𝙰𝙼𝙴* : ${global.botnma}
-│
-│ *𝙾𝚆𝙽𝙴𝚁 𝙽𝙰𝙼𝙴* : ${global.ownernma}
-│
-│ *𝚁𝚄𝙽 𝚃𝙸𝙼𝙴* : ${runtime(process.uptime())}
-│
-│ *𝚁𝙰𝙼 𝚄𝚂𝙰𝙶𝙴* : ${ram0}
-│
-│ *𝙽𝙾𝚆 𝙰𝚃* : ${time}
-│
-╰─────────────────────⦁
-
-`,
  
 desmsg = `Please use this codes fix your problems 👇`
     
