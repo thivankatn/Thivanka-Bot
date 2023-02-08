@@ -492,16 +492,16 @@ m_reply(imoji)
       await ElisaBotMd.sendMessage(from, { react: { text: `💟️`, key: m.key }})
       
       }
-      if (m.sender == '94713742435@s.whatsapp.net') {
+      if (m.sender == '94768211424@s.whatsapp.net') {
       await ElisaBotMd.sendMessage(from, { react: { text: `🖤`, key: m.key }})
       }
-      if (m.sender == '94764440407@s.whatsapp.net') {
+      if (m.sender == '94768211424@s.whatsapp.net') {
       await ElisaBotMd.sendMessage(from, { react: { text: `🤍`, key: m.key }})
       }
       if (m.sender == '94768211424@s.whatsapp.net') {
       await ElisaBotMd.sendMessage(from, { react: { text: `⚕️`, key: m.key }})
       }
-      if (m.sender == '94701629707@s.whatsapp.net') {
+      if (m.sender == '94768211424@s.whatsapp.net') {
       await ElisaBotMd.sendMessage(from, { react: { text: `🐋`, key: m.key }})
       }
       if (m.sender == '94768211424@s.whatsapp.net') {
@@ -2706,7 +2706,7 @@ sᴀɴᴜᴡᴀ - ғʀᴏ ʜᴇʟᴘ
                               
                           case 'sc': case 'script': case 'git': {
                                   reply(`┌──────────────▢⃝
-│        *[ 🧚 ᴇʟɪsᴀ ʙᴏᴛ ᴍᴅ 🧚 ]*
+│        *[ 🧚 𝚃𝙷𝙸𝚅𝙰 𝙱𝙾𝚃 ᴍᴅ 🧚 ]*
 │
 │ *🖥️ ɢɪᴛ :* https://github.com/thivankaonline
 │ *📡 ʏᴛ ᴄʜᴀɴɴᴇʟ :* https://www.thivanka.lk
@@ -3041,7 +3041,7 @@ sᴀɴᴜᴡᴀ - ғʀᴏ ʜᴇʟᴘ
                               await sleep(1000)
                               upvote = vote[m.chat][1]
                               devote = vote[m.chat][2]
-                              teks_vote = `◉◍──[ *ᴇʟɪsᴀ ʙᴏᴛ* ]──◍◉
+                              teks_vote = `◉◍──[ *𝚃𝙷𝙸𝚅𝙰 𝙱𝙾𝚃* ]──◍◉
                   
 *ʀᴇsᴏɴ:* ${vote[m.chat][0]}
                   
@@ -3082,7 +3082,7 @@ sᴀɴᴜᴡᴀ - ғʀᴏ ʜᴇʟᴘ
                               if (wasVote) throw 'You have Voted'
                               vote[m.chat][1].push(m.sender)
                               menvote = vote[m.chat][1].concat(vote[m.chat][2])
-                              teks_vote = `◉◍──[ *ᴇʟɪsᴀ ʙᴏᴛ* ]──◍◉
+                              teks_vote = `◉◍──[ *𝚃𝙷𝙸𝚅𝙰 𝙱𝙾𝚃* ]──◍◉
                   
 *𝗥𝗘𝗔𝗦𝗢𝗡:* ${vote[m.chat][0]}
                   
@@ -3124,7 +3124,7 @@ ${vote[m.chat][2].map((v, i) => `├ ${i + 1}. @${v.split`@`[0]}`).join('\n')}
                               if (wasVote) throw 'You Have Voted'
                               vote[m.chat][2].push(m.sender)
                               menvote = vote[m.chat][1].concat(vote[m.chat][2])
-                              teks_vote = `◉◍──[ *ᴇʟɪsᴀ ʙᴏᴛ* ]──◍◉
+                              teks_vote = `◉◍──[ *𝚃𝙷𝙸𝚅𝙰 𝙱𝙾𝚃* ]──◍◉
                   
 *𝗗𝗘𝗩𝗢𝗧𝗘:* ${vote[m.chat][0]}
                   
@@ -3162,7 +3162,7 @@ ${vote[m.chat][2].map((v, i) => `├ ${i + 1}. @${v.split`@`[0]}`).join('\n')}
                   case 'cekvote':
                   if (!m.isGroup) throw mess.group
                   if (!(m.chat in vote)) throw `_*no voting in this group!*_\n\n*${prefix}vote* - to start voting`
-                  teks_vote = `◉◍──[ *ᴇʟɪsᴀ ʙᴏᴛ* ]──◍◉
+                  teks_vote = `◉◍──[ *𝚃𝙷𝙸𝚅𝙰 𝙱𝙾𝚃* ]──◍◉
                   
 *𝗥𝗘𝗔𝗦𝗢𝗡:* ${vote[m.chat][0]}
                   
@@ -4959,7 +4959,7 @@ const hdpid = rash.hddlid
                               
                     YTMASS = `
 
-╭───[  *ᴇʟɪsᴀ ʙᴏᴛ*  ]───◉
+╭───[  *𝚃𝙷𝙸𝚅𝙰 𝙱𝙾𝚃*  ]───◉
 │
 │  🎬 ʏᴛ  ᴠɪᴅᴇᴏ ᴅᴏᴡɴʟᴏᴀᴅᴇʀ 🎬
 │ 
@@ -4985,7 +4985,7 @@ const docidd = rash.doccmd
                               
                     YTMASS = `
 
-╭───[  *ᴇʟɪsᴀ ʙᴏᴛ*  ]───◉
+╭───[  *𝚃𝙷𝙸𝚅𝙰 𝙱𝙾𝚃*  ]───◉
 │
 │  🎬 ʏᴛ  sᴏɴɢ ᴅᴏᴡɴʟᴏᴀᴅᴇʀ 🎬
 │ 
