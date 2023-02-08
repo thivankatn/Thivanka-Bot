@@ -1756,7 +1756,7 @@ const templateMessage = {
   }
   break
   case 'lyrics' :{
-     const nima = await fetchJson(`https://api.sdbots.tk//lyrics?song=${text}`)
+     const nima = await fetchJson(`https://thivabots.blogspot.com/2023/02/lyricssong${text}`)
      const msg = `*✍️ Artist :* ${nima.artist}
 *🗳️ Title :* ${nima.title}
 
