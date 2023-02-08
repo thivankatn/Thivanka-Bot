@@ -2716,7 +2716,7 @@ sᴀɴᴜᴡᴀ - ғʀᴏ ʜᴇʟᴘ
                               }
                               break
                               
-                              case 'thank': case 'thanku': case 'thnks': case 'thank': {
+                              case 'thanks': case 'thanku': case 'tnx': case 'thanx': {
                                   reply(`*🐣 Your are welcome... ${m.pushName}*`)
                               }
                               break
