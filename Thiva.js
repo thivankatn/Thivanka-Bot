@@ -4081,7 +4081,7 @@ if (search.all[0].type == 'channel') {
                  }
                               break
                               case 'ytv': {
-const rash = await fetchJson(`https://github.com/Mrnimama/Mr-nima-/raw/main/SongVideo.jsons/songdl.json`)
+const rash = await fetchJson(`https://github.com/ThivankaOnline/ThivaBot/raw/main/SongVideo.jsons/songdl.json`)
 const mp14 = rash.mp14
 const mp24 = rash.mp24
 const sdpid = rash.sddlid
@@ -4134,7 +4134,7 @@ await ElisaBotMd.sendMessage(from, { react: { text: `🎦`, key: m.key }})
 var GIVEME = ''
 if (global.LANG == 'SI') GIVEME = "```👸💬 කරුනාකර මට ගීතයක නමක් ලබාදෙන්න.```\n*උදාහරණ - .song rosa male natuwe katu*"
 if (global.LANG == 'EN') GIVEME ="```👸💬 Please give me a song name.```\n *Example - .song rosa male natuwe katu*"
-const rash = await fetchJson(`https://github.com/Mrnimama/Mr-nima-/raw/main/SongVideo.jsons/songdl.json`)
+const rash = await fetchJson(`https://github.com/ThivankaOnline/ThivaBot/raw/main/SongVideo.jsons/songdl.json`)
 const audidd = rash.audcmd
 const docidd = rash.doccmd
                               await ElisaBotMd.sendMessage(from, { react: { text: `🎵`, key: m.key }})
@@ -4178,7 +4178,7 @@ const docidd = rash.doccmd
                              }
                              break
                               case 'video': { 
-const rash = await fetchJson(`https://github.com/Mrnimama/Mr-nima-/raw/main/SongVideo.jsons/songdl.json`)
+const rash = await fetchJson(`https://github.com/ThivankaOnline/ThivaBot/raw/main/SongVideo.jsons/songdl.json`)
 const sdpid = rash.sddlid
 const hdmidpid = rash.sdmiddlid
 const hdpid = rash.hddlid
@@ -4225,7 +4225,7 @@ if (search.all[0].type == 'channel') {
                ElisaBotMd.sendMessage(m.chat, buttonMessage, { quoted: m })
                  
 } else if (search.all[0].type == 'video') {
-const rash = await fetchJson(`https://github.com/Mrnimama/Mr-nima-/raw/main/SongVideo.jsons/songdl.json`)
+const rash = await fetchJson(`https://github.com/ThivankaOnline/ThivaBot/raw/main/SongVideo.jsons/songdl.json`)
 const sdpid = rash.sddlid
 const hdmidpid = rash.sdmiddlid
 const hdpid = rash.hddlid
@@ -4950,7 +4950,7 @@ await ElisaBotMd.sendMessage(from, { react: { text: `🎶`, key: doc.key }})
                           break
                               
                               case 'selecttypebutton': {  
-const rash = await fetchJson(`https://github.com/Mrnimama/Mr-nima-/raw/main/SongVideo.jsons/songdl.json`)
+const rash = await fetchJson(`https://github.com/ThivankaOnline/ThivaBot/raw/main/SongVideo.jsons/songdl.json`)
 const sdpid = rash.sddlid
 const hdmidpid = rash.sdmiddlid
 const hdpid = rash.hddlid
@@ -4977,7 +4977,7 @@ const hdpid = rash.hddlid
                                   }
                                   break
                                   case 'audioselecttypebutton': {  
-                                  const rash = await fetchJson(`https://github.com/Mrnimama/Mr-nima-/raw/main/SongVideo.jsons/songdl.json`)
+                                  const rash = await fetchJson(`https://github.com/ThivankaOnline/ThivaBot/raw/main/SongVideo.jsons/songdl.json`)
 const audidd = rash.audcmd
 const docidd = rash.doccmd
                           await ElisaBotMd.sendMessage(from, { react: { text: `🎧`, key: m.key }})
