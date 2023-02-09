@@ -8333,7 +8333,7 @@ break
                                       ElisaBotMd.sendImage(m.chat, data.url, mess.success, m)
                                       })
                                       break
-case 'thiva': case 'hello' case 'tda':{
+case 'thiva': case 'hello': case 'tda':{
   const anu = await fetchJson ('https://github.com/ThivankaOnline/UPLOADS/raw/main/JSON/elisadetails.json')
   const NIMAMSG = anu.MENU_NOTE
   const start = new Date().getTime()
