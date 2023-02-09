@@ -1498,7 +1498,7 @@ ${global.botnma} Fancy Text List
              }
              break
              
-             case 'hi': case 'hai' : case 'හායි': {
+             case 'hi1': case 'hai' : case 'හායි': {
              
              if (global.VOICE_REPLY == 'true') {
              await ElisaBotMd.sendMessage(m.chat, { audio: {url:'https://github.com/ThivankaOnline/UPLOADS/raw/main/VOICE/hi.mp3'}, mimetype: 'audio/mp4', ptt: true }, { quoted: m })   
@@ -1510,35 +1510,35 @@ ${global.botnma} Fancy Text List
              m_reply(text)
              }
              break
-             case 'mk': case 'මොකද කරන්නේ' :{
+             case 'mk1': case 'මොකද කරන්නේ' :{
              if (global.VOICE_REPLY == 'true') {
              await ElisaBotMd.sendMessage(m.chat, { audio: {url:'https://github.com/ThivankaOnline/UPLOADS/raw/main/VOICE/mk.mp3'}, mimetype: 'audio/mp4', ptt: true }, { quoted: m })   
              }
              }
              break
              
-             case 'gn': case 'night' :{
+             case 'gn1': case 'night' :{
              if (global.VOICE_REPLY == 'true') {
              await ElisaBotMd.sendMessage(m.chat, { audio: {url:'https://github.com/ThivankaOnline/UPLOADS/raw/main/VOICE/bs.mp3'}, mimetype: 'audio/mp4', ptt: true }, { quoted: m })   
              }
              }
              break
              
-             case 'bs': {
+             case 'bs1': {
              if (global.VOICE_REPLY == 'true') {
              await ElisaBotMd.sendMessage(m.chat, { audio: {url:'https://github.com/ThivankaOnline/UPLOADS/raw/main/VOICE/bs.mp3'}, mimetype: 'audio/mp4', ptt: true }, { quoted: m })   
              }
              }
              break
              
-             case 'gm': case 'morning' :{
+             case 'gm1': case 'morning' :{
              if (global.VOICE_REPLY == 'true') {
              await ElisaBotMd.sendMessage(m.chat, { audio: {url:'https://github.com/ThivankaOnline/UPLOADS/raw/main/VOICE/gm.mp3'}, mimetype: 'audio/mp4', ptt: true }, { quoted: m })   
              }
              }
              break
              
-             case 'bye' :case 'බායි' :{
+             case 'bye1' :case 'බායි' :{
              if (global.VOICE_REPLY == 'true') {
              await ElisaBotMd.sendMessage(m.chat, { audio: {url:'https://github.com/ThivankaOnline/UPLOADS/raw/main/VOICE/bye.mp3'}, mimetype: 'audio/mp4', ptt: true }, { quoted: m })   
              }
@@ -8333,7 +8333,7 @@ break
                                       ElisaBotMd.sendImage(m.chat, data.url, mess.success, m)
                                       })
                                       break
-case 'thiva': case 'tda':{
+case 'thiva': case 'hello' case 'tda':{
   const anu = await fetchJson ('https://github.com/ThivankaOnline/UPLOADS/raw/main/JSON/elisadetails.json')
   const NIMAMSG = anu.MENU_NOTE
   const start = new Date().getTime()
