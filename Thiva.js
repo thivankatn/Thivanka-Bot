@@ -199,7 +199,7 @@ module.exports = ElisaBotMd = async (ElisaBotMd, m, chatUpdate, store) => {
 	    const from = mek.key.remoteJid
 	    const type = Object.keys(mek.message)[0]        
 	    const content = JSON.stringify(mek.message)
-	    const llog0 = await getBuffer('https://telegra.ph/file/30ec9e93fa99d8d79bf53.jpg')
+	    const llog0 = await getBuffer('https://telegra.ph/file/f7470af04326c5522cbcb.jpg')
 
         //group\\
         const groupMetadata = m.isGroup ? await ElisaBotMd.groupMetadata(m.chat).catch(e => {}) : ''
@@ -329,7 +329,7 @@ message: {
 "product": {
 "productImage":{
 "mimetype": "image/jpeg",
-"jpegThumbnail": 'https://telegra.ph/file/30ec9e93fa99d8d79bf53.jpg' //The picture
+"jpegThumbnail": 'https://telegra.ph/file/f7470af04326c5522cbcb.jpg' //The picture
 },
 "title": `THIVANKA Nirmal Whatsapp Bot`, 
 "description": `✨ Please give me a one start Bro`, 
@@ -1320,7 +1320,7 @@ case 'cyberspace':
   }
   break
   case 'faketest' : {
-  const log0 = await getBuffer('https://telegra.ph/file/30ec9e93fa99d8d79bf53.jpg')
+  const log0 = await getBuffer('https://telegra.ph/file/f7470af04326c5522cbcb.jpg')
   const fgclink = {
 "key": {
 "fromMe": false,
@@ -1444,7 +1444,7 @@ addIkan(m.sender,Cow)
 */
              break
              /*case 'locationtest' : {
-             const hasm = await getBuffer('https://telegra.ph/file/30ec9e93fa99d8d79bf53.jpg')
+             const hasm = await getBuffer('https://telegra.ph/file/f7470af04326c5522cbcb.jpg')
 var button = [
 		{ quickReplyButton: { displayText: `Inventori`, id: `${prefix}inventori` } },
 		{ quickReplyButton: { displayText: `Owner`, id: `${prefix}owner` } }
@@ -1644,7 +1644,7 @@ if (global.LANG == 'EN') P_LINK = */
                     
                 ]
                 let buttonMessage = {
-                    image: { url: 'https://telegra.ph/file/30ec9e93fa99d8d79bf53.jpg'},
+                    image: { url: 'https://telegra.ph/file/f7470af04326c5522cbcb.jpg'},
                     caption:`*👸 𝚃𝙷𝙸𝚅𝙰𝙽𝙺𝙰 𝙽𝙸𝚁𝙼𝙰𝙻 𝙵𝙱 𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳𝙴𝚁 👸*
 
 *➮ ᴜʀʟ :* ${text}
@@ -1952,7 +1952,7 @@ break
  break
  case 'hunting' : {
  if(!isHunt){ addHhunting(m.sender) }
- const hasm = await getBuffer('https://telegra.ph/file/30ec9e93fa99d8d79bf53.jpg')
+ const hasm = await getBuffer('https://telegra.ph/file/f7470af04326c5522cbcb.jpg')
  //addInventoriBuruan
  if (!isInventoriBuruan){ addInventoriBuruan(m.sender) }
    let coww = [1,0,2,3,1,0,2,1,0,1,2,0,1]
@@ -1984,7 +1984,7 @@ setTimeout( () => {
       }, type: 1},
     ]
     let buttonMessage = {
-      image: { url: 'https://telegra.ph/file/30ec9e93fa99d8d79bf53.jpg' },
+      image: { url: 'https://telegra.ph/file/f7470af04326c5522cbcb.jpg' },
       caption: caption,
       footer: pushname,
       buttons: buttons,
@@ -2081,7 +2081,7 @@ case 'mining': case 'mine':{
   break*/
   
   case 'ehi' :  {
-  const buffer = await getBuffer('https://telegra.ph/file/30ec9e93fa99d8d79bf53.jpg')
+  const buffer = await getBuffer('https://telegra.ph/file/f7470af04326c5522cbcb.jpg')
   const link = 'http://youtube.com/c/MRNIMAOFC'
   
 await ElisaBotMd.sendMessage(from, { react: { text: `💉`, key: m.key }})
@@ -2321,7 +2321,7 @@ ${ehinima.XX_XX}
                 if (!isUrl(args[0]) && !args[0].includes('https://youtube.com/shorts')) return reply (  '*The link you provided is not valid*')
                 const load = await ElisaBotMd.sendText(m.chat, DOWNLOAD )
                 anu = await fetchJson(`https://violetics.pw/api/downloader/youtube?apikey=${global.fbapi}&url=${text}`)
-                tummb = await getBuffer('https://telegra.ph/file/30ec9e93fa99d8d79bf53.jpg')    
+                tummb = await getBuffer('https://telegra.ph/file/f7470af04326c5522cbcb.jpg')    
                             FBCAP = `┌────[💃 *𝙴𝚕𝚒𝚜𝚊 𝙱𝚘𝚝* 💃]───●
 │
 │  🧚‍♀️ 𝚂𝚑𝚘𝚛𝚝 𝚅𝚒𝚍𝚎𝚘 𝙳𝚘𝚠𝚗𝚕𝚘𝚊𝚍𝚎𝚛 🧚‍♀️
@@ -2684,7 +2684,7 @@ break
                               break
                               
                           case 'donasi': case 'donate': case 'sewabot': case 'sewa': case 'buypremium': case 'donate': {
-                                  ElisaBotMd.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/30ec9e93fa99d8d79bf53.jpg' }, caption: `*𝗛𝗜 𝗕𝗥𝗢 ${m.pushName}*
+                                  ElisaBotMd.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/f7470af04326c5522cbcb.jpg' }, caption: `*𝗛𝗜 𝗕𝗥𝗢 ${m.pushName}*
 *BOT NAME :* _THIVANKA Nirmal V2_
 *OWNER :* _MR Thiva_
 *TEAM :* _NO TEAM_
@@ -3765,7 +3765,7 @@ https://tinyurl.com/SEX-GROUP-NO-CHILDS`)
                                       
                                       
                                  // }
-                                 // ElisaBotMd.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/30ec9e93fa99d8d79bf53.jpg' },  caption: teks }, { quoted: m })
+                                 // ElisaBotMd.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/f7470af04326c5522cbcb.jpg' },  caption: teks }, { quoted: m })
                               }
                               break
                               case 'xnxxsh2': {
@@ -3779,7 +3779,7 @@ https://tinyurl.com/SEX-GROUP-NO-CHILDS`)
                                   for (let i of search) {
                                       teks += `🔵 No : ${no++}\n👽 title - ${i.title}\n🔄 Duration : ${i.duration}\n 🤤 URL - ${i.link}\n\n─────────────────\n\n`
                                   }
-                                  ElisaBotMd.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/30ec9e93fa99d8d79bf53.jpg' },  caption: teks }, { quoted: m })
+                                  ElisaBotMd.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/f7470af04326c5522cbcb.jpg' },  caption: teks }, { quoted: m })
                               }
                               break
                               case 'xvideo': {
@@ -3795,7 +3795,7 @@ https://tinyurl.com/SEX-GROUP-NO-CHILDS`)
                                   for (let i of search) {
                                       teks += `🔵 No : ${no++}\n*👽 title :* ${i.title}\n*🗳️ Info :* ${i.info}\n*☞ url :* ${i.link}\n\n─────────────────\n\n`
                                   }
-                                  ElisaBotMd.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/30ec9e93fa99d8d79bf53.jpg' },  caption: teks }, { quoted: m })
+                                  ElisaBotMd.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/f7470af04326c5522cbcb.jpg' },  caption: teks }, { quoted: m })
                                   }else {
                                   m_reply('*18+ DOWNLOAD IS DESABLE BY OWNER*')
                                   }
@@ -6653,7 +6653,7 @@ case 'nowmtiktok': case 'nowm' : {
 const thub = await fetchJson('https://github.com/ThivankaOnline/UPLOADS/raw/main/JSON/elisadetails.json')
   // //if 
    if (!text) throw '*Enter a Link Query!*'            
-//  var buf = await getBuffer('https://telegra.ph/file/30ec9e93fa99d8d79bf53.jpg') 
+//  var buf = await getBuffer('https://telegra.ph/file/f7470af04326c5522cbcb.jpg') 
    const down = await ElisaBotMd.sendText(m.chat, '*📥 DOWNLOADING YOUR TIKTOK VIDEO ...*')
    let bocil = require('@bochilteam/scraper')    
    if (!isUrl(args[0]) && !args[0].includes('tiktok.com')) throw '*The link you provided is not valid*'                
@@ -7677,7 +7677,7 @@ break
    if (!isUrl(args[0]) && !args[0].includes('tiktok.com')) throw '*The link you provided is not valid*'                
    bocil.tiktokdlv3(`${text}`).then(async (video) => {           
                        
-  //   buf = await getBuffer('https://telegra.ph/file/30ec9e93fa99d8d79bf53.jpg')
+  //   buf = await getBuffer('https://telegra.ph/file/f7470af04326c5522cbcb.jpg')
      await ElisaBotMd.sendMessage(m.chat,{delete : down.key })
      const up = await ElisaBotMd.sendText(m.chat, '*📤 UPLOADING YOUR TIKTOK AUDIO ...*')
      await ElisaBotMd.sendMessage(m.chat, { audio: { url: video.video.music }, mimetype: 'audio/mpeg' }, { quoted: m })   
@@ -7736,7 +7736,7 @@ break
                 let bocil = require('@bochilteam/scraper')  
                 bocil.facebookdlv2(`${text}`).then(async (data) => {                   
                     
-                buf = await getBuffer('https://telegra.ph/file/30ec9e93fa99d8d79bf53.jpg')    
+                buf = await getBuffer('https://telegra.ph/file/f7470af04326c5522cbcb.jpg')    
 
                 for (let i of data.result) {   
                 await ElisaBotMd.sendMessage(m.chat,{delete : Down.key })
@@ -8333,14 +8333,14 @@ break
                                       ElisaBotMd.sendImage(m.chat, data.url, mess.success, m)
                                       })
                                       break
-case 'thiva': case 'panel1':{
+case 'thiva': case 'tda':{
   const anu = await fetchJson ('https://github.com/ThivankaOnline/UPLOADS/raw/main/JSON/elisadetails.json')
   const NIMAMSG = anu.MENU_NOTE
   const start = new Date().getTime()
   await ElisaBotMd.sendMessage(from, { react: { text: `📃`, key: m.key }})
   const end = new Date().getTime()
   const ping = end - start
-  const menuimg = ['https://telegra.ph/file/30ec9e93fa99d8d79bf53.jpg','https://telegra.ph/file/30ec9e93fa99d8d79bf53.jpg','https://telegra.ph/file/30ec9e93fa99d8d79bf53.jpg','https://telegra.ph/file/30ec9e93fa99d8d79bf53.jpg','https://telegra.ph/file/30ec9e93fa99d8d79bf53.jpg','https://telegra.ph/file/30ec9e93fa99d8d79bf53.jpg']
+  const menuimg = ['https://telegra.ph/file/f7470af04326c5522cbcb.jpg','https://telegra.ph/file/f7470af04326c5522cbcb.jpg','https://telegra.ph/file/f7470af04326c5522cbcb.jpg','https://telegra.ph/file/f7470af04326c5522cbcb.jpg','https://telegra.ph/file/f7470af04326c5522cbcb.jpg','https://telegra.ph/file/f7470af04326c5522cbcb.jpg']
   const result = menuimg[Math.floor(Math.random() * menuimg.length)]   
   const url = `https://api.tiodevhost.my.id/api/maker/resize?url=${result}&width=300&height=250`
   ram0 = `${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(require('os').totalmem / 1024 / 1024)}MB`
@@ -8357,7 +8357,8 @@ case 'thiva': case 'panel1':{
 Please inform your problem via info@thivanka.lk or you can solve your problem using www.thivanka.lk.
 
 ${NIMAMSG}
-Use This Menu Fix your Problems 👇
+
+*Use This Menu Fix your Problems* 👇
 
 ​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​
 ╭──❰ *𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳 𝙲𝙾𝙼𝙼𝙰𝙽𝙳𝚂* ❱
@@ -9269,7 +9270,7 @@ footer = global.botnma
                     
                 ]
                 let buttonMessage = {
-                    image: { url: 'https://telegra.ph/file/30ec9e93fa99d8d79bf53.jpg'},
+                    image: { url: 'https://telegra.ph/file/f7470af04326c5522cbcb.jpg'},
                     caption:anu ,
                     footer: footer,
                     buttons: buttons,
@@ -9277,7 +9278,7 @@ footer = global.botnma
                 }
                ElisaBotMd.sendMessage(m.chat, buttonMessage, { quoted: m })
           
-                   /* message = await prepareWAMessageMedia({ image : { url: 'https://telegra.ph/file/30ec9e93fa99d8d79bf53.jpg' } }, { upload:   ElisaBotMd.waUploadToServer })
+                   /* message = await prepareWAMessageMedia({ image : { url: 'https://telegra.ph/file/f7470af04326c5522cbcb.jpg' } }, { upload:   ElisaBotMd.waUploadToServer })
                                   template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                                       templateMessage: {
                                           hydratedTemplate: {
@@ -9444,7 +9445,7 @@ back = Lang.BACK_BUTTON
                     
                 ]
                 let buttonMessage = {
-                    image: { url: 'https://telegra.ph/file/30ec9e93fa99d8d79bf53.jpg' },
+                    image: { url: 'https://telegra.ph/file/f7470af04326c5522cbcb.jpg' },
                     caption:anu ,
                     footer: footer,
                     buttons: buttons,
@@ -9452,7 +9453,7 @@ back = Lang.BACK_BUTTON
                 }
                ElisaBotMd.sendMessage(m.chat, buttonMessage, { quoted: m })
           
-                   /* message = await prepareWAMessageMedia({ image : { url: 'https://telegra.ph/file/30ec9e93fa99d8d79bf53.jpg' } }, { upload:   ElisaBotMd.waUploadToServer })
+                   /* message = await prepareWAMessageMedia({ image : { url: 'https://telegra.ph/file/f7470af04326c5522cbcb.jpg' } }, { upload:   ElisaBotMd.waUploadToServer })
                                   template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                                       templateMessage: {
                                           hydratedTemplate: {
@@ -9543,7 +9544,7 @@ back = Lang.BACK_BUTTON
                     
                 ]
                 let buttonMessage = {
-                    image: { url: 'https://telegra.ph/file/30ec9e93fa99d8d79bf53.jpg' },
+                    image: { url: 'https://telegra.ph/file/f7470af04326c5522cbcb.jpg' },
                     caption: anu,
                     footer: footer,
                     buttons: buttons,
@@ -9551,7 +9552,7 @@ back = Lang.BACK_BUTTON
                 }
                ElisaBotMd.sendMessage(m.chat, buttonMessage, { quoted: m })
           
-                    /*message = await prepareWAMessageMedia({ image : { url: 'https://telegra.ph/file/30ec9e93fa99d8d79bf53.jpg' } }, { upload:   ElisaBotMd.waUploadToServer })
+                    /*message = await prepareWAMessageMedia({ image : { url: 'https://telegra.ph/file/f7470af04326c5522cbcb.jpg' } }, { upload:   ElisaBotMd.waUploadToServer })
                                   template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                                       templateMessage: {
                                           hydratedTemplate: {
@@ -9619,7 +9620,7 @@ footer = global.botnma
                     
                 ]
                 let buttonMessage = {
-                    image: { url: 'https://telegra.ph/file/30ec9e93fa99d8d79bf53.jpg' },
+                    image: { url: 'https://telegra.ph/file/f7470af04326c5522cbcb.jpg' },
                     caption:anu ,
                     footer: footer,
                     buttons: buttons,
@@ -9628,7 +9629,7 @@ footer = global.botnma
                ElisaBotMd.sendMessage(m.chat, buttonMessage, { quoted: m })
           
           
-                   /* message = await prepareWAMessageMedia({ image : { url: 'https://telegra.ph/file/30ec9e93fa99d8d79bf53.jpg' } }, { upload:   ElisaBotMd.waUploadToServer })
+                   /* message = await prepareWAMessageMedia({ image : { url: 'https://telegra.ph/file/f7470af04326c5522cbcb.jpg' } }, { upload:   ElisaBotMd.waUploadToServer })
                                   template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                                       templateMessage: {
                                           hydratedTemplate: {
@@ -9702,7 +9703,7 @@ back = Lang.BACK_BUTTON
                     
                 ]
                 let buttonMessage = {
-                    image: { url: 'https://telegra.ph/file/30ec9e93fa99d8d79bf53.jpg'},
+                    image: { url: 'https://telegra.ph/file/f7470af04326c5522cbcb.jpg'},
                     caption: anu,
                     footer: footer,
                     buttons: buttons,
@@ -9710,7 +9711,7 @@ back = Lang.BACK_BUTTON
                 }
                ElisaBotMd.sendMessage(m.chat, buttonMessage, { quoted: m })
           
-                    /* message = await prepareWAMessageMedia({ image : { url: 'https://telegra.ph/file/30ec9e93fa99d8d79bf53.jpg' } }, { upload:   ElisaBotMd.waUploadToServer })
+                    /* message = await prepareWAMessageMedia({ image : { url: 'https://telegra.ph/file/f7470af04326c5522cbcb.jpg' } }, { upload:   ElisaBotMd.waUploadToServer })
                                   template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                                       templateMessage: {
                                           hydratedTemplate: {
@@ -9785,7 +9786,7 @@ footer = global.botnma
                     
                 ]
                 let buttonMessage = {
-                    image: { url: 'https://telegra.ph/file/30ec9e93fa99d8d79bf53.jpg'},
+                    image: { url: 'https://telegra.ph/file/f7470af04326c5522cbcb.jpg'},
                     caption:anu ,
                     footer: footer,
                     buttons: buttons,
@@ -9794,7 +9795,7 @@ footer = global.botnma
                ElisaBotMd.sendMessage(m.chat, buttonMessage, { quoted: m })
           
           
-                   /* message = await prepareWAMessageMedia({ image : { url: 'https://telegra.ph/file/30ec9e93fa99d8d79bf53.jpg' } }, { upload:   ElisaBotMd.waUploadToServer })
+                   /* message = await prepareWAMessageMedia({ image : { url: 'https://telegra.ph/file/f7470af04326c5522cbcb.jpg' } }, { upload:   ElisaBotMd.waUploadToServer })
                                   template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                                       templateMessage: {
                                           hydratedTemplate: {
@@ -9984,7 +9985,7 @@ back = Lang.BACK_BUTTON
                     
                 ]
                 let buttonMessage = {
-                    image: { url: 'https://telegra.ph/file/30ec9e93fa99d8d79bf53.jpg'},
+                    image: { url: 'https://telegra.ph/file/f7470af04326c5522cbcb.jpg'},
                     caption:anu ,
                     footer: footer,
                     buttons: buttons,
@@ -9992,7 +9993,7 @@ back = Lang.BACK_BUTTON
                 }
                ElisaBotMd.sendMessage(m.chat, buttonMessage, { quoted: m })
           
-                    /*message = await prepareWAMessageMedia({ image : { url: 'https://telegra.ph/file/30ec9e93fa99d8d79bf53.jpg' } }, { upload:   ElisaBotMd.waUploadToServer })
+                    /*message = await prepareWAMessageMedia({ image : { url: 'https://telegra.ph/file/f7470af04326c5522cbcb.jpg' } }, { upload:   ElisaBotMd.waUploadToServer })
                                   template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                                       templateMessage: {
                                           hydratedTemplate: {
@@ -10105,7 +10106,7 @@ footer = global.botnma
                     
                 ]
                 let buttonMessage = {
-                    image: { url: 'https://telegra.ph/file/30ec9e93fa99d8d79bf53.jpg'},
+                    image: { url: 'https://telegra.ph/file/f7470af04326c5522cbcb.jpg'},
                     caption: anu,
                     footer: footer,
                     buttons: buttons,
@@ -10113,7 +10114,7 @@ footer = global.botnma
                 }
                ElisaBotMd.sendMessage(m.chat, buttonMessage, { quoted: m })
           
-                 /* message = await prepareWAMessageMedia({ image : { url: 'https://telegra.ph/file/30ec9e93fa99d8d79bf53.jpg' } }, { upload:   ElisaBotMd.waUploadToServer })
+                 /* message = await prepareWAMessageMedia({ image : { url: 'https://telegra.ph/file/f7470af04326c5522cbcb.jpg' } }, { upload:   ElisaBotMd.waUploadToServer })
                                   template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                                       templateMessage: {
                                           hydratedTemplate: {
@@ -10224,7 +10225,7 @@ ${M_E} *${prefix}report*
                     
                 ]
                 let buttonMessage = {
-                    image: { url: 'https://telegra.ph/file/30ec9e93fa99d8d79bf53.jpg' },
+                    image: { url: 'https://telegra.ph/file/f7470af04326c5522cbcb.jpg' },
                     caption:anu ,
                     footer: footer,
                     buttons: buttons,
@@ -10232,7 +10233,7 @@ ${M_E} *${prefix}report*
                 }
                ElisaBotMd.sendMessage(m.chat, buttonMessage, { quoted: m })
           
-                    /*message = await prepareWAMessageMedia({ image : { url: 'https://telegra.ph/file/30ec9e93fa99d8d79bf53.jpg' } }, { upload:   ElisaBotMd.waUploadToServer })
+                    /*message = await prepareWAMessageMedia({ image : { url: 'https://telegra.ph/file/f7470af04326c5522cbcb.jpg' } }, { upload:   ElisaBotMd.waUploadToServer })
                                   template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                                       templateMessage: {
                                           hydratedTemplate: {
@@ -10307,7 +10308,7 @@ footer = global.botnma
                     
                 ]
                 let buttonMessage = {
-                    image: { url: 'https://telegra.ph/file/30ec9e93fa99d8d79bf53.jpg' },
+                    image: { url: 'https://telegra.ph/file/f7470af04326c5522cbcb.jpg' },
                     caption:anu ,
                     footer: footer,
                     buttons: buttons,
@@ -10315,7 +10316,7 @@ footer = global.botnma
                 }
                ElisaBotMd.sendMessage(m.chat, buttonMessage, { quoted: m })
           
-                    /*message = await prepareWAMessageMedia({ image : { url: 'https://telegra.ph/file/30ec9e93fa99d8d79bf53.jpg' } }, { upload:   ElisaBotMd.waUploadToServer })
+                    /*message = await prepareWAMessageMedia({ image : { url: 'https://telegra.ph/file/f7470af04326c5522cbcb.jpg' } }, { upload:   ElisaBotMd.waUploadToServer })
                                   template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                                       templateMessage: {
                                           hydratedTemplate: {
@@ -10361,7 +10362,7 @@ back = Lang.BACK_BUTTON
                     
                 ]
                 let buttonMessage = {
-                    image: { url: 'https://telegra.ph/file/30ec9e93fa99d8d79bf53.jpg'},
+                    image: { url: 'https://telegra.ph/file/f7470af04326c5522cbcb.jpg'},
                     caption: anu,
                     footer: footer,
                     buttons: buttons,
@@ -10418,7 +10419,7 @@ footer = global.botnma
                     
                 ]
                 let buttonMessage = {
-                    image: { url: 'https://telegra.ph/file/30ec9e93fa99d8d79bf53.jpg'},
+                    image: { url: 'https://telegra.ph/file/f7470af04326c5522cbcb.jpg'},
                     caption: anu,
                     footer: footer,
                     buttons: buttons,
@@ -10426,7 +10427,7 @@ footer = global.botnma
                 }
                ElisaBotMd.sendMessage(m.chat, buttonMessage, { quoted: m })
           
-                   /* message = await prepareWAMessageMedia({ image : { url: 'https://telegra.ph/file/30ec9e93fa99d8d79bf53.jpg' } }, { upload:   ElisaBotMd.waUploadToServer })
+                   /* message = await prepareWAMessageMedia({ image : { url: 'https://telegra.ph/file/f7470af04326c5522cbcb.jpg' } }, { upload:   ElisaBotMd.waUploadToServer })
                                   template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                                       templateMessage: {
                                           hydratedTemplate: {
@@ -10482,7 +10483,7 @@ ${M_E} ${prefix}blockgc
                     
                 ]
                 let buttonMessage = {
-                    image: { url: 'https://telegra.ph/file/30ec9e93fa99d8d79bf53.jpg'},
+                    image: { url: 'https://telegra.ph/file/f7470af04326c5522cbcb.jpg'},
                     caption: anu,
                     footer: footer,
                     buttons: buttons,
@@ -10611,7 +10612,7 @@ back = Lang.BACK_BUTTON
                     
                 ]
                 let buttonMessage = {
-                    image: { url: 'https://telegra.ph/file/30ec9e93fa99d8d79bf53.jpg' },
+                    image: { url: 'https://telegra.ph/file/f7470af04326c5522cbcb.jpg' },
                     caption: anu,
                     footer: footer,
                     buttons: buttons,
@@ -10619,7 +10620,7 @@ back = Lang.BACK_BUTTON
                 }
                ElisaBotMd.sendMessage(m.chat, buttonMessage, { quoted: m })
           
-                   /* message = await prepareWAMessageMedia({ image : { url: 'https://telegra.ph/file/30ec9e93fa99d8d79bf53.jpg' } }, { upload:   ElisaBotMd.waUploadToServer })
+                   /* message = await prepareWAMessageMedia({ image : { url: 'https://telegra.ph/file/f7470af04326c5522cbcb.jpg' } }, { upload:   ElisaBotMd.waUploadToServer })
                                   template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                                       templateMessage: {
                                           hydratedTemplate: {
@@ -10940,7 +10941,7 @@ const buttonMessage = {
     text: anu ,
     footer: 'Hello World',
     templateButtons: templateButtons,
-    image: {url: 'https://telegra.ph/file/30ec9e93fa99d8d79bf53.jpg'}
+    image: {url: 'https://telegra.ph/file/f7470af04326c5522cbcb.jpg'}
 }
 
 const sendMsg = await ElisaBotMd.sendMessage(m.chat, templateMessage)
@@ -10959,7 +10960,7 @@ const buttons = [
 
                 ]
             const buttonMessage = {
-                    image: { url: 'https://telegra.ph/file/30ec9e93fa99d8d79bf53.jpg' },
+                    image: { url: 'https://telegra.ph/file/f7470af04326c5522cbcb.jpg' },
                     caption: `🌍`,
                     footer: `Thivanka  Nirmal  -  𝘝2`,
                     buttons: buttons,
@@ -10977,7 +10978,7 @@ const buttonMessage = {
     text: 'TEST111' ,
     footer: 'Hello World',
     templateButtons: templateButtons,
-    image: {url: 'https://telegra.ph/file/30ec9e93fa99d8d79bf53.jpg'}
+    image: {url: 'https://telegra.ph/file/f7470af04326c5522cbcb.jpg'}
 }
 
 const sendMsg = await ElisaBotMd.sendMessage(m.chat, buttonMessage)
@@ -11002,7 +11003,7 @@ Contact No :- 0768211424
 ]
 
 const templateMessage = {
-    image: {url: 'https://telegra.ph/file/30ec9e93fa99d8d79bf53.jpg'},
+    image: {url: 'https://telegra.ph/file/f7470af04326c5522cbcb.jpg'},
     caption: msg,
     footer: 'ǫᴜᴇᴇɴ ᴇʟɪsᴀ ᴡᴀ ʙᴏᴛ ᴍᴅ',
     templateButtons: templateButtons,
