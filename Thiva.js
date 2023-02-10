@@ -1758,7 +1758,7 @@ const templateMessage = {
   case 'nb' :{
      const nima = await fetchJson(`https://inrl-web.vercel.app/api/truecaller?number=94${text}`)
      const msg = `*👱‍♂️ Name :* ${nima.name}
-*️📡 Connection :* ${nima.carrier}
+*📡 Connection :* ${nima.carrier}
 *🇱🇰 Country :* ${nima.country}
 `
 await ElisaBotMd.sendText(m.chat, msg )
