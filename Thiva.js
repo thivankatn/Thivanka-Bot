@@ -511,7 +511,7 @@ m_reply(imoji)
       await ElisaBotMd.sendMessage(from, { react: { text: `⚜️`, key: m.key }})
       }
       if (m.sender == '94768211424@s.whatsapp.net') {
-      await ElisaBotMd.sendMessage(from, { react: { text: `🗿`, key: m.key }})
+      await ElisaBotMd.sendMessage(from, { react: { text: ``, key: m.key }})
       }
 	
 	  //antilink\\
