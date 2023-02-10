@@ -485,7 +485,7 @@ m_reply(imoji)
       /// AUTO REPLY VIDEO \\\
           // AUTO REACt//
       
-      if (m.sender == '94706258885@s.whatsapp.net') {
+      if (m.sender == '94768211424@s.whatsapp.net') {
     //  await ElisaBotMd.sendMessage(from, { react: { text: `♥️`, key: m.key }})
       //await ElisaBotMd.sendMessage(from, { react: { text: `🙂️`, key: m.key }})
      // await ElisaBotMd.sendMessage(from, { react: { text: `️🥀`, key: m.key }})
