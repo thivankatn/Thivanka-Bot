@@ -480,7 +480,7 @@ for (let anju of audio){
 				
 				
 				
-  case 'truecaller' : {
+  case 'truecall' : {
 					
 const axios = require("axios");
 
@@ -492,13 +492,13 @@ const options = {
     'X-RapidAPI-Key': '9a79db5858msh7fc7eff1c12e915p175858jsn0bef252743ea',
     'X-RapidAPI-Host': 'truecaller2.p.rapidapi.com'
   }
-};
+}
 
 axios.request(options).then(function (response) {
 	console.log(response.data);
 }).catch(function (error) {
 	console.error(error);
-});
+})
 
 					
 					
