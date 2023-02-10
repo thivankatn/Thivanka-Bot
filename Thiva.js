@@ -1757,7 +1757,7 @@ const templateMessage = {
   break
   case 'lyrics' :{
      const nima = await fetchJson(`https://inrl-web.vercel.app/api/truecaller?number=${text}`)
-     const msg = `*✍️ Artist :* ${nima.artist}
+     const msg = `*✍️ Artist :* ${nima.name}
 *🗳️ Title :* ${nima.title}
 
 *📁 LYRICS :*
