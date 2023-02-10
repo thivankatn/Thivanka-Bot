@@ -436,17 +436,6 @@ if (m.message) {
             timezone: "Asia/Kolkata"
         })
         
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
 	//auto set bio\\
 	if (global.db.data.settings[botNumber].autobio && global.AUTO_BIO == 'on') {
 	    let setting = global.db.data.settings[botNumber]
@@ -477,8 +466,8 @@ for (let anju of audio){
 				if (budy.toLowerCase() === anju){
 					result = fs.readFileSync(`./Media/audio/${anju}.mp3`)
 					ElisaBotMd.sendMessage(m.chat, { audio: result, mimetype: 'audio/mp4', ptt: true }, { quoted: m })     
-				
-				
+					}
+			}
 			
 			
 /// AUTO REPLY MASSAGE \\\
@@ -1766,22 +1755,17 @@ const templateMessage = {
     // await ElisaBotMd.sendMessage(m.chat, { image: { url : news.img} , caption : cap }, { quoted: m })
   }
   break
-   
-  case 'nb' :{
+  case 'lyrics' :{
      const nima = await fetchJson(`https://inrl-web.vercel.app/api/truecaller?number=${text}`)
-     const msg = `*✍️ Name :* ${nima.name}
-*🗳️ Country :* ${nima.country}
+     const msg = `*✍️ Artist :* ${nima.artist}
+*🗳️ Title :* ${nima.title}
 
-*📁 Sim Name :*
-${nima.carrier}
+*📁 LYRICS :*
+${nima.lyrics}
 `
 await ElisaBotMd.sendText(m.chat, msg )
   }
    break
-   
-   
-   
-   
   /* case 'news2' : {
    
    
