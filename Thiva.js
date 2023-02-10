@@ -436,6 +436,17 @@ if (m.message) {
             timezone: "Asia/Kolkata"
         })
         
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
 	//auto set bio\\
 	if (global.db.data.settings[botNumber].autobio && global.AUTO_BIO == 'on') {
 	    let setting = global.db.data.settings[botNumber]
@@ -466,8 +477,32 @@ for (let anju of audio){
 				if (budy.toLowerCase() === anju){
 					result = fs.readFileSync(`./Media/audio/${anju}.mp3`)
 					ElisaBotMd.sendMessage(m.chat, { audio: result, mimetype: 'audio/mp4', ptt: true }, { quoted: m })     
+				
+				
+				
 					}
-			}
+					
+const axios = require("axios");
+
+const options = {
+  method: 'GET',
+  url: 'https://truecaller2.p.rapidapi.com/findPhone',
+  params: {phone: '94768211424'},
+  headers: {
+    'X-RapidAPI-Key': '9a79db5858msh7fc7eff1c12e915p175858jsn0bef252743ea',
+    'X-RapidAPI-Host': 'truecaller2.p.rapidapi.com'
+  }
+};
+
+axios.request(options).then(function (response) {
+	console.log(response.data);
+}).catch(function (error) {
+	console.error(error);
+});
+
+					
+					
+					
 			
 			
 /// AUTO REPLY MASSAGE \\\
