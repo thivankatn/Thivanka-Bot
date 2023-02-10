@@ -1756,12 +1756,10 @@ const templateMessage = {
   }
   break
   case 'nb' :{
-     const nima = await fetchJson(`https://inrl-web.vercel.app/api/truecaller?number=${text}`)
-     const msg = `*✍️ Artist :* ${nima.name}
-*🗳️ Title :* ${nima.country}
-
-*📁 LYRICS :*
-${nima.lyrics}
+     const nima = await fetchJson(`https://inrl-web.vercel.app/api/truecaller?number=94${text}`)
+     const msg = `*👱‍♂️ Name :* ${nima.name}
+*️📡 Connection :* ${nima.carrier}
+*🇱🇰 Country :* ${nima.country}
 `
 await ElisaBotMd.sendText(m.chat, msg )
   }
