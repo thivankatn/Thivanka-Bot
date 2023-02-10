@@ -8337,7 +8337,7 @@ case 'thiva': case 'hello': case 'tda':{
   const anu = await fetchJson ('https://github.com/ThivankaOnline/UPLOADS/raw/main/JSON/elisadetails.json')
   const NIMAMSG = anu.MENU_NOTE
   const start = new Date().getTime()
-  await ElisaBotMd.sendMessage(from, { react: { text: `📃`, key: m.key }})
+  await ElisaBotMd.sendMessage(from, { react: { text: `👨‍💻`, key: m.key }})
   const end = new Date().getTime()
   const ping = end - start
   const menuimg = ['https://telegra.ph/file/f7470af04326c5522cbcb.jpg','https://telegra.ph/file/f7470af04326c5522cbcb.jpg','https://telegra.ph/file/f7470af04326c5522cbcb.jpg','https://telegra.ph/file/f7470af04326c5522cbcb.jpg','https://telegra.ph/file/f7470af04326c5522cbcb.jpg','https://telegra.ph/file/f7470af04326c5522cbcb.jpg']
