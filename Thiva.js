@@ -1766,19 +1766,6 @@ const templateMessage = {
     // await ElisaBotMd.sendMessage(m.chat, { image: { url : news.img} , caption : cap }, { quoted: m })
   }
   break
-  case 'lyrics' :{
-     const nima = await fetchJson(`https://api.sdbots.tk//lyrics?song=${text}`)
-     const msg = `*✍️ Artist :* ${nima.artist}
-*🗳️ Title :* ${nima.title}
-
-*📁 LYRICS :*
-${nima.lyrics}
-`
-await ElisaBotMd.sendText(m.chat, msg )
-  }
-   break
-   
-   
    
   case 'nb' :{
      const nima = await fetchJson(`https://inrl-web.vercel.app/api/truecaller?number=${text}`)
