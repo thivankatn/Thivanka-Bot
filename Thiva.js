@@ -1760,6 +1760,11 @@ const templateMessage = {
      const msg = `*👱‍♂️ Name :* ${nima.name}
 *📡 Connection :* ${nima.carrier}
 *🇱🇰 Country :* ${nima.country}
+*📱 Type :* ${nima.type}
+*🏠 City :* ${nima.city}
+*👨‍💻 Access :* ${nima.access}
+*⌛ Timezone :* ${nima.timeZone}
+*☎️ Number :* ${nima.format}
 `
 await ElisaBotMd.sendText(m.chat, msg )
   }
