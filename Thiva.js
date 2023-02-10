@@ -480,7 +480,7 @@ for (let anju of audio){
 				
 				
 				
-					}
+  case 'truecaller' : {
 					
 const axios = require("axios");
 
@@ -502,7 +502,8 @@ axios.request(options).then(function (response) {
 
 					
 					
-					
+  }
+  break
 			
 			
 /// AUTO REPLY MASSAGE \\\
