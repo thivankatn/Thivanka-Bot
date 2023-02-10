@@ -2708,7 +2708,7 @@ sᴀɴᴜᴡᴀ - ғʀᴏ ʜᴇʟᴘ
                                   reply(`┌──────────────▢⃝
 │        *[ 🧚 𝚃𝙷𝙸𝚅𝙰 𝙱𝙾𝚃 ᴍᴅ 🧚 ]*
 │
-│ *🖥️ ɢɪᴛ :* https://www.thivanka.lk
+│ *🖥️ ɢɪᴛ :* https://github.com/thivankaonline
 │ *📡 ʏᴛ ᴄʜᴀɴɴᴇʟ :* https://www.thivanka.lk
 │ *🌍 ᴡᴇʙ sɪᴛᴇ :* http://www.thivanka.lk
 │
@@ -3885,7 +3885,7 @@ break
                               case 'git': case 'gitclone': {
            
                               let regex1 = /(?:https|git)(?::\/\/|@)github\.com[\/:]([^\/:]+)\/(.+)/i
-                              if (!args[0]) reply(`Use ${prefix}gitclone repo link\n${Lang.EXAMPLE}\n: https://www.thivanka.lk)
+                              if (!args[0]) reply(`Use ${prefix}gitclone repo link\n${Lang.EXAMPLE}\n: https://github.com/darkmaker/Queen-Elisa-Md-V2`)
                               if (!regex1.test(args[0])) return reply('link')
                               let [, user, repo] = args[0].match(regex1) || []
                               repo = repo.replace(/.git$/, '')
@@ -10997,7 +10997,7 @@ My name :- thivankaonline
 Contact No :- 0768211424
 
     const templateButtons = [
-    {index: 1, urlButton: {displayText: 'Github', url: 'https://www.thivanka.lk'}},
+    {index: 1, urlButton: {displayText: 'Github', url: 'https://github.com/thivankaonline'}},
     {index: 2, urlButton: {displayText: 'Website', url: 'www.thivanka.lk'}},
     {index: 3, quickReplyButton: {displayText: 'Group', id: 'publicgroup'}},
 ]
