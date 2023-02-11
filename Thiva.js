@@ -1755,6 +1755,24 @@ const templateMessage = {
     // await ElisaBotMd.sendMessage(m.chat, { image: { url : news.img} , caption : cap }, { quoted: m })
   }
   break
+  
+  
+     case 'sendnews' : {
+    if (m.chat == '120363049703450133@g.us') {
+
+const cyber = await fetchJson(`https://api.sdbots.tk/hirunews`)
+
+ElisaBotMd.sendMessage(`${text}`, { image: { url: cyber.img }, caption: `*${cyber.title}*\n\n🔔 *විස්තරය* - ${cyber.description}\n\n*_🖇️ News Link -_* ${cyber.link}\n\nꜱʟ ɴᴇᴡꜱ ᴜᴘᴅᴀᴛᴇꜱ ᴄᴇɴᴛᴇʀ` }, )
+     } else {
+     reply("This Chat not News Sender Group")
+     }
+     }
+     
+    break
+    
+  
+  
+  
   case 'nb' :{
      const nima = await fetchJson(`https://inrl-web.vercel.app/api/truecaller?number=94${text}`)
      const msg = `*👱‍♂️ Name :* ${nima.name}
