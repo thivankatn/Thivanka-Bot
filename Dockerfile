@@ -1,17 +1,8 @@
-FROM node:lts-buster
+FROM fusuf/whatsasena:latest
 
-RUN apt-get update && \
-  apt-get install -y \
-  ffmpeg \
-  imagemagick \
-  webp && \
-  apt-get upgrade -y && \
-  rm -rf /var/lib/apt/lists/*
-
-COPY package.json .
-
-RUN npm install
-
-COPY . .
-
-CMD ["node", "."]
+RUN git clone https://github.com/MR-NIMA-X/Railway-test /skl/Railway-test
+WORKDIR /skl/Railway-test
+ENV TZ=Asia/Kolkata
+RUN npm install supervisor -g
+RUN yarn install --ignore-engines
+CMD ["node", "index.js"]
