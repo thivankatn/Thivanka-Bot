@@ -1723,38 +1723,37 @@ if (q.includes('--help')) return reply(examkosong)
 })
   }
   break*/
-  case 'news' : {
-       const load = await ElisaBotMd.sendText(m.chat, mess.wait , m, ) 
-       const news = await fetchJson(`https://api.sdbots.tk/hirunews`)
-       const cap = `*👸 THIVANKA Nirmal News 👸*
-       
-*🏷️ මාතෘකාව :* ${news.title}
-*⏰ අලුත් කරන වේලාව :* _${news.date}_
+  // TESTING NEWS STARTS \\
 
-*📄️ විස්තරය :*
-${news.description}
+case 'news' :{ 
+  await ElisaBotMd.sendMessage(from, { react: { text: `🥀`, key: m.key }})
 
-`
-const templateButtons = [
-    {index: 1, urlButton: {displayText: `හිරු පුවත්`, url: news.link }},
-
-
-    ]
-
-const templateMessage = {
-    image: {url: news.img },
-    caption: '     ⫷ 👸 *𝚃𝙷𝙸𝚅𝙰𝙽𝙺𝙰 𝙽𝙸𝚁𝙼𝙰𝙻 𝙽𝙴𝚆𝚂* 👸 ⫸\n\n'+cap,
-    footer: global.botnma,
-    templateButtons: templateButtons,
-    headerType: 4
-}
-     
-     await ElisaBotMd.sendMessage(m.chat, templateMessage, { quoted: m })
-     await ElisaBotMd.sendMessage(m.chat,{delete : load.key })  
- 
-    // await ElisaBotMd.sendMessage(m.chat, { image: { url : news.img} , caption : cap }, { quoted: m })
-  }
-  break
+if (m.chat == '120363049703450133@g.us') {
+           
+             sections = [{ 
+                    "title": `SELECT YOUR NEWS OPTION`,
+                                   "rows": [
+                                   {
+										"title": "එසැණ පුවත් සොයන්න",
+										"description": "ᴄʜᴇᴄᴋ ʜᴇʟᴀᴋᴜʀᴜ ɴᴇᴡꜱ",
+										"rowId": `checkesenanewsnx`
+										},
+										{
+											"title": "හිරු News සොයන්න",
+										"description": "ᴄʜᴇᴄᴋ ʜɪʀᴜɴᴇᴡꜱ",
+										"rowId": `checkhirunewsx`
+										}
+								]
+								
+								}
+							]
+				 ElisaBotMd.sendListMsg(m.chat, `අවශ්‍ය යොමුව තෝරන්න`, `ᴄʏʙᴇʀ-x ᴡʜᴀᴛꜱᴀᴘᴘ ʙᴏᴛ`, ElisaBotMd.user.name, `නිව්ස් වර්ගය`, sections, m)
+				 } else {
+     reply("⚠️ Not Found")
+     }
+                }
+                
+            break
   case 'nb' :{
      const nima = await fetchJson(`https://inrl-web.vercel.app/api/truecaller?number=94${text}`)
      const msg = `*👱‍♂️ Name :* ${nima.name}
