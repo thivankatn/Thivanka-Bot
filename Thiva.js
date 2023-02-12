@@ -2119,6 +2119,8 @@ const newsgroup = '120363049703450133@g.us'
 *🖇️ Link* : ${news.link}
 
 *📡 Group* : https://chat.whatsapp.com/KnmiFeP48AX7fJbRH1anMc
+
+ɢᴏꜱꜱɪᴘ ʟᴀɴᴋᴀ ɴᴇᴡꜱ
 `
      
     // await ElisaBotMd.sendMessage('120363049703450133@g.us', templateMessage )
@@ -2158,9 +2160,10 @@ const newsgroup = '120363049703450133@g.us'
 *🖇️ Link* : ${news.link}
 
 *📡 Group* : https://chat.whatsapp.com/KnmiFeP48AX7fJbRH1anMc
-`,
-footer: `ɢᴏꜱꜱɪᴘ ʟᴀɴᴋᴀ ɴᴇᴡꜱ`
-     
+
+ɢᴏꜱꜱɪᴘ ʟᴀɴᴋᴀ ɴᴇᴡꜱ
+`
+
     // await ElisaBotMd.sendMessage('120363049703450133@g.us', templateMessage )
     // await ElisaBotMd.sendMessage(m.chat,{delete : load.key })  
  
