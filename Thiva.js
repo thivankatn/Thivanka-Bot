@@ -1933,7 +1933,7 @@ if (command == 'fb') rimogi = '🪀'
 if (command == 'get') rimogi = '🧸'
 
 const seccap = args[1] || '😍💗'
-    const thub = await fetchJson('https://github.com/DarkMakerofc/UPLOADS/raw/main/JSON/elisadetails.json')
+    const thub = await fetchJson('https://github.com/thivankaonline/UPLOADS/raw/main/JSON/elisadetails.json')
                           await ElisaBotMd.sendMessage(from, { react: { text: `⬇️`, key: m.key }})
     
     if (!text) {
@@ -1983,7 +1983,7 @@ const urlnya = text.split("&")[0]
 const seccap = text.split("&")[1] || '😇💗'
  
 //const seccap = args[1] || '😍💗'
-    const thub = await fetchJson('https://github.com/DarkMakerofc/UPLOADS/raw/main/JSON/elisadetails.json')
+    const thub = await fetchJson('https://github.com/thivankaonline/UPLOADS/raw/main/JSON/elisadetails.json')
                           await ElisaBotMd.sendMessage(from, { react: { text: `📥`, key: m.key }})
     
     if (!text) throw '*Please Give me a link*'
@@ -2034,7 +2034,7 @@ reply('✅ Done !')
 }
     break
 case 'ytmp4' : {
-                                  const thub = await fetchJson('https://github.com/DarkMakerofc/UPLOADS/raw/main/JSON/elisadetails.json')
+                                  const thub = await fetchJson('https://github.com/thivankaonline/UPLOADS/raw/main/JSON/elisadetails.json')
                               const buf = await getBuffer(thub.YT_THUB)
                           if(!text) return reply('*👸💬 Need youtube url* \n'+'```ℹ️ Example .ytmp4 https://youtube.com/watch?v=WoWlWb6vbzA```')
                           if (!text.includes('https://youtu')) return reply('*👸💬 Need youtube url* \n'+'```ℹ️ Example .ytmp4 https://youtube.com/watch?v=WoWlWb6vbzA```')
@@ -2086,7 +2086,7 @@ case 'ping' : case 'ping2' : {
 case 'tiktok2' : {
    
 if (!isUrl(args[0]) && !args[0].includes('tiktok.com')) return reply ( '*The link you provided is not valid*')
-const thub = await fetchJson('https://github.com/DarkMakerofc/UPLOADS/raw/main/JSON/elisadetails.json')
+const thub = await fetchJson('https://github.com/thivankaonline/UPLOADS/raw/main/JSON/elisadetails.json')
 buf = await getBuffer(thub.TIKTOK_THUB)
 const cyber = await fetchJson(`https://api.sdbots.tk/tiktok?url=${text}`)
 const down = await ElisaBotMd.sendText(m.chat, '*📥 DOWNLOADING YOUR TIKTOK VIDEO ...*')
@@ -2103,11 +2103,11 @@ await ElisaBotMd.sendMessage(m.chat,{delete : up.key })
 break
 
 
-case 'nnews' : {
+case 'send' : {
 const newsgroup = '120363049703450133@g.us'
        const load = await ElisaBotMd.sendText(m.chat, mess.wait ) 
-      // const thub = await fetchJson('https://github.com/DarkMakerofc/UPLOADS/raw/main/JSON/elisadetails.json')
-       buf = await getBuffer('https://telegra.ph/file/a0829817f254c84fc96c9.jpg')
+      // const thub = await fetchJson('https://github.com/thivankaonline/UPLOADS/raw/main/JSON/elisadetails.json')
+       buf = await getBuffer('https://telegra.ph/file/9f4c68f6657ab901053c6.jpg')
        const news = await fetchJson(`https://api.sdbots.tk/hirunews`)
        const time2 = moment().tz('Asia/colombo').format('HH:mm:ss')  
        console.log(news)
@@ -2142,17 +2142,15 @@ const newsgroup = '120363049703450133@g.us'
   
   
     
-case 'cnnews' : {
+case 'test' : {
 const newsgroup = '120363049703450133@g.us'
        const load = await ElisaBotMd.sendText(m.chat, mess.wait ) 
-      // const thub = await fetchJson('https://github.com/DarkMakerofc/UPLOADS/raw/main/JSON/elisadetails.json')
-       buf = await getBuffer('https://telegra.ph/file/a0829817f254c84fc96c9.jpg')
+      // const thub = await fetchJson('https://github.com/thivankaonline/UPLOADS/raw/main/JSON/elisadetails.json')
+       buf = await getBuffer('https://telegra.ph/file/9f4c68f6657ab901053c6.jpg')
        const news = await fetchJson(`https://api.sdbots.tk/hirunews`)
        const time2 = moment().tz('Asia/colombo').format('HH:mm:ss')  
        console.log(news)
-       const cap = `        *ɢᴏꜱꜱɪᴘ ʟᴀɴᴋᴀ ɴᴇᴡꜱ*
-
-  *${news.title}*
+       const cap = `*${news.title}*
 
 *📬️ විස්තරය -* ${news.description}
 
