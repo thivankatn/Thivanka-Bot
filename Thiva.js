@@ -2115,7 +2115,6 @@ const newsgroup = '120363049703450133@g.us'
 
 *📬️ විස්තරය -* ${news.description}
 
-
 *🖇️ Link* : ${news.link}
 
 *📡 Group* : https://chat.whatsapp.com/KnmiFeP48AX7fJbRH1anMc
@@ -2153,7 +2152,6 @@ const newsgroup = '120363049703450133@g.us'
        const cap = `*${news.title}*
 
 *📬️ විස්තරය -* ${news.description}
-
 
 *🖇️ Link* : ${news.link}
 
