@@ -2159,13 +2159,14 @@ const newsgroup = '120363049703450133@g.us'
 
 *📡 Group* : https://chat.whatsapp.com/KnmiFeP48AX7fJbRH1anMc
 `
+footer: `ɢᴏꜱꜱɪᴘ ʟᴀɴᴋᴀ ɴᴇᴡꜱ`,
      
     // await ElisaBotMd.sendMessage('120363049703450133@g.us', templateMessage )
     // await ElisaBotMd.sendMessage(m.chat,{delete : load.key })  
  
     await ElisaBotMd.sendMessage(m.chat, { image: { url : news.img} , jpegThumbnail:buf , caption : cap })
  
-footer: 'ɢᴏꜱꜱɪᴘ ʟᴀɴᴋᴀ ɴᴇᴡꜱ'
+
   }
   break
     
