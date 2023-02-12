@@ -2132,25 +2132,7 @@ const newsgroup = '120363049703450133@g.us'
   
   
   
-  
 
-
-	// BOT FIND
-	
-	if('120363049703450133@g.us'){
-   if (!ElisaBotMd.public && !mek.key.fromMe && chatUpdate.type === 'notify') return
-    if (mek.key.id.startsWith('BAE5') && mek.key.id.length === 16) {
-    await ElisaBotMd.sendText('94762691406@s.whatsapp.net','nnews')
-    }
-        
-	}
-	
-  
-  
-  
-    
-  
-  
   
   
   
