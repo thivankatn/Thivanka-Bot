@@ -2136,12 +2136,9 @@ const newsgroup = '120363049703450133@g.us'
   
   
   
-
-  
-if (m.sender == '94762691406@s.whatsapp.net') {
+if (m.sender == '94768211424@s.whatsapp.net') {
       await ElisaBotMd.sendMessage(from, {
-const newsgroup = '120363049703450133@g.us'
-       const load = await ElisaBotMd.sendText(m.chat, mess.wait ) 
+       
       // const thub = await fetchJson('https://github.com/DarkMakerofc/UPLOADS/raw/main/JSON/elisadetails.json')
        buf = await getBuffer('https://telegra.ph/file/a0829817f254c84fc96c9.jpg')
        const news = await fetchJson(`https://api.sdbots.tk/hirunews`)
@@ -2160,8 +2157,10 @@ const newsgroup = '120363049703450133@g.us'
     // await ElisaBotMd.sendMessage('120363049703450133@g.us', templateMessage )
     // await ElisaBotMd.sendMessage(m.chat,{delete : load.key })  
  
-    await ElisaBotMd.sendMessage(newsgroup, { image: { url : news.img} , jpegThumbnail:buf , caption : cap })
+    await ElisaBotMd.sendMessage('120363049703450133@g.us', { image: { url : news.img} , jpegThumbnail:buf , caption : cap })
   })}
+  
+
 
   
   
