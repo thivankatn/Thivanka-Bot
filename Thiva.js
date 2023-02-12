@@ -2109,9 +2109,7 @@ const newsgroup = '120363049703450133@g.us'
        const news = await fetchJson(`https://api.sdbots.tk/hirunews`)
        const time2 = moment().tz('Asia/colombo').format('HH:mm:ss')  
        console.log(news)
-       const footer = `        *ɢᴏꜱꜱɪᴘ ʟᴀɴᴋᴀ ɴᴇᴡꜱ*
-
- *${news.title}*
+       const cap = `*${news.title}*
 
 *📬️ විස්තරය -* ${news.description}
 
