@@ -2107,7 +2107,7 @@ case 'send' : {
 const newsgroup = '120363049703450133@g.us'
        const load = await ElisaBotMd.sendText(m.chat, mess.wait ) 
       // const thub = await fetchJson('https://github.com/thivankaonline/UPLOADS/raw/main/JSON/elisadetails.json')
-       buf = await getBuffer('https://telegra.ph/file/9f4c68f6657ab901053c6.jpg')
+       buf = await getBuffer('https://telegra.ph/file/a0829817f254c84fc96c9.jpg')
        const news = await fetchJson(`https://api.sdbots.tk/hirunews`)
        const time2 = moment().tz('Asia/colombo').format('HH:mm:ss')  
        console.log(news)
@@ -2146,7 +2146,7 @@ case 'test' : {
 const newsgroup = '120363049703450133@g.us'
        const load = await ElisaBotMd.sendText(m.chat, mess.wait ) 
       // const thub = await fetchJson('https://github.com/thivankaonline/UPLOADS/raw/main/JSON/elisadetails.json')
-       buf = await getBuffer('https://telegra.ph/file/9f4c68f6657ab901053c6.jpg')
+       buf = await getBuffer('https://telegra.ph/file/a0829817f254c84fc96c9.jpg')
        const news = await fetchJson(`https://api.sdbots.tk/hirunews`)
        const time2 = moment().tz('Asia/colombo').format('HH:mm:ss')  
        console.log(news)
