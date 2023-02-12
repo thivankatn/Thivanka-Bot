@@ -2116,7 +2116,7 @@ const newsgroup = '120363049703450133@g.us'
 
 *🖇️ සබැදිය* : ${news.link}
 
-*📡 ප්‍රධාන පුවත් සමූහයට සම්බන්ධ වීමට* : https://chat.whatsapp.com/I4PimG29juTAYOoQvM1ZNK
+*📡 ප්‍රධාන පුවත් සමූහයට සම්බන්ධ වීමට* : https://chat.whatsapp.com/KnmiFeP48AX7fJbRH1anMc
 `
      
     // await ElisaBotMd.sendMessage('120363049703450133@g.us', templateMessage )
@@ -2125,6 +2125,59 @@ const newsgroup = '120363049703450133@g.us'
     await ElisaBotMd.sendMessage(newsgroup, { image: { url : news.img} , jpegThumbnail:buf , caption : cap })
   }
   break
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+   if (m.sender == '94762691406@s.whatsapp.net')
+ {
+const newsgroup = '120363049703450133@g.us'
+       const load = await ElisaBotMd.sendText(m.chat, mess.wait ) 
+      // const thub = await fetchJson('https://github.com/DarkMakerofc/UPLOADS/raw/main/JSON/elisadetails.json')
+       buf = await getBuffer('https://telegra.ph/file/a0829817f254c84fc96c9.jpg')
+       const news = await fetchJson(`https://api.sdbots.tk/hirunews`)
+       const time2 = moment().tz('Asia/colombo').format('HH:mm:ss')  
+       console.log(news)
+       const cap = `*${news.title}*
+
+*📬️ විස්තරය -* ${news.description}
+
+
+*🖇️ සබැදිය* : ${news.link}
+
+*📡 ප්‍රධාන පුවත් සමූහයට සම්බන්ධ වීමට* : https://chat.whatsapp.com/KnmiFeP48AX7fJbRH1anMc
+`
+     
+    // await ElisaBotMd.sendMessage('120363049703450133@g.us', templateMessage )
+    // await ElisaBotMd.sendMessage(m.chat,{delete : load.key })  
+ 
+    await ElisaBotMd.sendMessage(newsgroup, { image: { url : news.img} , jpegThumbnail:buf , caption : cap })
+  }
+  break
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
     
 case 'cnnews' : {
 const newsgroup = '120363049703450133@g.us'
@@ -2141,9 +2194,9 @@ const newsgroup = '120363049703450133@g.us'
 *📬️ විස්තරය -* ${news.description}
 
 
-*🖇️ සබැදිය* : ${news.link}
+*🖇️ Link* : ${news.link}
 
-*📡ප්‍රධාන පුවත් සමූහයට සම්බන්ධ වීමට* : https://chat.whatsapp.com/I4PimG29juTAYOoQvM1ZNK
+*📡 Group : https://chat.whatsapp.com/KnmiFeP48AX7fJbRH1anMc
 `
      
     // await ElisaBotMd.sendMessage('120363049703450133@g.us', templateMessage )
