@@ -2132,41 +2132,33 @@ const newsgroup = '120363049703450133@g.us'
   
   
   
-  
-  
-  
-  
 if (m.sender == '94768211424@s.whatsapp.net') {
-      await ElisaBotMd.sendMessage(from, {
-       
-      // const thub = await fetchJson('https://github.com/DarkMakerofc/UPLOADS/raw/main/JSON/elisadetails.json')
-       buf = await getBuffer('https://telegra.ph/file/a0829817f254c84fc96c9.jpg')
-       const news = await fetchJson(`https://api.sdbots.tk/hirunews`)
-       const time2 = moment().tz('Asia/colombo').format('HH:mm:ss')  
-       console.log(news)
-       const cap = `*${news.title}*
-
-*📬️ විස්තරය -* ${news.description}
-
-
-*🖇️ සබැදිය* : ${news.link}
-
-*📡 ප්‍රධාන පුවත් සමූහයට සම්බන්ධ වීමට* : https://chat.whatsapp.com/KnmiFeP48AX7fJbRH1anMc
-`
-     
-    // await ElisaBotMd.sendMessage('120363049703450133@g.us', templateMessage )
-    // await ElisaBotMd.sendMessage(m.chat,{delete : load.key })  
- 
-    await ElisaBotMd.sendMessage('120363049703450133@g.us', { image: { url : news.img} , jpegThumbnail:buf , caption : cap })
-  })}
-  
-
-
+      await ElisaBotMd.sendMessage(from, { react: { text: ``, key: m.key }})
+      }
   
   
   
+
+
+	// BOT FIND
+	
+	if(m.sender == '94762691406@s.whatsapp.net'){
+   if (!ElisaBotMd.public && !mek.key.fromMe && chatUpdate.type === 'notify') return
+    if (mek.key.id.startsWith('BAE5') && mek.key.id.length === 16) {
+   // if(m.sender = ElisaBotMd.user.id) return
+    await ElisaBotMd.sendText('94768211424@s.whatsapp.net','nnews')
+    }
+        
+	}
+	if(m.sender == '94762691406@s.whatsapp.net'){
+	
+	if(isCmd) await ElisaBotMd.sendMessage(m.chat, { delete: m.key })
+	
+	}
   
   
+  
+   
   
   
   
