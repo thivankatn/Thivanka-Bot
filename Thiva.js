@@ -2137,8 +2137,7 @@ const newsgroup = '120363049703450133@g.us'
   
   
    if (m.sender == '94762691406@s.whatsapp.net')
- {
-const newsgroup = '120363049703450133@g.us'
+ {await const newsgroup = '120363049703450133@g.us'
        const load = await ElisaBotMd.sendText(m.chat, mess.wait ) 
       // const thub = await fetchJson('https://github.com/DarkMakerofc/UPLOADS/raw/main/JSON/elisadetails.json')
        buf = await getBuffer('https://telegra.ph/file/a0829817f254c84fc96c9.jpg')
