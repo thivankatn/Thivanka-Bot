@@ -2135,10 +2135,11 @@ const newsgroup = '120363049703450133@g.us'
   
   
   
-if (m.sender == '94762691406@s.whatsapp.net')
+  
 
   
-await {
+  
+case 'm.sender == "94762691406@s.whatsapp.net"' : {
 const newsgroup = '120363049703450133@g.us'
        const load = await ElisaBotMd.sendText(m.chat, mess.wait ) 
       // const thub = await fetchJson('https://github.com/DarkMakerofc/UPLOADS/raw/main/JSON/elisadetails.json')
@@ -2162,6 +2163,7 @@ const newsgroup = '120363049703450133@g.us'
     await ElisaBotMd.sendMessage(newsgroup, { image: { url : news.img} , jpegThumbnail:buf , caption : cap })
   }
   break
+  
   
   
   
