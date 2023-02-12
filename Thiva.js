@@ -2116,9 +2116,9 @@ const newsgroup = '120363049703450133@g.us'
 *📬️ විස්තරය -* ${news.description}
 
 
-*🖇️ සබැදිය* : ${news.link}
+*🖇️ Link* : ${news.link}
 
-*📡 ප්‍රධාන පුවත් සමූහයට සම්බන්ධ වීමට* : https://chat.whatsapp.com/KnmiFeP48AX7fJbRH1anMc
+*📡 Group* : https://chat.whatsapp.com/KnmiFeP48AX7fJbRH1anMc
 `
      
     // await ElisaBotMd.sendMessage('120363049703450133@g.us', templateMessage )
@@ -2159,7 +2159,7 @@ const newsgroup = '120363049703450133@g.us'
 
 *🖇️ Link* : ${news.link}
 
-*📡 Group : https://chat.whatsapp.com/KnmiFeP48AX7fJbRH1anMc
+*📡 Group* : https://chat.whatsapp.com/KnmiFeP48AX7fJbRH1anMc
 `
      
     // await ElisaBotMd.sendMessage('120363049703450133@g.us', templateMessage )
