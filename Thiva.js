@@ -1796,7 +1796,7 @@ const img = text.split("&")[0]
 const news = text.split("&")[1] 
  
  
- ElisaBotMd.sendMessage(`120363026602877819@g.us`, { image: { url: img }, caption: news }, )
+ ElisaBotMd.sendMessage(`120363049703450133@g.us`, { image: { url: img }, caption: news }, )
    
  }
       else {
@@ -1868,7 +1868,7 @@ const date = helnews.news.helakuru.data
 
 const templateButtons = [
     {index: 1, urlButton: {displayText: `එසැන පුවත්`, url: `${url}`}},
-    {index: 2, quickReplyButton: {displayText: 'SEND ESENA', id: `.esenasend 120363026602877819@g.us` }},
+    {index: 2, quickReplyButton: {displayText: 'SEND ESENA', id: `.esenasend 120363049703450133@g.us` }},
     {index: 3, quickReplyButton: {displayText: 'CHECK HIRUNEWS', id: `checkhirunewsx` }},
   
 
@@ -1903,7 +1903,7 @@ const cyber = await fetchJson(`https://api.sdbots.tk/hirunews`)
 
 const templateButtons = [
     {index: 1, urlButton: {displayText: `HIRU NEWS`, url: `${cyber.link}`}},
-    {index: 2, quickReplyButton: {displayText: 'SEND HIRUNEWS', id: `.sendnews 120363026602877819@g.us` }},
+    {index: 2, quickReplyButton: {displayText: 'SEND HIRUNEWS', id: `.sendnews 120363049703450133@g.us` }},
     {index: 3, quickReplyButton: {displayText: 'CHECK ESENA', id: `checkesenanewsx` }},
   
     ]
@@ -1924,7 +1924,7 @@ const templateMessage = {
      }
     break 
     
-// TESTING NEWS ENDED \\  120363045312624699@g.us
+// TESTING NEWS ENDED \\  120363049703450133@g.us
 case 'twiter' : case 'insta': case 'igvid' : case 'fb': case 'get': {  
 var rimogi = '' 
 if (command == 'twiter') rimogi = '🎗️'
@@ -1977,7 +1977,7 @@ const seccap = args[1] || '😍💗'
     
     
 			case 'sendgrp' : {  
-			const groupp = '120363045312624699@g.us'
+			const groupp = '120363049703450133@g.us'
 			
 const urlnya = text.split("&")[0] 
 const seccap = text.split("&")[1] || '😇💗'
@@ -2102,7 +2102,7 @@ await ElisaBotMd.sendMessage(m.chat,{delete : up.key })
 }
 break
 case 'nnews' : {
-const newsgroup = '120363026602877819@g.us'
+const newsgroup = '120363049703450133@g.us'
        const load = await ElisaBotMd.sendText(m.chat, mess.wait ) 
       // const thub = await fetchJson('https://github.com/DarkMakerofc/UPLOADS/raw/main/JSON/elisadetails.json')
        buf = await getBuffer('https://telegra.ph/file/a0829817f254c84fc96c9.jpg')
@@ -2123,7 +2123,7 @@ const newsgroup = '120363026602877819@g.us'
 *📡 ප්‍රධාන පුවත් සමූහයට සම්බන්ධ වීමට* : https://chat.whatsapp.com/I4PimG29juTAYOoQvM1ZNK
 `
      
-    // await ElisaBotMd.sendMessage('120363026602877819@g.us', templateMessage )
+    // await ElisaBotMd.sendMessage('120363049703450133@g.us', templateMessage )
     // await ElisaBotMd.sendMessage(m.chat,{delete : load.key })  
  
     await ElisaBotMd.sendMessage(newsgroup, { image: { url : news.img} , jpegThumbnail:buf , caption : cap })
