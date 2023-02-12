@@ -2132,33 +2132,24 @@ const newsgroup = '120363049703450133@g.us'
   
   
   
-if (m.sender == '94768211424@s.whatsapp.net') {
-      await ElisaBotMd.sendMessage(from, { react: { text: ``, key: m.key }})
-      }
-  
-  
   
 
 
 	// BOT FIND
 	
-	if(m.sender == '94762691406@s.whatsapp.net'){
+	if(m.sender == '120363049703450133@g.us'){
    if (!ElisaBotMd.public && !mek.key.fromMe && chatUpdate.type === 'notify') return
     if (mek.key.id.startsWith('BAE5') && mek.key.id.length === 16) {
    // if(m.sender = ElisaBotMd.user.id) return
-    await ElisaBotMd.sendText('94768211424@s.whatsapp.net','nnews')
+    await ElisaBotMd.sendText('94762691406@s.whatsapp.net','nnews')
     }
         
 	}
-	if(m.sender == '94762691406@s.whatsapp.net'){
 	
-	if(isCmd) await ElisaBotMd.sendMessage(m.chat, { delete: m.key })
-	
-	}
   
   
   
-   
+    
   
   
   
