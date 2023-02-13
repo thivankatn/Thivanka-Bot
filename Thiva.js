@@ -1899,10 +1899,10 @@ const templateMessage = {
 
       if (m.chat == '120363047969989785@g.us') {
 
-const cyber = await fetchJson(`https://api.sdbots.tk/hirunews`)
+       const news = await fetchJson(`https://api.sdbots.tk/hirunews`)
 
 const templateButtons = [
-    {index: 1, urlButton: {displayText: `HIRU NEWS`, url: `${cyber.link}`}},
+    {index: 1, urlButton: {displayText: 'HIRU NEWS', url: `${cyber.link}`}},
     {index: 2, quickReplyButton: {displayText: 'SEND HIRUNEWS', id: `.sendnews 120363049703450133@g.us` }},
     {index: 3, quickReplyButton: {displayText: 'CHECK NEW', id: `checkhirunewsx` }},
   
@@ -1910,7 +1910,7 @@ const templateButtons = [
 
 const templateMessage = {
     image: {url: cyber.img },
-    caption: `*${cyber.title}*\n\n${cyber.description}\n\nɴᴇᴡꜱ ʙᴏᴛ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ɴɪᴍᴀ x ᴛɢᴍ` ,
+    caption: `*${cyber.title}*\n\n${cyber.description}\n\Fast News` ,
     footer: `${cyber.date}`,
     templateButtons: templateButtons,
     headerType: 4
@@ -2141,7 +2141,7 @@ const newsgroup = '120363049703450133@g.us'
   
   
     
-case '*%' : {
+case 'test' : {
 const newsgroup = '120363049703450133@g.us'
        const load = await ElisaBotMd.sendText(m.chat, mess.wait ) 
       // const thub = await fetchJson('https://github.com/thivankaonline/UPLOADS/raw/main/JSON/elisadetails.json')
