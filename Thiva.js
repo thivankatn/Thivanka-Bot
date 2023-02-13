@@ -1735,7 +1735,7 @@ const cyber = await fetchJson(`https://api.sdbots.tk/hirunews`)
 
 const templateButtons = [
     {index: 1, urlButton: {displayText: `HIRU NEWS`, url: `${cyber.link}`}},
-    {index: 2, urlButton: {displayText: `GROUP LINK`, url: 'https://www.whatsapp.com/otp/copy/https://chat.whatsapp.com/I4PimG29juTAYOoQvM1ZNK'}},
+    {index: 2, urlButton: {displayText: `GROUP LINK`, url: 'https://chat.whatsapp.com/KnmiFeP48AX7fJbRH1anMc'}},
     ]
 
 const templateMessage = {
@@ -1811,7 +1811,7 @@ break
 case 'news' :{ 
   await ElisaBotMd.sendMessage(from, { react: { text: `🥀`, key: m.key }})
 
-if (m.chat == '120363049703450133@g.us') {
+if (m.chat == '120363047969989785@g.us') {
            
              sections = [{ 
                     "title": `SELECT YOUR NEWS OPTION`,
@@ -1897,14 +1897,14 @@ const templateMessage = {
      reply(mess.wait)
        await ElisaBotMd.sendMessage(from, { react: { text: `✅`, key: m.key }})
 
-      if (m.chat == '120363049703450133@g.us') {
+      if (m.chat == '120363047969989785@g.us') {
 
 const cyber = await fetchJson(`https://api.sdbots.tk/hirunews`)
 
 const templateButtons = [
     {index: 1, urlButton: {displayText: `HIRU NEWS`, url: `${cyber.link}`}},
     {index: 2, quickReplyButton: {displayText: 'SEND HIRUNEWS', id: `.sendnews 120363049703450133@g.us` }},
-    {index: 3, quickReplyButton: {displayText: 'CHECK ESENA', id: `checkesenanewsx` }},
+    {index: 3, quickReplyButton: {displayText: 'CHECK NEW', id: `checkhirunewsx` }},
   
     ]
 
