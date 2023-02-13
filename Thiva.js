@@ -1899,7 +1899,7 @@ const templateMessage = {
 
       if (m.chat == '120363047969989785@g.us') {
 
-       const news = await fetchJson(`https://api.sdbots.tk/hirunews`)
+const cyber = await fetchJson(`https://api.sdbots.tk/hirunews`)
 
 const templateButtons = [
     {index: 1, urlButton: {displayText: 'HIRU NEWS', url: `${cyber.link}`}},
