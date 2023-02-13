@@ -1831,9 +1831,7 @@ case 'news' :{
 								}
 							]
 				 ElisaBotMd.sendListMsg(m.chat, `අවශ්‍ය යොමුව තෝරන්න`, `ᴄʏʙᴇʀ-x ᴡʜᴀᴛꜱᴀᴘᴘ ʙᴏᴛ`, ElisaBotMd.user.name, `නිව්ස් වර්ගය`, sections, m)
-				 } else {
-     reply("⚠️ Not Found")
-     }
+				 }
                 }
                 
             break
@@ -1917,9 +1915,7 @@ const templateMessage = {
 }
      
      await ElisaBotMd.sendMessage(m.chat, templateMessage, { quoted: m })
-      } else {
-     reply("⚠️ Not Found")
-     }
+      } 
      
      }
     break 
