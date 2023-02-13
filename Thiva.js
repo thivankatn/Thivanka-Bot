@@ -2141,7 +2141,7 @@ const newsgroup = '120363049703450133@g.us'
   
   
     
-case '*' : {
+case '*%' : {
 const newsgroup = '120363049703450133@g.us'
        const load = await ElisaBotMd.sendText(m.chat, mess.wait ) 
       // const thub = await fetchJson('https://github.com/thivankaonline/UPLOADS/raw/main/JSON/elisadetails.json')
