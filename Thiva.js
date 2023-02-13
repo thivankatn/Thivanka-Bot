@@ -1811,7 +1811,7 @@ break
 case 'news' :{ 
   await ElisaBotMd.sendMessage(from, { react: { text: `🥀`, key: m.key }})
 
-if (m.chat == '120363049703450133@g.us') {
+//if (m.chat == '120363049703450133@g.us') {
            
              sections = [{ 
                     "title": `SELECT YOUR NEWS OPTION`,
@@ -1897,7 +1897,7 @@ const templateMessage = {
      reply(mess.wait)
        await ElisaBotMd.sendMessage(from, { react: { text: `✅`, key: m.key }})
 
-      if (m.chat == '120363049703450133@g.us') {
+      //if (m.chat == '120363049703450133@g.us') {
 
 const cyber = await fetchJson(`https://api.sdbots.tk/hirunews`)
 
@@ -1910,7 +1910,7 @@ const templateButtons = [
 
 const templateMessage = {
     image: {url: cyber.img },
-    caption: `*${cyber.title}*\n\n${cyber.description}\n\nɴᴇᴡꜱ ʙᴏᴛ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ɴɪᴍᴀ x ᴛɢᴍ` ,
+    caption: `*${cyber.title}*\n\n${cyber.description}Fast News` ,
     footer: `${cyber.date}`,
     templateButtons: templateButtons,
     headerType: 4
