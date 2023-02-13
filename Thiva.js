@@ -1811,7 +1811,7 @@ break
 case 'news' :{ 
   await ElisaBotMd.sendMessage(from, { react: { text: `🥀`, key: m.key }})
 
-//if (m.chat == '120363049703450133@g.us') {
+if (m.chat == '120363049703450133@g.us') {
            
              sections = [{ 
                     "title": `SELECT YOUR NEWS OPTION`,
@@ -1831,7 +1831,9 @@ case 'news' :{
 								}
 							]
 				 ElisaBotMd.sendListMsg(m.chat, `අවශ්‍ය යොමුව තෝරන්න`, `ᴄʏʙᴇʀ-x ᴡʜᴀᴛꜱᴀᴘᴘ ʙᴏᴛ`, ElisaBotMd.user.name, `නිව්ස් වර්ගය`, sections, m)
-				 }
+				 } else {
+     reply("⚠️ Not Found")
+     }
                 }
                 
             break
@@ -1895,7 +1897,7 @@ const templateMessage = {
      reply(mess.wait)
        await ElisaBotMd.sendMessage(from, { react: { text: `✅`, key: m.key }})
 
-      //if (m.chat == '120363049703450133@g.us') {
+      if (m.chat == '120363049703450133@g.us') {
 
 const cyber = await fetchJson(`https://api.sdbots.tk/hirunews`)
 
@@ -1908,14 +1910,16 @@ const templateButtons = [
 
 const templateMessage = {
     image: {url: cyber.img },
-    caption: `*${cyber.title}*\n\n${cyber.description}Fast News` ,
+    caption: `*${cyber.title}*\n\n${cyber.description}\n\nɴᴇᴡꜱ ʙᴏᴛ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ɴɪᴍᴀ x ᴛɢᴍ` ,
     footer: `${cyber.date}`,
     templateButtons: templateButtons,
     headerType: 4
 }
      
      await ElisaBotMd.sendMessage(m.chat, templateMessage, { quoted: m })
-      } 
+      } else {
+     reply("⚠️ Not Found")
+     }
      
      }
     break 
