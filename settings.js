@@ -18,7 +18,7 @@ global.cap = '© Thivanka Nirmal'
 //👇 Do you want show time on your bio use "on" want desable use "off"
 global.AUTO_BIO = process.env.AUTO_BIO || 'off'
 //👇 Inbox massage block PM block
-global.INBOX_BLOCK = process.env.INBOX_BLOCK || 'off'
+global.INBOX_BLOCK = process.env.INBOX_BLOCK || 'on'
 //👇 Auto react 
 global.AUTO_REACT = process.env.AUTO_REACT || 'false'
 //👇 Bad word Auto delete ( you must add bad words )
