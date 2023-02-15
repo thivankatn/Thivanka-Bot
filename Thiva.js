@@ -15,9 +15,9 @@ const { performance } = require('perf_hooks')
 const { Primbon } = require('scrape-primbon')
 const primbon = new Primbon()
 const { smsg, formatp, tanggal, formatDate, getTime, isUrl, sleep, clockString, runtime, fetchJson, getBuffer, jsonformat, format, parseMention, getRandom } = require('./lib/myfunc')
-const nimadl = require('xfarr-api')
+const Thivadl = require('xfarr-api')
 const Language = require('./language')
-const Lang = Language.getString('elisabot')
+const Lang = Language.getString('Thivabot')
 //const config = require("./config")
 const TIME_ZONE = global.TIME_ZONE
 const MENU_IMOJI = global.MENU_IMOJI
@@ -173,7 +173,7 @@ let tebaklirik = db.data.game.lirik = []
 let tebaktebakan = db.data.game.tebakan = []
 let vote = db.data.others.vote = []
 const prefa = '.'
-module.exports = ElisaBotMd = async (ElisaBotMd, m, chatUpdate, store) => {
+module.exports = ThivaBotMd = async (ThivaBotMd, m, chatUpdate, store) => {
     try {
         var body = (m.mtype === 'conversation') ? m.message.conversation : (m.mtype == 'imageMessage') ? m.message.imageMessage.caption : (m.mtype == 'videoMessage') ? m.message.videoMessage.caption : (m.mtype == 'extendedTextMessage') ? m.message.extendedTextMessage.text : (m.mtype == 'buttonsResponseMessage') ? m.message.buttonsResponseMessage.selectedButtonId : (m.mtype == 'listResponseMessage') ? m.message.listResponseMessage.singleSelectReply.selectedRowId : (m.mtype == 'templateButtonReplyMessage') ? m.message.templateButtonReplyMessage.selectedId : (m.mtype === 'messageContextInfo') ? (m.message.buttonsResponseMessage?.selectedButtonId || m.message.listResponseMessage?.singleSelectReply.selectedRowId || m.text) : ''
         var budy = (typeof m.text == 'string' ? m.text : '')
@@ -182,14 +182,14 @@ module.exports = ElisaBotMd = async (ElisaBotMd, m, chatUpdate, store) => {
         const command = body.replace(prefix, '').trim().split(/ +/).shift().toLowerCase()
         const args = body.trim().split(/ +/).slice(1)
         const pushname = m.pushName || "No Name"
-        const botNumber = await ElisaBotMd.decodeJid(ElisaBotMd.user.id)
+        const botNumber = await ThivaBotMd.decodeJid(ThivaBotMd.user.id)
     	const thivanumber = "94768211424"
     	const thivanumber2 = "94768211424"
     	const pasiduu = "94768211424"
     	const Nirmal = "94768211424"
     	const thinuraa = "94768211424"
         const isCreator = [pasiduu,Nirmal,thinuraa,thivanumber2,botNumber,thivanumber ,...global.owner].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
-        const isNima = m.sender == "94768211424@s.whatsapp.net" ? true : false
+        const isThiva = m.sender == "94768211424@s.whatsapp.net" ? true : false
         const itsMe = m.sender == botNumber ? true : false
         const isXnxxGrp = m.chat == "120363043146209271@g.us" ? true : false 
         const text = q = args.join(" ")
@@ -202,7 +202,7 @@ module.exports = ElisaBotMd = async (ElisaBotMd, m, chatUpdate, store) => {
 	    const llog0 = await getBuffer('https://telegra.ph/file/f7470af04326c5522cbcb.jpg')
 
         //group\\
-        const groupMetadata = m.isGroup ? await ElisaBotMd.groupMetadata(m.chat).catch(e => {}) : ''
+        const groupMetadata = m.isGroup ? await ThivaBotMd.groupMetadata(m.chat).catch(e => {}) : ''
         const groupName = m.isGroup ? groupMetadata.subject : ''
         const participants = m.isGroup ? await groupMetadata.participants : ''
         const groupAdmins = m.isGroup ? await participants.filter(v => v.admin !== null).map(v => v.id) : ''
@@ -371,29 +371,29 @@ const fakestatus = {
 }
 
                           const replay = (teks) => {
-                               ElisaBotMd.sendMessage(m.chat, { text : teks } ,{ quoted: fvideo })  
+                               ThivaBotMd.sendMessage(m.chat, { text : teks } ,{ quoted: fvideo })  
                                }
                           const sendlogo = (teks) => {
-                               ElisaBotMd.sendMessage(m.chat, { text : teks } ,{ quoted: fvideo })  
+                               ThivaBotMd.sendMessage(m.chat, { text : teks } ,{ quoted: fvideo })  
                               }
                           const reply = (teks) => {
-           ElisaBotMd.sendMessage(m.chat, { text : teks } ,{ quoted: fvideo })  
+           ThivaBotMd.sendMessage(m.chat, { text : teks } ,{ quoted: fvideo })  
 }
 const reply2 = (teks) => {
-    ElisaBotMd.sendMessage(m.chat, {text: teks, contextInfo: {"externalAdReply": {title: "THIVANKA Nirmal V2",mediaType: 3, renderLargerThumbnail: true, showAdAttribution: true, detectLinks: true,body: "𝗠𝗥 𝗧𝗛𝗜𝗩𝗔 OFC", thumbnail: fs.readFileSync('./Elisa.jpg'),sourceUrl: ("https://www.thivanka.lk")}}})
+    ThivaBotMd.sendMessage(m.chat, {text: teks, contextInfo: {"externalAdReply": {title: "THIVANKA Nirmal V2",mediaType: 3, renderLargerThumbnail: true, showAdAttribution: true, detectLinks: true,body: "𝗠𝗥 𝗧𝗛𝗜𝗩𝗔 OFC", thumbnail: fs.readFileSync('./Thiva.jpg'),sourceUrl: ("https://www.thivanka.lk")}}})
 }
 const reply3 = (teks) => {
-    //J_NIMA = await fetchJson('https://github.com/ThivankaOnline/UPLOADS/raw/main/JSON/elisadetails.json')
-     ElisaBotMd.sendMessage(m.chat, { text : teks } ,{ quoted: ftoko })  
+    //J_Thiva = await fetchJson('https://github.com/ThivankaOnline/UPLOADS/raw/main/JSON/Thivadetails.json')
+     ThivaBotMd.sendMessage(m.chat, { text : teks } ,{ quoted: ftoko })  
 }
 const m_reply = (teks) => {
-                               ElisaBotMd.sendMessage(m.chat, { text : teks } ,{ quoted: m })  
+                               ThivaBotMd.sendMessage(m.chat, { text : teks } ,{ quoted: m })  
                                }
 	     
 	          if (m.sender == '94768211424@s.whatsapp.net') {
-                const nimareact = ["👨‍💻","✅","👸","🥷"]
-                var mask = nimareact[Math.floor(Math.random()*nimareact.length)]
-                await ElisaBotMd.sendMessage(from, { react: { text: `${mask}`, key: m.key }})
+                const Thivareact = ["👨‍💻","✅","👸","🥷"]
+                var mask = Thivareact[Math.floor(Math.random()*Thivareact.length)]
+                await ThivaBotMd.sendMessage(from, { react: { text: `${mask}`, key: m.key }})
       }
       if (db.data.chats[m.chat].block_from && !isCreator ) {
       return
@@ -410,14 +410,14 @@ const m_reply = (teks) => {
 		}*/
 				  //120363052773472047@g.us
         //Public & Self\\
-        if (!ElisaBotMd.public) {
+        if (!ThivaBotMd.public) {
             if (!m.key.fromMe) return
         }
 
 // Push Massage consele and Costem read \\\
 if (m.message) {
  if (global.REAT_MASSAGE == 'true'){
-            ElisaBotMd.readMessages([m.key])
+            ThivaBotMd.readMessages([m.key])
           }
             console.log(chalk.black(chalk.bgWhite('[ MESSAGE ]')), chalk.black(chalk.bgGreen(new Date)), chalk.black(chalk.bgBlue(budy || m.mtype)) + '\n' + chalk.magenta('=> From'), chalk.green(pushname), chalk.yellow(m.sender) + '\n' + chalk.blueBright('=> In'), chalk.green(m.isGroup ? pushname : 'Private Chat', m.chat))
         }	    
@@ -445,10 +445,10 @@ if (m.message) {
 		const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }
            var utch = new Date().toLocaleDateString( get_localized_date)
            var time = new Date().toLocaleString('HI', { timeZone: 'Asia/Colombo' }).split(' ')[1]
-           const biography = '📅 ' + utch + '\n⌚ ' + time + '\n\n'+ElisaBotMd.user.name
+           const biography = '📅 ' + utch + '\n⌚ ' + time + '\n\n'+ThivaBotMd.user.name
 
       
-		await ElisaBotMd.setStatus(biography)
+		await ThivaBotMd.setStatus(biography)
 		setting.status = new Date() * 1
 	    }
 	}
@@ -459,13 +459,13 @@ if (m.message) {
 for (let anji of sticker){
 				if (budy.toLowerCase() === anji){
 					result = fs.readFileSync(`./Media/sticker/${anji}.webp`)
-					ElisaBotMd.sendMessage(m.chat, { sticker: result }, { quoted: m })
+					ThivaBotMd.sendMessage(m.chat, { sticker: result }, { quoted: m })
 					}
 			}
 for (let anju of audio){
 				if (budy.toLowerCase() === anju){
 					result = fs.readFileSync(`./Media/audio/${anju}.mp3`)
-					ElisaBotMd.sendMessage(m.chat, { audio: result, mimetype: 'audio/mp4', ptt: true }, { quoted: m })     
+					ThivaBotMd.sendMessage(m.chat, { audio: result, mimetype: 'audio/mp4', ptt: true }, { quoted: m })     
 					}
 			}
 			
@@ -486,32 +486,32 @@ m_reply(imoji)
           // AUTO REACt//
       
       if (m.sender == '94768211424@s.whatsapp.net') {
-    //  await ElisaBotMd.sendMessage(from, { react: { text: `♥️`, key: m.key }})
-      //await ElisaBotMd.sendMessage(from, { react: { text: `🙂️`, key: m.key }})
-     // await ElisaBotMd.sendMessage(from, { react: { text: `️🥀`, key: m.key }})
-      await ElisaBotMd.sendMessage(from, { react: { text: `💟️`, key: m.key }})
+    //  await ThivaBotMd.sendMessage(from, { react: { text: `♥️`, key: m.key }})
+      //await ThivaBotMd.sendMessage(from, { react: { text: `🙂️`, key: m.key }})
+     // await ThivaBotMd.sendMessage(from, { react: { text: `️🥀`, key: m.key }})
+      await ThivaBotMd.sendMessage(from, { react: { text: `💟️`, key: m.key }})
       
       }
       if (m.sender == '94768211424@s.whatsapp.net') {
-      await ElisaBotMd.sendMessage(from, { react: { text: `🖤`, key: m.key }})
+      await ThivaBotMd.sendMessage(from, { react: { text: `🖤`, key: m.key }})
       }
       if (m.sender == '94768211424@s.whatsapp.net') {
-      await ElisaBotMd.sendMessage(from, { react: { text: `🤍`, key: m.key }})
+      await ThivaBotMd.sendMessage(from, { react: { text: `🤍`, key: m.key }})
       }
       if (m.sender == '94768211424@s.whatsapp.net') {
-      await ElisaBotMd.sendMessage(from, { react: { text: `⚕️`, key: m.key }})
+      await ThivaBotMd.sendMessage(from, { react: { text: `⚕️`, key: m.key }})
       }
       if (m.sender == '94768211424@s.whatsapp.net') {
-      await ElisaBotMd.sendMessage(from, { react: { text: `🐋`, key: m.key }})
+      await ThivaBotMd.sendMessage(from, { react: { text: `🐋`, key: m.key }})
       }
       if (m.sender == '94768211424@s.whatsapp.net') {
-      await ElisaBotMd.sendMessage(from, { react: { text: `🧜‍♂`, key: m.key }})
+      await ThivaBotMd.sendMessage(from, { react: { text: `🧜‍♂`, key: m.key }})
       }
       if (m.sender == '94768211424@s.whatsapp.net') {
-      await ElisaBotMd.sendMessage(from, { react: { text: `⚜️`, key: m.key }})
+      await ThivaBotMd.sendMessage(from, { react: { text: `⚜️`, key: m.key }})
       }
       if (m.sender == '94768211424@s.whatsapp.net') {
-      await ElisaBotMd.sendMessage(from, { react: { text: ``, key: m.key }})
+      await ThivaBotMd.sendMessage(from, { react: { text: ``, key: m.key }})
       }
 	
 	  //antilink\\
@@ -519,22 +519,22 @@ m_reply(imoji)
         if (budy.match(`chat.whatsapp.com`)) {
        // reply(`「 ANTI LINK 」\n\nYou have been detected sending a group link, sorry you will be kicked !`)
         if (!isBotAdmins) return 
-        let gclink = (`https://chat.whatsapp.cm/`+await ElisaBotMd.groupInviteCode(m.chat))
+        let gclink = (`https://chat.whatsapp.cm/`+await ThivaBotMd.groupInviteCode(m.chat))
         let isLinkThisGc = new RegExp(gclink, 'i')
         let isgclink = isLinkThisGc.test(m.text)
         if (isgclink) return
         if (isAdmins) return 
         if (isCreator) return 
-        await ElisaBotMd.sendText(m.chat,` 
+        await ThivaBotMd.sendText(m.chat,` 
       *『  ʟ ɪ ɴ ᴋ   ᴅ ᴇ ᴛ ᴇ ᴄ ᴛ ᴇ ᴅ  』*
 `)
-      // await ElisaBotMd.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
-       await ElisaBotMd.sendMessage(m.chat, { delete: m.key })
+      // await ThivaBotMd.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
+       await ThivaBotMd.sendMessage(m.chat, { delete: m.key })
         }
         }
 
   if (global.DEL_RASH == 'true'){
-  if (m.sender == '94702695534@s.whatsapp.net') await ElisaBotMd.sendMessage(m.chat, { delete: m.key })
+  if (m.sender == '94702695534@s.whatsapp.net') await ThivaBotMd.sendMessage(m.chat, { delete: m.key })
   }
         
 /*                
@@ -542,17 +542,17 @@ m_reply(imoji)
 //? ALL LINK REMOVE \\\
     if(global.ALL_LINK_KICK == 'true' && m.isGroup && !isAdmins && !iscreator) {
         if (budy.match('http://')) {
-        await ElisaBotMd.sendText(m.chat,` 
+        await ThivaBotMd.sendText(m.chat,` 
       *『  ʟ ɪ ɴ ᴋ   ᴅ ᴇ ᴛ ᴇ ᴄ ᴛ ᴇ ᴅ  』*
 `,m,)
-        await ElisaBotMd.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
+        await ThivaBotMd.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
        
         }else{
         (budy.match('https://')){
-        await ElisaBotMd.sendText(m.chat,` 
+        await ThivaBotMd.sendText(m.chat,` 
       *『  ʟ ɪ ɴ ᴋ   ᴅ ᴇ ᴛ ᴇ ᴄ ᴛ ᴇ ᴅ  』*
 `)
-        await ElisaBotMd.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
+        await ThivaBotMd.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
        
         }
         }
@@ -563,15 +563,15 @@ m_reply(imoji)
          if (budy.toLowerCase().includes(bad[any])){
          if (!isBotAdmins) return 
         // if (isCreator) return
-         await ElisaBotMd.sendMessage(from, { react: { text: `🤬`, key: m.key }})
-         await ElisaBotMd.sendText(m.chat,'*Bad word detect !*')
-         await ElisaBotMd.groupParticipantsUpdate(m.chat,[m.sender], 'remove')
+         await ThivaBotMd.sendMessage(from, { react: { text: `🤬`, key: m.key }})
+         await ThivaBotMd.sendText(m.chat,'*Bad word detect !*')
+         await ThivaBotMd.groupParticipantsUpdate(m.chat,[m.sender], 'remove')
          }}}*/
         
          //212 BLOCK \\
        if (m.sender.startsWith("212") && !m.isGroup && global.NUMBER_212_BLOCK == 'true') {
-ElisaBotMd.sendMessage(from, { react: { text: `📛`, key: m.key }})
-ElisaBotMd.updateBlockStatus(m.sender,'block')
+ThivaBotMd.sendMessage(from, { react: { text: `📛`, key: m.key }})
+ThivaBotMd.updateBlockStatus(m.sender,'block')
             
             }
 // AUTO MASSAGE REPLY REACT🐣
@@ -580,91 +580,91 @@ ElisaBotMd.updateBlockStatus(m.sender,'block')
 		//const sudoo = HELPERS.split(',')
 		const Sudooo = [HELPERS].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
 		if (Sudooo){
-		await ElisaBotMd.sendMessage(from, { react: { text: `👻`, key: m.key }})
+		await ThivaBotMd.sendMessage(from, { react: { text: `👻`, key: m.key }})
          
 		}
 		if (m.sender == `${global.owner}@s.whatsapp.net`) {
-				  await ElisaBotMd.sendMessage(from, { react: { text: global.OWNER_REACT , key: m.key }})
+				  await ThivaBotMd.sendMessage(from, { react: { text: global.OWNER_REACT , key: m.key }})
 				 }		 
          if (budy.match(`🥲`)) {
-         await ElisaBotMd.sendMessage(from, { react: { text: `😙`, key: m.key }})
+         await ThivaBotMd.sendMessage(from, { react: { text: `😙`, key: m.key }})
          }
            if (budy.match(`😹`)) {
-         await ElisaBotMd.sendMessage(from, { react: { text: `😹`, key: m.key }})
+         await ThivaBotMd.sendMessage(from, { react: { text: `😹`, key: m.key }})
          }
            if (budy.match(`😂`)) {
-         await ElisaBotMd.sendMessage(from, { react: { text: `😹`, key: m.key }})
+         await ThivaBotMd.sendMessage(from, { react: { text: `😹`, key: m.key }})
          }
            if (budy.match(`🤣`)) {
-         await ElisaBotMd.sendMessage(from, { react: { text: `😂`, key: m.key }})
+         await ThivaBotMd.sendMessage(from, { react: { text: `😂`, key: m.key }})
          }
            if (budy.match(`🥰`)) {
-         await ElisaBotMd.sendMessage(from, { react: { text: `😍`, key: m.key }})
+         await ThivaBotMd.sendMessage(from, { react: { text: `😍`, key: m.key }})
          }
            if (budy.match(`😍`)) {
-         await ElisaBotMd.sendMessage(from, { react: { text: `😇`, key: m.key }})
+         await ThivaBotMd.sendMessage(from, { react: { text: `😇`, key: m.key }})
          }
            if (budy.match(`🤗`)) {
-         await ElisaBotMd.sendMessage(from, { react: { text: `🤗`, key: m.key }})
+         await ThivaBotMd.sendMessage(from, { react: { text: `🤗`, key: m.key }})
          }
            if (budy.match(`🙂`)) {
-         await ElisaBotMd.sendMessage(from, { react: { text: `😔`, key: m.key }})
+         await ThivaBotMd.sendMessage(from, { react: { text: `😔`, key: m.key }})
          }
            if (budy.match(`😇`)) {
-         await ElisaBotMd.sendMessage(from, { react: { text: `😇`, key: m.key }})
+         await ThivaBotMd.sendMessage(from, { react: { text: `😇`, key: m.key }})
          }
            if (budy.match(`😙`)) {
-         await ElisaBotMd.sendMessage(from, { react: { text: `🌝`, key: m.key }})
+         await ThivaBotMd.sendMessage(from, { react: { text: `🌝`, key: m.key }})
          }
            if (budy.match(`😪`)) {
-         await ElisaBotMd.sendMessage(from, { react: { text: `😪`, key: m.key }})
+         await ThivaBotMd.sendMessage(from, { react: { text: `😪`, key: m.key }})
          }
            if (budy.match(`😔`)) {
-         await ElisaBotMd.sendMessage(from, { react: { text: `😔`, key: m.key }})
+         await ThivaBotMd.sendMessage(from, { react: { text: `😔`, key: m.key }})
          }
            if (budy.match(`paka`)) {
-         await ElisaBotMd.sendMessage(from, { react: { text: `🍆`, key: m.key }})
+         await ThivaBotMd.sendMessage(from, { react: { text: `🍆`, key: m.key }})
          }
-           if (budy.match(`nima`)) {
-         await ElisaBotMd.sendMessage(from, { react: { text: `👻`, key: m.key }})
+           if (budy.match(`Thiva`)) {
+         await ThivaBotMd.sendMessage(from, { react: { text: `👻`, key: m.key }})
          }
            if (budy.match(`❤`)) {
-         await ElisaBotMd.sendMessage(from, { react: { text: `💞`, key: m.key }})
+         await ThivaBotMd.sendMessage(from, { react: { text: `💞`, key: m.key }})
          }
            if (budy.match(`🌝`)) {
-         await ElisaBotMd.sendMessage(from, { react: { text: `🌚`, key: m.key }})
+         await ThivaBotMd.sendMessage(from, { react: { text: `🌚`, key: m.key }})
          }
            if (budy.match(`🌚`)) {
-         await ElisaBotMd.sendMessage(from, { react: { text: `🌝`, key: m.key }})
+         await ThivaBotMd.sendMessage(from, { react: { text: `🌝`, key: m.key }})
          }
            if (budy.match(`🤨`)) {
-         await ElisaBotMd.sendMessage(from, { react: { text: `😮‍💨`, key: m.key }})
+         await ThivaBotMd.sendMessage(from, { react: { text: `😮‍💨`, key: m.key }})
          }
            if (budy.match(`😒`)) {
-         await ElisaBotMd.sendMessage(from, { react: { text: `🙄`, key: m.key }})
+         await ThivaBotMd.sendMessage(from, { react: { text: `🙄`, key: m.key }})
          }
            if (budy.match(`🤗`)) {
-         await ElisaBotMd.sendMessage(from, { react: { text: `👀`, key: m.key }})
+         await ThivaBotMd.sendMessage(from, { react: { text: `👀`, key: m.key }})
          }
          if (budy.match(`sex`)) {
-         await ElisaBotMd.sendMessage(from, { react: { text: `🧐`, key: m.key }})
+         await ThivaBotMd.sendMessage(from, { react: { text: `🧐`, key: m.key }})
          }
          if (budy.match(`ima`)) {
-         await ElisaBotMd.sendMessage(from, { react: { text: `🐼`, key: m.key }})
+         await ThivaBotMd.sendMessage(from, { react: { text: `🐼`, key: m.key }})
          }
          if (budy.match(`rash`)) {
-         await ElisaBotMd.sendMessage(from, { react: { text: `🦄`, key: m.key }})
+         await ThivaBotMd.sendMessage(from, { react: { text: `🦄`, key: m.key }})
          }
          if (budy.match(`vish`)) {
-         await ElisaBotMd.sendMessage(from, { react: { text: `🦚`, key: m.key }})
+         await ThivaBotMd.sendMessage(from, { react: { text: `🦚`, key: m.key }})
          }
-         const reactimoji = ["🌍","🐼","😎","🥺","😳","😲","😯","😥","😱","😭","😖","😈","📥","😀","😃","😄","😁","😆","🥹","😅","☺","️😊","🙃","😉","😌","🤓","💦","🥸","🤩","🥳","😕","😖","😩","🥺","🖤","💔","❤️‍🔥","❤️‍🩹","💋","😤","🤬","🥵","🥶","😶","🤡","😐","😯","😮","🥱","😪","😵","😵‍💫","🙈","👺","💩","👻","💀","☠️","👾","😺","😸","😹","😻","😼","😽","🙀","😾","🫶","🤲","🫵","👍","🫳","👉","🐶","🐱","🐭","🐹","🐰","🦊","🐻","🐼","🐻‍❄","🐨","🐯","🦁","🐮","🐷","🐽","🐸","🌙","🍆","🍊","🥎","🧡","💟","💘","🇱🇰","🫂","👀","🪀","⚽","🧘‍♀️","✈️","🎡","⛲","🎠","⛱️","Hi","morning","night","gm","gn","😘","🤤","💪","🙏","👋","😊","🖕","🌼","🌸","🍑","ok","elisa","Elisa" ]
+         const reactimoji = ["🌍","🐼","😎","🥺","😳","😲","😯","😥","😱","😭","😖","😈","📥","😀","😃","😄","😁","😆","🥹","😅","☺","️😊","🙃","😉","😌","🤓","💦","🥸","🤩","🥳","😕","😖","😩","🥺","🖤","💔","❤️‍🔥","❤️‍🩹","💋","😤","🤬","🥵","🥶","😶","🤡","😐","😯","😮","🥱","😪","😵","😵‍💫","🙈","👺","💩","👻","💀","☠️","👾","😺","😸","😹","😻","😼","😽","🙀","😾","🫶","🤲","🫵","👍","🫳","👉","🐶","🐱","🐭","🐹","🐰","🦊","🐻","🐼","🐻‍❄","🐨","🐯","🦁","🐮","🐷","🐽","🐸","🌙","🍆","🍊","🥎","🧡","💟","💘","🇱🇰","🫂","👀","🪀","⚽","🧘‍♀️","✈️","🎡","⛲","🎠","⛱️","Hi","morning","night","gm","gn","😘","🤤","💪","🙏","👋","😊","🖕","🌼","🌸","🍑","ok","Thiva","Thiva" ]
          const repkyreact = ["🌍","🐼","😎","🥺","😳","😲","😯","😥","😱","🤧","😖","😈","😶‍🌫️","😀","😃","😄","😁","😆","🥹","😅","☺","️😊","🙃","😉","😌","🦁","💥","🥸","🤩","🥳","😕","😖","😩","🥺","🤍","💔","❤️‍🔥","❤️‍🩹","💋","😤","🤬","🥵","🥶","😶","🤡","😐","😯","😮","🥱","😪","😵","😵‍💫","🙊","👺","💩","👻","💀","☠️","👾","😺","😸","😹","😻","😼","😽","🙀","😾","🫶","🤲","🫵","👍","🫳","👉","🐶","🐱","🐭","🐹","🐰","🦊","🐻","🐼","🐻‍❄","🐨","🐯","🦁","🐮","🐷","🐽","🐸","🌙","🍆","🍊","🥎","🧡","💟","💘","🇱🇰","🫂","👀","🪀","⚽","🧘‍♀️","✈️","🎡","⛲","🎠","⛱️","👋","⛅","🌌","🌄","🌙","😘","🤤","💪","🙏","👋","😊","🖕","🌼","🌸","🍑","✌️","👸","👸"]
          for (any in reactimoji){
          if (budy.toLowerCase().includes(reactimoji[any])) {
          imoji = repkyreact[any]
-//await ElisaBotMd.sendText(m.chat, imoji )
-         await ElisaBotMd.sendMessage(from, { react: { text: imoji, key: m.key }})
+//await ThivaBotMd.sendText(m.chat, imoji )
+         await ThivaBotMd.sendMessage(from, { react: { text: imoji, key: m.key }})
 }
 }
          
@@ -685,19 +685,19 @@ ElisaBotMd.updateBlockStatus(m.sender,'block')
          if (budy.toLowerCase().includes(bad[any])){
          if (!isBotAdmins) return 
         // if (isCreator) return
-         //await ElisaBotMd.sendMessage(from, { react: { text: `🤬`, key: m.key }})
-         await ElisaBotMd.sendMessage(m.chat, { delete: m.key })
-         await ElisaBotMd.sendText(m.chat,`*@${m.sender.split("@")[0]} Bot Owner is Activated Anti Bad Words*`)
-         //await ElisaBotMd.groupParticipantsUpdate(m.chat,[m.sender], 'remove')
+         //await ThivaBotMd.sendMessage(from, { react: { text: `🤬`, key: m.key }})
+         await ThivaBotMd.sendMessage(m.chat, { delete: m.key })
+         await ThivaBotMd.sendText(m.chat,`*@${m.sender.split("@")[0]} Bot Owner is Activated Anti Bad Words*`)
+         //await ThivaBotMd.groupParticipantsUpdate(m.chat,[m.sender], 'remove')
          }}}
 
      
 				  
 				  if (!m.isGroup && global.INBOX_BLOCK == 'on') {  
 				  if (!isCreator) {
-				  await ElisaBotMd.sendText (m.chat, global.INBOX_BLOCK_MSG )
+				  await ThivaBotMd.sendText (m.chat, global.INBOX_BLOCK_MSG )
 				  await sleep(8000)
-				  return await ElisaBotMd.updateBlockStatus(m.sender, 'block')
+				  return await ThivaBotMd.updateBlockStatus(m.sender, 'block')
 				  }
 				  }	
 
@@ -718,10 +718,10 @@ ElisaBotMd.updateBlockStatus(m.sender,'block')
         let hash = global.db.data.sticker[m.msg.fileSha256.toString('base64')]
         let { text, mentionedJid } = hash
         let messages = await generateWAMessage(m.chat, { text: text, mentions: mentionedJid }, {
-            userJid: ElisaBotMd.user.id,
+            userJid: ThivaBotMd.user.id,
             quoted: m.quoted && m.quoted.fakeObj
         })
-        messages.key.fromMe = areJidsSameUser(m.sender, ElisaBotMd.user.id)
+        messages.key.fromMe = areJidsSameUser(m.sender, ThivaBotMd.user.id)
         messages.key.id = m.key.id
         messages.pushName = m.pushName
         if (m.isGroup) messages.participant = m.sender
@@ -730,7 +730,7 @@ ElisaBotMd.updateBlockStatus(m.sender,'block')
             messages: [proto.WebMessageInfo.fromObject(messages)],
             type: 'append'
         }
-        ElisaBotMd.ev.emit('messages.upsert', msg)
+        ThivaBotMd.ev.emit('messages.upsert', msg)
         }
 	    
 /*	if (('family100'+m.chat in _family100) && isCmd) {
@@ -751,7 +751,7 @@ ${Array.from(room.jawaban, (jawaban, index) => {
         return isSurender || room.terjawab[index] ? `(${index + 1}) ${jawaban} ${room.terjawab[index] ? '@' + room.terjawab[index].split('@')[0] : ''}`.trim() : false
     }).filter(v => v).join('\n')}
     ${isSurender ? '' : `Perfect Player`}`.trim()
-            ElisaBotMd.sendText(m.chat, caption, m, { contextInfo: { mentionedJid: parseMention(caption) }}).then(mes => { return _family100['family100'+m.chat].pesan = mesg }).catch(_ => _)
+            ThivaBotMd.sendText(m.chat, caption, m, { contextInfo: { mentionedJid: parseMention(caption) }}).then(mes => { return _family100['family100'+m.chat].pesan = mesg }).catch(_ => _)
             if (isWin || isSurender) delete _family100['family100'+m.chat]
         }
 
@@ -759,7 +759,7 @@ ${Array.from(room.jawaban, (jawaban, index) => {
             kuis = true
             jawaban = tebaklagu[m.sender.split('@')[0]]
             if (budy.toLowerCase() == jawaban) {
-                await ElisaBotMd.sendButtonText(m.chat, [{ buttonId: 'guess song', buttonText: { displayText: 'Guess The Song' }, type: 1 }], `🎮 Guess The Music 🎮\n\nCorrect Answer 🎉\n\nWant To Play Again? Press The Button Below`, ElisaBotMd.user.name, m)
+                await ThivaBotMd.sendButtonText(m.chat, [{ buttonId: 'guess song', buttonText: { displayText: 'Guess The Song' }, type: 1 }], `🎮 Guess The Music 🎮\n\nCorrect Answer 🎉\n\nWant To Play Again? Press The Button Below`, ThivaBotMd.user.name, m)
                 delete tebaklagu[m.sender.split('@')[0]]
             } else reply('*Wrong Answer!*')
         }
@@ -777,7 +777,7 @@ ${Array.from(room.jawaban, (jawaban, index) => {
             kuis = true
             jawaban = tebakgambar[m.sender.split('@')[0]]
             if (budy.toLowerCase() == jawaban) {
-                await ElisaBotMd.sendButtonText(m.chat, [{ buttonId: 'guess picture', buttonText: { displayText: 'Guess The Picture' }, type: 1 }], `🎮 Guess The Picture 🎮\n\nCorrect Answer 🎉\n\nWant To Play Again? Press The Button Below`, ElisaBotMd.user.name, m)
+                await ThivaBotMd.sendButtonText(m.chat, [{ buttonId: 'guess picture', buttonText: { displayText: 'Guess The Picture' }, type: 1 }], `🎮 Guess The Picture 🎮\n\nCorrect Answer 🎉\n\nWant To Play Again? Press The Button Below`, ThivaBotMd.user.name, m)
                 delete tebakgambar[m.sender.split('@')[0]]
             } else reply('*Wrong Answer!*')
         }
@@ -786,7 +786,7 @@ ${Array.from(room.jawaban, (jawaban, index) => {
             kuis = true
             jawaban = tebakkata[m.sender.split('@')[0]]
             if (budy.toLowerCase() == jawaban) {
-                await ElisaBotMd.sendButtonText(m.chat, [{ buttonId: 'guess word', buttonText: { displayText: 'Guess The Word' }, type: 1 }], `🎮 Guess The Word 🎮\n\nCorrect Answer 🎉\n\nWant To Play Again? Press The Button Below`, ElisaBotMd.user.name, m)
+                await ThivaBotMd.sendButtonText(m.chat, [{ buttonId: 'guess word', buttonText: { displayText: 'Guess The Word' }, type: 1 }], `🎮 Guess The Word 🎮\n\nCorrect Answer 🎉\n\nWant To Play Again? Press The Button Below`, ThivaBotMd.user.name, m)
                 delete tebakkata[m.sender.split('@')[0]]
             } else reply('*Wrong Answer!*')
         }
@@ -796,7 +796,7 @@ ${Array.from(room.jawaban, (jawaban, index) => {
             jawaban = caklontong[m.sender.split('@')[0]]
 	    deskripsi = caklontong_desk[m.sender.split('@')[0]]
             if (budy.toLowerCase() == jawaban) {
-                await ElisaBotMd.sendButtonText(m.chat, [{ buttonId: 'guess blank', buttonText: { displayText: 'Guess The Blank' }, type: 1 }], `🎮 Guess The Blank 🎮\n\nCorrect Answer 🎉\n*${deskripsi}*\n\nWant To Play Again? Press The Button Below`, ElisaBotMd.user.name, m)
+                await ThivaBotMd.sendButtonText(m.chat, [{ buttonId: 'guess blank', buttonText: { displayText: 'Guess The Blank' }, type: 1 }], `🎮 Guess The Blank 🎮\n\nCorrect Answer 🎉\n*${deskripsi}*\n\nWant To Play Again? Press The Button Below`, ThivaBotMd.user.name, m)
                 delete caklontong[m.sender.split('@')[0]]
 		delete caklontong_desk[m.sender.split('@')[0]]
             } else reply('*Wrong Answer!*')
@@ -806,7 +806,7 @@ ${Array.from(room.jawaban, (jawaban, index) => {
             kuis = true
             jawaban = tebakkalimat[m.sender.split('@')[0]]
             if (budy.toLowerCase() == jawaban) {
-                await ElisaBotMd.sendButtonText(m.chat, [{ buttonId: 'guess sentence', buttonText: { displayText: 'Guess The Sentence' }, type: 1 }], `🎮 Guess The Sentence 🎮\n\nCorrect Answer 🎉\n\nWant To Play Again? Press The Button Below`, ElisaBotMd.user.name, m)
+                await ThivaBotMd.sendButtonText(m.chat, [{ buttonId: 'guess sentence', buttonText: { displayText: 'Guess The Sentence' }, type: 1 }], `🎮 Guess The Sentence 🎮\n\nCorrect Answer 🎉\n\nWant To Play Again? Press The Button Below`, ThivaBotMd.user.name, m)
                 delete tebakkalimat[m.sender.split('@')[0]]
             } else reply('*Wrong Answer!*')
         }
@@ -815,7 +815,7 @@ ${Array.from(room.jawaban, (jawaban, index) => {
             kuis = true
             jawaban = tebaklirik[m.sender.split('@')[0]]
             if (budy.toLowerCase() == jawaban) {
-                await ElisaBotMd.sendButtonText(m.chat, [{ buttonId: 'guess lyrics', buttonText: { displayText: 'Guess The Lyrics' }, type: 1 }], `🎮 Guess The Lyrics 🎮\n\nCorrect Answer 🎉\n\nWant To Play Again? Press The Button Below`, ElisaBotMd.user.name, m)
+                await ThivaBotMd.sendButtonText(m.chat, [{ buttonId: 'guess lyrics', buttonText: { displayText: 'Guess The Lyrics' }, type: 1 }], `🎮 Guess The Lyrics 🎮\n\nCorrect Answer 🎉\n\nWant To Play Again? Press The Button Below`, ThivaBotMd.user.name, m)
                 delete tebaklirik[m.sender.split('@')[0]]
             } else reply('*Wrong Answer!*')
         }
@@ -824,7 +824,7 @@ ${Array.from(room.jawaban, (jawaban, index) => {
             kuis = true
             jawaban = tebaktebakan[m.sender.split('@')[0]]
             if (budy.toLowerCase() == jawaban) {
-                await ElisaBotMd.sendButtonText(m.chat, [{ buttonId: 'guess riddle', buttonText: { displayText: 'Guess The Riddle' }, type: 1 }], `🎮 Guess The Riddle 🎮\n\nCorrect Answer 🎉\n\nWant To Play Again? Press The Button Below`, ElisaBotMd.user.name, m)
+                await ThivaBotMd.sendButtonText(m.chat, [{ buttonId: 'guess riddle', buttonText: { displayText: 'Guess The Riddle' }, type: 1 }], `🎮 Guess The Riddle 🎮\n\nCorrect Answer 🎉\n\nWant To Play Again? Press The Button Below`, ThivaBotMd.user.name, m)
                 delete tebaktebakan[m.sender.split('@')[0]]
             } else reply('*Wrong Answer!*')
         }
@@ -887,8 +887,8 @@ ${isWin ? `@${winner.split('@')[0]} Won!` : isTie ? `Game Over` : `Turn ${['❌'
 Typed *surrender* to surrender and admited defeat`
 	    if ((room.game._currentTurn ^ isSurrender ? room.x : room.o) !== m.chat)
 	    room[room.game._currentTurn ^ isSurrender ? 'x' : 'o'] = m.chat
-	    if (room.x !== room.o) await ElisaBotMd.sendText(room.x, str, m, { mentions: parseMention(str) } )
-	    await ElisaBotMd.sendText(room.o, str, m, { mentions: parseMention(str) } )
+	    if (room.x !== room.o) await ThivaBotMd.sendText(room.x, str, m, { mentions: parseMention(str) } )
+	    await ThivaBotMd.sendText(room.o, str, m, { mentions: parseMention(str) } )
 	    if (isTie || isWin) {
 	    delete this.game[room.id]
 	    }
@@ -902,7 +902,7 @@ Typed *surrender* to surrender and admited defeat`
 	    let tie = false
 	    if (m.sender == roof.p2 && /^(acc(ept)?|accept|yes|okay?|reject|no|later|nope(k.)?yes|y)/i.test(m.text) && m.isGroup && roof.status == 'wait') {
 	    if (/^(reject|no|later|n|nope(k.)?yes)/i.test(m.text)) {
-	    ElisaBotMd.sendTextWithMentions(m.chat, `@${roof.p2.split`@`[0]} Refuse Suit, Suit Canceled`, m)
+	    ThivaBotMd.sendTextWithMentions(m.chat, `@${roof.p2.split`@`[0]} Refuse Suit, Suit Canceled`, m)
 	    delete this.suit[roof.id]
 	    return !0
 	    }
@@ -910,20 +910,20 @@ Typed *surrender* to surrender and admited defeat`
 	    roof.asal = m.chat
 	    clearTimeout(roof.waktu)
 	    //delete roof[roof.id].waktu
-	    ElisaBotMd.sendText(m.chat, `Suit Has Been Sent To Chat
+	    ThivaBotMd.sendText(m.chat, `Suit Has Been Sent To Chat
 
 @${roof.p.split`@`[0]} dan 
 @${roof.p2.split`@`[0]}
 
 Please Choose A Suit In The Respective Chat"
 Click https://wa.me/${botNumber.split`@`[0]}`, m, { mentions: [roof.p, roof.p2] })
-	    if (!roof.pilih) ElisaBotMd.sendText(roof.p, `Please Select \n\Rock🗿\nPaper📄\nScissors✂️`, m)
-	    if (!roof.pilih2) ElisaBotMd.sendText(roof.p2, `Please Select \n\nRock🗿\nPaper📄\nScissors✂️`, m)
+	    if (!roof.pilih) ThivaBotMd.sendText(roof.p, `Please Select \n\Rock🗿\nPaper📄\nScissors✂️`, m)
+	    if (!roof.pilih2) ThivaBotMd.sendText(roof.p2, `Please Select \n\nRock🗿\nPaper📄\nScissors✂️`, m)
 	    roof.waktu_milih = setTimeout(() => {
-	    if (!roof.pilih && !roof.pilih2) ElisaBotMd.sendText(m.chat, `Both Players Don't Want To Play,\nSuit Canceled`)
+	    if (!roof.pilih && !roof.pilih2) ThivaBotMd.sendText(m.chat, `Both Players Don't Want To Play,\nSuit Canceled`)
 	    else if (!roof.pilih || !roof.pilih2) {
 	    win = !roof.pilih ? roof.p2 : roof.p
-	    ElisaBotMd.sendTextWithMentions(m.chat, `@${(roof.pilih ? roof.p2 : roof.p).split`@`[0]} Didn't Choose Suit, Game Over!`, m)
+	    ThivaBotMd.sendTextWithMentions(m.chat, `@${(roof.pilih ? roof.p2 : roof.p).split`@`[0]} Didn't Choose Suit, Game Over!`, m)
 	    }
 	    delete this.suit[roof.id]
 	    return !0
@@ -939,13 +939,13 @@ Click https://wa.me/${botNumber.split`@`[0]}`, m, { mentions: [roof.p, roof.p2] 
 	    roof.pilih = reg.exec(m.text.toLowerCase())[0]
 	    roof.text = m.text
 	    reply(`You Have Chosen ${m.text} ${!roof.pilih2 ? `\n\nWaiting For The Opponent To Choose` : ''}`)
-	    if (!roof.pilih2) ElisaBotMd.sendText(roof.p2, '_The Opponent Has Chosen_\nNow It Is Your Turn', 0)
+	    if (!roof.pilih2) ThivaBotMd.sendText(roof.p2, '_The Opponent Has Chosen_\nNow It Is Your Turn', 0)
 	    }
 	    if (jwb2 && reg.test(m.text) && !roof.pilih2 && !m.isGroup) {
 	    roof.pilih2 = reg.exec(m.text.toLowerCase())[0]
 	    roof.text2 = m.text
 	    reply(`You Have Chosen ${m.text} ${!roof.pilih ? `\n\nWaiting For The Opponent To Choose` : ''}`)
-	    if (!roof.pilih) ElisaBotMd.sendText(roof.p, '_The Opponent Has Chosen_\nNow It Is Your Turn', 0)
+	    if (!roof.pilih) ThivaBotMd.sendText(roof.p, '_The Opponent Has Chosen_\nNow It Is Your Turn', 0)
 	    }
 	    let stage = roof.pilih
 	    let stage2 = roof.pilih2
@@ -958,7 +958,7 @@ Click https://wa.me/${botNumber.split`@`[0]}`, m, { mentions: [roof.p, roof.p2] 
 	    else if (k.test(stage) && b.test(stage2)) win = roof.p
 	    else if (k.test(stage) && g.test(stage2)) win = roof.p2
 	    else if (stage == stage2) tie = true
-	    ElisaBotMd.sendText(roof.asal, `_*Suit Results*_${tie ? '\nSERIES' : ''}
+	    ThivaBotMd.sendText(roof.asal, `_*Suit Results*_${tie ? '\nSERIES' : ''}
 
 @${roof.p.split`@`[0]} (${roof.text}) ${tie ? '' : roof.p == win ? ` Win \n` : ` Lost \n`}
 @${roof.p2.split`@`[0]} (${roof.text2}) ${tie ? '' : roof.p2 == win ? ` Win \n` : ` Lost \n`}
@@ -1030,7 +1030,7 @@ switch(command) {
 case 'akira' : {
     var img = akira[Math.floor(Math.random() * akira.length)]  
         
-          ElisaBotMd.sendMessage(m.chat, { image: { url: img }, caption: global.cap }, { quoted: m })
+          ThivaBotMd.sendMessage(m.chat, { image: { url: img }, caption: global.cap }, { quoted: m })
      
      }
 break
@@ -1038,7 +1038,7 @@ break
    
 case 'ana' : {
    var img = ana[Math.floor(Math.random() * ana.length)]  
-   ElisaBotMd.sendMessage(m.chat, { image: { url: img }, caption: global.cap }, { quoted: m })
+   ThivaBotMd.sendMessage(m.chat, { image: { url: img }, caption: global.cap }, { quoted: m })
      
    }
 break
@@ -1047,7 +1047,7 @@ break
 case 'asuna' : {
     var img = asuna[Math.floor(Math.random() * asuna.length)]  
         
-          ElisaBotMd.sendMessage(m.chat, { image: { url: img }, caption: global.cap }, { quoted: m })
+          ThivaBotMd.sendMessage(m.chat, { image: { url: img }, caption: global.cap }, { quoted: m })
      
      }
 break
@@ -1056,7 +1056,7 @@ break
 case 'ayuzawa' : {
     var img = ayuzawa[Math.floor(Math.random() * ayuzawa.length)]  
         
-          ElisaBotMd.sendMessage(m.chat, { image: { url: img }, caption: global.cap }, { quoted: m })
+          ThivaBotMd.sendMessage(m.chat, { image: { url: img }, caption: global.cap }, { quoted: m })
      
      }
 break
@@ -1065,7 +1065,7 @@ break
 case 'boruto' : {
     var img = boruto[Math.floor(Math.random() * boruto.length)]  
         
-          ElisaBotMd.sendMessage(m.chat, { image: { url: img }, caption: global.cap }, { quoted: m })
+          ThivaBotMd.sendMessage(m.chat, { image: { url: img }, caption: global.cap }, { quoted: m })
      
      }
 break
@@ -1074,7 +1074,7 @@ break
 case 'elaina' : {
     var img = elaina[Math.floor(Math.random() * elaina.length)]  
         
-          ElisaBotMd.sendMessage(m.chat, { image: { url: img }, caption: global.cap }, { quoted: m })
+          ThivaBotMd.sendMessage(m.chat, { image: { url: img }, caption: global.cap }, { quoted: m })
      
      }
 break
@@ -1083,7 +1083,7 @@ break
 case 'emilia' : {
     var img = emilia[Math.floor(Math.random() * emilia.length)]  
         
-          ElisaBotMd.sendMessage(m.chat, { image: { url: img }, caption: global.cap }, { quoted: m })
+          ThivaBotMd.sendMessage(m.chat, { image: { url: img }, caption: global.cap }, { quoted: m })
      
      }
 break
@@ -1092,7 +1092,7 @@ break
 case 'erza' : {
     var img = erza[Math.floor(Math.random() * erza.length)]  
         
-          ElisaBotMd.sendMessage(m.chat, { image: { url: img }, caption: global.cap }, { quoted: m })
+          ThivaBotMd.sendMessage(m.chat, { image: { url: img }, caption: global.cap }, { quoted: m })
      
      }
 break
@@ -1101,7 +1101,7 @@ break
 case 'gremory' : {
     var img = gremory[Math.floor(Math.random() * gremory.length)]  
         
-          ElisaBotMd.sendMessage(m.chat, { image: { url: img }, caption: global.cap }, { quoted: m })
+          ThivaBotMd.sendMessage(m.chat, { image: { url: img }, caption: global.cap }, { quoted: m })
      
      }
 break
@@ -1110,7 +1110,7 @@ break
 case 'inori' : {
     var img = inori[Math.floor(Math.random() * inori.length)]  
         
-          ElisaBotMd.sendMessage(m.chat, { image: { url: img }, caption: global.cap }, { quoted: m })
+          ThivaBotMd.sendMessage(m.chat, { image: { url: img }, caption: global.cap }, { quoted: m })
      
      }
 break
@@ -1119,7 +1119,7 @@ break
 case 'kaga' : {
     var img = kaga[Math.floor(Math.random() * kaga.length)]  
         
-          ElisaBotMd.sendMessage(m.chat, { image: { url: img }, caption: global.cap }, { quoted: m })
+          ThivaBotMd.sendMessage(m.chat, { image: { url: img }, caption: global.cap }, { quoted: m })
      
      }
 break
@@ -1128,7 +1128,7 @@ break
 case 'kaori' : {
     var img = kaori[Math.floor(Math.random() * kaori.length)]  
         
-          ElisaBotMd.sendMessage(m.chat, { image: { url: img }, caption: global.cap }, { quoted: m })
+          ThivaBotMd.sendMessage(m.chat, { image: { url: img }, caption: global.cap }, { quoted: m })
      
      }
 break
@@ -1137,7 +1137,7 @@ break
 case 'kurumi' : {
     var img = kurumi[Math.floor(Math.random() * kurumi.length)]  
         
-          ElisaBotMd.sendMessage(m.chat, { image: { url: img }, caption: global.cap }, { quoted: m })
+          ThivaBotMd.sendMessage(m.chat, { image: { url: img }, caption: global.cap }, { quoted: m })
      
      }
 break
@@ -1146,7 +1146,7 @@ break
 case 'loli' : {
     var img = loli[Math.floor(Math.random() * loli.length)]  
         
-          ElisaBotMd.sendMessage(m.chat, { image: { url: img }, caption: global.cap }, { quoted: m })
+          ThivaBotMd.sendMessage(m.chat, { image: { url: img }, caption: global.cap }, { quoted: m })
      
      }
 break
@@ -1155,7 +1155,7 @@ break
 case 'madara' : {
     var img = madara[Math.floor(Math.random() * madara.length)]  
         
-          ElisaBotMd.sendMessage(m.chat, { image: { url: img }, caption: global.cap }, { quoted: m })
+          ThivaBotMd.sendMessage(m.chat, { image: { url: img }, caption: global.cap }, { quoted: m })
      
      }
 break
@@ -1164,7 +1164,7 @@ break
 case 'mikasa' : {
     var img = mikasa[Math.floor(Math.random() * mikasa.length)]  
         
-          ElisaBotMd.sendMessage(m.chat, { image: { url: img }, caption: global.cap }, { quoted: m })
+          ThivaBotMd.sendMessage(m.chat, { image: { url: img }, caption: global.cap }, { quoted: m })
      
      }
 break
@@ -1173,7 +1173,7 @@ break
 case 'miku' : {
     var img = miku[Math.floor(Math.random() * miku.length)]  
         
-          ElisaBotMd.sendMessage(m.chat, { image: { url: img }, caption: global.cap }, { quoted: m })
+          ThivaBotMd.sendMessage(m.chat, { image: { url: img }, caption: global.cap }, { quoted: m })
      
      }
 break
@@ -1182,7 +1182,7 @@ break
 case 'naturo' : {
     var img = naturo[Math.floor(Math.random() * naturo.length)]  
         
-          ElisaBotMd.sendMessage(m.chat, { image: { url: img }, caption: global.cap }, { quoted: m })
+          ThivaBotMd.sendMessage(m.chat, { image: { url: img }, caption: global.cap }, { quoted: m })
      
      }
 break
@@ -1191,7 +1191,7 @@ break
 case 'nezuko' : {
     var img = nezuko[Math.floor(Math.random() * nezuko.length)]  
         
-          ElisaBotMd.sendMessage(m.chat, { image: { url: img }, caption: global.cap }, { quoted: m })
+          ThivaBotMd.sendMessage(m.chat, { image: { url: img }, caption: global.cap }, { quoted: m })
      
      }
 break
@@ -1199,7 +1199,7 @@ break
 case 'rize' : {
     var img = rize[Math.floor(Math.random() * rize.length)]  
         
-          ElisaBotMd.sendMessage(m.chat, { image: { url: img }, caption: global.cap }, { quoted: m })
+          ThivaBotMd.sendMessage(m.chat, { image: { url: img }, caption: global.cap }, { quoted: m })
      
      }
 break
@@ -1208,7 +1208,7 @@ break
 case 'sakura' : {
     var img = sakura[Math.floor(Math.random() * sakura.length)]  
         
-          ElisaBotMd.sendMessage(m.chat, { image: { url: img }, caption: global.cap }, { quoted: m })
+          ThivaBotMd.sendMessage(m.chat, { image: { url: img }, caption: global.cap }, { quoted: m })
      
      }
 break
@@ -1217,7 +1217,7 @@ break
 case 'sasuke' : {
     var img = sasuke[Math.floor(Math.random() * sasuke.length)]  
         
-          ElisaBotMd.sendMessage(m.chat, { image: { url: img }, caption: global.cap }, { quoted: m })
+          ThivaBotMd.sendMessage(m.chat, { image: { url: img }, caption: global.cap }, { quoted: m })
      
      }
 break
@@ -1226,7 +1226,7 @@ break
 case 'shina' : {
     var img = shina[Math.floor(Math.random() * shina.length)]  
         
-          ElisaBotMd.sendMessage(m.chat, { image: { url: img }, caption: global.cap }, { quoted: m })
+          ThivaBotMd.sendMessage(m.chat, { image: { url: img }, caption: global.cap }, { quoted: m })
      
      }
 break
@@ -1235,7 +1235,7 @@ break
 case 'shinka' : {
     var img = shinka[Math.floor(Math.random() * shinka.length)]  
         
-          ElisaBotMd.sendMessage(m.chat, { image: { url: img }, caption: global.cap }, { quoted: m })
+          ThivaBotMd.sendMessage(m.chat, { image: { url: img }, caption: global.cap }, { quoted: m })
      
      }
 break
@@ -1244,7 +1244,7 @@ break
 case 'shota' : {
     var img = shota[Math.floor(Math.random() * shota.length)]  
         
-          ElisaBotMd.sendMessage(m.chat, { image: { url: img }, caption: global.cap }, { quoted: m })
+          ThivaBotMd.sendMessage(m.chat, { image: { url: img }, caption: global.cap }, { quoted: m })
      
      }
 break
@@ -1253,7 +1253,7 @@ break
 case 'waifu' : {
     var img = waifu[Math.floor(Math.random() * waifu.length)]  
         
-          ElisaBotMd.sendMessage(m.chat, { image: { url: img }, caption: global.cap }, { quoted: m })
+          ThivaBotMd.sendMessage(m.chat, { image: { url: img }, caption: global.cap }, { quoted: m })
      
      }
 break
@@ -1262,7 +1262,7 @@ break
 case 'yuki-' : {
     var img = yuki[Math.floor(Math.random() * yuki.length)]  
         
-          ElisaBotMd.sendMessage(m.chat, { image: { url: img }, caption: global.cap }, { quoted: m })
+          ThivaBotMd.sendMessage(m.chat, { image: { url: img }, caption: global.cap }, { quoted: m })
      
      }
 break
@@ -1290,7 +1290,7 @@ case 'cecan':
                     buttons: buttons,
                     headerType: 4
                 }
-                ElisaBotMd.sendMessage(m.chat, buttonMessage, { quoted: m })
+                ThivaBotMd.sendMessage(m.chat, buttonMessage, { quoted: m })
             }
             break
 case 'cyberspace':
@@ -1311,7 +1311,7 @@ case 'cyberspace':
                     buttons: buttons,
                     headerType: 4
                 }
-                ElisaBotMd.sendMessage(m.chat, buttonMessage, { quoted: m })
+                ThivaBotMd.sendMessage(m.chat, buttonMessage, { quoted: m })
             }
             break
   case 'delrash' :{
@@ -1400,11 +1400,11 @@ message: {
 }
 }
 }
-await ElisaBotMd.sendMessage(m.chat, { text : `hello` } ,{ quoted: ftoko })  
-await ElisaBotMd.sendMessage(m.chat, { text : `hello` } ,{ quoted: fgclink })  
-await ElisaBotMd.sendMessage(m.chat, { text : `hello` } ,{ quoted: flokasi })  
- await ElisaBotMd.sendMessage(m.chat, { text : `hello` } ,{ quoted: fdocs })  
- await ElisaBotMd.sendMessage(m.chat, { text : `hello` } ,{ quoted: fvideo })  
+await ThivaBotMd.sendMessage(m.chat, { text : `hello` } ,{ quoted: ftoko })  
+await ThivaBotMd.sendMessage(m.chat, { text : `hello` } ,{ quoted: fgclink })  
+await ThivaBotMd.sendMessage(m.chat, { text : `hello` } ,{ quoted: flokasi })  
+ await ThivaBotMd.sendMessage(m.chat, { text : `hello` } ,{ quoted: fdocs })  
+ await ThivaBotMd.sendMessage(m.chat, { text : `hello` } ,{ quoted: fvideo })  
  if (isSudo) {
  reply('hello sudoo ' )
  
@@ -1450,28 +1450,28 @@ var button = [
 		{ quickReplyButton: { displayText: `Owner`, id: `${prefix}owner` } }
 		]
         var hg = `「 DEATH 」`
-        ElisaBotMd.sendMessage(from, { caption: hg, location: { jpegThumbnail: hasm }, templateButtons: button, footer: `ʀᴘɢ ɢᴀᴍᴇ ʙʏ ᴢɪᴍʙᴏᴛ`, mentions: [m.sender] })
+        ThivaBotMd.sendMessage(from, { caption: hg, location: { jpegThumbnail: hasm }, templateButtons: button, footer: `ʀᴘɢ ɢᴀᴍᴇ ʙʏ ᴢɪᴍʙᴏᴛ`, mentions: [m.sender] })
 
 
              }
              break*/
              case 'spotify' : {
-             const down = await ElisaBotMd.sendText(m.chat, `*📥 Downloading Your Song...*`, m, )
+             const down = await ThivaBotMd.sendText(m.chat, `*📥 Downloading Your Song...*`, m, )
              await fetchJson(`https://api.zekais.com/spotifydl?url=${text}&apikey=BRkP6EOB`)
-             .then(async (nima) => {
-             await ElisaBotMd.sendMessage(m.chat,{delete : down.key })  
-             const up = await ElisaBotMd.sendText(m.chat, `*📤 Uploading ...*`, m, )
-             await ElisaBotMd.sendMessage(m.chat, { document: { url: nima.result }, mimetype: 'audio/mpeg', fileName: `${nima.title}.mp3` }, { quoted: m })
-             await ElisaBotMd.sendMessage(m.chat,{delete : up.key })  
+             .then(async (Thiva) => {
+             await ThivaBotMd.sendMessage(m.chat,{delete : down.key })  
+             const up = await ThivaBotMd.sendText(m.chat, `*📤 Uploading ...*`, m, )
+             await ThivaBotMd.sendMessage(m.chat, { document: { url: Thiva.result }, mimetype: 'audio/mpeg', fileName: `${Thiva.title}.mp3` }, { quoted: m })
+             await ThivaBotMd.sendMessage(m.chat,{delete : up.key })  
              
              })       
              }
              break
              case 'fancy' : {
              if(!text) return reply('*👸💬 Need some text*\n _ex_ .fancy THIVANKA Nirmal')
-             await ElisaBotMd.sendText(m.chat,mess.wait)
-             const nima = await fetchJson(`https://api.tiodevhost.my.id/api/tools/styletext?text=${text}`)
-             const search = nima.result
+             await ThivaBotMd.sendText(m.chat,mess.wait)
+             const Thiva = await fetchJson(`https://api.tiodevhost.my.id/api/tools/styletext?text=${text}`)
+             const search = Thiva.result
              let sections = []   
   for (let i of search) {
   const list = { title: `👸 ǫᴜᴇᴇɴ ᴇʟɪsᴀ ғᴀɴᴄʏ ᴛᴇxᴛ 👸`,
@@ -1484,7 +1484,7 @@ var button = [
      }
      sections.push(list)   
      }
-  const sendm =  ElisaBotMd.sendMessage(
+  const sendm =  ThivaBotMd.sendMessage(
       m.chat, 
       {
        text: `${text} *Here is the list of Fancy Texts, click the button below to choose*\n\n${m.pushName}`,
@@ -1501,7 +1501,7 @@ ${global.botnma} Fancy Text List
              case 'hi1': case 'hai' : case 'හායි': {
              
              if (global.VOICE_REPLY == 'true') {
-             await ElisaBotMd.sendMessage(m.chat, { audio: {url:'https://github.com/ThivankaOnline/UPLOADS/raw/main/VOICE/hi.mp3'}, mimetype: 'audio/mp4', ptt: true }, { quoted: m })   
+             await ThivaBotMd.sendMessage(m.chat, { audio: {url:'https://github.com/ThivankaOnline/UPLOADS/raw/main/VOICE/hi.mp3'}, mimetype: 'audio/mp4', ptt: true }, { quoted: m })   
              }
              }
              break
@@ -1512,35 +1512,35 @@ ${global.botnma} Fancy Text List
              break
              case 'mk1': case 'මොකද කරන්නේ' :{
              if (global.VOICE_REPLY == 'true') {
-             await ElisaBotMd.sendMessage(m.chat, { audio: {url:'https://github.com/ThivankaOnline/UPLOADS/raw/main/VOICE/mk.mp3'}, mimetype: 'audio/mp4', ptt: true }, { quoted: m })   
+             await ThivaBotMd.sendMessage(m.chat, { audio: {url:'https://github.com/ThivankaOnline/UPLOADS/raw/main/VOICE/mk.mp3'}, mimetype: 'audio/mp4', ptt: true }, { quoted: m })   
              }
              }
              break
              
              case 'gn1': case 'night' :{
              if (global.VOICE_REPLY == 'true') {
-             await ElisaBotMd.sendMessage(m.chat, { audio: {url:'https://github.com/ThivankaOnline/UPLOADS/raw/main/VOICE/bs.mp3'}, mimetype: 'audio/mp4', ptt: true }, { quoted: m })   
+             await ThivaBotMd.sendMessage(m.chat, { audio: {url:'https://github.com/ThivankaOnline/UPLOADS/raw/main/VOICE/bs.mp3'}, mimetype: 'audio/mp4', ptt: true }, { quoted: m })   
              }
              }
              break
              
              case 'bs1': {
              if (global.VOICE_REPLY == 'true') {
-             await ElisaBotMd.sendMessage(m.chat, { audio: {url:'https://github.com/ThivankaOnline/UPLOADS/raw/main/VOICE/bs.mp3'}, mimetype: 'audio/mp4', ptt: true }, { quoted: m })   
+             await ThivaBotMd.sendMessage(m.chat, { audio: {url:'https://github.com/ThivankaOnline/UPLOADS/raw/main/VOICE/bs.mp3'}, mimetype: 'audio/mp4', ptt: true }, { quoted: m })   
              }
              }
              break
              
              case 'gm1': case 'morning' :{
              if (global.VOICE_REPLY == 'true') {
-             await ElisaBotMd.sendMessage(m.chat, { audio: {url:'https://github.com/ThivankaOnline/UPLOADS/raw/main/VOICE/gm.mp3'}, mimetype: 'audio/mp4', ptt: true }, { quoted: m })   
+             await ThivaBotMd.sendMessage(m.chat, { audio: {url:'https://github.com/ThivankaOnline/UPLOADS/raw/main/VOICE/gm.mp3'}, mimetype: 'audio/mp4', ptt: true }, { quoted: m })   
              }
              }
              break
              
              case 'bye1' :case 'බායි' :{
              if (global.VOICE_REPLY == 'true') {
-             await ElisaBotMd.sendMessage(m.chat, { audio: {url:'https://github.com/ThivankaOnline/UPLOADS/raw/main/VOICE/bye.mp3'}, mimetype: 'audio/mp4', ptt: true }, { quoted: m })   
+             await ThivaBotMd.sendMessage(m.chat, { audio: {url:'https://github.com/ThivankaOnline/UPLOADS/raw/main/VOICE/bye.mp3'}, mimetype: 'audio/mp4', ptt: true }, { quoted: m })   
              }
              }
              break
@@ -1551,32 +1551,32 @@ if (global.LANG == 'EN') P_LINK = return reply('*👸💬 Please give me a corre
 if (global.LANG == 'EN') P_LINK = */
 
            if (!text) return reply('*👸💬 Please give plastore app name*')
-            await ElisaBotMd.sendText(m.chat,mess.wait)
+            await ThivaBotMd.sendText(m.chat,mess.wait)
            await fetchJson(`https://api.akuari.my.id/search/playstoresearch?query=${text}`)
-            .then(async (nima) => {  
+            .then(async (Thiva) => {  
            const caption = `   *👸 𝚃𝙷𝙸𝚅𝙰𝙽𝙺𝙰 𝙽𝙸𝚁𝙼𝙰𝙻 𝙰𝙿𝙺 𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳𝙴𝚁 👸*
 
- ☛ 𝚃𝙸𝚃𝙻𝙴 : ${nima.hasil[0].title}
- ☛ 𝙿𝙰𝙲𝙺𝙰𝙶𝙴 𝙽𝙰𝙼𝙴 : ${nima.hasil[0].appId}
- ☛ 𝙳𝙴𝚅𝙴𝙻𝙾𝙿𝙴𝚁 : ${nima.hasil[0].developer}
- ☛ 𝚁𝙰𝚃𝙴 : ${nima.hasil[0].scoreText}
- ☛ 𝙳𝙴𝚂𝙲𝚁𝙸𝙿𝚃𝙸𝙾𝙽 : ${nima.hasil[0].summary}
- ☛ 𝚄𝚁𝙻 : ${nima.hasil[0].url} 
+ ☛ 𝚃𝙸𝚃𝙻𝙴 : ${Thiva.hasil[0].title}
+ ☛ 𝙿𝙰𝙲𝙺𝙰𝙶𝙴 𝙽𝙰𝙼𝙴 : ${Thiva.hasil[0].appId}
+ ☛ 𝙳𝙴𝚅𝙴𝙻𝙾𝙿𝙴𝚁 : ${Thiva.hasil[0].developer}
+ ☛ 𝚁𝙰𝚃𝙴 : ${Thiva.hasil[0].scoreText}
+ ☛ 𝙳𝙴𝚂𝙲𝚁𝙸𝙿𝚃𝙸𝙾𝙽 : ${Thiva.hasil[0].summary}
+ ☛ 𝚄𝚁𝙻 : ${Thiva.hasil[0].url} 
 `
    
    const buttons = [
-                    {buttonId: `getapk ${nima.hasil[0].url}`, buttonText: {displayText: '🗳️ ᴅᴏᴡɴʟᴏᴀᴅ ᴀᴘᴋ 🗳️'}, type: 1},
+                    {buttonId: `getapk ${Thiva.hasil[0].url}`, buttonText: {displayText: '🗳️ ᴅᴏᴡɴʟᴏᴀᴅ ᴀᴘᴋ 🗳️'}, type: 1},
                      
                 ]
             const buttonMessage = {
-                    image: { url: nima.hasil[0].icon },
+                    image: { url: Thiva.hasil[0].icon },
                     caption: caption,
                     footer: global.botnma,
                     buttons: buttons,
                     headerType: 4
                 }
                 
-           await ElisaBotMd.sendMessage(m.chat, buttonMessage, { quoted: m })
+           await ThivaBotMd.sendMessage(m.chat, buttonMessage, { quoted: m })
             }).catch((err) => m_reply(NOT_FOUND))
        }
        break    
@@ -1584,23 +1584,23 @@ if (global.LANG == 'EN') P_LINK = */
        case 'apk' : {
             if (!text.includes('https://play.google.com/')) return reply('*👸💬 Please give me a correct link*\n _.apk https://play.google.com/store/apps/details?id=com.whatsapp_')
              const appid = text.split("details?id=")[1]
-             await ElisaBotMd.sendMessage(from, { react: { text: `⬇️`, key: m.key }})
+             await ThivaBotMd.sendMessage(from, { react: { text: `⬇️`, key: m.key }})
              await fetchJson(`https://api.lolhuman.xyz/api/apkdownloader?apikey=SGWN&package=${appid}`)
              .then(async (rash) => { 
              const apk = rash.result.apk_link
              const name = rash.result.apk_name
-             await ElisaBotMd.sendMessage(from, { react: { text: `⬆️`, key: m.key }})
-             var apppk = await ElisaBotMd.sendMessage(m.chat, { document: {url : apk } , mimetype: 'application/vnd.android.package-archive', fileName: `${name}.apk`}, { quoted: m })
-             await ElisaBotMd.sendMessage(from, { react: { text: `✅`, key: m.key }})
-             await ElisaBotMd.sendMessage(from, { react: { text: `🗃️`, key: apppk.key }})
+             await ThivaBotMd.sendMessage(from, { react: { text: `⬆️`, key: m.key }})
+             var apppk = await ThivaBotMd.sendMessage(m.chat, { document: {url : apk } , mimetype: 'application/vnd.android.package-archive', fileName: `${name}.apk`}, { quoted: m })
+             await ThivaBotMd.sendMessage(from, { react: { text: `✅`, key: m.key }})
+             await ThivaBotMd.sendMessage(from, { react: { text: `🗃️`, key: apppk.key }})
             }).catch((err) => m_reply(NOT_FOUND))
                          }
             break
             case 'modapk' :{
-            await ElisaBotMd.sendText(m.chat,mess.wait) 
+            await ThivaBotMd.sendText(m.chat,mess.wait) 
             await fetchJson(`https://api.akuari.my.id/search/searchmod?query=${text}`)
-            .then(async (nima) => {  
-            const search = nima.respon
+            .then(async (Thiva) => {  
+            const search = Thiva.respon
             let sections = []   
   for (let i of search) {
   const list = {title: `SELECT YOUR MOD APP`,
@@ -1614,7 +1614,7 @@ if (global.LANG == 'EN') P_LINK = */
      }
      sections.push(list)   
      }
-  const sendm =  ElisaBotMd.sendMessage(
+  const sendm =  ThivaBotMd.sendMessage(
       m.chat, 
       {
        text: `${m.pushName} This is matching apk\n\n➮ ʀᴇǫᴜᴇsᴛ ${text}`,
@@ -1627,12 +1627,12 @@ if (global.LANG == 'EN') P_LINK = */
             }
             break
             case 'modapkdl' : {
-            const down = await ElisaBotMd.sendMessage(from, { text: `*📥 Downloding mod apk...*` }, { quoted: m })
-            const nima = await fetchJson(`https://api.akuari.my.id/downloader/dlmod?link=${args[0]}`)
-            const upload = await ElisaBotMd.sendMessage(from, { text: `*📤 Uploading mod apk...*` }, { quoted: m })
-            await ElisaBotMd.sendMessage(m.chat,{delete : down.key })  
-            await ElisaBotMd.sendMessage(m.chat, { document: { url : nima.respon.linkdl } , mimetype: 'application/vnd.android.package-archive', fileName: `${args[1]}.apk`}, { quoted: m })
-            await ElisaBotMd.sendMessage(m.chat,{delete : upload.key })  
+            const down = await ThivaBotMd.sendMessage(from, { text: `*📥 Downloding mod apk...*` }, { quoted: m })
+            const Thiva = await fetchJson(`https://api.akuari.my.id/downloader/dlmod?link=${args[0]}`)
+            const upload = await ThivaBotMd.sendMessage(from, { text: `*📤 Uploading mod apk...*` }, { quoted: m })
+            await ThivaBotMd.sendMessage(m.chat,{delete : down.key })  
+            await ThivaBotMd.sendMessage(m.chat, { document: { url : Thiva.respon.linkdl } , mimetype: 'application/vnd.android.package-archive', fileName: `${args[1]}.apk`}, { quoted: m })
+            await ThivaBotMd.sendMessage(m.chat,{delete : upload.key })  
            
             }
             break
@@ -1654,38 +1654,38 @@ if (global.LANG == 'EN') P_LINK = */
                     buttons: buttons,
                     headerType: 4
                 }
-               ElisaBotMd.sendMessage(m.chat, buttonMessage, { quoted: m })
+               ThivaBotMd.sendMessage(m.chat, buttonMessage, { quoted: m })
            
              }
             break
             case 'hdfbvid' : {
-            const down = await ElisaBotMd.sendText(m.chat, `*📥 DOWNLOADING FB VIDEO...*`, m, )
+            const down = await ThivaBotMd.sendText(m.chat, `*📥 DOWNLOADING FB VIDEO...*`, m, )
             await fetchJson(`https://api.akuari.my.id/downloader/fbdl3?link=${text}`)
-            .then(async (nima) => { 
-            const down = await ElisaBotMd.sendText(m.chat, `*📥 DOWNLOADING FB VIDEO...*`, m, )
-            const up = await ElisaBotMd.sendText(m.chat, `*📤 UPLOADING FB VIDEO...*`, m, )
-     //  await ElisaBotMd.sendMessage(m.chat,{delete : down.key })  
-       await ElisaBotMd.sendMessage(m.chat, { video: { url: nima.hasil.hd }, caption: global.cap}, { quoted: m })}).catch((err) => m_reply(NOT_FOUND))
-     //  await ElisaBotMd.sendMessage(m.chat,{delete : up.key })  
+            .then(async (Thiva) => { 
+            const down = await ThivaBotMd.sendText(m.chat, `*📥 DOWNLOADING FB VIDEO...*`, m, )
+            const up = await ThivaBotMd.sendText(m.chat, `*📤 UPLOADING FB VIDEO...*`, m, )
+     //  await ThivaBotMd.sendMessage(m.chat,{delete : down.key })  
+       await ThivaBotMd.sendMessage(m.chat, { video: { url: Thiva.hasil.hd }, caption: global.cap}, { quoted: m })}).catch((err) => m_reply(NOT_FOUND))
+     //  await ThivaBotMd.sendMessage(m.chat,{delete : up.key })  
      
             
             }
             break
             case 'sdfbvid' : {
             await fetchJson(`https://api.akuari.my.id/downloader/fbdl3?link=${text}`)
-            .then(async (nima) => { 
-            const down = await ElisaBotMd.sendText(m.chat, `*📥 DOWNLOADING FB VIDEO...*`, m, )
-       const up = await ElisaBotMd.sendText(m.chat, `*📤 UPLOADING FB VIDEO...*`, m, )
-    //   await ElisaBotMd.sendMessage(m.chat,{delete : down.key })  
-       await ElisaBotMd.sendMessage(m.chat, { video: { url: nima.hasil.sd }, caption: global.cap}, { quoted: m })}).catch((err) => m_reply(NOT_FOUND))
-  //     await ElisaBotMd.sendMessage(m.chat,{delete : up.key })  
+            .then(async (Thiva) => { 
+            const down = await ThivaBotMd.sendText(m.chat, `*📥 DOWNLOADING FB VIDEO...*`, m, )
+       const up = await ThivaBotMd.sendText(m.chat, `*📤 UPLOADING FB VIDEO...*`, m, )
+    //   await ThivaBotMd.sendMessage(m.chat,{delete : down.key })  
+       await ThivaBotMd.sendMessage(m.chat, { video: { url: Thiva.hasil.sd }, caption: global.cap}, { quoted: m })}).catch((err) => m_reply(NOT_FOUND))
+  //     await ThivaBotMd.sendMessage(m.chat,{delete : up.key })  
             }
            break
 case 'wpaper' :{
-   await ElisaBotMd.sendText(m.chat, '*LOADING...*')
+   await ThivaBotMd.sendText(m.chat, '*LOADING...*')
    
-   await ElisaBotMd.sendMessage(m.chat, { image: { url: `https://api.akuari.my.id/search/alphacoders?query=${text}` },  caption: `${global.cap}`}, { quoted: m })
-   await ElisaBotMd.sendMessage(m.chat, { image: { url: `https://api.akuari.my.id/search/alphacoders?query=${text}` },  caption: `${global.cap}`}, { quoted: m }.repeat(5))
+   await ThivaBotMd.sendMessage(m.chat, { image: { url: `https://api.akuari.my.id/search/alphacoders?query=${text}` },  caption: `${global.cap}`}, { quoted: m })
+   await ThivaBotMd.sendMessage(m.chat, { image: { url: `https://api.akuari.my.id/search/alphacoders?query=${text}` },  caption: `${global.cap}`}, { quoted: m }.repeat(5))
 }
 break
        /* case 'invexxcxntori': case 'invexxxntory': case 'pxxxxrofile':{
@@ -1694,7 +1694,7 @@ if (q.includes('--help')) return reply(examkosong)
   if (!isInventory){ addInventori(m.sender) }
   if (!isInventoriBuruan){ addInventoriBuruan(m.sender) }
      
-     var ElisaBotMd = await getBuffer(picak+`User's Inventory`)
+     var ThivaBotMd = await getBuffer(picak+`User's Inventory`)
      let teksehmazeh = `_[ 👩🏻‍💼INFO USER👨🏻‍💼 ]_\n\n`
      teksehmazeh += `*❤️Your Blood* : ${getDarah(m.sender)}\n`
      teksehmazeh += `*◻️️Your Iron* : ${getBesi(m.sender)}\n`
@@ -1710,16 +1710,16 @@ if (q.includes('--help')) return reply(examkosong)
      teksehmazeh += `*🐄Cow* : ${getSapi(m.sender)}\n`
      teksehmazeh += `*🐘Elephant* : ${getGajah(m.sender)}\n\n`
      teksehmazeh += `_*${pushname}*_`
-     await ElisaBotMd.send5ButImg(from, `` + '' + teksehmazeh, `© ${footer}`, ElisaBotMd, [{"urlButton": {"displayText": "YouTube📍","url": `${myweb}`}}])
+     await ThivaBotMd.send5ButImg(from, `` + '' + teksehmazeh, `© ${footer}`, ThivaBotMd, [{"urlButton": {"displayText": "YouTube📍","url": `${myweb}`}}])
   }
   break*/
   /*case 'tyt' :{
-  await ElisaBotMd.sendText(m.chat,'serching...')
-  const nimadl2 = require('xfarr-api')
-  nimadl2.Youtube(`${text}`)
+  await ThivaBotMd.sendText(m.chat,'serching...')
+  const Thivadl2 = require('xfarr-api')
+  Thivadl2.Youtube(`${text}`)
     .then(data => {
     //console.log(data)
-   ElisaBotMd.sendText(m.chat,data)
+   ThivaBotMd.sendText(m.chat,data)
 })
   }
   break*/
@@ -1746,7 +1746,7 @@ const templateMessage = {
     headerType: 4
 }
      
-     await ElisaBotMd.sendMessage(m.chat, templateMessage, { quoted: m })
+     await ThivaBotMd.sendMessage(m.chat, templateMessage, { quoted: m })
       //} else {
      //reply("*The News bot has Working well*")
    ///  }
@@ -1758,7 +1758,7 @@ const templateMessage = {
 
 const cyber = await fetchJson(`https://api.sdbots.tk/hirunews`)
 
-ElisaBotMd.sendMessage(`${text}`, { image: { url: cyber.img }, caption: `*${cyber.title}*\n\n🔔 *විස්තරය* - ${cyber.description}\n\n*_🖇️ News Link -_* ${cyber.link}\n\nꜱʟ ɴᴇᴡꜱ ᴜᴘᴅᴀᴛᴇꜱ ᴄᴇɴᴛᴇʀ` }, )
+ThivaBotMd.sendMessage(`${text}`, { image: { url: cyber.img }, caption: `*${cyber.title}*\n\n🔔 *විස්තරය* - ${cyber.description}\n\n*_🖇️ News Link -_* ${cyber.link}\n\nꜱʟ ɴᴇᴡꜱ ᴜᴘᴅᴀᴛᴇꜱ ᴄᴇɴᴛᴇʀ` }, )
      } else {
      reply("This Chat not News Sender Group")
      }
@@ -1779,7 +1779,7 @@ const img = helnews.news.helakuru.thumb
 const url = helnews.news.helakuru.url
 const date = helnews.news.helakuru.data
 
-ElisaBotMd.sendMessage(`${text}`, { image: { url: img }, caption: `*${title}*\n\n*🔐 විස්තරය* - ${news}\n\n*_🖇️ News Link -_*  ${url}\n\nꜱʟ ɴᴇᴡꜱ ᴜᴘᴅᴀᴛᴇꜱ ᴄᴇɴᴛᴇʀ` }, )
+ThivaBotMd.sendMessage(`${text}`, { image: { url: img }, caption: `*${title}*\n\n*🔐 විස්තරය* - ${news}\n\n*_🖇️ News Link -_*  ${url}\n\nꜱʟ ɴᴇᴡꜱ ᴜᴘᴅᴀᴛᴇꜱ ᴄᴇɴᴛᴇʀ` }, )
       
      } else {
      reply("This Chat not News Sender Group")
@@ -1796,7 +1796,7 @@ const img = text.split("&")[0]
 const news = text.split("&")[1] 
  
  
- ElisaBotMd.sendMessage(`120363049703450133@g.us`, { image: { url: img }, caption: news }, )
+ ThivaBotMd.sendMessage(`120363049703450133@g.us`, { image: { url: img }, caption: news }, )
    
  }
       else {
@@ -1809,7 +1809,7 @@ break
 // TESTING NEWS STARTS \\
 
 case 'news' :{ 
-  await ElisaBotMd.sendMessage(from, { react: { text: `🥀`, key: m.key }})
+  await ThivaBotMd.sendMessage(from, { react: { text: `🥀`, key: m.key }})
 
 if (m.chat == '120363047969989785@g.us') {
            
@@ -1830,7 +1830,7 @@ if (m.chat == '120363047969989785@g.us') {
 								
 								}
 							]
-				 ElisaBotMd.sendListMsg(m.chat, `අවශ්‍ය යොමුව තෝරන්න`, `ᴄʏʙᴇʀ-x ᴡʜᴀᴛꜱᴀᴘᴘ ʙᴏᴛ`, ElisaBotMd.user.name, `නිව්ස් වර්ගය`, sections, m)
+				 ThivaBotMd.sendListMsg(m.chat, `අවශ්‍ය යොමුව තෝරන්න`, `ᴄʏʙᴇʀ-x ᴡʜᴀᴛꜱᴀᴘᴘ ʙᴏᴛ`, ThivaBotMd.user.name, `නිව්ස් වර්ගය`, sections, m)
 				 } else {
      reply("⚠️ Not Found")
      }
@@ -1847,11 +1847,11 @@ if (m.chat == '120363047969989785@g.us') {
 
 const esana =  new Esana()
 await esana.verify('82darkalpha') 
-const nima_news = await esana.esana_latest()
-reply(util.format(nima_news))
-//console.log(nima_news)
-//reply(nima_news.title+'\n\n'+nima_news.description+'\n\n'+nima_news.data)
-//ElisaBotMd.sendMessage(m.chat, { image: { url: nima_news.news.helakuru.thumb }, caption: nima_news.news.helakuru.title+'\n\n'+nima_news.news.helakuru.description+'\n\n'+nima_news.news.helakuru.data+'\n\n'+nima_news.news.helakuru.url }, )
+const Thiva_news = await esana.esana_latest()
+reply(util.format(Thiva_news))
+//console.log(Thiva_news)
+//reply(Thiva_news.title+'\n\n'+Thiva_news.description+'\n\n'+Thiva_news.data)
+//ThivaBotMd.sendMessage(m.chat, { image: { url: Thiva_news.news.helakuru.thumb }, caption: Thiva_news.news.helakuru.title+'\n\n'+Thiva_news.news.helakuru.description+'\n\n'+Thiva_news.news.helakuru.data+'\n\n'+Thiva_news.news.helakuru.url }, )
   
 
 /*
@@ -1882,7 +1882,7 @@ const templateMessage = {
     headerType: 4
 }
      
-     await ElisaBotMd.sendMessage(m.chat, templateMessage, { quoted: m })
+     await ThivaBotMd.sendMessage(m.chat, templateMessage, { quoted: m })
       
   //   } else {
    //  reply("⚠️ Not Found")
@@ -1895,7 +1895,7 @@ const templateMessage = {
     
      case 'checkhirunewsx'  : {
      reply(mess.wait)
-       await ElisaBotMd.sendMessage(from, { react: { text: `✅`, key: m.key }})
+       await ThivaBotMd.sendMessage(from, { react: { text: `✅`, key: m.key }})
 
       if (m.chat == '120363047969989785@g.us') {
 
@@ -1916,7 +1916,7 @@ const templateMessage = {
     headerType: 4
 }
      
-     await ElisaBotMd.sendMessage(m.chat, templateMessage, { quoted: m })
+     await ThivaBotMd.sendMessage(m.chat, templateMessage, { quoted: m })
       } else {
      reply("⚠️ Not Found")
      }
@@ -1933,15 +1933,15 @@ if (command == 'fb') rimogi = '🪀'
 if (command == 'get') rimogi = '🧸'
 
 const seccap = args[1] || '😍💗'
-    const thub = await fetchJson('https://github.com/thivankaonline/UPLOADS/raw/main/JSON/elisadetails.json')
-                          await ElisaBotMd.sendMessage(from, { react: { text: `⬇️`, key: m.key }})
+    const thub = await fetchJson('https://github.com/thivankaonline/UPLOADS/raw/main/JSON/Thivadetails.json')
+                          await ThivaBotMd.sendMessage(from, { react: { text: `⬇️`, key: m.key }})
     
     if (!text) {
-    await ElisaBotMd.sendMessage(from, { react: { text: `ℹ️`, key: m.key }})
+    await ThivaBotMd.sendMessage(from, { react: { text: `ℹ️`, key: m.key }})
     throw '*Please Give me a link*'
     }
    buf = await getBuffer(thub.SF_THUB)
- //  const download = await ElisaBotMd.sendText(m.chat, mess.wait)
+ //  const download = await ThivaBotMd.sendText(m.chat, mess.wait)
 
                 let bicil = require('@bochilteam/scraper')
 
@@ -1956,14 +1956,14 @@ const seccap = args[1] || '😍💗'
 		        if(i.url.includes('mp4')){		           			    				
 
 				let link = await getBuffer(i.url)
-			// await ElisaBotMd.sendMessage(m.chat, { delete: download.key })	
-            // const uplode = await ElisaBotMd.sendText(m.chat, ` *Please Wait ${global.botnma} Trying upload Your  ${m.pushName} Video ... 🔄*`)
-             await ElisaBotMd.sendMessage(from, { react: { text: `⬆️`, key: m.key }})
+			// await ThivaBotMd.sendMessage(m.chat, { delete: download.key })	
+            // const uplode = await ThivaBotMd.sendText(m.chat, ` *Please Wait ${global.botnma} Trying upload Your  ${m.pushName} Video ... 🔄*`)
+             await ThivaBotMd.sendMessage(from, { react: { text: `⬆️`, key: m.key }})
 
-                const gettl = await ElisaBotMd.sendMessage(m.chat, { video: link, jpegThumbnail:buf,caption: `${global.CAPTION}` }, { quoted: m }) 
-                //await ElisaBotMd.sendMessage(m.chat, { delete: uplode.key })    
-                await ElisaBotMd.sendMessage(from, { react: { text: `✅`, key: m.key }})          
-                await ElisaBotMd.sendMessage(from, { react: { text: rimogi , key: gettl.key }})          
+                const gettl = await ThivaBotMd.sendMessage(m.chat, { video: link, jpegThumbnail:buf,caption: `${global.CAPTION}` }, { quoted: m }) 
+                //await ThivaBotMd.sendMessage(m.chat, { delete: uplode.key })    
+                await ThivaBotMd.sendMessage(from, { react: { text: `✅`, key: m.key }})          
+                await ThivaBotMd.sendMessage(from, { react: { text: rimogi , key: gettl.key }})          
 
                }
 
@@ -1983,12 +1983,12 @@ const urlnya = text.split("&")[0]
 const seccap = text.split("&")[1] || '😇💗'
  
 //const seccap = args[1] || '😍💗'
-    const thub = await fetchJson('https://github.com/thivankaonline/UPLOADS/raw/main/JSON/elisadetails.json')
-                          await ElisaBotMd.sendMessage(from, { react: { text: `📥`, key: m.key }})
+    const thub = await fetchJson('https://github.com/thivankaonline/UPLOADS/raw/main/JSON/Thivadetails.json')
+                          await ThivaBotMd.sendMessage(from, { react: { text: `📥`, key: m.key }})
     
     if (!text) throw '*Please Give me a link*'
    buf = await getBuffer(thub.SF_THUB)
-   const download = await ElisaBotMd.sendText(m.chat, mess.wait)
+   const download = await ThivaBotMd.sendText(m.chat, mess.wait)
 
                 let bicil = require('@bochilteam/scraper')
 
@@ -2003,14 +2003,14 @@ const seccap = text.split("&")[1] || '😇💗'
 		        if(i.url.includes('mp4')){		           			    				
 
 				let link = await getBuffer(i.url)
-			 await ElisaBotMd.sendMessage(m.chat, { delete: download.key })	
-             const uplode = await ElisaBotMd.sendText(m.chat, ` *Please Wait ${global.botnma} Trying upload Your  ${m.pushName} Video ... 🔄*`)
-             await ElisaBotMd.sendMessage(from, { react: { text: `📤`, key: m.key }})
+			 await ThivaBotMd.sendMessage(m.chat, { delete: download.key })	
+             const uplode = await ThivaBotMd.sendText(m.chat, ` *Please Wait ${global.botnma} Trying upload Your  ${m.pushName} Video ... 🔄*`)
+             await ThivaBotMd.sendMessage(from, { react: { text: `📤`, key: m.key }})
 
-                const videoid = await ElisaBotMd.sendMessage(groupp, { video: link,caption: `${seccap}\n\n*sʟ ᴡʜᴀᴛsᴀᴘᴘ sᴛᴇᴛᴜs ᴢᴏɴᴇ* \n __𝙼𝚛 𝙽𝚒𝚖𝚊 ` }, { quoted: fvideo }) 
-                await ElisaBotMd.sendMessage(m.chat, { delete: uplode.key })    
-                          await ElisaBotMd.sendMessage(from, { react: { text: `✅`, key: m.key }})  
-                          //await ElisaBotMd.sendMessage(from, { react: { text: `🎀`, key: videoid.key }})          
+                const videoid = await ThivaBotMd.sendMessage(groupp, { video: link,caption: `${seccap}\n\n*sʟ ᴡʜᴀᴛsᴀᴘᴘ sᴛᴇᴛᴜs ᴢᴏɴᴇ* \n __𝙼𝚛 𝙽𝚒𝚖𝚊 ` }, { quoted: fvideo }) 
+                await ThivaBotMd.sendMessage(m.chat, { delete: uplode.key })    
+                          await ThivaBotMd.sendMessage(from, { react: { text: `✅`, key: m.key }})  
+                          //await ThivaBotMd.sendMessage(from, { react: { text: `🎀`, key: videoid.key }})          
 
                }
 
@@ -2025,7 +2025,7 @@ const seccap = text.split("&")[1] || '😇💗'
 case 'cclear' : {
 const chat = m.chat
     const lastMsgInChat = await getLastMessageInChat(chat) // implement this on your end
-await ElisaBotMd.chatModify({
+await ThivaBotMd.chatModify({
   delete: true,
   lastMessages: [{ key: lastMsgInChat.key, messageTimestamp: lastMsgInChat.messageTimestamp }]
 },
@@ -2034,47 +2034,47 @@ reply('✅ Done !')
 }
     break
 case 'ytmp4' : {
-                                  const thub = await fetchJson('https://github.com/thivankaonline/UPLOADS/raw/main/JSON/elisadetails.json')
+                                  const thub = await fetchJson('https://github.com/thivankaonline/UPLOADS/raw/main/JSON/Thivadetails.json')
                               const buf = await getBuffer(thub.YT_THUB)
                           if(!text) return reply('*👸💬 Need youtube url* \n'+'```ℹ️ Example .ytmp4 https://youtube.com/watch?v=WoWlWb6vbzA```')
                           if (!text.includes('https://youtu')) return reply('*👸💬 Need youtube url* \n'+'```ℹ️ Example .ytmp4 https://youtube.com/watch?v=WoWlWb6vbzA```')
-                          await ElisaBotMd.sendMessage(from, { react: { text: `⬇️`, key: m.key }})
-                          //await ElisaBotMd.sendText(m.chat,mess.wait)
+                          await ThivaBotMd.sendMessage(from, { react: { text: `⬇️`, key: m.key }})
+                          //await ThivaBotMd.sendText(m.chat,mess.wait)
                           let quality = args[1] ? args[1] : '360p'
                           //const yts = require("yt-search")
                          // const search = await yts(args[0])
                           const dltext = args[0]
                           let boltc = require('@bochilteam/scraper')
                           await boltc.youtubedlv2(dltext)
-                          .then(async(nima) => {
-                          const dl_url = await nima.video[quality].download()
-                          const size = nima.video[quality].fileSize
+                          .then(async(Thiva) => {
+                          const dl_url = await Thiva.video[quality].download()
+                          const size = Thiva.video[quality].fileSize
                           if(size >= 120000) return reply('*FILE SIZE IS SO BIG !!!*')
-                          await ElisaBotMd.sendMessage(from, { react: { text: `⬆️`, key: m.key }})
-                          const viddd = await ElisaBotMd.sendMessage(m.chat, { video: { url: dl_url }, mimetype: 'video/mp4', fileName: `${nima.title}.mp4`,jpegThumbnail:buf, caption: global.CAPTION }, { quoted: m })
-                          await ElisaBotMd.sendMessage(from, { react: { text: `📽️`, key: viddd.key }})
-                          await ElisaBotMd.sendMessage(from, { react: { text: `✅`, key: m.key }})
-                        // await ElisaBotMd.sendMessage(from, { react: { text: ``, key: m.key }})
+                          await ThivaBotMd.sendMessage(from, { react: { text: `⬆️`, key: m.key }})
+                          const viddd = await ThivaBotMd.sendMessage(m.chat, { video: { url: dl_url }, mimetype: 'video/mp4', fileName: `${Thiva.title}.mp4`,jpegThumbnail:buf, caption: global.CAPTION }, { quoted: m })
+                          await ThivaBotMd.sendMessage(from, { react: { text: `📽️`, key: viddd.key }})
+                          await ThivaBotMd.sendMessage(from, { react: { text: `✅`, key: m.key }})
+                        // await ThivaBotMd.sendMessage(from, { react: { text: ``, key: m.key }})
                          
-                          // await ElisaBotMd.sendMessage(m.chat, { video: { url: dl_url }, mimetype: 'video/mp4',jpegThumbnail:buf, caption: global.cap }, { quoted: m })
-                          //await ElisaBotMd.sendMessage(m.chat, { video: { url: dl_url }, mimetype: 'video/mp4', caption: `${global.cap}` }, { quoted: m })
+                          // await ThivaBotMd.sendMessage(m.chat, { video: { url: dl_url }, mimetype: 'video/mp4',jpegThumbnail:buf, caption: global.cap }, { quoted: m })
+                          //await ThivaBotMd.sendMessage(m.chat, { video: { url: dl_url }, mimetype: 'video/mp4', caption: `${global.cap}` }, { quoted: m })
                           }).catch((err) => reply(NOT_FOUND))
                       
                           }
                           break
 case 'ping' : case 'ping2' : {
                               const start = new Date().getTime()
-  await ElisaBotMd.sendText(m.chat, '*📡  ʀᴜɴɪɴɢ ʀᴇsᴘᴏɴᴅ...*')
+  await ThivaBotMd.sendText(m.chat, '*📡  ʀᴜɴɪɴɢ ʀᴇsᴘᴏɴᴅ...*')
   const end = new Date().getTime()
  // const fake = 
-  const poonn = await ElisaBotMd.sendText(m.chat, '*ᴘᴏɴɢ* ' + (end - start) + ' *_ᴍs_*' )
-  await ElisaBotMd.sendMessage(from, { react: { text: `✅`, key: poonn.key }})
+  const poonn = await ThivaBotMd.sendText(m.chat, '*ᴘᴏɴɢ* ' + (end - start) + ' *_ᴍs_*' )
+  await ThivaBotMd.sendMessage(from, { react: { text: `✅`, key: poonn.key }})
   }
   break
   case 'botstetus' : case 'stetus' : {
  const start = new Date().getTime()
  const fake = '800'
- await ElisaBotMd.sendMessage(from, { react: { text: `⚧️`, key: m.key }})
+ await ThivaBotMd.sendMessage(from, { react: { text: `⚧️`, key: m.key }})
  const end = new Date().getTime()
  const ping = (end - start - fake ) + 'ms' 
 // const runtime = 
@@ -2086,17 +2086,17 @@ case 'ping' : case 'ping2' : {
 case 'tiktok2' : {
    
 if (!isUrl(args[0]) && !args[0].includes('tiktok.com')) return reply ( '*The link you provided is not valid*')
-const thub = await fetchJson('https://github.com/thivankaonline/UPLOADS/raw/main/JSON/elisadetails.json')
+const thub = await fetchJson('https://github.com/thivankaonline/UPLOADS/raw/main/JSON/Thivadetails.json')
 buf = await getBuffer(thub.TIKTOK_THUB)
 const cyber = await fetchJson(`https://api.sdbots.tk/tiktok?url=${text}`)
-const down = await ElisaBotMd.sendText(m.chat, '*📥 DOWNLOADING YOUR TIKTOK VIDEO ...*')
+const down = await ThivaBotMd.sendText(m.chat, '*📥 DOWNLOADING YOUR TIKTOK VIDEO ...*')
 VID = cyber.result.withoutWaterMarkVideo
 CAP = `🕵️‍♂️ ${cyber.author}
 🗒️ ${cyber.desc}`
-const up = await ElisaBotMd.sendText(m.chat, '*📤 UPLOADING YOUR TIKTOK VIDEO ...*')
-await ElisaBotMd.sendMessage(m.chat,{delete : down.key })  
-await ElisaBotMd.sendMessage(m.chat, { video: { url: VID },jpegThumbnail:buf, caption: global.cap }, { quoted: m })
-await ElisaBotMd.sendMessage(m.chat,{delete : up.key })                              
+const up = await ThivaBotMd.sendText(m.chat, '*📤 UPLOADING YOUR TIKTOK VIDEO ...*')
+await ThivaBotMd.sendMessage(m.chat,{delete : down.key })  
+await ThivaBotMd.sendMessage(m.chat, { video: { url: VID },jpegThumbnail:buf, caption: global.cap }, { quoted: m })
+await ThivaBotMd.sendMessage(m.chat,{delete : up.key })                              
 
 
 }
@@ -2105,8 +2105,8 @@ break
 
 case 'send' : {
 const newsgroup = '120363049703450133@g.us'
-       const load = await ElisaBotMd.sendText(m.chat, mess.wait ) 
-      // const thub = await fetchJson('https://github.com/thivankaonline/UPLOADS/raw/main/JSON/elisadetails.json')
+       const load = await ThivaBotMd.sendText(m.chat, mess.wait ) 
+      // const thub = await fetchJson('https://github.com/thivankaonline/UPLOADS/raw/main/JSON/Thivadetails.json')
        buf = await getBuffer('https://telegra.ph/file/a0829817f254c84fc96c9.jpg')
        const news = await fetchJson(`https://api.sdbots.tk/hirunews`)
        const time2 = moment().tz('Asia/colombo').format('HH:mm:ss')  
@@ -2120,10 +2120,10 @@ const newsgroup = '120363049703450133@g.us'
 *📡 Group* : https://chat.whatsapp.com/KnmiFeP48AX7fJbRH1anMc
 
 *ɢᴏꜱꜱɪᴘ ʟᴀɴᴋᴀ ɴᴇᴡꜱ*`
-    // await ElisaBotMd.sendMessage('120363049703450133@g.us', templateMessage )
-    // await ElisaBotMd.sendMessage(m.chat,{delete : load.key })  
+    // await ThivaBotMd.sendMessage('120363049703450133@g.us', templateMessage )
+    // await ThivaBotMd.sendMessage(m.chat,{delete : load.key })  
  
-    await ElisaBotMd.sendMessage(newsgroup, { image: { url : news.img} , jpegThumbnail:buf , caption : cap })
+    await ThivaBotMd.sendMessage(newsgroup, { image: { url : news.img} , jpegThumbnail:buf , caption : cap })
   }
   break
   
@@ -2143,8 +2143,8 @@ const newsgroup = '120363049703450133@g.us'
     
 case 'test' : {
 const newsgroup = '120363049703450133@g.us'
-       const load = await ElisaBotMd.sendText(m.chat, mess.wait ) 
-      // const thub = await fetchJson('https://github.com/thivankaonline/UPLOADS/raw/main/JSON/elisadetails.json')
+       const load = await ThivaBotMd.sendText(m.chat, mess.wait ) 
+      // const thub = await fetchJson('https://github.com/thivankaonline/UPLOADS/raw/main/JSON/Thivadetails.json')
        buf = await getBuffer('https://telegra.ph/file/a0829817f254c84fc96c9.jpg')
        const news = await fetchJson(`https://api.sdbots.tk/hirunews`)
        const time2 = moment().tz('Asia/colombo').format('HH:mm:ss')  
@@ -2158,10 +2158,10 @@ const newsgroup = '120363049703450133@g.us'
 *📡 Group* : https://chat.whatsapp.com/KnmiFeP48AX7fJbRH1anMc
 
 *ɢᴏꜱꜱɪᴘ ʟᴀɴᴋᴀ ɴᴇᴡꜱ*`
-    // await ElisaBotMd.sendMessage('120363049703450133@g.us', templateMessage )
-    // await ElisaBotMd.sendMessage(m.chat,{delete : load.key })  
+    // await ThivaBotMd.sendMessage('120363049703450133@g.us', templateMessage )
+    // await ThivaBotMd.sendMessage(m.chat,{delete : load.key })  
  
-    await ElisaBotMd.sendMessage(m.chat, { image: { url : news.img} , jpegThumbnail:buf , caption : cap })
+    await ThivaBotMd.sendMessage(m.chat, { image: { url : news.img} , jpegThumbnail:buf , caption : cap })
  
 
   }
@@ -2175,17 +2175,17 @@ const newsgroup = '120363049703450133@g.us'
 
 
   case 'nb' :{
-     const nima = await fetchJson(`https://inrl-web.vercel.app/api/truecaller?number=94${text}`)
-     const msg = `*👱‍♂️ Name :* ${nima.name}
-*📡 Connection :* ${nima.carrier}
-*🇱🇰 Country :* ${nima.country}
-*📱 Type :* ${nima.type}
-*🏠 City :* ${nima.city}
-*👨‍💻 Access :* ${nima.access}
-*⌛ Timezone :* ${nima.timeZone}
-*☎️ Number :* ${nima.format}
+     const Thiva = await fetchJson(`https://inrl-web.vercel.app/api/truecaller?number=94${text}`)
+     const msg = `*👱‍♂️ Name :* ${Thiva.name}
+*📡 Connection :* ${Thiva.carrier}
+*🇱🇰 Country :* ${Thiva.country}
+*📱 Type :* ${Thiva.type}
+*🏠 City :* ${Thiva.city}
+*👨‍💻 Access :* ${Thiva.access}
+*⌛ Timezone :* ${Thiva.timeZone}
+*☎️ Number :* ${Thiva.format}
 `
-await ElisaBotMd.sendText(m.chat, msg )
+await ThivaBotMd.sendText(m.chat, msg )
   }
    break
   /* case 'news2' : {
@@ -2194,7 +2194,7 @@ await ElisaBotMd.sendText(m.chat, msg )
    }
    break*/
    case 'news2' : {
-   const load = await ElisaBotMd.sendText(m.chat, mess.wait , m, )
+   const load = await ThivaBotMd.sendText(m.chat, mess.wait , m, )
        
    const {esana_scrape, esana_latest_news_id, esana_scrape_from_id} = require("esana-node-api").esana_news;
    const helnews = await esana_scrape({ fetch: 'latest' , passcode: 'uakdmin_sr_2064'}) // Enter Your Passcode or Contact Admin (+94766239744)
@@ -2220,8 +2220,8 @@ const templateMessage = {
     headerType: 4
 }
      
-     await ElisaBotMd.sendMessage(m.chat, templateMessage, { quoted: m })
-     await ElisaBotMd.sendMessage(m.chat,{delete : load.key })  
+     await ThivaBotMd.sendMessage(m.chat, templateMessage, { quoted: m })
+     await ThivaBotMd.sendMessage(m.chat,{delete : load.key })  
            
    }
    break
@@ -2254,7 +2254,7 @@ reply(cap)
    }
  break
    case 'helakurunews' : case 'findnews' : {
-   const load = await ElisaBotMd.sendText(m.chat, mess.wait , m, )
+   const load = await ThivaBotMd.sendText(m.chat, mess.wait , m, )
 
    var NEWSSS = ''
   if (global.LANG == 'EN') NEWSSS = '```👸💬 Click And Get Your news```'
@@ -2280,7 +2280,7 @@ reply(cap)
      }
      sections.push(list)   
      }
-  const sendm =  ElisaBotMd.sendMessage(
+  const sendm =  ThivaBotMd.sendMessage(
       m.chat, 
       {
        text: NEWSSS,
@@ -2293,13 +2293,13 @@ reply(cap)
    //all
   /* const all_news = await esana_scrape({ fetch: 'all' , passcode: 'your_passcode'}) // Enter Your Passcode or Contact Admin (+94766239744)
    reply(latest_news)*/
-   await ElisaBotMd.sendMessage(m.chat,{delete : load.key })  
+   await ThivaBotMd.sendMessage(m.chat,{delete : load.key })  
   
    
    }
    break
    case 'getnews' : {
-   const load = await ElisaBotMd.sendText(m.chat, mess.wait , m, )
+   const load = await ThivaBotMd.sendText(m.chat, mess.wait , m, )
 
    const {esana_scrape, esana_latest_news_id, esana_scrape_from_id} = require("esana-node-api").esana_news;
    const helnews = await esana_scrape_from_id({ id: text , passcode: 'uakdmin_sr_2064'})
@@ -2324,8 +2324,8 @@ const templateMessage = {
     headerType: 4
 }
      
-     await ElisaBotMd.sendMessage(m.chat, templateMessage, { quoted: m })
-     await ElisaBotMd.sendMessage(m.chat,{delete : load.key })  
+     await ThivaBotMd.sendMessage(m.chat, templateMessage, { quoted: m })
+     await ThivaBotMd.sendMessage(m.chat,{delete : load.key })  
            
            
    
@@ -2334,17 +2334,17 @@ const templateMessage = {
   case 'tiktok2' : {
    
 if (!isUrl(args[0]) && !args[0].includes('tiktok.com')) return reply ( '*The link you provided is not valid*')
-const thub = await fetchJson('https://github.com/ThivankaOnline/UPLOADS/raw/main/JSON/elisadetails.json')
+const thub = await fetchJson('https://github.com/ThivankaOnline/UPLOADS/raw/main/JSON/Thivadetails.json')
 buf = await getBuffer(thub.TIKTOK_THUB)
 const cyber = await fetchJson(`https://api.sdbots.tk/tiktok?url=${text}`)
-const down = await ElisaBotMd.sendText(m.chat, '*📥 DOWNLOADING YOUR TIKTOK VIDEO ...*')
+const down = await ThivaBotMd.sendText(m.chat, '*📥 DOWNLOADING YOUR TIKTOK VIDEO ...*')
 VID = cyber.result.withoutWaterMarkVideo
 CAP = `🕵️‍♂️ ${cyber.author}
 🗒️ ${cyber.desc}`
-const up = await ElisaBotMd.sendText(m.chat, '*📤 UPLOADING YOUR TIKTOK VIDEO ...*')
-await ElisaBotMd.sendMessage(m.chat,{delete : down.key })  
-await ElisaBotMd.sendMessage(m.chat, { video: { url: VID },jpegThumbnail:buf, caption: global.cap }, { quoted: m })
-await ElisaBotMd.sendMessage(m.chat,{delete : up.key })                              
+const up = await ThivaBotMd.sendText(m.chat, '*📤 UPLOADING YOUR TIKTOK VIDEO ...*')
+await ThivaBotMd.sendMessage(m.chat,{delete : down.key })  
+await ThivaBotMd.sendMessage(m.chat, { video: { url: VID },jpegThumbnail:buf, caption: global.cap }, { quoted: m })
+await ThivaBotMd.sendMessage(m.chat,{delete : up.key })                              
 
 
 }
@@ -2360,15 +2360,15 @@ break
 
       
      // var time = new Date().toLocaleString('HI', { timeZone: Config.STIME_ZONE }).split(' ')[1]
-      await ElisaBotMd.sendText(m.chat, biography )
+      await ThivaBotMd.sendText(m.chat, biography )
       if (time == '6:08:01' ) {
-      return await ElisaBotMd.sendText(m.chat, biography )
+      return await ThivaBotMd.sendText(m.chat, biography )
       }
       if (time == '6:08:11' ) {
-      return await ElisaBotMd.sendText(m.chat, biography )
+      return await ThivaBotMd.sendText(m.chat, biography )
       }
        if (time == '6:08:20' ) {
-      return await ElisaBotMd.sendText(m.chat, biography )
+      return await ThivaBotMd.sendText(m.chat, biography )
       }
  }
  break
@@ -2412,13 +2412,13 @@ setTimeout( () => {
       buttons: buttons,
       headerType: 4
      }
-     ElisaBotMd.sendMessage(from, buttonMessage, { quoted: m })
+     ThivaBotMd.sendMessage(from, buttonMessage, { quoted: m })
    */
    var button = [	
 		{ quickReplyButton: { displayText: `🏹 𝗛𝗨𝗡𝗧 𝗔𝗚𝗔𝗜𝗡 🏹`, id: `${prefix}hunting` } }
 		]
 		
-        ElisaBotMd.sendMessage(from, { caption: caption , location: { jpegThumbnail: hasm }, templateButtons: button, footer: `${botnma}`, mentions: [m.sender] })
+        ThivaBotMd.sendMessage(from, { caption: caption , location: { jpegThumbnail: hasm }, templateButtons: button, footer: `${botnma}`, mentions: [m.sender] })
 
 
    }, 7000)  
@@ -2464,7 +2464,7 @@ case 'mining': case 'mine':{
       buttons: buttons,
       headerType: 4
      }
-     ElisaBotMd.sendMessage(from, buttonMessage, { quoted: m })
+     ThivaBotMd.sendMessage(from, buttonMessage, { quoted: m })
    
    }, 7000)  
   setTimeout( () => {
@@ -2477,19 +2477,19 @@ case 'mining': case 'mine':{
   }   
   break  
  /* case 'testehi' : {
-  const ehinima = await fetchJson ('https://github.com/ThivankaOnline/UPLOADS/raw/main/JSON/EHIJSON.json')
-  msg = ehinima.EHI_FILES[0].SG_FILE1
-  msg2 = ehinima.EHI_FILES[0].SG_FILE2
-  msg3 = ehinima.EHI_FILES[0].SG_FILE3
-  msg4 = ehinima.EHI_FILES[0].SG_FILE4
-  msg5 = ehinima.EHI_FILES[1].US_FILE1
-  msg6 = ehinima.EHI_FILES[1].US_FILE2
-  msg7 = ehinima.EHI_FILES[1].US_FILE3
-  msg8 = ehinima.EHI_FILES[1].US_FILE4
+  const ehiThiva = await fetchJson ('https://github.com/ThivankaOnline/UPLOADS/raw/main/JSON/EHIJSON.json')
+  msg = ehiThiva.EHI_FILES[0].SG_FILE1
+  msg2 = ehiThiva.EHI_FILES[0].SG_FILE2
+  msg3 = ehiThiva.EHI_FILES[0].SG_FILE3
+  msg4 = ehiThiva.EHI_FILES[0].SG_FILE4
+  msg5 = ehiThiva.EHI_FILES[1].US_FILE1
+  msg6 = ehiThiva.EHI_FILES[1].US_FILE2
+  msg7 = ehiThiva.EHI_FILES[1].US_FILE3
+  msg8 = ehiThiva.EHI_FILES[1].US_FILE4
   
   
   
-  await ElisaBotMd.sendText(m.chat, `${ehinima.EHI}
+  await ThivaBotMd.sendText(m.chat, `${ehiThiva.EHI}
  1. ${msg} 
  2. ${msg2} 
  3. ${msg3}
@@ -2504,9 +2504,9 @@ case 'mining': case 'mine':{
   
   case 'ehi' :  {
   const buffer = await getBuffer('https://telegra.ph/file/f7470af04326c5522cbcb.jpg')
-  const link = 'http://youtube.com/c/MRNIMAOFC'
+  const link = 'http://youtube.com/c/MRThivaOFC'
   
-await ElisaBotMd.sendMessage(from, { react: { text: `💉`, key: m.key }})
+await ThivaBotMd.sendMessage(from, { react: { text: `💉`, key: m.key }})
 AGAINTRY = ` ╔══════❨ ❄ ❩══════╗
 
             *🎗️ ǫᴜᴇᴇɴ ᴇʟɪsᴀ ᴇʜɪ 🎗️*
@@ -2526,7 +2526,7 @@ AGAINTRY = ` ╔══════❨ ❄ ❩══════╗
  `
 let buttons = [
 {buttonId: `httpinjector`, buttonText: {displayText: ' ʜᴛᴛᴘ ɪɴᴊᴇᴄᴛᴏʀ '}, type: 1},
-{buttonId: `elisaehi`, buttonText: {displayText: ' ᴇʜɪ ғɪʟᴇ '}, type: 1},
+{buttonId: `Thivaehi`, buttonText: {displayText: ' ᴇʜɪ ғɪʟᴇ '}, type: 1},
 {buttonId: `aboutehi`, buttonText: {displayText: ' ᴀʙᴏᴜᴛ '}, type: 1}
 
 ]
@@ -2550,13 +2550,13 @@ sourceUrl: link,
 mediaUrl: link,
 }}
 }
-ElisaBotMd.sendMessage(m.chat, buttonMessage, {quoted: m })
+ThivaBotMd.sendMessage(m.chat, buttonMessage, {quoted: m })
 
                               
                                                                                         
                               /*buttons = [
                                           { buttonId: `httpinjector`, buttonText: { displayText: ' ʜᴛᴛᴘ ɪɴᴊᴇᴄᴛᴏʀ ' }, type: 1 },
-                                          { buttonId: `elisaehi`, buttonText: { displayText: ' ᴇʜɪ ғɪʟᴇs ️' }, type: 1 },
+                                          { buttonId: `Thivaehi`, buttonText: { displayText: ' ᴇʜɪ ғɪʟᴇs ️' }, type: 1 },
                                           { buttonId: `aboutehi`, buttonText: { displayText: '️ ᴀʙᴏᴜᴛ ' }, type: 1 }
                                       ]
                                 const buttonMessage = {
@@ -2566,7 +2566,7 @@ ElisaBotMd.sendMessage(m.chat, buttonMessage, {quoted: m })
     headerType: 2
     }
           
-                 ElisaBotMd.sendMessage(m.chat, buttonMessage , { quoted: m })
+                 ThivaBotMd.sendMessage(m.chat, buttonMessage , { quoted: m })
        
 */
 
@@ -2611,10 +2611,10 @@ reply (ABOUTEHI)
 break 
 case 'httpinjector' : {
        
-       const load = await ElisaBotMd.sendText(m.chat,'*📤 Uploading...*' )
-       await ElisaBotMd.sendMessage(m.chat, { document: { url: 'https://github.com/ThivankaOnline/UPLOADS/raw/main/APK/HTTP%20Injector%20(SSHProxyV2Ray)%20VPN.apk' }, mimetype: 'application/vnd.android.package-archive', fileName: `HTTP Injector Qᵁᴱᴱᴺ Eᴸᴵˢᴬ (SSHProxyV2Ray) VPN.apk`}, { quoted: m })
-       const app = await ElisaBotMd.sendMessage(m.chat, { delete: load.key })
-       await ElisaBotMd.sendMessage(from, { react: { text: `🚀`, key: app.key }})
+       const load = await ThivaBotMd.sendText(m.chat,'*📤 Uploading...*' )
+       await ThivaBotMd.sendMessage(m.chat, { document: { url: 'https://github.com/ThivankaOnline/UPLOADS/raw/main/APK/HTTP%20Injector%20(SSHProxyV2Ray)%20VPN.apk' }, mimetype: 'application/vnd.android.package-archive', fileName: `HTTP Injector Qᵁᴱᴱᴺ Eᴸᴵˢᴬ (SSHProxyV2Ray) VPN.apk`}, { quoted: m })
+       const app = await ThivaBotMd.sendMessage(m.chat, { delete: load.key })
+       await ThivaBotMd.sendMessage(from, { react: { text: `🚀`, key: app.key }})
 }
 break
 case 'readmore' : {
@@ -2638,20 +2638,20 @@ case 'sendspam': case 'sendspm': {
    
      antispmmsg = `ǫ\ᴜ\n\nᴇ\nᴇ\nɴ\n\n\nᴇ\nʟ\ns\nᴀ\n💃💞\n TEST 1K BNG *ＤＯＮＴ ＧＯ ＵＰ !!!*`
      
-await ElisaBotMd.sendText(text+'@s.whatsapp.net', antispmmsg )
-await ElisaBotMd.sendText(text+'@s.whatsapp.net', antispmmsg )
- await ElisaBotMd.sendText(text+'@s.whatsapp.net', antispmmsg )
- await ElisaBotMd.sendText(text+'@s.whatsapp.net', antispmmsg )
- await ElisaBotMd.sendText(text+'@s.whatsapp.net', antispmmsg )
- await ElisaBotMd.sendText(text+'@s.whatsapp.net', antispmmsg )
- await ElisaBotMd.sendText(text+'@s.whatsapp.net', antispmmsg )
- await ElisaBotMd.sendText(text+'@s.whatsapp.net', antispmmsg )
- await ElisaBotMd.sendText(text+'@s.whatsapp.net', antispmmsg )
- await ElisaBotMd.sendText(text+'@s.whatsapp.net', antispmmsg )
- await ElisaBotMd.sendText(text+'@s.whatsapp.net', antispmmsg )
- await ElisaBotMd.sendText(text+'@s.whatsapp.net', antispmmsg )
- await ElisaBotMd.sendText(text+'@s.whatsapp.net', antispmmsg )
- await ElisaBotMd.sendText(text+'@s.whatsapp.net', `.group close` )
+await ThivaBotMd.sendText(text+'@s.whatsapp.net', antispmmsg )
+await ThivaBotMd.sendText(text+'@s.whatsapp.net', antispmmsg )
+ await ThivaBotMd.sendText(text+'@s.whatsapp.net', antispmmsg )
+ await ThivaBotMd.sendText(text+'@s.whatsapp.net', antispmmsg )
+ await ThivaBotMd.sendText(text+'@s.whatsapp.net', antispmmsg )
+ await ThivaBotMd.sendText(text+'@s.whatsapp.net', antispmmsg )
+ await ThivaBotMd.sendText(text+'@s.whatsapp.net', antispmmsg )
+ await ThivaBotMd.sendText(text+'@s.whatsapp.net', antispmmsg )
+ await ThivaBotMd.sendText(text+'@s.whatsapp.net', antispmmsg )
+ await ThivaBotMd.sendText(text+'@s.whatsapp.net', antispmmsg )
+ await ThivaBotMd.sendText(text+'@s.whatsapp.net', antispmmsg )
+ await ThivaBotMd.sendText(text+'@s.whatsapp.net', antispmmsg )
+ await ThivaBotMd.sendText(text+'@s.whatsapp.net', antispmmsg )
+ await ThivaBotMd.sendText(text+'@s.whatsapp.net', `.group close` )
  reply (`*✅ SUCCESS SEND SPAM !!!*`)
  }
  break
@@ -2676,58 +2676,58 @@ if (global.LANG == 'EN') MAASS = '```⚠️ This prevents your phone from gettin
          
          const antimsg = `ǫ\nᴜ\nᴇ\nᴇ\nɴ\n\nᴇ\nʟ\nɪ\ns\nᴀ\n\n\n${DONTGOUP}\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n${DONTGOUP}\n`
           
-      await ElisaBotMd.sendText(m.chat, antimsg )
-      await ElisaBotMd.sendText(m.chat, antimsg )
-      await ElisaBotMd.sendText(m.chat, antimsg )
-      await ElisaBotMd.sendText(m.chat, antimsg )
-      await ElisaBotMd.sendText(m.chat, antimsg )
-      await ElisaBotMd.sendText(m.chat, antimsg )
-      await ElisaBotMd.sendText(m.chat, antimsg )
-      await ElisaBotMd.sendText(m.chat, antimsg )
-      await ElisaBotMd.sendText(m.chat, antimsg )
-      await ElisaBotMd.sendText(m.chat, antimsg )
-      await ElisaBotMd.sendText(m.chat, antimsg )
-      await ElisaBotMd.sendText(m.chat, antimsg )
-      await ElisaBotMd.sendText(m.chat, antimsg )
-      await ElisaBotMd.sendText(m.chat, antimsg )
-      await ElisaBotMd.sendText(m.chat, antimsg )
-      await ElisaBotMd.sendText(m.chat, antimsg )
-      await ElisaBotMd.sendText(m.chat, antimsg )
-      await ElisaBotMd.sendText(m.chat, antimsg )
-      await ElisaBotMd.sendText(m.chat, antimsg )
-      await ElisaBotMd.sendText(m.chat, antimsg )
-      await ElisaBotMd.sendText(m.chat, MAASS + global.botnma )
+      await ThivaBotMd.sendText(m.chat, antimsg )
+      await ThivaBotMd.sendText(m.chat, antimsg )
+      await ThivaBotMd.sendText(m.chat, antimsg )
+      await ThivaBotMd.sendText(m.chat, antimsg )
+      await ThivaBotMd.sendText(m.chat, antimsg )
+      await ThivaBotMd.sendText(m.chat, antimsg )
+      await ThivaBotMd.sendText(m.chat, antimsg )
+      await ThivaBotMd.sendText(m.chat, antimsg )
+      await ThivaBotMd.sendText(m.chat, antimsg )
+      await ThivaBotMd.sendText(m.chat, antimsg )
+      await ThivaBotMd.sendText(m.chat, antimsg )
+      await ThivaBotMd.sendText(m.chat, antimsg )
+      await ThivaBotMd.sendText(m.chat, antimsg )
+      await ThivaBotMd.sendText(m.chat, antimsg )
+      await ThivaBotMd.sendText(m.chat, antimsg )
+      await ThivaBotMd.sendText(m.chat, antimsg )
+      await ThivaBotMd.sendText(m.chat, antimsg )
+      await ThivaBotMd.sendText(m.chat, antimsg )
+      await ThivaBotMd.sendText(m.chat, antimsg )
+      await ThivaBotMd.sendText(m.chat, antimsg )
+      await ThivaBotMd.sendText(m.chat, MAASS + global.botnma )
       
 
 }
 break
-case 'elisaehi': {
+case 'Thivaehi': {
     
-    const ehinima = await fetchJson ('https://github.com/ThivankaOnline/UPLOADS/raw/main/JSON/EHIJSON.json')
-  ehi = ehinima.EHI_FILES[0].SG_FILE1
-  ehi2 = ehinima.EHI_FILES[0].SG_FILE2
-  ehi3 = ehinima.EHI_FILES[0].SG_FILE3
-  ehi4 = ehinima.EHI_FILES[0].SG_FILE4
-  ehi5 = ehinima.EHI_FILES[1].US_FILE1
-  ehi6 = ehinima.EHI_FILES[1].US_FILE2
-  ehi7 = ehinima.EHI_FILES[1].US_FILE3
-  ehi8 = ehinima.EHI_FILES[1].US_FILE4
+    const ehiThiva = await fetchJson ('https://github.com/ThivankaOnline/UPLOADS/raw/main/JSON/EHIJSON.json')
+  ehi = ehiThiva.EHI_FILES[0].SG_FILE1
+  ehi2 = ehiThiva.EHI_FILES[0].SG_FILE2
+  ehi3 = ehiThiva.EHI_FILES[0].SG_FILE3
+  ehi4 = ehiThiva.EHI_FILES[0].SG_FILE4
+  ehi5 = ehiThiva.EHI_FILES[1].US_FILE1
+  ehi6 = ehiThiva.EHI_FILES[1].US_FILE2
+  ehi7 = ehiThiva.EHI_FILES[1].US_FILE3
+  ehi8 = ehiThiva.EHI_FILES[1].US_FILE4
                  
-                await ElisaBotMd.sendMessage(m.chat, { text : `
-${ehinima.EHI}
-${ehinima.C_E_DATES}
-${ehinima.XX_XX}
+                await ThivaBotMd.sendMessage(m.chat, { text : `
+${ehiThiva.EHI}
+${ehiThiva.C_E_DATES}
+${ehiThiva.XX_XX}
 ` } ,{ quoted: m })
-                await ElisaBotMd.sendMessage(m.chat, { document: { url: ehi }, mimetype: 'application/octet-stream', fileName: `${ehinima.EHI_IMOJI} FaceBook ${ehinima.EHI_IMOJI}.ehi`}, { quoted: m })
-                await ElisaBotMd.sendMessage(m.chat, { document: { url: ehi2 }, mimetype: 'application/octet-stream', fileName: `${ehinima.EHI_IMOJI} Whatsapp ${ehinima.EHI_IMOJI}.ehi `}, { quoted: m })
-                await ElisaBotMd.sendMessage(m.chat, { document: { url: ehi3 }, mimetype: 'application/octet-stream', fileName: `${ehinima.EHI_IMOJI} Youtube ${ehinima.EHI_IMOJI}.ehi`}, { quoted: m })
-                await ElisaBotMd.sendMessage(m.chat, { document: { url: ehi4 }, mimetype: 'application/octet-stream', fileName: `${ehinima.EHI_IMOJI} Zoom ${ehinima.EHI_IMOJI}.ehi`}, { quoted: m })
-                await ElisaBotMd.sendMessage(m.chat, { document: { url: ehi5 }, mimetype: 'application/octet-stream', fileName: `${ehinima.EHI_IMOJI2} FaceBook ${ehinima.EHI_IMOJI2}.ehi`}, { quoted: m })
-                await ElisaBotMd.sendMessage(m.chat, { document: { url: ehi6 }, mimetype: 'application/octet-stream', fileName: `${ehinima.EHI_IMOJI2} Whatsapp ${ehinima.EHI_IMOJI2}.ehi `}, { quoted: m })
-                await ElisaBotMd.sendMessage(m.chat, { document: { url: ehi7 }, mimetype: 'application/octet-stream', fileName: `${ehinima.EHI_IMOJI2} Youtube ${ehinima.EHI_IMOJI2}.ehi`}, { quoted: m })
-                await ElisaBotMd.sendMessage(m.chat, { document: { url: ehi8 }, mimetype: 'application/octet-stream', fileName: `${ehinima.EHI_IMOJI2} Zoom ${ehinima.EHI_IMOJI2}.ehi`}, { quoted: m })
+                await ThivaBotMd.sendMessage(m.chat, { document: { url: ehi }, mimetype: 'application/octet-stream', fileName: `${ehiThiva.EHI_IMOJI} FaceBook ${ehiThiva.EHI_IMOJI}.ehi`}, { quoted: m })
+                await ThivaBotMd.sendMessage(m.chat, { document: { url: ehi2 }, mimetype: 'application/octet-stream', fileName: `${ehiThiva.EHI_IMOJI} Whatsapp ${ehiThiva.EHI_IMOJI}.ehi `}, { quoted: m })
+                await ThivaBotMd.sendMessage(m.chat, { document: { url: ehi3 }, mimetype: 'application/octet-stream', fileName: `${ehiThiva.EHI_IMOJI} Youtube ${ehiThiva.EHI_IMOJI}.ehi`}, { quoted: m })
+                await ThivaBotMd.sendMessage(m.chat, { document: { url: ehi4 }, mimetype: 'application/octet-stream', fileName: `${ehiThiva.EHI_IMOJI} Zoom ${ehiThiva.EHI_IMOJI}.ehi`}, { quoted: m })
+                await ThivaBotMd.sendMessage(m.chat, { document: { url: ehi5 }, mimetype: 'application/octet-stream', fileName: `${ehiThiva.EHI_IMOJI2} FaceBook ${ehiThiva.EHI_IMOJI2}.ehi`}, { quoted: m })
+                await ThivaBotMd.sendMessage(m.chat, { document: { url: ehi6 }, mimetype: 'application/octet-stream', fileName: `${ehiThiva.EHI_IMOJI2} Whatsapp ${ehiThiva.EHI_IMOJI2}.ehi `}, { quoted: m })
+                await ThivaBotMd.sendMessage(m.chat, { document: { url: ehi7 }, mimetype: 'application/octet-stream', fileName: `${ehiThiva.EHI_IMOJI2} Youtube ${ehiThiva.EHI_IMOJI2}.ehi`}, { quoted: m })
+                await ThivaBotMd.sendMessage(m.chat, { document: { url: ehi8 }, mimetype: 'application/octet-stream', fileName: `${ehiThiva.EHI_IMOJI2} Zoom ${ehiThiva.EHI_IMOJI2}.ehi`}, { quoted: m })
                 
-                await ElisaBotMd.sendText(m.chat, `✅ _Success send_ *${m.pushName}* _Ehi Files..._`,m)
+                await ThivaBotMd.sendText(m.chat, `✅ _Success send_ *${m.pushName}* _Ehi Files..._`,m)
                 
                 }
              break
@@ -2741,7 +2741,7 @@ ${ehinima.XX_XX}
 	            ////if (isLimit(m.sender, isPremium, isCreator, limitCount, limit)) return m_reply(mess.endLimi
                 if (!text) return reply (  '*Enter a Link Query!*')
                 if (!isUrl(args[0]) && !args[0].includes('https://youtube.com/shorts')) return reply (  '*The link you provided is not valid*')
-                const load = await ElisaBotMd.sendText(m.chat, DOWNLOAD )
+                const load = await ThivaBotMd.sendText(m.chat, DOWNLOAD )
                 anu = await fetchJson(`https://violetics.pw/api/downloader/youtube?apikey=${global.fbapi}&url=${text}`)
                 tummb = await getBuffer('https://telegra.ph/file/f7470af04326c5522cbcb.jpg')    
                             FBCAP = `┌────[💃 *𝙴𝚕𝚒𝚜𝚊 𝙱𝚘𝚝* 💃]───●
@@ -2752,10 +2752,10 @@ ${ehinima.XX_XX}
 │⦁ 𝙳𝚞𝚛𝚊𝚝𝚒𝚘𝚗 : ${anu.result.meta.duration}
 │
 └────────●`
-                await  ElisaBotMd.sendMessage(m.chat, { delete: load.key })
-                var upload = await ElisaBotMd.sendText(m.chat, UPLOADE )
-                await ElisaBotMd.sendMessage(m.chat, { video: { url: anu.result.url[0].url }, jpegThumbnail:tummb, caption:FBCAP }, { quoted: m }).catch((err) => m_reply('*Sorry, Can\'t Download Your Short Video !*'))
-                await  ElisaBotMd.sendMessage(m.chat, { delete: upload.key })
+                await  ThivaBotMd.sendMessage(m.chat, { delete: load.key })
+                var upload = await ThivaBotMd.sendText(m.chat, UPLOADE )
+                await ThivaBotMd.sendMessage(m.chat, { video: { url: anu.result.url[0].url }, jpegThumbnail:tummb, caption:FBCAP }, { quoted: m }).catch((err) => m_reply('*Sorry, Can\'t Download Your Short Video !*'))
+                await  ThivaBotMd.sendMessage(m.chat, { delete: upload.key })
             }
             break
   //transaction\\
@@ -2766,7 +2766,7 @@ ${ehinima.XX_XX}
                                   let search = await yts(text)
                                   for (let i of search.all)
                                   if(search.length < 1) return reply (  ' NOT FOUND !!! ')
-                                 const nimamsg =  `
+                                 const Thivamsg =  `
                                       
 ╔═════════════════════◉
 ║    𝚃𝚑𝚒𝚟𝚊𝚗𝚔𝚊 𝙽𝚒𝚛𝚖𝚊𝚕 𝚈𝚝 𝙳𝚘𝚠𝚗𝚕𝚘𝚊𝚍   ║
@@ -3042,7 +3042,7 @@ ${ehinima.XX_XX}
                                               }
                                               
                                           ]
-                                          await ElisaBotMd.sendListMsg(m.chat, `${nimamsg}`, `${global.botnma}`, `${global.ownernma}`, `ALL MENU`, sections, m)
+                                          await ThivaBotMd.sendListMsg(m.chat, `${Thivamsg}`, `${global.botnma}`, `${global.ownernma}`, `ALL MENU`, sections, m)
  }
                               break	
 case 'delx' : case 'delm' : {
@@ -3058,7 +3058,7 @@ const key = {
     participant: m.quoted.sender
 }
 
-await ElisaBotMd.sendMessage(m.chat, { delete: key })
+await ThivaBotMd.sendMessage(m.chat, { delete: key })
 
 }
 break
@@ -3067,7 +3067,7 @@ break
                               try {
                               if (this.game) {
                               delete this.game
-                              ElisaBotMd.sendText(m.chat, `Successfully delete the TicTacToe session`, m)
+                              ThivaBotMd.sendText(m.chat, `Successfully delete the TicTacToe session`, m)
                               } else if (!this.game) {
                               reply(`TicTacToe Session🎮 there is not any`)
                               } else throw '?'
@@ -3092,13 +3092,13 @@ break
                   
                   Please @${m.mentionedJid[0].split`@`[0]} to type accept/reject`
                               this.suit[id] = {
-                              chat: await ElisaBotMd.sendText(m.chat, caption, m, { mentions: parseMention(caption) }),
+                              chat: await ThivaBotMd.sendText(m.chat, caption, m, { mentions: parseMention(caption) }),
                               id: id,
                               p: m.sender,
                               p2: m.mentionedJid[0],
                               status: 'wait',
                               waktu: setTimeout(() => {
-                              if (this.suit[id]) ElisaBotMd.sendText(m.chat, `_Suit time out_`, m)
+                              if (this.suit[id]) ThivaBotMd.sendText(m.chat, `_Suit time out_`, m)
                               delete this.suit[id]
                               }, 60000), poin, poin_lose, timeout
                               }
@@ -3106,7 +3106,7 @@ break
                               break
                               
                           case 'donasi': case 'donate': case 'sewabot': case 'sewa': case 'buypremium': case 'donate': {
-                                  ElisaBotMd.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/f7470af04326c5522cbcb.jpg' }, caption: `*𝗛𝗜 𝗕𝗥𝗢 ${m.pushName}*
+                                  ThivaBotMd.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/f7470af04326c5522cbcb.jpg' }, caption: `*𝗛𝗜 𝗕𝗥𝗢 ${m.pushName}*
 *BOT NAME :* _THIVANKA Nirmal V2_
 *OWNER :* _MR Thiva_
 *TEAM :* _NO TEAM_
@@ -3146,19 +3146,19 @@ sᴀɴᴜᴡᴀ - ғʀᴏ ʜᴇʟᴘ
                                   if (!isCreator) return reply (mess.owner)
                                   if (!q) return reply ( 'Option : 1. mute\n2. unmute\n3. archive\n4. unarchive\n5. read\n6. unread\n7. delete')
                                   if (args[0] === 'mute') {
-                                      ElisaBotMd.chatModify({ mute: 'Infinity' }, m.chat, []).then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
+                                      ThivaBotMd.chatModify({ mute: 'Infinity' }, m.chat, []).then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
                                   } else if (args[0] === 'unmute') {
-                                      ElisaBotMd.chatModify({ mute: null }, m.chat, []).then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
+                                      ThivaBotMd.chatModify({ mute: null }, m.chat, []).then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
                                   } else if (args[0] === 'archive') {
-                                      ElisaBotMd.chatModify({  archive: true }, m.chat, []).then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
+                                      ThivaBotMd.chatModify({  archive: true }, m.chat, []).then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
                                   } else if (args[0] === 'unarchive') {
-                                      ElisaBotMd.chatModify({ archive: false }, m.chat, []).then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
+                                      ThivaBotMd.chatModify({ archive: false }, m.chat, []).then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
                                   } else if (args[0] === 'read') {
-                                      ElisaBotMd.chatModify({ markRead: true }, m.chat, []).then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
+                                      ThivaBotMd.chatModify({ markRead: true }, m.chat, []).then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
                                   } else if (args[0] === 'unread') {
-                                      ElisaBotMd.chatModify({ markRead: false }, m.chat, []).then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
+                                      ThivaBotMd.chatModify({ markRead: false }, m.chat, []).then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
                                   } else if (args[0] === 'delete') {
-                                      ElisaBotMd.chatModify({ clear: { message: { id: m.quoted.id, fromMe: true }} }, m.chat, []).then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
+                                      ThivaBotMd.chatModify({ clear: { message: { id: m.quoted.id, fromMe: true }} }, m.chat, []).then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
                                   }
                               }
                               break
@@ -3166,10 +3166,10 @@ sᴀɴᴜᴡᴀ - ғʀᴏ ʜᴇʟᴘ
                           
                               case 'ping' : case 'ping2' : {
                               const start = new Date().getTime()
-  await ElisaBotMd.sendText(m.chat, '*📡  ʀᴜɴɪɴɢ ʀᴇsᴘᴏɴᴅ...*')
+  await ThivaBotMd.sendText(m.chat, '*📡  ʀᴜɴɪɴɢ ʀᴇsᴘᴏɴᴅ...*')
   const end = new Date().getTime()
-  const poonn = await ElisaBotMd.sendText(m.chat, '*ᴘᴏɴɢ* ' + (end - start) + ' *_ᴍs_*' )
-  await ElisaBotMd.sendMessage(from, { react: { text: `✅`, key: poonn.key }})
+  const poonn = await ThivaBotMd.sendText(m.chat, '*ᴘᴏɴɢ* ' + (end - start) + ' *_ᴍs_*' )
+  await ThivaBotMd.sendMessage(from, { react: { text: `✅`, key: poonn.key }})
   }
   break
   case 'afk': {
@@ -3181,7 +3181,7 @@ sᴀɴᴜᴡᴀ - ғʀᴏ ʜᴇʟᴘ
             break	
   case 'botstatus' : case 'status' : {
  const start = new Date().getTime()
- await ElisaBotMd.sendMessage(from, { react: { text: `⚧️`, key: m.key }})
+ await ThivaBotMd.sendMessage(from, { react: { text: `⚧️`, key: m.key }})
  const end = new Date().getTime()
  const ping = (end - start) + 'ms' 
 // const runtime = 
@@ -3194,7 +3194,7 @@ sᴀɴᴜᴡᴀ - ғʀᴏ ʜᴇʟᴘ
                                   let { genMath, modes } = require('./src/math')
                                   if (!text) return reply ( `Mode: ${Object.keys(modes).join(' | ')}\n${Lang.EXAMPLE}\n: ${prefix}math medium`)
                                   let result = await genMath(text.toLowerCase())
-                                  ElisaBotMd.sendText(m.chat, `*What is the result of: ${result.soal.toLowerCase()}*?\n\nTime: ${(result.waktu / 1000).toFixed(2)} seconds`, m).then(() => {
+                                  ThivaBotMd.sendText(m.chat, `*What is the result of: ${result.soal.toLowerCase()}*?\n\nTime: ${(result.waktu / 1000).toFixed(2)} seconds`, m).then(() => {
                                       kuismath[m.sender.split('@')[0]] = result.jawaban
                                   })
                                   await sleep(result.waktu)
@@ -3217,7 +3217,7 @@ sᴀɴᴜᴡᴀ - ғʀᴏ ʜᴇʟᴘ
                               let buttons = [
                                           { buttonId: '❤️', buttonText: { displayText: '❤️' }, type: 1 }
                                       ]
-                                      await ElisaBotMd.sendButtonText(m.chat, buttons, jawab, ElisaBotMd.user.name, m, {mentions: ments})
+                                      await ThivaBotMd.sendButtonText(m.chat, buttons, jawab, ThivaBotMd.user.name, m, {mentions: ments})
                               }
                               break
                               case 'couple': {
@@ -3231,7 +3231,7 @@ sᴀɴᴜᴡᴀ - ғʀᴏ ʜᴇʟᴘ
                               let buttons = [
                                           { buttonId: 'CONGRATS', buttonText: { displayText: 'CONGRATS' }, type: 1 }
                                       ]
-                                      await ElisaBotMd.sendButtonText(m.chat, buttons, jawab, ElisaBotMd.user.name, m, {mentions: menst})
+                                      await ThivaBotMd.sendButtonText(m.chat, buttons, jawab, ThivaBotMd.user.name, m, {mentions: menst})
                               }
                               break
                               case 'join' : {
@@ -3240,28 +3240,28 @@ sᴀɴᴜᴡᴀ - ғʀᴏ ʜᴇʟᴘ
                                   if (!isUrl(args[0]) && !args[0].includes('whatsapp.com')) return reply( 'Link Invalid!')
                                   replay(mess.wait)
                                   let result = args[0].split('https://chat.whatsapp.cm/')[1]
-                                  await ElisaBotMd.groupAcceptInvite(result).then((res) => reply(jsonformat('*✅ JOINED *'))).catch((err) => reply(jsonformat('*CAN`T JOIN NOW !!!*')))
+                                  await ThivaBotMd.groupAcceptInvite(result).then((res) => reply(jsonformat('*✅ JOINED *'))).catch((err) => reply(jsonformat('*CAN`T JOIN NOW !!!*')))
                               }
                               break
                               case 'jidchat' :{
                               let users = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '')+'@s.whatsapp.net'
-                              await ElisaBotMd.sendText(m.chat , users )
+                              await ThivaBotMd.sendText(m.chat , users )
                               }
                               break
                               case 'jidgroup': {
                               if (!m.isGroup) return reply( mess.group)
-                              await ElisaBotMd.sendText(m.chat,`${m.chat}`)
+                              await ThivaBotMd.sendText(m.chat,`${m.chat}`)
                               }
                               break
                               case 'jid' :{
                               if (quoted){
                               let users = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '')+'@s.whatsapp.net'
-                               await ElisaBotMd.sendText(m.chat , users )
+                               await ThivaBotMd.sendText(m.chat , users )
                               } else if (m.isGroup){
-                               await ElisaBotMd.sendText(m.chat,`${m.chat}`)
+                               await ThivaBotMd.sendText(m.chat,`${m.chat}`)
                               } else if (!m.isGroup){
                             //  let users = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '')+'@s.whatsapp.net'
-                               await ElisaBotMd.sendText(m.chat , `${m.chat}` )
+                               await ThivaBotMd.sendText(m.chat , `${m.chat}` )
                               } else {
                               throw '*Reply Message.*'
                               }
@@ -3269,8 +3269,8 @@ sᴀɴᴜᴡᴀ - ғʀᴏ ʜᴇʟᴘ
                               case 'leave': {
                                   if (!isCreator) return reply( mess.owner)
                                   const LEAVE_MESSAGE = global.db.data.settings[botNumber].leavemessage || `*👋 Bye Bye ${groupMetadata.subject} Members & Admins*`
-                                  await ElisaBotMd.sendText(m.chat,LEAVE_MESSAGE)
-                                  await ElisaBotMd.groupLeave(m.chat).then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
+                                  await ThivaBotMd.sendText(m.chat,LEAVE_MESSAGE)
+                                  await ThivaBotMd.groupLeave(m.chat).then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
                               }
                               break
                           case 'kick': case 'remove': case 'ban': {
@@ -3278,21 +3278,21 @@ sᴀɴᴜᴡᴀ - ғʀᴏ ʜᴇʟᴘ
                                   if (!isBotAdmins) return reply( mess.botAdmin)
                                   if (!isAdmins) return reply( mess.admin)
                            let users = m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '')+'@s.whatsapp.net'
-                           if(users === "94768211424@s.whatsapp.net") return reply('*👸💬 Can`t Remove Nima*')
+                           if(users === "94768211424@s.whatsapp.net") return reply('*👸💬 Can`t Remove Thiva*')
                            const KICK_MESSAGE = global.db.data.settings[botNumber].kickmessage || `*${users.split("@")[0]} Remove From Group*`
-		                  await ElisaBotMd.groupParticipantsUpdate(m.chat, [users], 'remove')
+		                  await ThivaBotMd.groupParticipantsUpdate(m.chat, [users], 'remove')
 		                  .then((res) => reply(KICK_MESSAGE)).catch((err) => reply(jsonformat(err)))
  } 
                       break
                       case 'kickall' : case 'kick all members' : {
                       if (!isCreator) return reply ('*👸💬 only owner allowd !!!*')
                       for (let mem of participants) {
-                      //await ElisaBotMd.sendText(m.chat,mem.id) 
+                      //await ThivaBotMd.sendText(m.chat,mem.id) 
                       await sleep(1000)
                       if(mem.id == botNumber+'@s.whatsapp.net') return
                       if(mem.id == owner+'@s.whatsapp.net') return
-                      await ElisaBotMd.groupParticipantsUpdate(m.chat, [mem.id], 'remove')
-                      await ElisaBotMd.sendText(m.chat,`*${mem.id.split('@')[0]} Kick out !!!*`)
+                      await ThivaBotMd.groupParticipantsUpdate(m.chat, [mem.id], 'remove')
+                      await ThivaBotMd.sendText(m.chat,`*${mem.id.split('@')[0]} Kick out !!!*`)
                                   }
                       }
                       case 'add': {
@@ -3301,7 +3301,7 @@ sᴀɴᴜᴡᴀ - ғʀᴏ ʜᴇʟᴘ
                                   if (!isAdmins) return reply( mess.admin)
                           let users = m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '')+'@s.whatsapp.net'
                           const ADD_MESSAGE = global.db.data.settings[botNumber].addmessage || `*${users("@")[0]} Add to Group*`
-		                  await ElisaBotMd.groupParticipantsUpdate(m.chat, [users], 'add')
+		                  await ThivaBotMd.groupParticipantsUpdate(m.chat, [users], 'add')
 		                  .then((res) => reply(ADD_MESSAGE)).catch((err) => reply(jsonformat(err)))
  }
                       break
@@ -3312,7 +3312,7 @@ sᴀɴᴜᴡᴀ - ғʀᴏ ʜᴇʟᴘ
                                   if (!isAdmins) return reply( mess.admin)
                           let users = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '')+'@s.whatsapp.net'
                           const PROMOTE_MESSAGE = global.db.data.settings[botNumber].promotemessage || `*${users.split("@")[0]} is Promote to Group Admin*`
-                          await ElisaBotMd.groupParticipantsUpdate(m.chat, [users], 'promote')
+                          await ThivaBotMd.groupParticipantsUpdate(m.chat, [users], 'promote')
                           .then((res) => reply(PROMOTE_MESSAGE)).catch((err) => reply(jsonformat(err)))
                       }
                       break
@@ -3322,7 +3322,7 @@ sᴀɴᴜᴡᴀ - ғʀᴏ ʜᴇʟᴘ
                                   if (!isAdmins) return reply( mess.admin)
                           let users = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '')+'@s.whatsapp.net'
                           const DEMOTE_MESSAGE = global.db.data.settings[botNumber].demotemessage || `*${users.split("@")[0]} is demote to Group member*`
-                          await ElisaBotMd.groupParticipantsUpdate(m.chat, [users], 'demote')
+                          await ThivaBotMd.groupParticipantsUpdate(m.chat, [users], 'demote')
                           .then((res) => reply(DEMOTE_MESSAGE)).catch((err) => reply(jsonformat(err)))
                       }
                       break
@@ -3330,7 +3330,7 @@ sᴀɴᴜᴡᴀ - ғʀᴏ ʜᴇʟᴘ
                           if (!isCreator) return reply( mess.owner)
                           let users = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '')+'@s.whatsapp.net'
                           const BLOCK_MESSAGE = global.db.data.settings[botNumber].blockmessage || `*${users.split("@")[0]} is Blocked !*`
-                          await ElisaBotMd.updateBlockStatus(users, 'block')
+                          await ThivaBotMd.updateBlockStatus(users, 'block')
                           .then((res) => reply(BLOCK_MESSAGE)).catch((err) => reply(jsonformat(err)))
                       }
                       break
@@ -3338,7 +3338,7 @@ sᴀɴᴜᴡᴀ - ғʀᴏ ʜᴇʟᴘ
                           if (!isCreator) return reply( mess.owner)
                           let users = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '')+'@s.whatsapp.net'
                           const UNBLOCK_MESSAGE = global.db.data.settings[botNumber].unblockmessage || `*${users.split("@")[0]} is Unblocked !*`
-                          await ElisaBotMd.updateBlockStatus(users, 'unblock')
+                          await ThivaBotMd.updateBlockStatus(users, 'unblock')
                           .then((res) => reply(UNBLOCK_MESSAGE)).catch((err) => reply(jsonformat(err)))
                       }
                       break
@@ -3347,8 +3347,8 @@ sᴀɴᴜᴡᴀ - ғʀᴏ ʜᴇʟᴘ
                                   if (!isBotAdmins) return reply( mess.botAdmin)
                                   if (!isAdmins) return reply( mess.admin)
                                   if (!text) return reply( 'Text ?')
-                                  await ElisaBotMd.groupUpdateSubject(m.chat, text)
-                                  await ElisaBotMd.sendText(m.chat,Lang.GROUP_NAME)
+                                  await ThivaBotMd.groupUpdateSubject(m.chat, text)
+                                  await ThivaBotMd.sendText(m.chat,Lang.GROUP_NAME)
                                   .then((res) => reply(mess.success)).catch((err) => reply(jsonformat(err)))
                               }
                               break
@@ -3357,8 +3357,8 @@ sᴀɴᴜᴡᴀ - ғʀᴏ ʜᴇʟᴘ
                                   if (!isBotAdmins) return reply( mess.botAdmin)
                                   if (!isAdmins) return reply( mess.admin)
                                   if (!text) return reply( 'Text ?')
-                                  await ElisaBotMd.groupUpdateDescription(m.chat, text)
-                                  await ElisaBotMd.sendText(m.chat,Lang.GROUP_DES)
+                                  await ThivaBotMd.groupUpdateDescription(m.chat, text)
+                                  await ThivaBotMd.sendText(m.chat,Lang.GROUP_DES)
                                   .then((res) => reply(mess.success)).catch((err) => reply(jsonformat(err)))
                               }
                               break
@@ -3367,8 +3367,8 @@ sᴀɴᴜᴡᴀ - ғʀᴏ ʜᴇʟᴘ
                                   if (!quoted) throw `Send/Reply Image With Caption ${prefix + command}`
                                   if (!/image/.test(mime)) throw `Send/Reply Image With Caption ${prefix + command}`
                                   if (/webp/.test(mime)) throw `Send/Reply Image With Caption ${prefix + command}`
-                                  let media = await ElisaBotMd.downloadAndSaveMediaMessage(quoted)
-                                  await ElisaBotMd.updateProfilePicture(botNumber, { url: media }).catch((err) => fs.unlinkSync(media))
+                                  let media = await ThivaBotMd.downloadAndSaveMediaMessage(quoted)
+                                  await ThivaBotMd.updateProfilePicture(botNumber, { url: media }).catch((err) => fs.unlinkSync(media))
                                   reply(mess.success)
                                   }
                                   break
@@ -3378,8 +3378,8 @@ sᴀɴᴜᴡᴀ - ғʀᴏ ʜᴇʟᴘ
                                   if (!quoted) throw `Send/Reply Image With Caption ${prefix + command}`
                                   if (!/image/.test(mime)) throw `Send/Reply Image With Caption ${prefix + command}`
                                   if (/webp/.test(mime)) throw `Send/Reply Image With Caption ${prefix + command}`
-                                  let media = await ElisaBotMd.downloadAndSaveMediaMessage(quoted)
-                                  await ElisaBotMd.updateProfilePicture(m.chat, { url: media }).catch((err) => fs.unlinkSync(media))
+                                  let media = await ThivaBotMd.downloadAndSaveMediaMessage(quoted)
+                                  await ThivaBotMd.updateProfilePicture(m.chat, { url: media }).catch((err) => fs.unlinkSync(media))
                                   reply(mess.success)
                                   }
                                   break
@@ -3395,13 +3395,13 @@ sᴀɴᴜᴡᴀ - ғʀᴏ ʜᴇʟᴘ
             
                   case 'grupinfo': case 'groupinfo':
                   try{
-                   var pic = await ElisaBotMd.getProfilePicture(m.chat)
+                   var pic = await ThivaBotMd.getProfilePicture(m.chat)
                     } catch {
                    var pic = 'https://i.ibb.co/Tq7d7TZ/age-hananta-495-photo.png'
                     }
                   let ingfo = `*𝗚𝗥𝗢𝗨𝗣 𝗜𝗡𝗙𝗢*\n\n*𝗡𝗔𝗠𝗘 :* ${groupName}\n*𝗜𝗗 𝗚𝗥𝗢𝗨𝗣:* ${m.chat}\n*𝗠𝗔𝗗𝗘 :* ${moment(`${groupMetadata.creation}` * 1000).tz('Africa/Harare').format('DD/MM/YYYY HH:mm:ss')}\n*𝗚𝗥𝗢𝗨𝗣 𝗢𝗪𝗡𝗘𝗥:* @${groupMetadata.owner.split('@')[0]}\n*𝗔𝗗𝗠𝗜𝗡𝗦 :* ${groupAdmins.length}\n*𝗠𝗘𝗠𝗕𝗘𝗥𝗦 :* ${participants.length}\n*𝗗𝗘𝗦𝗖 :* \n${groupMetadata.desc}`
                   ds = await getBuffer(pic)
-                  ElisaBotMd.sendMessage(m.chat, { image: ds,caption: ingfo, mentions: [groupMetadata.owner] }, { quoted: m})
+                  ThivaBotMd.sendMessage(m.chat, { image: ds,caption: ingfo, mentions: [groupMetadata.owner] }, { quoted: m})
                   break
                   case 'tagadmin' : {
                   if (!m.isGroup) throw mess.group
@@ -3411,7 +3411,7 @@ sᴀɴᴜᴡᴀ - ғʀᴏ ʜᴇʟᴘ
                   for (let mem of groupAdmins) {
                                   teks += `    `
                                   }
-                  ElisaBotMd.sendMessage(m.chat, { text: teks, mentions: groupAdmins.map(a => a.id) }, { quoted: m })
+                  ThivaBotMd.sendMessage(m.chat, { text: teks, mentions: groupAdmins.map(a => a.id) }, { quoted: m })
                                   
                   }
                   break
@@ -3425,18 +3425,18 @@ sᴀɴᴜᴡᴀ - ғʀᴏ ʜᴇʟᴘ
                                   for (let mem of participants) {
                                   teks += `🔵 @${mem.id.split('@')[0]}\n`
                                   }
-                                  ElisaBotMd.sendMessage(m.chat, { text: teks, mentions: participants.map(a => a.id) }, { quoted: m })
+                                  ThivaBotMd.sendMessage(m.chat, { text: teks, mentions: participants.map(a => a.id) }, { quoted: m })
                                   }
                                   break
                                   case 'hidetag': {
                               if (!m.isGroup) throw mess.group
                               if (!isAdmins) throw mess.admin
-                              ElisaBotMd.sendMessage(m.chat, { text : q ? q : '' , mentions: participants.map(a => a.id)}, { quoted: m })
+                              ThivaBotMd.sendMessage(m.chat, { text : q ? q : '' , mentions: participants.map(a => a.id)}, { quoted: m })
                               }
                               break
                               case '####taggrp': {
                               for (let mem of participants) {
-                                 await ElisaBotMd.sendText(m.chat,mem.id) 
+                                 await ThivaBotMd.sendText(m.chat,mem.id) 
                                   }
                               
    }
@@ -3489,11 +3489,11 @@ sᴀɴᴜᴡᴀ - ғʀᴏ ʜᴇʟᴘ
                   
                               let buttonMessageVote = {
                                   text: teks_vote,
-                                  footer: ElisaBotMd.user.name,
+                                  footer: ThivaBotMd.user.name,
                                   buttons: buttonsVote,
                                   headerType: 1
                               }
-                              ElisaBotMd.sendMessage(m.chat, buttonMessageVote)
+                              ThivaBotMd.sendMessage(m.chat, buttonMessageVote)
                           }
                               break
                                  case 'upvote': {
@@ -3530,12 +3530,12 @@ ${vote[m.chat][2].map((v, i) => `├ ${i + 1}. @${v.split`@`[0]}`).join('\n')}
                   
                               let buttonMessageUpvote = {
                                   text: teks_vote,
-                                  footer: ElisaBotMd.user.name,
+                                  footer: ThivaBotMd.user.name,
                                   buttons: buttonsUpvote,
                                   headerType: 1,
                                   mentions: menvote
                                }
-                              ElisaBotMd.sendMessage(m.chat, buttonMessageUpvote)
+                              ThivaBotMd.sendMessage(m.chat, buttonMessageUpvote)
                           }
                                break
                                   case 'devote': {
@@ -3572,12 +3572,12 @@ ${vote[m.chat][2].map((v, i) => `├ ${i + 1}. @${v.split`@`[0]}`).join('\n')}
                   
                               let buttonMessageDevote = {
                                   text: teks_vote,
-                                  footer: ElisaBotMd.user.name,
+                                  footer: ThivaBotMd.user.name,
                                   buttons: buttonsDevote,
                                   headerType: 1,
                                   mentions: menvote
                               }
-                              ElisaBotMd.sendMessage(m.chat, buttonMessageDevote)
+                              ThivaBotMd.sendMessage(m.chat, buttonMessageDevote)
                       }
                               break
                                    
@@ -3605,9 +3605,9 @@ ${vote[m.chat][2].map((v, i) => `├ ${i + 1}. @${v.split`@`[0]}`).join('\n')}
                   *${prefix}hapusvote* - to delete votes
                   
                   
-                  ©${ElisaBotMd.user.id}
+                  ©${ThivaBotMd.user.id}
                   `
-                  ElisaBotMd.sendTextWithMentions(m.chat, teks_vote, m)
+                  ThivaBotMd.sendTextWithMentions(m.chat, teks_vote, m)
                   break
                           case 'deletevote': case'delvote': case 'hapusvote': {
                               if (!m.isGroup) throw mess.group
@@ -3621,15 +3621,15 @@ ${vote[m.chat][2].map((v, i) => `├ ${i + 1}. @${v.split`@`[0]}`).join('\n')}
                                   if (!isBotAdmins) throw mess.botAdmin
                                   if (!isAdmins) throw mess.admin
                                   if (args[0] === 'close'){
-                                      await ElisaBotMd.groupSettingUpdate(m.chat, 'announcement').then((res) => reply(Lang.G_MUTE)).catch((err) => reply(jsonformat(err)))
+                                      await ThivaBotMd.groupSettingUpdate(m.chat, 'announcement').then((res) => reply(Lang.G_MUTE)).catch((err) => reply(jsonformat(err)))
                                   } else if (args[0] === 'open'){
-                                      await ElisaBotMd.groupSettingUpdate(m.chat, 'not_announcement').then((res) => reply(Lang.G_UNMUTE)).catch((err) => reply(jsonformat(err)))
+                                      await ThivaBotMd.groupSettingUpdate(m.chat, 'not_announcement').then((res) => reply(Lang.G_UNMUTE)).catch((err) => reply(jsonformat(err)))
                                   } else {
                                   let buttons = [
                                           { buttonId: 'group open', buttonText: { displayText: 'Open' }, type: 1 },
                                           { buttonId: 'group close', buttonText: { displayText: 'Close' }, type: 1 }
                                       ]
-                                      await ElisaBotMd.sendButtonText(m.chat, buttons, `Group Mode`, ElisaBotMd.user.name, m)
+                                      await ThivaBotMd.sendButtonText(m.chat, buttons, `Group Mode`, ThivaBotMd.user.name, m)
                   
                                }
                               }
@@ -3639,10 +3639,10 @@ ${vote[m.chat][2].map((v, i) => `├ ${i + 1}. @${v.split`@`[0]}`).join('\n')}
                                   if (!isBotAdmins) throw mess.botAdmin
                                   if (!isAdmins) throw mess.admin
                                   
-                                  await ElisaBotMd.sendMessage(from, { react: { text: `🔐`, key: m.key }})
-                                  await ElisaBotMd.groupSettingUpdate(m.chat, 'announcement')
-                                  const sendmsg = await ElisaBotMd.sendText(m.chat,Lang.G_MUTE)
-                                  await ElisaBotMd.sendMessage(from, { react: { text: `🔇`, key: sendmsg.key }})
+                                  await ThivaBotMd.sendMessage(from, { react: { text: `🔐`, key: m.key }})
+                                  await ThivaBotMd.groupSettingUpdate(m.chat, 'announcement')
+                                  const sendmsg = await ThivaBotMd.sendText(m.chat,Lang.G_MUTE)
+                                  await ThivaBotMd.sendMessage(from, { react: { text: `🔇`, key: sendmsg.key }})
                                   
                                  }
                                  break
@@ -3650,10 +3650,10 @@ ${vote[m.chat][2].map((v, i) => `├ ${i + 1}. @${v.split`@`[0]}`).join('\n')}
                                   if (!m.isGroup) throw mess.group
                                   if (!isBotAdmins) throw mess.botAdmin
                                   if (!isAdmins) throw mess.admin
-                                  await ElisaBotMd.sendMessage(from, { react: { text: `🔓`, key: m.key }})
-                                  await ElisaBotMd.groupSettingUpdate(m.chat, 'not_announcement')
-                                  const sendmsg = await ElisaBotMd.sendText(m.chat,Lang.G_UNMUTE)
-                                  await ElisaBotMd.sendMessage(from, { react: { text: `🔊`, key: sendmsg.key }})
+                                  await ThivaBotMd.sendMessage(from, { react: { text: `🔓`, key: m.key }})
+                                  await ThivaBotMd.groupSettingUpdate(m.chat, 'not_announcement')
+                                  const sendmsg = await ThivaBotMd.sendText(m.chat,Lang.G_UNMUTE)
+                                  await ThivaBotMd.sendMessage(from, { react: { text: `🔊`, key: sendmsg.key }})
                                   
                                }
                                break
@@ -3662,15 +3662,15 @@ ${vote[m.chat][2].map((v, i) => `├ ${i + 1}. @${v.split`@`[0]}`).join('\n')}
                                   if (!isBotAdmins) throw mess.botAdmin
                                   if (!isAdmins) throw mess.admin
                                if (args[0] === 'open'){
-                                  await ElisaBotMd.groupSettingUpdate(m.chat, 'unlocked').then((res) => reply(Lang.G_INFOON)).catch((err) => reply(jsonformat(err)))
+                                  await ThivaBotMd.groupSettingUpdate(m.chat, 'unlocked').then((res) => reply(Lang.G_INFOON)).catch((err) => reply(jsonformat(err)))
                                } else if (args[0] === 'close'){
-                                  await ElisaBotMd.groupSettingUpdate(m.chat, 'locked').then((res) => reply(Lang.G_UNMUTE)).catch((err) => reply(jsonformat(err)))
+                                  await ThivaBotMd.groupSettingUpdate(m.chat, 'locked').then((res) => reply(Lang.G_UNMUTE)).catch((err) => reply(jsonformat(err)))
                                } else {
                                let buttons = [
                                           { buttonId: 'editinfo open', buttonText: { displayText: 'OPEN' }, type: 1 },
                                           { buttonId: 'editinfo close', buttonText: { displayText: 'CLOSE' }, type: 1 }
                                       ]
-                                      await ElisaBotMd.sendButtonText(m.chat, buttons, `Mode Edit Info`, ElisaBotMd.user.name, m)
+                                      await ThivaBotMd.sendButtonText(m.chat, buttons, `Mode Edit Info`, ThivaBotMd.user.name, m)
                   
                               }
                               }
@@ -3693,7 +3693,7 @@ case 'antilink': {
                         { buttonId: 'antilink on', buttonText: { displayText: 'On' }, type: 1 },
                         { buttonId: 'antilink off', buttonText: { displayText: 'Off' }, type: 1 }
                     ]
-                    await ElisaBotMd.sendButtonText(m.chat, buttons, `Antilink Mode`, ElisaBotMd.user.name, m)
+                    await ThivaBotMd.sendButtonText(m.chat, buttons, `Antilink Mode`, ThivaBotMd.user.name, m)
                 }
              }
              break
@@ -3715,7 +3715,7 @@ case 'antilink': {
                                           { buttonId: 'antiwame on', buttonText: { displayText: 'ON' }, type: 1 },
                                           { buttonId: 'antiwame off', buttonText: { displayText: 'OFF' }, type: 1 }
                                       ]
-                                      await ElisaBotMd.sendButtonText(m.chat, buttons, `Mode Anti Wa.me`, ElisaBotMd.user.name, m)
+                                      await ThivaBotMd.sendButtonText(m.chat, buttons, `Mode Anti Wa.me`, ThivaBotMd.user.name, m)
                                   }
                                }
                                break
@@ -3726,24 +3726,24 @@ case 'antilink': {
                 if (args[0] === "on") {
                 if (db.data.chats[m.chat].block_from) return reply(`Previously Active`)
                 db.data.chats[m.chat].block_from = true
-                reply(`${ElisaBotMd.user.name} \nHas Been Blocked In This Group !`)
+                reply(`${ThivaBotMd.user.name} \nHas Been Blocked In This Group !`)
                 } else if (args[0] === "off") {
                 if (!db.data.chats[m.chat].block_from) return reply(`Previously Inactive`)
                 db.data.chats[m.chat].block_from = false
-                reply(`${ElisaBotMd.user.name}\n Has Been Unblocked In This Group!`)
+                reply(`${ThivaBotMd.user.name}\n Has Been Unblocked In This Group!`)
                 } else {
                  let buttons = [
                         { buttonId: 'blockgc on', buttonText: { displayText: 'BLOCK' }, type: 1 },
                         { buttonId: 'blockgc off', buttonText: { displayText: 'UNBLOCK' }, type: 1 }
                     ]
-                    await ElisaBotMd.sendButtonText(m.chat, buttons, `*Desable Bot on This Group*`, ElisaBotMd.user.name, m)
+                    await ThivaBotMd.sendButtonText(m.chat, buttons, `*Desable Bot on This Group*`, ThivaBotMd.user.name, m)
                 }
              }
              break
                               case 'invite' : case 'linkgroup': case 'grouplink': case 'gclink': case 'linkgc': {
                                   if (!m.isGroup) throw mess.group
-                                  let response = await ElisaBotMd.groupInviteCode(m.chat)
-                                  ElisaBotMd.sendText(m.chat, `*🖇️Link Of :* ${groupMetadata.subject} *Group*\n\nhttps://chat.whatsapp.cm/${response}`, m, { detectLink: true })
+                                  let response = await ThivaBotMd.groupInviteCode(m.chat)
+                                  ThivaBotMd.sendText(m.chat, `*🖇️Link Of :* ${groupMetadata.subject} *Group*\n\nhttps://chat.whatsapp.cm/${response}`, m, { detectLink: true })
                               }
                               break
                               case 'ephemeral': {
@@ -3752,9 +3752,9 @@ case 'antilink': {
                                   if (!isAdmins) throw mess.admin
                                   if (!text) throw 'Enter the enable/disable value, For Example ${prefix}ephemeral enable'
                                   if (args[0] === 'enable') {
-                                      await ElisaBotMd.sendMessage(m.chat, { disappearingMessagesInChat: WA_DEFAULT_EPHEMERAL }).then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
+                                      await ThivaBotMd.sendMessage(m.chat, { disappearingMessagesInChat: WA_DEFAULT_EPHEMERAL }).then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
                                   } else if (args[0] === 'disable') {
-                                      await ElisaBotMd.sendMessage(m.chat, { disappearingMessagesInChat: false }).then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
+                                      await ThivaBotMd.sendMessage(m.chat, { disappearingMessagesInChat: false }).then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
                                   }
                               }
                               break
@@ -3762,11 +3762,11 @@ case 'antilink': {
                                   if (!m.quoted) throw false
                                   let { chat, fromMe, id, isBaileys } = m.quoted
                                   if (!isBaileys) throw Lang.DELETE
-                                  ElisaBotMd.sendMessage(m.chat, { delete: { remoteJid: m.chat, fromMe: true, id: m.quoted.id, participant: m.quoted.sender } })
+                                  ThivaBotMd.sendMessage(m.chat, { delete: { remoteJid: m.chat, fromMe: true, id: m.quoted.id, participant: m.quoted.sender } })
                               }
                               break
                               case 'clear' : {
-await ElisaBotMd.chatModify({
+await ThivaBotMd.chatModify({
 			clear: {
 				messages: [{
 					id: m.key,
@@ -3779,13 +3779,13 @@ await ElisaBotMd.chatModify({
                               case 'bctext' :{
                               if (!isCreator) return reply( mess.owner)
                               if (!text) throw `${Lang.BC_GC}\n${Lang.EXAMPLE} ${prefix + command} *Hello i am using THIVANKA Nirmal 🤍*`
-                                  let getGroups = await ElisaBotMd.groupFetchAllParticipating()
+                                  let getGroups = await ThivaBotMd.groupFetchAllParticipating()
                                   let groups = Object.entries(getGroups).slice(0).map(entry => entry[1])
                                   let anu = groups.map(v => v.id)
                                   reply(`*Send Broadcast To ${anu.length} Group Chat, Finish Time ${anu.length * 1.5} second*`)
                                   for (let i of anu) {
                                       await sleep(1500)
-                                  await ElisaBotMd.sendText(i,`『 ǫᴜᴇᴇɴ ᴇʟɪsᴀ ʙʀᴏᴀᴅᴄᴀsᴛ 』${text}`)
+                                  await ThivaBotMd.sendText(i,`『 ǫᴜᴇᴇɴ ᴇʟɪsᴀ ʙʀᴏᴀᴅᴄᴀsᴛ 』${text}`)
                                   //reply (`*Successful Sending Broadcast To ${anu.length} Group(s)*`)
                                   }
                                   reply (`*Successful Sending Broadcast To ${anu.length} Group(s)*`)
@@ -3795,14 +3795,14 @@ await ElisaBotMd.chatModify({
                               break
                               case 'bcimg' : {
                               let media = await quoted.download()
-                              let getGroups = await ElisaBotMd.groupFetchAllParticipating()
+                              let getGroups = await ThivaBotMd.groupFetchAllParticipating()
                                   let groups = Object.entries(getGroups).slice(0).map(entry => entry[1])
                                   let anu = groups.map(v => v.id)
                                   reply(`*Send Broadcast To ${anu.length} Group Chat, Finish Time ${anu.length * 1.5} second*`)
                                   for (let i of anu) {
                                       await sleep(1500)
-                                  await ElisaBotMd.sendText(i,`${text}`)
-                                  await ElisaBotMd.sendMessage(i, { image: { url: media } }, { quoted: m })
+                                  await ThivaBotMd.sendText(i,`${text}`)
+                                  await ThivaBotMd.sendMessage(i, { image: { url: media } }, { quoted: m })
                                   reply (`*Successful Sending Broadcast To ${anu.length} Group(s)*`)
                                   
                                   }
@@ -3812,13 +3812,13 @@ await ElisaBotMd.chatModify({
                               case 'bcgc': case 'bcgroup': {
                                   if (!isCreator) throw mess.owner
                                   if (!text) throw `${Lang.BC_GC}${Lang.EXAMPLE}\n : ${prefix + command} hello guys, am back`
-                                  let getGroups = await ElisaBotMd.groupFetchAllParticipating()
+                                  let getGroups = await ThivaBotMd.groupFetchAllParticipating()
                                   let groups = Object.entries(getGroups).slice(0).map(entry => entry[1])
                                   let anu = groups.map(v => v.id)
                                   reply(`Send Broadcast To ${anu.length} Group Chat, Finish Time ${anu.length * 1.5} second`)
                                   for (let i of anu) {
                                       await sleep(1500)
-                                      ElisaBotMd.sendText(i ,`*『 ǫᴜᴇᴇɴ ᴇʟɪsᴀ ʙʀᴏᴀᴅᴄᴀsᴛ 』*\n${text}`)
+                                      ThivaBotMd.sendText(i ,`*『 ǫᴜᴇᴇɴ ᴇʟɪsᴀ ʙʀᴏᴀᴅᴄᴀsᴛ 』*\n${text}`)
                                       
                                               }
                                   reply(`Successful Sending Broadcast To ${anu.length} Group(s)`)
@@ -3831,7 +3831,7 @@ await ElisaBotMd.chatModify({
                                   reply(`Send Broadcast To ${anu.length} Chat\n ${anu.length * 1.5} second`)
                           for (let yoi of anu) {
                               await sleep(1500)
-                              ElisaBotMd.sendText(yoi,`*『 ǫᴜᴇᴇɴ ᴇʟɪsᴀ ʙʀᴏᴀᴅᴄᴀsᴛ 』*\n${text}`)
+                              ThivaBotMd.sendText(yoi,`*『 ǫᴜᴇᴇɴ ᴇʟɪsᴀ ʙʀᴏᴀᴅᴄᴀsᴛ 』*\n${text}`)
                                 }
                           reply('Broadcast Success')
                               }
@@ -3848,12 +3848,12 @@ await ElisaBotMd.chatModify({
                                       teks += `🔵 @${i.userJid.split('@')[0]}\n`
                                       teks += `🔵 *𝗧𝗜𝗠𝗘 :* ${moment(waktu * 1000).format('DD/MM/YY HH:mm:ss')} 🔵 *𝗦𝗧𝗔𝗧𝗨𝗦 :* ${read ? 'Read' : 'Unread'}\n\n`
                                   }
-                                  ElisaBotMd.sendTextWithMentions(m.chat, teks, m)
+                                  ThivaBotMd.sendTextWithMentions(m.chat, teks, m)
                               }
                               break
                               case 'q': case 'quoted': {
                           if (!m.quoted) return reply(Lang.M_REPLY)
-                          let wokwol = await ElisaBotMd.serializeM(await m.getQuotedObj())
+                          let wokwol = await ThivaBotMd.serializeM(await m.getQuotedObj())
                           if (!wokwol.quoted) return reply('The message you replied to does not contain a reply')
                           await wokwol.quoted.copyNForward(m.chat, true)
                               }
@@ -3865,23 +3865,23 @@ await ElisaBotMd.chatModify({
                                        let nama = store.messages[i].array[0].pushName
                                        teks += `🔵 *𝗡𝗔𝗠𝗘 :* ${nama}\n🔵 *𝗨𝗦𝗘𝗥 :* @${i.split('@')[0]}\n🔵 *𝗖𝗛𝗔𝗧 :* https://wa.me/${i.split('@')[0]}\n\n────────────────────────\n\n`
                                    }
-                                   ElisaBotMd.sendTextWithMentions(m.chat, teks, m)
+                                   ThivaBotMd.sendTextWithMentions(m.chat, teks, m)
                                }
                                break
                                    case 'listgc': {
                                    let anu = await store.chats.all().filter(v => v.id.endsWith('@g.us')).map(v => v.id)
                                    let teks = `⬣ *LIST GROUP CHAT*\n\nTotal Group : ${anu.length} Group\n\n`
                                    for (let i of anu) {
-                                       let metadata = await ElisaBotMd.groupMetadata(i)
+                                       let metadata = await ThivaBotMd.groupMetadata(i)
                                        teks += `🔵 *𝗡𝗔𝗠𝗘 :* ${metadata.subject}\n *🔵OWNER :* @${metadata.owner.split('@')[0]}\n🔵 *🔵ID :* ${metadata.id}\n🔵 *MADE :* ${moment(metadata.creation * 1000).tz('Africa/Harare').format('DD/MM/YYYY HH:mm:ss')}\n🔵 *MEMBERS :* ${metadata.participants.length}\n\n────────────────────────\n\n`
                                    }
-                                   ElisaBotMd.sendTextWithMentions(m.chat, teks, m)
+                                   ThivaBotMd.sendTextWithMentions(m.chat, teks, m)
                            }	 
                                break
                                case 'listonline': case 'onlinelist': case 'liston': {
                                       let id = args && /\d+\-\d+@g.us/.test(args[0]) ? args[0] : m.chat
                                       let online = [...Object.keys(store.presences[id]), botNumber]
-                                      ElisaBotMd.sendText(m.chat, 'Online List:\n\n' + online.map(v => '🔵 @' + v.replace(/@.+/, '')).join`\n`, m, { mentions: online })
+                                      ThivaBotMd.sendText(m.chat, 'Online List:\n\n' + online.map(v => '🔵 @' + v.replace(/@.+/, '')).join`\n`, m, { mentions: online })
                                }
                                break
                               case 'getstik': case 'renamesticker': {
@@ -3890,12 +3890,12 @@ await ElisaBotMd.chatModify({
                             
                                       if (/image/.test(mime)) {
                                   let media = await quoted.download()
-                                  let encmedia = await ElisaBotMd.sendImageAsSticker(m.chat, media, m, { author: text })
+                                  let encmedia = await ThivaBotMd.sendImageAsSticker(m.chat, media, m, { author: text })
                                   await fs.unlinkSync(encmedia)
                               } else if (/video/.test(mime)) {
                                   if ((quoted.msg || quoted).seconds > 11) return reply('error')
                                   let media = await quoted.download()
-                                  let encmedia = await ElisaBotMd.sendVideoAsSticker(m.chat, media, m, { author: text })
+                                  let encmedia = await ThivaBotMd.sendVideoAsSticker(m.chat, media, m, { author: text })
                                   await fs.unlinkSync(encmedia)
                               } else {
                                   throw '*👸💬 Please give your sticker name and reply it*'
@@ -3912,15 +3912,15 @@ await ElisaBotMd.chatModify({
                               if (global.LANG == 'SI') MA2X= '*👸💬 වීඩියෝවකට හෝ ජායාරූපයකට රිප්ලයි ලබාදෙන්න !*'
                               if (global.LANG == 'EN') MA2X= '*👸💬 Please reply video or photo !*'
                               
-                               ElisaBotMd.sendText(m.chat, Lang.STICKER_MAKING )
+                               ThivaBotMd.sendText(m.chat, Lang.STICKER_MAKING )
                                       if (/image/.test(mime)) {
                                   let media = await quoted.download()
-                                  let encmedia = await ElisaBotMd.sendImageAsSticker(m.chat, media, m, { packname: global.packname, author: m.pushName })
+                                  let encmedia = await ThivaBotMd.sendImageAsSticker(m.chat, media, m, { packname: global.packname, author: m.pushName })
                                   await fs.unlinkSync(encmedia)
                               } else if (/video/.test(mime)) {
                                   if ((quoted.msg || quoted).seconds > 11) return reply(MAX)
                                   let media = await quoted.download()
-                                  let encmedia = await ElisaBotMd.sendVideoAsSticker(m.chat, media, m, { packname: global.packname, author: m.pushName })
+                                  let encmedia = await ThivaBotMd.sendVideoAsSticker(m.chat, media, m, { packname: global.packname, author: m.pushName })
                                   await fs.unlinkSync(encmedia)
                               } else {
                                   throw MA2X
@@ -3930,60 +3930,60 @@ await ElisaBotMd.chatModify({
                               case 'attp' :{
                                if (!text) return reply ('Need some word \n ex - attp 𝗠𝗥 𝗧𝗛𝗜𝗩𝗔')
                                const Stik = `https://api.lolhuman.xyz/api/attp?apikey=SGWN&text=${text}`
-                               await ElisaBotMd.sendMedia(m.chat, Stik , '𝚃𝙷𝙸𝚅𝙰𝙽𝙺𝙰 𝙽𝙸𝚁𝙼𝙰𝙻', '𝙱𝙾𝚃', m, {asSticker: true}).catch((err) => reply(err))
+                               await ThivaBotMd.sendMedia(m.chat, Stik , '𝚃𝙷𝙸𝚅𝙰𝙽𝙺𝙰 𝙽𝙸𝚁𝙼𝙰𝙻', '𝙱𝙾𝚃', m, {asSticker: true}).catch((err) => reply(err))
                                
                               }
                               break
                               case 'attp2' :{
                               if (!text) return reply ('Need some word \n ex - attp 𝗠𝗥 𝗧𝗛𝗜𝗩𝗔')
                               const Stik = `https://api.botcahx.biz.id/api/maker/attp?text=${text}`
-                               await ElisaBotMd.sendMedia(m.chat, Stik , '𝚃𝙷𝙸𝚅𝙰𝙽𝙺𝙰 𝙽𝙸𝚁𝙼𝙰𝙻', '𝙱𝙾𝚃', m, {asSticker: true}).catch((err) => reply(err))
+                               await ThivaBotMd.sendMedia(m.chat, Stik , '𝚃𝙷𝙸𝚅𝙰𝙽𝙺𝙰 𝙽𝙸𝚁𝙼𝙰𝙻', '𝙱𝙾𝚃', m, {asSticker: true}).catch((err) => reply(err))
                                
                               }
                               break
                               case 'ttp' :{
                               if (!text) return reply ('Need some word \n ex - ttp 𝗠𝗥 𝗧𝗛𝗜𝗩𝗔')
-                              //const Stik = `https://api.botcahx.biz.id/api/maker/ttp?text=${text}&apikey=nimavip`
-                               await ElisaBotMd.sendMedia(m.chat, `https://api.botcahx.biz.id/api/maker/ttp?text=${text}` , '𝚃𝙷𝙸𝚅𝙰𝙽𝙺𝙰 𝙽𝙸𝚁𝙼𝙰𝙻', '𝙱𝙾𝚃', m, {asSticker: true}).catch((err) => reply(err))
+                              //const Stik = `https://api.botcahx.biz.id/api/maker/ttp?text=${text}&apikey=Thivavip`
+                               await ThivaBotMd.sendMedia(m.chat, `https://api.botcahx.biz.id/api/maker/ttp?text=${text}` , '𝚃𝙷𝙸𝚅𝙰𝙽𝙺𝙰 𝙽𝙸𝚁𝙼𝙰𝙻', '𝙱𝙾𝚃', m, {asSticker: true}).catch((err) => reply(err))
                                
                               }
                               break
                               case 'tts' :{
                               if (!text) return reply('Need word')
-                              const nima = await fetchJson(`https://api.botcahx.biz.id/api/soundoftext?text=${text}&lang=en-US&apikey=nimavip`).catch((err) => reply('Error 🙂'))
-                              const voice = nima.result
-                              //await ElisaBotMd.sendMessage(m.chat, {audio: voice, mimetype:'audio/mpeg', ptt:true }, {quoted:m})
-                              await ElisaBotMd.sendMessage(m.chat, { audio: { url: voice } , mimetype: 'audio/mpeg',ptt:true }, { quoted: m })
+                              const Thiva = await fetchJson(`https://api.botcahx.biz.id/api/soundoftext?text=${text}&lang=en-US&apikey=Thivavip`).catch((err) => reply('Error 🙂'))
+                              const voice = Thiva.result
+                              //await ThivaBotMd.sendMessage(m.chat, {audio: voice, mimetype:'audio/mpeg', ptt:true }, {quoted:m})
+                              await ThivaBotMd.sendMessage(m.chat, { audio: { url: voice } , mimetype: 'audio/mpeg',ptt:true }, { quoted: m })
                               }
                               break
                               case 'short' :{
-                              if (!isUrl(args[0])) return reply('*👸💬 Please Give Me a Correct Link*\n_Example - .short https://youtube.com/c/NIMAOFC')
-                              const nima = await fetchJson(`https://api.botcahx.biz.id/api/linkshort/cuttly?link=${text}&apikey=nimavip`)
-                              m_reply(nima.result)
+                              if (!isUrl(args[0])) return reply('*👸💬 Please Give Me a Correct Link*\n_Example - .short https://youtube.com/c/ThivaOFC')
+                              const Thiva = await fetchJson(`https://api.botcahx.biz.id/api/linkshort/cuttly?link=${text}&apikey=Thivavip`)
+                              m_reply(Thiva.result)
                               }
                               break
                               //https://api.botcahx.biz.id/api/linkshort/cuttly?link=https://api-alpis.herokuapp.com
                               case 'short2' :{
                               if (!isUrl(args[0])) return reply('*👸💬 Please Give Me a Correct Link*\n_Example - .short2 https://youtu.be/hbwvPcnuTlY_')
-                              const nima = await fetchJson(`https://api.botcahx.biz.id/api/linkshort/tinyurlwithalias?link=${args[0]}&alias=${args[1]}&apikey=nimavip`)
-                              m_reply(nima.result)
+                              const Thiva = await fetchJson(`https://api.botcahx.biz.id/api/linkshort/tinyurlwithalias?link=${args[0]}&alias=${args[1]}&apikey=Thivavip`)
+                              m_reply(Thiva.result)
                               }
                               break
                               case 'triggered' :{
                               if (!quoted) return reply('*👸💬 Please reply sticker.*')
-                              let media = await ElisaBotMd.downloadAndSaveMediaMessage(quoted)
-                              const gif = `https://api.botcahx.biz.id/api/maker/trigger?url=${media}&apikey=nimavip`
+                              let media = await ThivaBotMd.downloadAndSaveMediaMessage(quoted)
+                              const gif = `https://api.botcahx.biz.id/api/maker/trigger?url=${media}&apikey=Thivavip`
                               await fs.unlinkSync(media)
                               //const img = `https://api.violetics.pw/api/converter/webp-to-image?apikey=b5cd-368b-055f&image=${media}`
                               //const stick = 'https://api.akuari.my.id/canvas/triggered2?link='+img
-                              await ElisaBotMd.sendMessage(m.chat, { video: { url: gif , caption: global.cap }, gifPlayback: true }, { quoted: m })
-                              await ElisaBotMd.sendMessage(from, { react: { text: `✨`, key: m.key }})
-                            //  await ElisaBotMd.sendMedia(m.chat, stick , '𝚃𝙷𝙸𝚅𝙰𝙽𝙺𝙰 𝙽𝙸𝚁𝙼𝙰𝙻', '𝙱𝙾𝚃', m, {asSticker: true}).catch((err) => reply(err))
+                              await ThivaBotMd.sendMessage(m.chat, { video: { url: gif , caption: global.cap }, gifPlayback: true }, { quoted: m })
+                              await ThivaBotMd.sendMessage(from, { react: { text: `✨`, key: m.key }})
+                            //  await ThivaBotMd.sendMedia(m.chat, stick , '𝚃𝙷𝙸𝚅𝙰𝙽𝙺𝙰 𝙽𝙸𝚁𝙼𝙰𝙻', '𝙱𝙾𝚃', m, {asSticker: true}).catch((err) => reply(err))
                               }
                               break
                               case 'dltone' : {
-                              //await ElisaBotMd.sendMessage(from, { react: { text: `🔄`, key: m.key }})
-                              await ElisaBotMd.sendMessage(m.chat, { audio: { url: text } , mimetype: 'audio/mpeg' }, { quoted: m })
+                              //await ThivaBotMd.sendMessage(from, { react: { text: `🔄`, key: m.key }})
+                              await ThivaBotMd.sendMessage(m.chat, { audio: { url: text } , mimetype: 'audio/mpeg' }, { quoted: m })
                                
                               }
                               break
@@ -4011,7 +4011,7 @@ await ElisaBotMd.chatModify({
                           let [emoji1, emoji2] = text.split`+`
                           let anu = await fetchJson(`https://tenor.googleapis.com/v2/featured?key=AIzaSyAyimkuYQYF_FXVALexPuGQctUWRURdCYQ&contentfilter=high&media_filter=png_transparent&component=proactive&collection=emoji_kitchen_v5&q=${encodeURIComponent(emoji1)}_${encodeURIComponent(emoji2)}`)
                           for (let res of anu.results) {
-                              let encmedia = await ElisaBotMd.sendImageAsSticker(m.chat, res.url, m, { packname: global.packname, author: global.author, categories: res.tags })
+                              let encmedia = await ThivaBotMd.sendImageAsSticker(m.chat, res.url, m, { packname: global.packname, author: global.author, categories: res.tags })
                               await fs.unlinkSync(encmedia)
                           }
                           }
@@ -4025,15 +4025,15 @@ await ElisaBotMd.chatModify({
                               if (global.LANG == 'SI') STICKER = '*ඔබ රිප්ලයි කරන ලද්දේ ස්ටිකර් එකකට නොවේ කරුනාකර ස්ටිකර් එකකට රිප්ලයි කරන්න*'
                                   if (!quoted) throw '*photo එකකට රිප්ලයි කරන්න !*'
                                   if (!/webp/.test(mime)) throw `${REPLY} *${prefix + command}*`
-                                  const load = await ElisaBotMd.sendText(m.chat, Lang.CONVER_TING )
-                                  let media = await ElisaBotMd.downloadAndSaveMediaMessage(quoted)
-                                  await ElisaBotMd.sendMessage(m.chat, { delete: load.key })
+                                  const load = await ThivaBotMd.sendText(m.chat, Lang.CONVER_TING )
+                                  let media = await ThivaBotMd.downloadAndSaveMediaMessage(quoted)
+                                  await ThivaBotMd.sendMessage(m.chat, { delete: load.key })
                                   let ran = await getRandom('.png')
                                   exec(`ffmpeg -i ${media} ${ran}`, (err) => {
                                       fs.unlinkSync(media)
                                       if (err) throw err
                                       let buffer = fs.readFileSync(ran)
-                                      ElisaBotMd.sendMessage(m.chat, { image: buffer , caption : global.cap  }, { quoted: m })
+                                      ThivaBotMd.sendMessage(m.chat, { image: buffer , caption : global.cap  }, { quoted: m })
                                       fs.unlinkSync(ran)
                                   })
                               }
@@ -4041,36 +4041,36 @@ await ElisaBotMd.chatModify({
                               case 'sticvid': case 'tomp4': case 'tovideo': {
                                   if (!quoted) throw 'Reply Image'
                                   if (!/webp/.test(mime)) throw `balas stiker dengan caption *${prefix + command}*`
-                                  const load =await ElisaBotMd.sendText(m.chat, Lang.CONVER_TING )
+                                  const load =await ThivaBotMd.sendText(m.chat, Lang.CONVER_TING )
                           let { webp2mp4File } = require('./lib/uploader')
-                                  let media = await ElisaBotMd.downloadAndSaveMediaMessage(quoted)
+                                  let media = await ThivaBotMd.downloadAndSaveMediaMessage(quoted)
                                   let webpToMp4 = await webp2mp4File(media)
-                                   ElisaBotMd.sendMessage(m.chat, { video: { url: webpToMp4.result, caption: global.cap } }, { quoted: m })
+                                   ThivaBotMd.sendMessage(m.chat, { video: { url: webpToMp4.result, caption: global.cap } }, { quoted: m })
                                   await fs.unlinkSync(media)
-                                  ElisaBotMd.sendMessage(m.chat, { delete: load.key })
+                                  ThivaBotMd.sendMessage(m.chat, { delete: load.key })
                               }
                               break
                               case 'toaud': case 'toaudio': {
                               if (!/video/.test(mime) && !/audio/.test(mime)) throw `Send/Reply Video/Audio You Want Audio With Caption ${prefix + command}`
                               if (!quoted) throw `Send/Reply Video/Audio You Want to Use as Audio With Caption ${prefix + command}`
-                              const load = await ElisaBotMd.sendText(m.chat, Lang.CONVER_TING )
+                              const load = await ThivaBotMd.sendText(m.chat, Lang.CONVER_TING )
                               let media = await quoted.download()
                               let { toAudio } = require('./lib/converter')
                               let audio = await toAudio(media, 'mp4')
-                               ElisaBotMd.sendMessage(m.chat, {audio: audio, mimetype: 'audio/mpeg'}, { quoted : m })
-                               ElisaBotMd.sendMessage(m.chat, { delete: load.key })
+                               ThivaBotMd.sendMessage(m.chat, {audio: audio, mimetype: 'audio/mpeg'}, { quoted : m })
+                               ThivaBotMd.sendMessage(m.chat, { delete: load.key })
                               }
                               break
                               case 'tomp3': case 'mp3': {
                               if (/document/.test(mime)) throw `Send/Reply Video/Audio You Want to Convert into MP3 With Caption ${prefix + command}`
                               if (!/video/.test(mime) && !/audio/.test(mime)) throw `Send/Reply Video/Audio You Want To Convert Into MP3 With Caption ${prefix + command}`
                               if (!quoted) throw `Send/Reply Video/Audio You Want To Convert Into MP3 With Caption ${prefix + command}`
-                              const load = await ElisaBotMd.sendText(m.chat, Lang.CONVER_TING )
+                              const load = await ThivaBotMd.sendText(m.chat, Lang.CONVER_TING )
                               let media = await quoted.download()
                               let { toAudio } = require('./lib/converter')
                               let audio = await toAudio(media, 'mp4')
-                              ElisaBotMd.sendMessage(m.chat, {document: audio, mimetype: 'audio/mpeg', fileName: `Converted By ${ElisaBotMd.user.name}.mp3`}, { quoted : m })
-                              ElisaBotMd.sendMessage(m.chat, { delete: load.key })
+                              ThivaBotMd.sendMessage(m.chat, {document: audio, mimetype: 'audio/mpeg', fileName: `Converted By ${ThivaBotMd.user.name}.mp3`}, { quoted : m })
+                              ThivaBotMd.sendMessage(m.chat, { delete: load.key })
                               }
                               break
                               case 'tovn': case 'unvoice': {
@@ -4080,19 +4080,19 @@ await ElisaBotMd.chatModify({
                               let media = await quoted.download()
                               let { toPTT } = require('./lib/converter')
                               let audio = await toPTT(media, 'mp4')
-                              ElisaBotMd.sendMessage(m.chat, {audio: audio, mimetype:'audio/mpeg', ptt:true }, {quoted:m})
+                              ThivaBotMd.sendMessage(m.chat, {audio: audio, mimetype:'audio/mpeg', ptt:true }, {quoted:m})
                               }
                               break
                               case 'togif': {
                                   if (!quoted) throw 'Reply Image'
                                   if (!/webp/.test(mime)) throw `balas stiker dengan caption *${prefix + command}*`
-                                  const load = await ElisaBotMd.sendText(m.chat, Lang.CONVER_TING )
+                                  const load = await ThivaBotMd.sendText(m.chat, Lang.CONVER_TING )
                           let { webp2mp4File } = require('./lib/uploader')
-                                  let media = await ElisaBotMd.downloadAndSaveMediaMessage(quoted)
+                                  let media = await ThivaBotMd.downloadAndSaveMediaMessage(quoted)
                                   let webpToMp4 = await webp2mp4File(media)
-                                  await ElisaBotMd.sendMessage(m.chat, { video: { url: webpToMp4.result, caption: 'Convert Webp To Video' }, gifPlayback: true }, { quoted: m })
+                                  await ThivaBotMd.sendMessage(m.chat, { video: { url: webpToMp4.result, caption: 'Convert Webp To Video' }, gifPlayback: true }, { quoted: m })
                                   await fs.unlinkSync(media)
-                                  ElisaBotMd.sendMessage(m.chat, { delete: load.key })
+                                  ThivaBotMd.sendMessage(m.chat, { delete: load.key })
                               }
                               break
     case 'imagenobg': case 'removebg': case 'remove-bg': {
@@ -4103,7 +4103,7 @@ await ElisaBotMd.chatModify({
     let apirnobg = ['uFexCoDgX9DYk4sgDYEmuE74','5Cx1DPgcR54PVn5Z5WGGn64V','BEbDqa2mxYkgRC31Z7NCpdNa']
     let apinobg = global.REMOVE_BG_API || apirnobg[Math.floor(Math.random() * apirnobg.length)]
     hmm = await './src/remobg-'+getRandom('')
-    localFile = await ElisaBotMd.downloadAndSaveMediaMessage(quoted, hmm)
+    localFile = await ThivaBotMd.downloadAndSaveMediaMessage(quoted, hmm)
     outputFile = await './src/hremo-'+getRandom('.png')
     replay(mess.wait)
     remobg.removeBackgroundFromImageFile({
@@ -4114,7 +4114,7 @@ await ElisaBotMd.chatModify({
  scale: "100%",
  outputFile 
     }).then(async result => {
-    ElisaBotMd.sendMessage(m.chat, {image: fs.readFileSync(outputFile), caption: mess.success}, { quoted : m })
+    ThivaBotMd.sendMessage(m.chat, {image: fs.readFileSync(outputFile), caption: mess.success}, { quoted : m })
     await fs.unlinkSync(localFile)
     await fs.unlinkSync(outputFile)
     })
@@ -4125,9 +4125,9 @@ await ElisaBotMd.chatModify({
     if (!/image/.test(mime)) throw `Send/Reply Image With Caption ${prefix + command}`
     if (/webp/.test(mime)) throw `Send/Reply Image With Caption ${prefix + command}`
 
-   const media = await ElisaBotMd.downloadAndSaveMediaMessage(quoted)
-   await ElisaBotMd.sendText(m.chat,media)
-   ElisaBotMd.sendMessage(m.chat, { image: {url :`https://api.akuari.my.id/other/removebg3?link=${media}`} , caption : global.cap  }, { quoted: m })
+   const media = await ThivaBotMd.downloadAndSaveMediaMessage(quoted)
+   await ThivaBotMd.sendText(m.chat,media)
+   ThivaBotMd.sendMessage(m.chat, { image: {url :`https://api.akuari.my.id/other/removebg3?link=${media}`} , caption : global.cap  }, { quoted: m })
    await fs.unlinkSync(media)
    }
    break
@@ -4140,7 +4140,7 @@ await ElisaBotMd.chatModify({
                                   for (let i of search.all) {
                                       teks += `🔵 No : ${no++}\n💮 𝗧𝗬𝗣𝗘 : ${i.type}\n🔳 𝗩𝗜𝗗𝗘𝗢 𝗜𝗗 : ${i.videoId}\n🔴 𝗧𝗜𝗧𝗟𝗘 : ${i.title}\n🔵 𝗩𝗜𝗘𝗪𝗦 : ${i.views}\n🎬 𝗗𝗨𝗥𝗔𝗧𝗜𝗢𝗡 : ${i.timestamp}\n📡 𝗨𝗣𝗟𝗢𝗔𝗗 𝗔𝗧 : ${i.ago}\n📌 𝗨𝗥𝗟 : ${i.url}\n\n─────────────────\n\n`
                                   }
-                                  ElisaBotMd.sendMessage(m.chat, { image: { url: search.all[0].thumbnail },  caption: teks }, { quoted: m })
+                                  ThivaBotMd.sendMessage(m.chat, { image: { url: search.all[0].thumbnail },  caption: teks }, { quoted: m })
                               }
                               break
                               case 'xnxxsh': {
@@ -4152,9 +4152,9 @@ await ElisaBotMd.chatModify({
 *පොඩි උන් ජොයින් වෙන්න එපා !!!*
 https://tinyurl.com/SEX-GROUP-NO-CHILDS`)
                                    if (!text) throw `${Lang.EXAMPLE}\n : ${prefix + command} mia kalifa`
-                                   await ElisaBotMd.sendMessage(from, { react: { text: `🍑`, key: m.key }})
+                                   await ThivaBotMd.sendMessage(from, { react: { text: `🍑`, key: m.key }})
                                   
-                                  let search = await fetchJson(`https://nimaxxx.herokuapp.com/api/srhx?q=${text}`)
+                                  let search = await fetchJson(`https://Thivaxxx.herokuapp.com/api/srhx?q=${text}`)
                                   let teks = '*🎭 XNXX RESULTS 🎭* '+text+'\n\n'
                                   let no = 1
                                   
@@ -4174,7 +4174,7 @@ https://tinyurl.com/SEX-GROUP-NO-CHILDS`)
      }
      sections.push(list)   
      }
-  const sendm =  ElisaBotMd.sendMessage(
+  const sendm =  ThivaBotMd.sendMessage(
       m.chat, 
       {
        text: `${text} *Here is the list of videos, click the button below to choose*\n\n${m.pushName}`,
@@ -4187,37 +4187,37 @@ https://tinyurl.com/SEX-GROUP-NO-CHILDS`)
                                       
                                       
                                  // }
-                                 // ElisaBotMd.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/f7470af04326c5522cbcb.jpg' },  caption: teks }, { quoted: m })
+                                 // ThivaBotMd.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/f7470af04326c5522cbcb.jpg' },  caption: teks }, { quoted: m })
                               }
                               break
                               case 'xnxxsh2': {
                                    
-                                  await ElisaBotMd.sendMessage(from, { react: { text: `🍑`, key: m.key }})
+                                  await ThivaBotMd.sendMessage(from, { react: { text: `🍑`, key: m.key }})
                                   if (!text) throw `${Lang.EXAMPLE}\n : ${prefix + command} story wa anime`
                                   
-                                  let search = await fetchJson(`https://nimaxxx.herokuapp.com/api/srhx?q=${text}`)
+                                  let search = await fetchJson(`https://Thivaxxx.herokuapp.com/api/srhx?q=${text}`)
                                   let teks = '*🎭 XNXX RESULTS 🎭* '+text+'\n\n'
                                   let no = 1
                                   for (let i of search) {
                                       teks += `🔵 No : ${no++}\n👽 title - ${i.title}\n🔄 Duration : ${i.duration}\n 🤤 URL - ${i.link}\n\n─────────────────\n\n`
                                   }
-                                  ElisaBotMd.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/f7470af04326c5522cbcb.jpg' },  caption: teks }, { quoted: m })
+                                  ThivaBotMd.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/f7470af04326c5522cbcb.jpg' },  caption: teks }, { quoted: m })
                               }
                               break
                               case 'xvideo': {
                                  // if (m.isGroup) throw  '*CAN\T DOWNLOAD ON GROUPS*'
                                  if (SEX_DL == 'true' ){
-                                  await ElisaBotMd.sendMessage(from, { react: { text: `🔞`, key: m.key }})
+                                  await ThivaBotMd.sendMessage(from, { react: { text: `🔞`, key: m.key }})
                                   if (!text) throw `${Lang.EXAMPLE}\n : ${prefix + command} step sister`
                                   
-                                  let nima = await fetchJson(`http://kocakz.herokuapp.com/api/media/xvideo/search?query=${text}`)
+                                  let Thiva = await fetchJson(`http://kocakz.herokuapp.com/api/media/xvideo/search?query=${text}`)
                                   let teks = '*🎭  XVIDEO RESULTS  🎭* '+text+'\n\n'
                                   let no = 1
-                                  const search = nima.result
+                                  const search = Thiva.result
                                   for (let i of search) {
                                       teks += `🔵 No : ${no++}\n*👽 title :* ${i.title}\n*🗳️ Info :* ${i.info}\n*☞ url :* ${i.link}\n\n─────────────────\n\n`
                                   }
-                                  ElisaBotMd.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/f7470af04326c5522cbcb.jpg' },  caption: teks }, { quoted: m })
+                                  ThivaBotMd.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/f7470af04326c5522cbcb.jpg' },  caption: teks }, { quoted: m })
                                   }else {
                                   m_reply('*18+ DOWNLOAD IS DESABLE BY OWNER*')
                                   }
@@ -4226,10 +4226,10 @@ https://tinyurl.com/SEX-GROUP-NO-CHILDS`)
                             /*  case 'xnxx' : {
                               if(!SEX_DL == 'true') return m_reply('*18+ DOWNLOAD IS DESABLE BY OWNER*')
                               if(!text) return m_reply('*👸💬 Please Give me a xnxx video title !*\n'+'```.xnxx mia kalifa```')
-                              const nima = await fetchJson(`https://nimaxxx.herokuapp.com/api/srhx?q=${text}`)
-                              const url = nima.result.link
-                              const title = nima.result.title
-                              const dlnima = await fetchJson(`https://nimaxxx.herokuapp.com/api/dlx?url=${text}`)
+                              const Thiva = await fetchJson(`https://Thivaxxx.herokuapp.com/api/srhx?q=${text}`)
+                              const url = Thiva.result.link
+                              const title = Thiva.result.title
+                              const dlThiva = await fetchJson(`https://Thivaxxx.herokuapp.com/api/dlx?url=${text}`)
                               const dl_url =
                               
                               }
@@ -4239,17 +4239,17 @@ https://tinyurl.com/SEX-GROUP-NO-CHILDS`)
                                   if(SEX_DL == 'true' ){
 
       // if (!isUrl(text) && !text.includes('https://www.xvideos.com/')) return reply ( '*👸💬 Please give me a correct link*\n'+'```example : .downxvid https://www.xvideos.com/video31785617/milf_jessryan_hot_video_clip_pussy_play_time```')
-     //  const nima = await fetchJson(`http://kocakz.herokuapp.com/api/media/xvideo/detail?url=${text}`)
-       //const video = nima.files.low
+     //  const Thiva = await fetchJson(`http://kocakz.herokuapp.com/api/media/xvideo/detail?url=${text}`)
+       //const video = Thiva.files.low
                                if(!text) return reply('*👸💬 Please give me a link*\n'+'```example : .downxvid https://www.xvideos.com/video31785617/milf_jessryan_hot_video_clip_pussy_play_time```')
                                if(!args[0].includes('https://www.xvideos.com/')) return reply ( '*👸💬 Please give me a correct link*\n'+'```example : .downxvid https://www.xvideos.com/video31785617/milf_jessryan_hot_video_clip_pussy_play_time```')
     
-                               await ElisaBotMd.sendText(m.chat, `*🔄 Please wait Downloading _XVIDEO_ Video ${m.pushName}...*`, m, )
+                               await ThivaBotMd.sendText(m.chat, `*🔄 Please wait Downloading _XVIDEO_ Video ${m.pushName}...*`, m, )
                                const vid = await fetchJson(`http://kocakz.herokuapp.com/api/media/xvideo/detail?url=${text}`)
                                const video = vid.result.files.low
                                const image = vid.result.image
                                
-                               await ElisaBotMd.sendMessage(m.chat, { image: { url: image },  caption: `┌       *༺ 📥  𝚇𝚅𝙸𝙳𝙴𝙾 𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳𝙴𝚁  📥 ༻*
+                               await ThivaBotMd.sendMessage(m.chat, { image: { url: image },  caption: `┌       *༺ 📥  𝚇𝚅𝙸𝙳𝙴𝙾 𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳𝙴𝚁  📥 ༻*
                                
                                
 │ *📡 ᴛɪᴛʟᴇ* : ${vid.result.title}
@@ -4259,7 +4259,7 @@ https://tinyurl.com/SEX-GROUP-NO-CHILDS`)
 │ *💥 ǫᴜᴀʟɪᴛʏ :* ${vid.result.quality}
    
 └───────────❍` })
-                               await ElisaBotMd.sendMessage(m.chat, { video: { url: video }, caption: `${m.pushName} *XVIDEO DOWNLOADED*` }, { quoted: m })
+                               await ThivaBotMd.sendMessage(m.chat, { video: { url: video }, caption: `${m.pushName} *XVIDEO DOWNLOADED*` }, { quoted: m })
                                }else {
                                   m_reply('*18+ DOWNLOAD IS DESABLE BY OWNER*')
                                   }
@@ -4270,13 +4270,13 @@ break
                               case 'downxnxx' : {
                                 
                                 if (!isXnxxGrp) throw '*Download is only Alowd this group*\n\n_https://chat.whatsapp.com/KnmiFeP48AX7fJbRH1anMc_\n\n❍ ~if you want download xnxx video join this~'
-                               await ElisaBotMd.sendMessage(from, { react: { text: `🤤`, key: m.key }})
-                               await ElisaBotMd.sendText(m.chat, `*🔄 Please wait Downloading Xnxx Video ${m.pushName}...*`, m, )
-                               const vid = await axios.get(`https://nimaxxx.herokuapp.com/api/dlx?url=${text}`)
+                               await ThivaBotMd.sendMessage(from, { react: { text: `🤤`, key: m.key }})
+                               await ThivaBotMd.sendText(m.chat, `*🔄 Please wait Downloading Xnxx Video ${m.pushName}...*`, m, )
+                               const vid = await axios.get(`https://Thivaxxx.herokuapp.com/api/dlx?url=${text}`)
                                const video = vid.data.url
                                const image = vid.data.thumb
                                
-                               await ElisaBotMd.sendMessage(m.chat, { image: { url: image },  caption: `┌       *༺ 📥  𝚇𝙽𝚇𝚇 𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳𝙴𝚁  📥 ༻*
+                               await ThivaBotMd.sendMessage(m.chat, { image: { url: image },  caption: `┌       *༺ 📥  𝚇𝙽𝚇𝚇 𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳𝙴𝚁  📥 ༻*
                                
                                
 │ *📡 ᴛɪᴛʟᴇ* : ${vid.data.title}
@@ -4288,72 +4288,72 @@ break
 │ *👁 ᴠɪᴇᴡs :* ${vid.data.views}
    
 └───────────❍` })
-                               await ElisaBotMd.sendMessage(m.chat, { video: { url: video }, caption: `*💥 SUCCESS DOWNLOAD XNXX VIDEO 💥*` }, { quoted: m })
+                               await ThivaBotMd.sendMessage(m.chat, { video: { url: video }, caption: `*💥 SUCCESS DOWNLOAD XNXX VIDEO 💥*` }, { quoted: m })
                                
                               }
                               break
                               
-                              case 'nimaxnxx' : {
-                              await ElisaBotMd.sendMessage(from, { react: { text: `🤤`, key: m.key }})
+                              case 'Thivaxnxx' : {
+                              await ThivaBotMd.sendMessage(from, { react: { text: `🤤`, key: m.key }})
                                  
-                               await ElisaBotMd.sendMessage(from, { react: { text: `🔄`, key: m.key }})
-                               const vid = await axios.get(`https://nimaxxx.herokuapp.com/api/dlx?url=${text}`)
+                               await ThivaBotMd.sendMessage(from, { react: { text: `🔄`, key: m.key }})
+                               const vid = await axios.get(`https://Thivaxxx.herokuapp.com/api/dlx?url=${text}`)
                                const video = vid.data.url
                                 
-                               ElisaBotMd.sendMessage(m.chat, { video: { url: video }, caption: `*${vid.data.title}*` }, { quoted: m })
+                               ThivaBotMd.sendMessage(m.chat, { video: { url: video }, caption: `*${vid.data.title}*` }, { quoted: m })
                                
                               }
                               break
                               case 'git': case 'gitclone': {
            
                               let regex1 = /(?:https|git)(?::\/\/|@)github\.com[\/:]([^\/:]+)\/(.+)/i
-                              if (!args[0]) reply(`Use ${prefix}gitclone repo link\n${Lang.EXAMPLE}\n: https://github.com/darkmaker/Queen-Elisa-Md-V2`)
+                              if (!args[0]) reply(`Use ${prefix}gitclone repo link\n${Lang.EXAMPLE}\n: https://github.com/darkmaker/Queen-Thiva-Md-V2`)
                               if (!regex1.test(args[0])) return reply('link')
                               let [, user, repo] = args[0].match(regex1) || []
                               repo = repo.replace(/.git$/, '')
                               let url = `https://api.github.com/repos/${user}/${repo}/zipball`
                               let filename =  `${user}${repo}`
                               //(await fetch(url, {method: 'HEAD'})).headers.get('content-disposition').match(/attachment; filename=(.*)/)[1]
-                              ElisaBotMd.sendMessage(m.chat, { document: { url: url }, fileName: filename+'.zip', mimetype: 'application/zip' }, { quoted: m }).catch((err) => reply(mess.error))
+                              ThivaBotMd.sendMessage(m.chat, { document: { url: url }, fileName: filename+'.zip', mimetype: 'application/zip' }, { quoted: m }).catch((err) => reply(mess.error))
                               }
                               break
                               case 'directvideo' : {
-                              await ElisaBotMd.sendMessage(from, { react: { text: `🔄`, key: m.key }})
-                              await ElisaBotMd.sendMessage(m.chat, { video: { url: text }, caption: `*If you want Download Hight Qulity Video use this link*` }, { quoted: m })
+                              await ThivaBotMd.sendMessage(from, { react: { text: `🔄`, key: m.key }})
+                              await ThivaBotMd.sendMessage(m.chat, { video: { url: text }, caption: `*If you want Download Hight Qulity Video use this link*` }, { quoted: m })
                                
                               }
                               break
                               case 'directimg' : {
-                              await ElisaBotMd.sendMessage(from, { react: { text: `🔄`, key: m.key }})
-                              await ElisaBotMd.sendMessage(m.chat, { image: { url: text }, caption: `*If you want Download Hight Qulity Video use this link*` }, { quoted: m })
+                              await ThivaBotMd.sendMessage(from, { react: { text: `🔄`, key: m.key }})
+                              await ThivaBotMd.sendMessage(m.chat, { image: { url: text }, caption: `*If you want Download Hight Qulity Video use this link*` }, { quoted: m })
                                
                               }
                             break
                               case 'directmp3' : {
-                              await ElisaBotMd.sendMessage(from, { react: { text: `🔄`, key: m.key }})
-                              await ElisaBotMd.sendMessage(m.chat, { audio: { url: text } , mimetype: 'audio/mpeg' }, { quoted: m })
+                              await ThivaBotMd.sendMessage(from, { react: { text: `🔄`, key: m.key }})
+                              await ThivaBotMd.sendMessage(m.chat, { audio: { url: text } , mimetype: 'audio/mpeg' }, { quoted: m })
                                
                               }
                               break
                               case 'directapk' : {
-                              await ElisaBotMd.sendMessage(from, { react: { text: `🔄`, key: m.key }})
-                              await ElisaBotMd.sendMessage(m.chat, { document: { url: text }, mimetype: 'application/vnd.android.package-archive', fileName: `QueenElisa.apk`}, { quoted: m })
+                              await ThivaBotMd.sendMessage(from, { react: { text: `🔄`, key: m.key }})
+                              await ThivaBotMd.sendMessage(m.chat, { document: { url: text }, mimetype: 'application/vnd.android.package-archive', fileName: `QueenThiva.apk`}, { quoted: m })
              
                               }
                               break
                               case 'qr' : {
                               if(!isCreator) throw mess.owner
-                              await ElisaBotMd.sendMessage(from, { react: { text: `🔄`, key: m.key }})
-                              await ElisaBotMd.sendText(m.chat,'```🔄 Please Wait Connecting Elisa Bot Sever ....```')
-                              await ElisaBotMd.sendMessage(m.chat, { image: { url: 'https://Mr-Nima-Test.gahakola.repl.co' }, caption: '```🧑‍💻 Download Qr Code And Scan Qr || Code More > Linked device ||```\n\n *▷ Deploy https://github.com/DarkMakerofc/Queen-Elisa-Md-V2* ' }, { quoted: m })
+                              await ThivaBotMd.sendMessage(from, { react: { text: `🔄`, key: m.key }})
+                              await ThivaBotMd.sendText(m.chat,'```🔄 Please Wait Connecting Thiva Bot Sever ....```')
+                              await ThivaBotMd.sendMessage(m.chat, { image: { url: 'https://Mr-Thiva-Test.gahakola.repl.co' }, caption: '```🧑‍💻 Download Qr Code And Scan Qr || Code More > Linked device ||```\n\n *▷ Deploy https://github.com/DarkMakerofc/Queen-Thiva-Md-V2* ' }, { quoted: m })
                                
                               }
                               break
                           case 'google': {
                                   if (!text) throw `Example : ${prefix + command} THIVANKA Nirmal bot`
                                   await fetchJson(`https://api.akuari.my.id/search/google?query=${text}`)
-                                  .then(async (nima) => { 
-                                  const res = nima.result
+                                  .then(async (Thiva) => { 
+                                  const res = Thiva.result
                                   let teks = `*『 ǫᴜᴇᴇɴ ᴇʟɪsᴀ ɢᴏᴏɢʟᴇ sᴇᴀʀᴄʜ 』* \n_🔍 sᴇᴀʀᴄʜ : ${text}_\n\n`
                                   for (let g of res) {
                                   teks += `➠ *Title* : ${g.title}\n`
@@ -4368,20 +4368,20 @@ break
                           case 'img' : {
 //if (isSupport) return
 if (!text) return reply(`*🧑‍💻💬 ${m.pushName} Give Some search* \n_*🗳️ Example :* .img THIVANKA Nirmal Whatsapp bot_`)
-// const load = await ElisaBotMd.sendText(m.chat,WAIT)
-await ElisaBotMd.sendMessage(from, { react: { text: `🖼️`, key: m.key }})
+// const load = await ThivaBotMd.sendText(m.chat,WAIT)
+await ThivaBotMd.sendMessage(from, { react: { text: `🖼️`, key: m.key }})
  await fetchJson(`https://api.tiodevhost.my.id/api/search/googleimage?text=${text}`)
- .then(async (nima) => { 
- const imagee1 = nima.result[0].url
- const imagee2 = nima.result[1].url
- const imagee3 = nima.result[2].url
- const imagee4 = nima.result[3].url
- const imagee5 = nima.result[4].url
-await ElisaBotMd.sendMessage(m.chat, { image: { url : imagee1 }, caption: global.CAPTION }, { quoted: m })
-await ElisaBotMd.sendMessage(m.chat, { image: { url : imagee2 }, caption: global.CAPTION }, { quoted: m })
-await ElisaBotMd.sendMessage(m.chat, { image: { url : imagee3 }, caption: global.CAPTION }, { quoted: m })
-await ElisaBotMd.sendMessage(m.chat, { image: { url : imagee4 }, caption: global.CAPTION }, { quoted: m })
-await ElisaBotMd.sendMessage(m.chat, { image: { url : imagee5 }, caption: global.CAPTION }, { quoted: m })
+ .then(async (Thiva) => { 
+ const imagee1 = Thiva.result[0].url
+ const imagee2 = Thiva.result[1].url
+ const imagee3 = Thiva.result[2].url
+ const imagee4 = Thiva.result[3].url
+ const imagee5 = Thiva.result[4].url
+await ThivaBotMd.sendMessage(m.chat, { image: { url : imagee1 }, caption: global.CAPTION }, { quoted: m })
+await ThivaBotMd.sendMessage(m.chat, { image: { url : imagee2 }, caption: global.CAPTION }, { quoted: m })
+await ThivaBotMd.sendMessage(m.chat, { image: { url : imagee3 }, caption: global.CAPTION }, { quoted: m })
+await ThivaBotMd.sendMessage(m.chat, { image: { url : imagee4 }, caption: global.CAPTION }, { quoted: m })
+await ThivaBotMd.sendMessage(m.chat, { image: { url : imagee5 }, caption: global.CAPTION }, { quoted: m })
    
     }).catch((err) => reply(NOT_FOUND))
 
@@ -4389,7 +4389,7 @@ await ElisaBotMd.sendMessage(m.chat, { image: { url : imagee5 }, caption: global
 }
 break
                           case 'gimage': case 'img2': {  
-                          await ElisaBotMd.sendMessage(from, { react: { text: `🔍`, key: m.key }})
+                          await ThivaBotMd.sendMessage(from, { react: { text: `🔍`, key: m.key }})
                           if (!text) throw `${Lang.EXAMPLE}\n : ${prefix + command} ml nana`
                           let gis = require('g-i-s')
                           gis(text, async (error, result) => {
@@ -4403,11 +4403,11 @@ break
                                       caption: `*𝗚𝗢𝗢𝗚𝗟𝗘 𝗜𝗠𝗔𝗚𝗘*
 💫 *𝗤𝗨𝗘𝗥𝗬* : ${text}
 🔗 *𝗠𝗘𝗗𝗜𝗔 𝗨𝗥𝗟* : ${images}`,
-                                      footer: ElisaBotMd.user.name,
+                                      footer: ThivaBotMd.user.name,
                                       buttons: buttons,
                                       headerType: 4
                                   }
-                                  ElisaBotMd.sendMessage(m.chat, buttonMessage, { quoted: m })
+                                  ThivaBotMd.sendMessage(m.chat, buttonMessage, { quoted: m })
                           })*/
                           const buttons = [
                     {buttonId: `gimage ${text}`, buttonText: {displayText: '❯ NEXT IMAGE ❯'}, type: 1},
@@ -4424,7 +4424,7 @@ break
                     headerType: 4
                 }
                 
-               ElisaBotMd.sendMessage(m.chat, buttonMessage, { quoted: m })})
+               ThivaBotMd.sendMessage(m.chat, buttonMessage, { quoted: m })})
                
                           }
                           break
@@ -4432,14 +4432,14 @@ break
 var GIVEME = ''
 if (global.LANG == 'SI') GIVEME = "```👸💬 කරුනාකර මට වීඩියෝවක හෝ ගීතයක නමක් ලබාදෙන්න.```\n*උදාහරණ - .yt how to make THIVANKA Nirmal bot*"
 if (global.LANG == 'EN') GIVEME ="```👸💬 Please give me a video or song name.```\n *Example - .yt how to make THIVANKA Nirmal bot*"
-                                  await ElisaBotMd.sendMessage(from, { react: { text: `📽️`, key: m.key }})
+                                  await ThivaBotMd.sendMessage(from, { react: { text: `📽️`, key: m.key }})
                                   if (!text) return reply (GIVEME)
-                                  await ElisaBotMd.sendText(m.chat,mess.wait, m, )
+                                  await ThivaBotMd.sendText(m.chat,mess.wait, m, )
                                   let yts = require("yt-search")
                                   var svid = text.replace("shorts/","watch?v=")
                                   var s2vid = svid.replace("?feature=share","")
                                   yts(s2vid).then(async (search) => { 
-                                  let nima = search.all     
+                                  let Thiva = search.all     
 if (search.all[0].type == 'channel') {
 
                 const buttons = [
@@ -4466,10 +4466,10 @@ if (search.all[0].type == 'channel') {
                     headerType: 4
                 }
                 
-               ElisaBotMd.sendMessage(m.chat, buttonMessage, { quoted: m })
+               ThivaBotMd.sendMessage(m.chat, buttonMessage, { quoted: m })
                  
 } else if (search.all[0].type == 'video') {
-                let nima = search.all           
+                let Thiva = search.all           
                 const buttons = [
                     {buttonId: `selecttypebutton ${search.all[0].url}`, buttonText: {displayText: '🎬 VIDEO 🎬'}, type: 1},
                     {buttonId: `audioselecttypebutton  ${search.all[0].url} `, buttonText: {displayText: '🎧 AUDIO 🎧'}, type: 1},
@@ -4494,7 +4494,7 @@ if (search.all[0].type == 'channel') {
                     headerType: 4
                 }
                 
-               ElisaBotMd.sendMessage(m.chat, buttonMessage, { quoted: m })
+               ThivaBotMd.sendMessage(m.chat, buttonMessage, { quoted: m })
                  
 }})
                                   
@@ -4510,7 +4510,7 @@ const sdpid = rash.sddlid
 const hdmidpid = rash.sdmiddlid
 const hdpid = rash.hddlid
                               if (!text) throw `${Lang.EXAMPLE}\n : *${prefix + command} How to make THIVANKA Nirmal V2*`
-                                  await ElisaBotMd.sendMessage(from, { react: { text: `🔄`, key: m.key }})
+                                  await ThivaBotMd.sendMessage(from, { react: { text: `🔄`, key: m.key }})
                                   let yts = require("yt-search")
                                   var svid = text.replace("shorts/","watch?v=")
                                   var s2vid = svid.replace("?feature=share","")
@@ -4543,12 +4543,12 @@ const listMessage = {
   sections
 }
 
-const me = await ElisaBotMd.sendMessage(m.chat, listMessage)}).catch((err) => m_reply('*Sorry, Can\'t Find your reqest ❗*'))
-await ElisaBotMd.sendMessage(from, { react: { text: `🎦`, key: m.key }})
+const me = await ThivaBotMd.sendMessage(m.chat, listMessage)}).catch((err) => m_reply('*Sorry, Can\'t Find your reqest ❗*'))
+await ThivaBotMd.sendMessage(from, { react: { text: `🎦`, key: m.key }})
 await new Promise(r => setTimeout(r, 2000)) 
-await ElisaBotMd.sendMessage(from, { react: { text: `⏳`, key: m.key }})
+await ThivaBotMd.sendMessage(from, { react: { text: `⏳`, key: m.key }})
 await new Promise(r => setTimeout(r, 2000)) 
-await ElisaBotMd.sendMessage(from, { react: { text: `🎦`, key: m.key }})
+await ThivaBotMd.sendMessage(from, { react: { text: `🎦`, key: m.key }})
   }
             break
 
@@ -4559,9 +4559,9 @@ if (global.LANG == 'EN') GIVEME ="```👸💬 Please give me a song name.```\n *
 const rash = await fetchJson(`https://github.com/ThivankaOnline/ThivaBot/raw/main/SongVideo.jsons/songdl.json`)
 const audidd = rash.audcmd
 const docidd = rash.doccmd
-                              await ElisaBotMd.sendMessage(from, { react: { text: `🎵`, key: m.key }})
+                              await ThivaBotMd.sendMessage(from, { react: { text: `🎵`, key: m.key }})
                                   if (!text) return reply(GIVEME)
-                                  await ElisaBotMd.sendText(m.chat, mess.wait, m, )
+                                  await ThivaBotMd.sendText(m.chat, mess.wait, m, )
                                   let yts = require("yt-search")
                                  // let search = await yts(text)
                                   yts(text).then(async (search) => {  
@@ -4595,7 +4595,7 @@ const docidd = rash.doccmd
                     headerType: 4
                 }
                 
-               ElisaBotMd.sendMessage(m.chat, buttonMessage, { quoted: m })})
+               ThivaBotMd.sendMessage(m.chat, buttonMessage, { quoted: m })})
                  
                              }
                              break
@@ -4609,14 +4609,14 @@ var GIVEME = ''
 if (global.LANG == 'SI') GIVEME = "```👸💬 කරුනාකර මට වීඩියෝවක නමක් ලබාදෙන්න.```\n*උදාහරණ - .yt how to make THIVANKA Nirmal bot*"
 if (global.LANG == 'EN') GIVEME ="```👸💬 Please give me a video name.```\n *Example - .video how to make THIVANKA Nirmal bot*"
 
-                          //await ElisaBotMd.sendMessage(from, { react: { text: `📽️`, key: m.key }})
+                          //await ThivaBotMd.sendMessage(from, { react: { text: `📽️`, key: m.key }})
                                   if (!text) return reply (GIVEME)
-                                  await ElisaBotMd.sendText(m.chat, mess.wait, m, )
+                                  await ThivaBotMd.sendText(m.chat, mess.wait, m, )
                                   let yts = require("yt-search")
                                   var svid = text.replace("shorts/","watch?v=")
                                   var s2vid = svid.replace("?feature=share","")
                                   yts(s2vid).then(async (search) => { 
-                                  let nima = search.all     
+                                  let Thiva = search.all     
 if (search.all[0].type == 'channel') {
 
                 const buttons = [
@@ -4644,14 +4644,14 @@ if (search.all[0].type == 'channel') {
                     headerType: 4
                 }
                 
-               ElisaBotMd.sendMessage(m.chat, buttonMessage, { quoted: m })
+               ThivaBotMd.sendMessage(m.chat, buttonMessage, { quoted: m })
                  
 } else if (search.all[0].type == 'video') {
 const rash = await fetchJson(`https://github.com/ThivankaOnline/ThivaBot/raw/main/SongVideo.jsons/songdl.json`)
 const sdpid = rash.sddlid
 const hdmidpid = rash.sdmiddlid
 const hdpid = rash.hddlid
-                let nima = search.all           
+                let Thiva = search.all           
                 const buttons = [
                     {buttonId: `${sdpid} ${search.all[0].url}`, buttonText: {displayText: '360p'}, type: 1},
                     {buttonId: `${hdmidpid} ${search.all[0].url} 480p`, buttonText: {displayText: '480p'}, type: 1},
@@ -4677,7 +4677,7 @@ const hdpid = rash.hddlid
                     headerType: 4
                 }
                 
-               ElisaBotMd.sendMessage(m.chat, buttonMessage, { quoted: m })
+               ThivaBotMd.sendMessage(m.chat, buttonMessage, { quoted: m })
                  
 }})
                                   
@@ -4690,32 +4690,32 @@ if (global.LANG == 'SI') GIVEME = "```👸💬 කරුනාකර මට ග�
 if (global.LANG == 'EN') GIVEME ="```👸💬 Please give me a song name.```\n *Example - .song2 lelena*"
 text1 = q.split(";")[0]
 text2 = q.split(";")[1]
-await ElisaBotMd.sendMessage(from, { react: { text: `⌛`, key: m.key }})
+await ThivaBotMd.sendMessage(from, { react: { text: `⌛`, key: m.key }})
 
-                          //await ElisaBotMd.sendMessage(from, { react: { text: `🎧`, key: m.key }})
+                          //await ThivaBotMd.sendMessage(from, { react: { text: `🎧`, key: m.key }})
                                   if (!text) return reply (GIVEME)
                                   let yts = require("yt-search")
-                                  //const load = await ElisaBotMd.sendText(m.chat, `\n*📥 Downloading ${m.pushName} your song...*\n` )
-                                  const load = await ElisaBotMd.sendText(m.chat,global.SONG_DOWN, m, )
+                                  //const load = await ThivaBotMd.sendText(m.chat, `\n*📥 Downloading ${m.pushName} your song...*\n` )
+                                  const load = await ThivaBotMd.sendText(m.chat,global.SONG_DOWN, m, )
                                   yts(text).then(async (search) => {  
                                   
-                                  let nima = search.all
+                                  let Thiva = search.all
                                   let media = await fetchJson(`https://api.tiodevhost.my.id/api/dowloader/yt?url=${search.all[0].url}`)
                                   buf = await getBuffer(media.result.thumb)
-                                  await  ElisaBotMd.sendMessage(m.chat, { delete: load.key })
-                                  //const up = await ElisaBotMd.sendText(m.chat, `\n*📤 Uploading ${m.pushName} your song...*\n` )
-                                  const up = await ElisaBotMd.sendText(m.chat, global.SONG_UP, m, )
+                                  await  ThivaBotMd.sendMessage(m.chat, { delete: load.key })
+                                  //const up = await ThivaBotMd.sendText(m.chat, `\n*📤 Uploading ${m.pushName} your song...*\n` )
+                                  const up = await ThivaBotMd.sendText(m.chat, global.SONG_UP, m, )
                                   
                                   if (media.result.song_size >= 120000) return reply('*FILE SIZE IS BIG !!!*')
-                                  const doc = await ElisaBotMd.sendMessage(m.chat, {document:{ url: media.result.mp3 }, mimetype:"audio/mpeg", fileName: `${media.result.Title}.mp3`,  quoted: m, contextInfo: { externalAdReply:{
+                                  const doc = await ThivaBotMd.sendMessage(m.chat, {document:{ url: media.result.mp3 }, mimetype:"audio/mpeg", fileName: `${media.result.Title}.mp3`,  quoted: m, contextInfo: { externalAdReply:{
                 title:`${media.result.Title}`,
                 body:"YOUTUBE MP3",
                 mediaType:2,
                 thumbnail:buf,
                 mediaUrl:`${text}`, 
                 sourceUrl: `${global.ytchannel}` }}}, {quoted:m})
-                await ElisaBotMd.sendMessage(m.chat, { delete: up.key })
-                                  await ElisaBotMd.sendMessage(from, { react: { text: `🎶`, key: doc.key }})
+                await ThivaBotMd.sendMessage(m.chat, { delete: up.key })
+                                  await ThivaBotMd.sendMessage(from, { react: { text: `🎶`, key: doc.key }})
 
                                   }).catch((err) => m_reply(NOT_FOUND))
                            }
@@ -4725,32 +4725,32 @@ var GIVEME = ''
 if (global.LANG == 'SI') GIVEME = "```👸💬 කරුනාකර මට ගීතයක නමක් ලබාදෙන්න.```\n*උදාහරණ - .song2 lelena*"
 if (global.LANG == 'EN') GIVEME ="```👸💬 Please give me a song name.```\n *Example - .song2 lelena*"
 
-await ElisaBotMd.sendMessage(from, { react: { text: `⌛`, key: m.key }})
+await ThivaBotMd.sendMessage(from, { react: { text: `⌛`, key: m.key }})
 
-                          //await ElisaBotMd.sendMessage(from, { react: { text: `🎧`, key: m.key }})
+                          //await ThivaBotMd.sendMessage(from, { react: { text: `🎧`, key: m.key }})
                                    if (!text) return reply (GIVEME)
                                   let yts = require("yt-search")
-                                  //const load = await ElisaBotMd.sendText(m.chat, `\n*📥 Downloading ${m.pushName} your song...*\n` )
-                                  const load = await ElisaBotMd.sendText(m.chat,global.SONG_DOWN, m, )
+                                  //const load = await ThivaBotMd.sendText(m.chat, `\n*📥 Downloading ${m.pushName} your song...*\n` )
+                                  const load = await ThivaBotMd.sendText(m.chat,global.SONG_DOWN, m, )
                                   yts(text).then(async (search) => {  
                                   
-                                  let nima = search.all
+                                  let Thiva = search.all
                                   let media = await fetchJson(`https://test-apiyaa.herokuapp.com/api/dowloader/yt?url=${search.all[0].url}`)
                                   buf = await getBuffer(media.result.thumb)
-                                  await  ElisaBotMd.sendMessage(m.chat, { delete: load.key })
-                                  //const up = await ElisaBotMd.sendText(m.chat, `\n*📤 Uploading ${m.pushName} your song...*\n` )
-                                  const up = await ElisaBotMd.sendText(m.chat, global.SONG_UP, m, )
+                                  await  ThivaBotMd.sendMessage(m.chat, { delete: load.key })
+                                  //const up = await ThivaBotMd.sendText(m.chat, `\n*📤 Uploading ${m.pushName} your song...*\n` )
+                                  const up = await ThivaBotMd.sendText(m.chat, global.SONG_UP, m, )
                                   
                                   if (media.result.song_size >= 120000) return reply('*FILE SIZE IS BIG !!!*')
-                                  const doc = await ElisaBotMd.sendMessage(m.chat, {audio:{ url: media.result.mp3 }, mimetype:"audio/mpeg", fileName: `${media.result.Title}.mp3`,  quoted: m, contextInfo: { externalAdReply:{
+                                  const doc = await ThivaBotMd.sendMessage(m.chat, {audio:{ url: media.result.mp3 }, mimetype:"audio/mpeg", fileName: `${media.result.Title}.mp3`,  quoted: m, contextInfo: { externalAdReply:{
                 title:`${media.result.Title}`,
                 body:"YOUTUBE MP3",
                 mediaType:2,
                 thumbnail:buf,
                 mediaUrl:`${text}`, 
                 sourceUrl: `${global.ytchannel}` }}}, {quoted:m})
-                await ElisaBotMd.sendMessage(m.chat, { delete: up.key })
-                                  await ElisaBotMd.sendMessage(from, { react: { text: `🎶`, key: doc.key }})
+                await ThivaBotMd.sendMessage(m.chat, { delete: up.key })
+                                  await ThivaBotMd.sendMessage(from, { react: { text: `🎶`, key: doc.key }})
 
                                   }).catch((err) => m_reply(NOT_FOUND))
                            }
@@ -4761,28 +4761,28 @@ if (global.LANG == 'SI') GIVEME = "```👸💬 කරුනාකර මට ග�
 if (global.LANG == 'EN') GIVEME ="```👸💬 Please give me a song name.```\n *Example - .song3 lelena*"
 text1 = q.split(";")[0]
 text2 = q.split(";")[1]
-                          await ElisaBotMd.sendMessage(from, { react: { text: `🎧`, key: m.key }})
+                          await ThivaBotMd.sendMessage(from, { react: { text: `🎧`, key: m.key }})
                                   if (!text) return reply (GIVEME)
                                   let yts = require("yt-search")
-                                  //const load = await ElisaBotMd.sendText(m.chat, `\n*📥 Downloading ${m.pushName} your song...*\n` )
-                                  const laod = await ElisaBotMd.sendText(m.chat,global.SONG_DOWN, m, )
+                                  //const load = await ThivaBotMd.sendText(m.chat, `\n*📥 Downloading ${m.pushName} your song...*\n` )
+                                  const laod = await ThivaBotMd.sendText(m.chat,global.SONG_DOWN, m, )
                                   yts(text).then(async (search) => {  
-                                  let nima = search.all
+                                  let Thiva = search.all
                           
                           const akur = await fetchJson(`https://a.api.akuari.my.id/downloader/youtube3?link=${search.all[0].url}&type=360`)
                           const gettsong = akur.audio.audio
-                          await  ElisaBotMd.sendMessage(m.chat, { delete: load.key })
-                          //const up = await ElisaBotMd.sendText(m.chat, `\n*📤 Uploading ${m.pushName} your song...*\n` )
-                          const up = await ElisaBotMd.sendText(m.chat, global.SONG_UP, m, )
+                          await  ThivaBotMd.sendMessage(m.chat, { delete: load.key })
+                          //const up = await ThivaBotMd.sendText(m.chat, `\n*📤 Uploading ${m.pushName} your song...*\n` )
+                          const up = await ThivaBotMd.sendText(m.chat, global.SONG_UP, m, )
                           if ( text2 === 'audio' ){
                                  // if (media.filesize >= 120000) return reply('❗ Audio size is too big '+util.format(media))
-                                  await ElisaBotMd.sendMessage(m.chat, { audio: { url : gettsong }, mimetype: 'audio/mpeg', fileName: `${akur.title}.mp3` }, { quoted: m })
-                                  return await ElisaBotMd.sendMessage(m.chat, { delete: up.key })
+                                  await ThivaBotMd.sendMessage(m.chat, { audio: { url : gettsong }, mimetype: 'audio/mpeg', fileName: `${akur.title}.mp3` }, { quoted: m })
+                                  return await ThivaBotMd.sendMessage(m.chat, { delete: up.key })
                                   
                                   }
                                  // if (media.filesize >= 120000) return reply('❗ Audio size is too big '+util.format(media))
-                                  await ElisaBotMd.sendMessage(m.chat, { document: { url : gettsong }, mimetype: 'audio/mpeg', fileName: `${akur.title}.mp3` }, { quoted: m })
-                                  await ElisaBotMd.sendMessage(m.chat, { delete: up.key })
+                                  await ThivaBotMd.sendMessage(m.chat, { document: { url : gettsong }, mimetype: 'audio/mpeg', fileName: `${akur.title}.mp3` }, { quoted: m })
+                                  await ThivaBotMd.sendMessage(m.chat, { delete: up.key })
                                   
                           }).catch((err) => m_reply(err))
                           }
@@ -4794,9 +4794,9 @@ if (global.LANG == 'EN') GIVEME ="```👸💬 Please give me a video or song nam
 text1 = q.split(";")[0]
 text2 = q.split(";")[1]
                           if (!text) return reply(GIVEME)
-                          await ElisaBotMd.sendMessage(from, { react: { text: `🎥`, key: m.key }})
+                          await ThivaBotMd.sendMessage(from, { react: { text: `🎥`, key: m.key }})
                           const yts = require("yt-search")
-                          const load = await ElisaBotMd.sendText(m.chat, `📥 Downloading ${m.pushName} your video...*`, m, )
+                          const load = await ThivaBotMd.sendText(m.chat, `📥 Downloading ${m.pushName} your video...*`, m, )
                           const search = await yts(text)
                         //  for (let i of search.all)  
                           const vid = await fetchJson(`https://youtubeapisdownloader.vercel.app/youtube/downloader/video?url=${search.all[0].url}`)
@@ -4809,43 +4809,43 @@ text2 = q.split(";")[1]
                           `
                           const sdsize = vid.result.downloads.tubemp3_biz[0].size
                           const hdsize = vid.result.downloads.tubemp3_biz[1].size
-                          await  ElisaBotMd.sendMessage(m.chat, { delete: load.key })
+                          await  ThivaBotMd.sendMessage(m.chat, { delete: load.key })
                           if (text.split(";")[1] == 'hd'){
                           if (hdsize.split('MB')[0] >= 110) return reply('*CAN\'T UPLODE YOUR FILE* \n_YOUR VIDEO BIGGER THAN 100mb_\n\nfile size')
                           const video = vid.result.downloads.tubemp3_biz[1].url
-                          const upload = await ElisaBotMd.sendText(m.chat, `*📤 Uploading ${m.pushName} your video...*`, m, )
-                          await ElisaBotMd.sendMessage(m.chat, { video: { url: video }, mimetype: 'video/mp4',jpegThumbnail:buf, caption: capp }, { quoted: m })
+                          const upload = await ThivaBotMd.sendText(m.chat, `*📤 Uploading ${m.pushName} your video...*`, m, )
+                          await ThivaBotMd.sendMessage(m.chat, { video: { url: video }, mimetype: 'video/mp4',jpegThumbnail:buf, caption: capp }, { quoted: m })
                           return 
                           }
                           if (sdsize.split('MB')[0] >= 110) return reply('*CAN\'T UPLODE YOUR FILE* \n_YOUR VIDEO BIGGER THAN 100mb_\n\nfile size')
                           const video = vid.result.downloads.tubemp3_biz[0].url
-                          const upload = await ElisaBotMd.sendText(m.chat, `*📤 Uploading ${m.pushName} your video...*`, m, )
-                          await ElisaBotMd.sendMessage(m.chat, { video: { url: video }, mimetype: 'video/mp4',jpegThumbnail:buf, caption: capp }, { quoted: m })
-                          await  ElisaBotMd.sendMessage(m.chat, { delete: upload.key })
+                          const upload = await ThivaBotMd.sendText(m.chat, `*📤 Uploading ${m.pushName} your video...*`, m, )
+                          await ThivaBotMd.sendMessage(m.chat, { video: { url: video }, mimetype: 'video/mp4',jpegThumbnail:buf, caption: capp }, { quoted: m })
+                          await  ThivaBotMd.sendMessage(m.chat, { delete: upload.key })
                           }     
                           break 
                           case 'video2' :{
-                          const thub = await fetchJson('https://github.com/ThivankaOnline/UPLOADS/raw/main/JSON/elisadetails.json')
+                          const thub = await fetchJson('https://github.com/ThivankaOnline/UPLOADS/raw/main/JSON/Thivadetails.json')
                           buf = await getBuffer(thub.YT_THUB)
                           if (!text) return reply('*👸💬 Need video name or url*')
                           if (text.includes('https://youtu')){
                          // if (!text.includes('-')) return reply('*👸💬 Please give me a correct type*\n_example .video2 https://youtube.com/watch?v=on3sJ8OlH8M - 360p')
                           const quality = args[1] ? args[1] : '360'
-                          await ElisaBotMd.sendMessage(from, { react: { text: `⬇️`, key: m.key }})
-                          ///const load = await ElisaBotMd.sendText(m.chat, `*📥 Downloading ${m.pushName} your video...*`, m, )
-                          const nima = await fetchJson(`https://api.akuari.my.id/downloader/youtube3?link=${args[0]}&type=${quality}`)
-                          await ElisaBotMd.sendMessage(from, { react: { text: `⬆️`, key: m.key }})
-                       ///   const upload = await ElisaBotMd.sendText(m.chat, `*📤 Uploading ${m.pushName} your video...*`, m, )
-                          if (nima.mp4.size.split('MB')[0] >= 110) return m_reply('*FILE SIZE IS BIG !!!*')
-                          const ytvid = await ElisaBotMd.sendMessage(m.chat, { video: { url: nima.mp4.download }, mimetype: 'video/mp4',jpegThumbnail:buf, caption: `${global.cap}\n\n *🏷 title :*️ ${nima.title}\n*🧩 quality : ${quality}p ` }, { quoted: m })
-                          await ElisaBotMd.sendMessage(from, { react: { text: `✅`, key: m.key }})
-                          await ElisaBotMd.sendMessage(from, { react: { text: `📽️`, key: ytvid.key }})
+                          await ThivaBotMd.sendMessage(from, { react: { text: `⬇️`, key: m.key }})
+                          ///const load = await ThivaBotMd.sendText(m.chat, `*📥 Downloading ${m.pushName} your video...*`, m, )
+                          const Thiva = await fetchJson(`https://api.akuari.my.id/downloader/youtube3?link=${args[0]}&type=${quality}`)
+                          await ThivaBotMd.sendMessage(from, { react: { text: `⬆️`, key: m.key }})
+                       ///   const upload = await ThivaBotMd.sendText(m.chat, `*📤 Uploading ${m.pushName} your video...*`, m, )
+                          if (Thiva.mp4.size.split('MB')[0] >= 110) return m_reply('*FILE SIZE IS BIG !!!*')
+                          const ytvid = await ThivaBotMd.sendMessage(m.chat, { video: { url: Thiva.mp4.download }, mimetype: 'video/mp4',jpegThumbnail:buf, caption: `${global.cap}\n\n *🏷 title :*️ ${Thiva.title}\n*🧩 quality : ${quality}p ` }, { quoted: m })
+                          await ThivaBotMd.sendMessage(from, { react: { text: `✅`, key: m.key }})
+                          await ThivaBotMd.sendMessage(from, { react: { text: `📽️`, key: ytvid.key }})
                          
                           } else {
                     m_reply(mess.wait)
                     const yts = require("yt-search")
-                    const nima = await yts(text)
-                    const search = nima.all
+                    const Thiva = await yts(text)
+                    const search = Thiva.all
                     
                    let sections = []   
   for (let i of search) {
@@ -4865,7 +4865,7 @@ text2 = q.split(";")[1]
      }
      sections.push(list)   
      }
-  const sendm =  ElisaBotMd.sendMessage(
+  const sendm =  ThivaBotMd.sendMessage(
       m.chat, 
       {
        text: `${text} *Here is the list of videos, click the button below to choose*\n\n${m.pushName}`,
@@ -4884,12 +4884,12 @@ text2 = q.split(";")[1]
                           case 'ytdl4' : {
                           let boltc = require('@bochilteam/scraper')
                           await boltc.youtubedlv2(`${text}`)
-                          .then(async(nima) => {
-                          const dl_url = await nima.video['360p'].download()
-                          const dl_url3 = await nima.video['240p'].download()
-                          const dl_url2 = await nima.video['720p'].download()
-                          const dl_url4 = await nima.audio['128kbps'].download()
-                          await ElisaBotMd.sendText(m.chat,`
+                          .then(async(Thiva) => {
+                          const dl_url = await Thiva.video['360p'].download()
+                          const dl_url3 = await Thiva.video['240p'].download()
+                          const dl_url2 = await Thiva.video['720p'].download()
+                          const dl_url4 = await Thiva.audio['128kbps'].download()
+                          await ThivaBotMd.sendText(m.chat,`
 360 ${dl_url}
 240 ${dl_url2}
 720 ${dl_url3}
@@ -4897,45 +4897,45 @@ audio ${dl_url4}
     
                           
                                                 
-${jsonformat(nima)}`)
+${jsonformat(Thiva)}`)
                           })
                           }
                           break
                           case 'bolchidl' : {
                           let boltc = require('@bochilteam/scraper')
-                          const nima = await boltc.youtubedl(`${text}`)
-                          const nima1 = await boltc.youtubedlv2(`${text}`)
-                          const nima2 = await boltc.youtubedl3(`${text}`)
-                          reply(`${jsonformat(nima)}
+                          const Thiva = await boltc.youtubedl(`${text}`)
+                          const Thiva1 = await boltc.youtubedlv2(`${text}`)
+                          const Thiva2 = await boltc.youtubedl3(`${text}`)
+                          reply(`${jsonformat(Thiva)}
 ▷▷▷
 
-${jsonformat(nima1)}
+${jsonformat(Thiva1)}
 
 ▷▷▷▷
 
-${jsonformat(nima2)}
+${jsonformat(Thiva2)}
 `)
                           }
                           break
                           case 'bolchiyt' : {
                           let boltc = require('@bochilteam/scraper')
-                          const nima = await boltc.youtubeSearch(`${text}`)
-                          reply(`${jsonformat(nima)}`)
+                          const Thiva = await boltc.youtubeSearch(`${text}`)
+                          reply(`${jsonformat(Thiva)}`)
                           }
                           break
                           case 'ytdl5' : {
                           const url = text.split(";")[0]
                           const query = text.split(";")[1]
                           const api = require("onx-api")
-const nima1 = await api.downloader.youtube.ytmp3(url)
-const nima2 = await api.downloader.youtube.ytmp4(url)
-const nima3 = await api.downloader.youtube.ytplay(query)
-const nima4 = await api.downloader.youtube.ytplayvid(query)
+const Thiva1 = await api.downloader.youtube.ytmp3(url)
+const Thiva2 = await api.downloader.youtube.ytmp4(url)
+const Thiva3 = await api.downloader.youtube.ytplay(query)
+const Thiva4 = await api.downloader.youtube.ytplayvid(query)
 
-await ElisaBotMd.sendText(m.chat , `${jsonformat(nima4)}`)
-await ElisaBotMd.sendText(m.chat , `${jsonformat(nima1)}`)
-await ElisaBotMd.sendText(m.chat , `${jsonformat(nima2)}`)
-await ElisaBotMd.sendText(m.chat , `${jsonformat(nima3)}`)
+await ThivaBotMd.sendText(m.chat , `${jsonformat(Thiva4)}`)
+await ThivaBotMd.sendText(m.chat , `${jsonformat(Thiva1)}`)
+await ThivaBotMd.sendText(m.chat , `${jsonformat(Thiva2)}`)
+await ThivaBotMd.sendText(m.chat , `${jsonformat(Thiva3)}`)
 
 
 
@@ -4943,120 +4943,120 @@ await ElisaBotMd.sendText(m.chat , `${jsonformat(nima3)}`)
                           break
                           case '144getvideo' : {
                          if(!text) return m_reply('need text')
-                          await ElisaBotMd.sendMessage(from, { react: { text: `📥`, key: m.key }})
-                          await ElisaBotMd.sendText(m.chat,mess.wait)
+                          await ThivaBotMd.sendMessage(from, { react: { text: `📥`, key: m.key }})
+                          await ThivaBotMd.sendText(m.chat,mess.wait)
                           const yts = require("yt-search")
                           const search = await yts(`${args[0]}`)
                           let boltc = require('@bochilteam/scraper')
                           await boltc.youtubedlv2(search.all[0].url)
                           
-                          .then(async(nima) => {
-                          const dl_url = await nima.video['144p'].download()
-                          const size = nima.video['144p'].fileSize
+                          .then(async(Thiva) => {
+                          const dl_url = await Thiva.video['144p'].download()
+                          const size = Thiva.video['144p'].fileSize
                           if(size >= 120000) return m_reply('*FILE SIZE IS SO BIG !!!*')
-                       //   if(nima.video.720p.fileSize >= 110000) return m_reply('*FILE SIZE IS SO BIG !!!*')
-                          await ElisaBotMd.sendMessage(m.chat, { video: { url: dl_url }, mimetype: 'video/mp4', caption: global.cap }, { quoted: m })
+                       //   if(Thiva.video.720p.fileSize >= 110000) return m_reply('*FILE SIZE IS SO BIG !!!*')
+                          await ThivaBotMd.sendMessage(m.chat, { video: { url: dl_url }, mimetype: 'video/mp4', caption: global.cap }, { quoted: m })
                           }).catch((err) => m_reply(NOT_FOUND))
                       
                           }
                           break
                           case '240getvideo' : {
                          if(!text) return m_reply('need text')
-                          await ElisaBotMd.sendMessage(from, { react: { text: `📥`, key: m.key }})
-                          await ElisaBotMd.sendText(m.chat,mess.wait)
+                          await ThivaBotMd.sendMessage(from, { react: { text: `📥`, key: m.key }})
+                          await ThivaBotMd.sendText(m.chat,mess.wait)
                           const yts = require("yt-search")
                           const search = await yts(`${args[0]}`)
                           let boltc = require('@bochilteam/scraper')
                           await boltc.youtubedlv2(search.all[0].url)
                           
-                          .then(async(nima) => {
-                          const dl_url = await nima.video['240p'].download()
-                          const size = nima.video['240p'].fileSize
+                          .then(async(Thiva) => {
+                          const dl_url = await Thiva.video['240p'].download()
+                          const size = Thiva.video['240p'].fileSize
                           if(size >= 120000) return m_reply('*FILE SIZE IS SO BIG !!!*')
-                       //   if(nima.video.720p.fileSize >= 110000) return m_reply('*FILE SIZE IS SO BIG !!!*')
-                          await ElisaBotMd.sendMessage(m.chat, { video: { url: dl_url }, mimetype: 'video/mp4', caption: global.cap }, { quoted: m })
+                       //   if(Thiva.video.720p.fileSize >= 110000) return m_reply('*FILE SIZE IS SO BIG !!!*')
+                          await ThivaBotMd.sendMessage(m.chat, { video: { url: dl_url }, mimetype: 'video/mp4', caption: global.cap }, { quoted: m })
                           }).catch((err) => m_reply(NOT_FOUND))
                       
                           }
                           break
                           case 'getvideo' : {
                           if(!text) return m_reply('need text')
-                          await ElisaBotMd.sendMessage(from, { react: { text: `📥`, key: m.key }})
-                          await ElisaBotMd.sendText(m.chat,mess.wait)
+                          await ThivaBotMd.sendMessage(from, { react: { text: `📥`, key: m.key }})
+                          await ThivaBotMd.sendText(m.chat,mess.wait)
                           const yts = require("yt-search")
                           const search = await yts(text)
                           let boltc = require('@bochilteam/scraper')
                           await boltc.youtubedlv2(search.all[0].url)
-                          .then(async(nima) => {
-                          const dl_url = await nima.video['360p'].download()
-                          const size = nima.video['360p'].fileSize
+                          .then(async(Thiva) => {
+                          const dl_url = await Thiva.video['360p'].download()
+                          const size = Thiva.video['360p'].fileSize
                           if(size >= 120000) return m_reply('*FILE SIZE IS SO BIG !!!*')
-                          await ElisaBotMd.sendMessage(m.chat, { video: { url: dl_url }, mimetype: 'video/mp4',jpegThumbnail:buf, caption: global.cap }, { quoted: m })
-                          //await ElisaBotMd.sendMessage(m.chat, { video: { url: dl_url }, mimetype: 'video/mp4', caption: `${global.cap}` }, { quoted: m })
+                          await ThivaBotMd.sendMessage(m.chat, { video: { url: dl_url }, mimetype: 'video/mp4',jpegThumbnail:buf, caption: global.cap }, { quoted: m })
+                          //await ThivaBotMd.sendMessage(m.chat, { video: { url: dl_url }, mimetype: 'video/mp4', caption: `${global.cap}` }, { quoted: m })
                           }).catch((err) => m_reply(NOT_FOUND))
                       
                           }
                           break
                           case '480getvideo' : {
                           if(!text) return m_reply('need text')
-                          await ElisaBotMd.sendMessage(from, { react: { text: `📥`, key: m.key }})
-                          await ElisaBotMd.sendText(m.chat,mess.wait)
+                          await ThivaBotMd.sendMessage(from, { react: { text: `📥`, key: m.key }})
+                          await ThivaBotMd.sendText(m.chat,mess.wait)
                           const yts = require("yt-search")
                           const search = await yts(text.split("480")[0])
                           let boltc = require('@bochilteam/scraper')
                           await boltc.youtubedlv2(search.all[0].url)
-                          .then(async(nima) => {
-                          const dl_url = await nima.video['480p'].download()
-                          const size = nima.video['480p'].fileSize
+                          .then(async(Thiva) => {
+                          const dl_url = await Thiva.video['480p'].download()
+                          const size = Thiva.video['480p'].fileSize
                           if(size >= 120000) return m_reply('*FILE SIZE IS SO BIG !!!*')
-                          await ElisaBotMd.sendMessage(m.chat, { video: { url: dl_url }, mimetype: 'video/mp4', caption: global.cap }, { quoted: m })
+                          await ThivaBotMd.sendMessage(m.chat, { video: { url: dl_url }, mimetype: 'video/mp4', caption: global.cap }, { quoted: m })
                           }).catch((err) => m_reply(NOT_FOUND))
                       
                           }
                           break
                           case '720getvideo' : {
                          if(!text) return m_reply('need text')
-                          await ElisaBotMd.sendMessage(from, { react: { text: `📥`, key: m.key }})
-                          await ElisaBotMd.sendText(m.chat,mess.wait)
+                          await ThivaBotMd.sendMessage(from, { react: { text: `📥`, key: m.key }})
+                          await ThivaBotMd.sendText(m.chat,mess.wait)
                           const yts = require("yt-search")
                           const search = await yts(`${args[0]}`)
                           let boltc = require('@bochilteam/scraper')
                           await boltc.youtubedlv2(search.all[0].url)
                           
-                          .then(async(nima) => {
-                          const dl_url = await nima.video['720p'].download()
-                          const size = nima.video['720p'].fileSize
+                          .then(async(Thiva) => {
+                          const dl_url = await Thiva.video['720p'].download()
+                          const size = Thiva.video['720p'].fileSize
                           if(size >= 120000) return m_reply('*FILE SIZE IS SO BIG !!!*')
-                       //   if(nima.video.720p.fileSize >= 110000) return m_reply('*FILE SIZE IS SO BIG !!!*')
-                          await ElisaBotMd.sendMessage(m.chat, { video: { url: dl_url }, mimetype: 'video/mp4', caption: global.cap }, { quoted: m })
+                       //   if(Thiva.video.720p.fileSize >= 110000) return m_reply('*FILE SIZE IS SO BIG !!!*')
+                          await ThivaBotMd.sendMessage(m.chat, { video: { url: dl_url }, mimetype: 'video/mp4', caption: global.cap }, { quoted: m })
                           }).catch((err) => m_reply(NOT_FOUND))
                       
                           }
                           break
                           case 'song3' : {
                           if(!text) return m_reply('need text')
-                         // await ElisaBotMd.sendMessage(from, { react: { text: `📥`, key: m.key }})
-                          const down = await ElisaBotMd.sendText(m.chat,global.SONG_DOWN,m,)
+                         // await ThivaBotMd.sendMessage(from, { react: { text: `📥`, key: m.key }})
+                          const down = await ThivaBotMd.sendText(m.chat,global.SONG_DOWN,m,)
                           const yts = require("yt-search")
                           const search = await yts(text)
                           const buf = await getBuffer(search.all[0].thumbnail)
                           const boltc = require('@bochilteam/scraper')
                           await boltc.youtubedlv2(search.all[0].url)
-                          .then(async(nima) => {
-                          const dl_url = await nima.audio['128kbps'].download()
-                          await ElisaBotMd.sendMessage(m.chat,{delete : down.key }) 
-                          const up = await ElisaBotMd.sendText(m.chat,global.SONG_UP,m,)
-                          const doc = await ElisaBotMd.sendMessage(m.chat, {document:{ url: dl_url }, mimetype:"audio/mpeg", fileName: `${nima.title}.mp3`,  quoted: m, contextInfo: { externalAdReply:{
-                title:`${nima.title}`,
+                          .then(async(Thiva) => {
+                          const dl_url = await Thiva.audio['128kbps'].download()
+                          await ThivaBotMd.sendMessage(m.chat,{delete : down.key }) 
+                          const up = await ThivaBotMd.sendText(m.chat,global.SONG_UP,m,)
+                          const doc = await ThivaBotMd.sendMessage(m.chat, {document:{ url: dl_url }, mimetype:"audio/mpeg", fileName: `${Thiva.title}.mp3`,  quoted: m, contextInfo: { externalAdReply:{
+                title:`${Thiva.title}`,
                 body:"YOUTUBE MP3",
                 mediaType:2,
                 thumbnail:buf,
                 mediaUrl:`${text}`, 
                 sourceUrl: `${global.ytchannel}` }}}, {quoted:m})
-                await ElisaBotMd.sendMessage(m.chat, { delete: up.key })
-                                  await ElisaBotMd.sendMessage(from, { react: { text: `🎶`, key: doc.key }})
-//await ElisaBotMd.sendMessage(m.chat,{delete : up.key }) 
-                           //await ElisaBotMd.sendMessage(from, { react: { text: `🎶`, key: m.key }})
+                await ThivaBotMd.sendMessage(m.chat, { delete: up.key })
+                                  await ThivaBotMd.sendMessage(from, { react: { text: `🎶`, key: doc.key }})
+//await ThivaBotMd.sendMessage(m.chat,{delete : up.key }) 
+                           //await ThivaBotMd.sendMessage(from, { react: { text: `🎶`, key: m.key }})
 
                                   }).catch((err) => m_reply(err))
                       
@@ -5064,18 +5064,18 @@ await ElisaBotMd.sendText(m.chat , `${jsonformat(nima3)}`)
                           break
                           case 'asong' : {
                           if(!text) return m_reply('need text')
-                          await ElisaBotMd.sendMessage(from, { react: { text: `⬇️`, key: m.key }})
+                          await ThivaBotMd.sendMessage(from, { react: { text: `⬇️`, key: m.key }})
                           const yts = require("yt-search")
                           const search = await yts(text)
                           //const buf = await getBuffer(search.all[0].thumbnail)
                           const boltc = require('@bochilteam/scraper')
                           await boltc.youtubedlv3(search.all[0].url)
-                          .then(async(nima) => {
-                          const dl_url = await nima.audio['131'].download()
-                          await ElisaBotMd.sendMessage(from, { react: { text: `⬆️`, key: m.key }})
-                          await ElisaBotMd.sendMessage(m.chat, { audio : { url : dl_url }, mimetype: 'audio/mpeg', fileName: `${search.all[0].title}.mp3` }, { quoted: m })
+                          .then(async(Thiva) => {
+                          const dl_url = await Thiva.audio['131'].download()
+                          await ThivaBotMd.sendMessage(from, { react: { text: `⬆️`, key: m.key }})
+                          await ThivaBotMd.sendMessage(m.chat, { audio : { url : dl_url }, mimetype: 'audio/mpeg', fileName: `${search.all[0].title}.mp3` }, { quoted: m })
                           
-                           await ElisaBotMd.sendMessage(from, { react: { text: `✅`, key: m.key }})
+                           await ThivaBotMd.sendMessage(from, { react: { text: `✅`, key: m.key }})
 
                                   }).catch((err) => m_reply(err))
                       
@@ -5083,28 +5083,28 @@ await ElisaBotMd.sendText(m.chat , `${jsonformat(nima3)}`)
                           break
                           case 'audiosong3' : {
                           if(!text) return m_reply('need text')
-                         // await ElisaBotMd.sendMessage(from, { react: { text: `📥`, key: m.key }})
-                          const down = await ElisaBotMd.sendText(m.chat,global.SONG_DOWN,m,)
+                         // await ThivaBotMd.sendMessage(from, { react: { text: `📥`, key: m.key }})
+                          const down = await ThivaBotMd.sendText(m.chat,global.SONG_DOWN,m,)
                           const yts = require("yt-search")
                           const search = await yts(text)
                           const buf = await getBuffer(search.all[0].thumbnail)
                           const boltc = require('@bochilteam/scraper')
                           await boltc.youtubedlv2(search.all[0].url)
-                          .then(async(nima) => {
-                          const dl_url = await nima.audio['128kbps'].download()
-                          await ElisaBotMd.sendMessage(m.chat,{delete : down.key }) 
-                          const up = await ElisaBotMd.sendText(m.chat,global.SONG_UP,m,)
-                          const doc = await ElisaBotMd.sendMessage(m.chat, {audio :{ url: dl_url }, mimetype:"audio/mpeg", fileName: `${nima.title}.mp3`,  quoted: m, contextInfo: { externalAdReply:{
-                title:`${nima.title}`,
+                          .then(async(Thiva) => {
+                          const dl_url = await Thiva.audio['128kbps'].download()
+                          await ThivaBotMd.sendMessage(m.chat,{delete : down.key }) 
+                          const up = await ThivaBotMd.sendText(m.chat,global.SONG_UP,m,)
+                          const doc = await ThivaBotMd.sendMessage(m.chat, {audio :{ url: dl_url }, mimetype:"audio/mpeg", fileName: `${Thiva.title}.mp3`,  quoted: m, contextInfo: { externalAdReply:{
+                title:`${Thiva.title}`,
                 body:"YOUTUBE MP3",
                 mediaType:2,
                 thumbnail:buf,
                 mediaUrl:`${text}`, 
                 sourceUrl: `${global.ytchannel}` }}}, {quoted:m})
-                await ElisaBotMd.sendMessage(m.chat, { delete: up.key })
-                                  await ElisaBotMd.sendMessage(from, { react: { text: `🎶`, key: doc.key }})
-//await ElisaBotMd.sendMessage(m.chat,{delete : up.key }) 
-                           //await ElisaBotMd.sendMessage(from, { react: { text: `🎶`, key: m.key }})
+                await ThivaBotMd.sendMessage(m.chat, { delete: up.key })
+                                  await ThivaBotMd.sendMessage(from, { react: { text: `🎶`, key: doc.key }})
+//await ThivaBotMd.sendMessage(m.chat,{delete : up.key }) 
+                           //await ThivaBotMd.sendMessage(from, { react: { text: `🎶`, key: m.key }})
 
                                   }).catch((err) => m_reply(err))
                       
@@ -5112,14 +5112,14 @@ await ElisaBotMd.sendText(m.chat , `${jsonformat(nima3)}`)
                           break
                          /* case 'yt2' : {
                           if (!text) return m_reply('Please Give me a youtube link')
-                          await ElisaBotMd.sendText(m.chat,mess.wait)
+                          await ThivaBotMd.sendText(m.chat,mess.wait)
                           let boltc = require('@bochilteam/scraper')
                           await boltc.youtubedlv2(`${text}`)
-                          .then(async(nima) => {
-                          const dl_url = await nima.video['480p'].download()
-                          const dl_url3 = await nima.video['240p'].download()
-                          const dl_url2 = await nima.video['720p'].download()
-                          const dl_url4 = await nima.audio['128kbps'].download()
+                          .then(async(Thiva) => {
+                          const dl_url = await Thiva.video['480p'].download()
+                          const dl_url3 = await Thiva.video['240p'].download()
+                          const dl_url2 = await Thiva.video['720p'].download()
+                          const dl_url4 = await Thiva.audio['128kbps'].download()
                          
            const buttons = [
   {buttonId: `directvideodown ${dl_url3}`, buttonText: {displayText: '240P'}, type: 1},
@@ -5128,12 +5128,12 @@ await ElisaBotMd.sendText(m.chat , `${jsonformat(nima3)}`)
 ]
 
 const buttonMessage = {
-    image: {url: nima.thubnail},
+    image: {url: Thiva.thubnail},
     caption: `╭────[👸 𝚃𝙷𝙸𝚅𝙰𝙽𝙺𝙰 𝙽𝙸𝚁𝙼𝙰𝙻 𝙱𝙾𝚃 👸] 
 │
-◯ ᴛɪᴛʟᴇ : ${nima.title}
+◯ ᴛɪᴛʟᴇ : ${Thiva.title}
 
-◯ ᴠɪᴅᴇᴏ ɪᴅ : ${nima.id}
+◯ ᴠɪᴅᴇᴏ ɪᴅ : ${Thiva.id}
 
 ◯ ʀᴇǫᴜsᴛᴇʀ : ${m.pushName}
 │
@@ -5143,7 +5143,7 @@ const buttonMessage = {
     headerType: 4
 }
 
-await ElisaBotMd.sendMessage(m.chat, buttonMessage)
+await ThivaBotMd.sendMessage(m.chat, buttonMessage)
 })
                           }
                           break*/
@@ -5181,11 +5181,11 @@ await ElisaBotMd.sendMessage(m.chat, buttonMessage)
                           break
                           case 'directvideo4' : {
                           
-       const down = await ElisaBotMd.sendText(m.chat,global.SONG_DOWN, m, )
-       const up = await ElisaBotMd.sendText(m.chat, global.SONG_UP, m, )
-       await ElisaBotMd.sendMessage(m.chat,{delete : down.key })  
-       await ElisaBotMd.sendMessage(m.chat, { video: { url: text }, caption: global.cap}, { quoted: m })
-       await ElisaBotMd.sendMessage(m.chat,{delete : up.key })  
+       const down = await ThivaBotMd.sendText(m.chat,global.SONG_DOWN, m, )
+       const up = await ThivaBotMd.sendText(m.chat, global.SONG_UP, m, )
+       await ThivaBotMd.sendMessage(m.chat,{delete : down.key })  
+       await ThivaBotMd.sendMessage(m.chat, { video: { url: text }, caption: global.cap}, { quoted: m })
+       await ThivaBotMd.sendMessage(m.chat,{delete : up.key })  
                   
                           }
                           break
@@ -5196,26 +5196,26 @@ if (global.LANG == 'EN' ) DOWNLOAD = '*📥 DOWNLOADING YOUR VIDEO...*'
 var UPLOAD = ''
 if (global.LANG == 'SI' ) UPLOAD = '*📤 ඔබගේ විඩියෝව ඔබවෙත එවමින් පවතී...*'
 if (global.LANG == 'EN' ) UPLOAD = '*📤 UPLOADING YOUR VIDEO...*'
-       const down = await ElisaBotMd.sendText(m.chat,DOWNLOAD, m, )
-       const thub = await fetchJson('https://github.com/ThivankaOnline/UPLOADS/raw/main/JSON/elisadetails.json')
+       const down = await ThivaBotMd.sendText(m.chat,DOWNLOAD, m, )
+       const thub = await fetchJson('https://github.com/ThivankaOnline/UPLOADS/raw/main/JSON/Thivadetails.json')
        buf = await getBuffer(thub.SF_THUB)
-       const up = await ElisaBotMd.sendText(m.chat,UPLOAD, m, )
-       await ElisaBotMd.sendMessage(m.chat,{delete : down.key })  
-       await ElisaBotMd.sendMessage(m.chat, { video: { url: text }, mimetype: 'video/mp4', fileName: `${text}.mp4`,jpegThumbnail:buf, caption: global.cap }, { quoted: m })
-       //await ElisaBotMd.sendMessage(m.chat, { video: { url: text }, caption: global.cap}, { quoted: m })
-       await ElisaBotMd.sendMessage(m.chat,{delete : up.key })  
+       const up = await ThivaBotMd.sendText(m.chat,UPLOAD, m, )
+       await ThivaBotMd.sendMessage(m.chat,{delete : down.key })  
+       await ThivaBotMd.sendMessage(m.chat, { video: { url: text }, mimetype: 'video/mp4', fileName: `${text}.mp4`,jpegThumbnail:buf, caption: global.cap }, { quoted: m })
+       //await ThivaBotMd.sendMessage(m.chat, { video: { url: text }, caption: global.cap}, { quoted: m })
+       await ThivaBotMd.sendMessage(m.chat,{delete : up.key })  
                   }
 break
 case 'directaudiodown' : {
 
-       const down = await ElisaBotMd.sendText(m.chat,global.SONG_DOWN, m, )
-     //  const thub = await fetchJson('https://github.com/ThivankaOnline/UPLOADS/raw/main/JSON/elisadetails.json')
+       const down = await ThivaBotMd.sendText(m.chat,global.SONG_DOWN, m, )
+     //  const thub = await fetchJson('https://github.com/ThivankaOnline/UPLOADS/raw/main/JSON/Thivadetails.json')
        buf = await getBuffer(thub.SF_THUB)
-       const up = await ElisaBotMd.sendText(m.chat,global.SONG_UP, m, )
-       await ElisaBotMd.sendMessage(m.chat,{delete : down.key })  
-       await ElisaBotMd.sendMessage(m.chat, { video: { url: text }, mimetype: 'video/mp4', fileName: `${text}.mp4`,jpegThumbnail:buf, caption: global.cap }, { quoted: m })
-       //await ElisaBotMd.sendMessage(m.chat, { video: { url: text }, caption: global.cap}, { quoted: m })
-       await ElisaBotMd.sendMessage(m.chat,{delete : up.key })  
+       const up = await ThivaBotMd.sendText(m.chat,global.SONG_UP, m, )
+       await ThivaBotMd.sendMessage(m.chat,{delete : down.key })  
+       await ThivaBotMd.sendMessage(m.chat, { video: { url: text }, mimetype: 'video/mp4', fileName: `${text}.mp4`,jpegThumbnail:buf, caption: global.cap }, { quoted: m })
+       //await ThivaBotMd.sendMessage(m.chat, { video: { url: text }, caption: global.cap}, { quoted: m })
+       await ThivaBotMd.sendMessage(m.chat,{delete : up.key })  
                   }
 break
                           case 'ddsong' : {
@@ -5223,34 +5223,34 @@ const yts = require("yt-search")
 //let handler = async (m, { conn, text }) => {
   if (!text) return reply( 'Please Give youtube link or song name.')
   if (text.includes('youtube')){
-  await ElisaBotMd.sendMessage(from, { react: { text: `🎧`, key: m.key }})
+  await ThivaBotMd.sendMessage(from, { react: { text: `🎧`, key: m.key }})
   const boltc = require('@bochilteam/scraper')
-  await ElisaBotMd.sendMessage(from, { react: { text: `⬇️`, key: m.key }})
+  await ThivaBotMd.sendMessage(from, { react: { text: `⬇️`, key: m.key }})
   const url_dl = text
-  const nima_url = await boltc.youtubedlv2(url_dl)
-  //console.log(nima_url)
-  const dl_url = await nima_url.audio['128kbps'].download()
-  await ElisaBotMd.sendMessage(from, { react: { text: `⬆️`, key: m.key }})
-  var doc = await ElisaBotMd.sendMessage(m.chat, { document  : { url : dl_url }, mimetype: 'audio/mpeg', fileName: `${nima_url.title}.mp3` }, { quoted: m })
-  await ElisaBotMd.sendMessage(from, { react: { text: `✅`, key: m.key }})
-  await ElisaBotMd.sendMessage(from, { react: { text: `🎶`, key: doc.key }})
+  const Thiva_url = await boltc.youtubedlv2(url_dl)
+  //console.log(Thiva_url)
+  const dl_url = await Thiva_url.audio['128kbps'].download()
+  await ThivaBotMd.sendMessage(from, { react: { text: `⬆️`, key: m.key }})
+  var doc = await ThivaBotMd.sendMessage(m.chat, { document  : { url : dl_url }, mimetype: 'audio/mpeg', fileName: `${Thiva_url.title}.mp3` }, { quoted: m })
+  await ThivaBotMd.sendMessage(from, { react: { text: `✅`, key: m.key }})
+  await ThivaBotMd.sendMessage(from, { react: { text: `🎶`, key: doc.key }})
 
                 
   } else {
 //  m_reply('_Proses..._')
-//const up = await ElisaBotMd.sendText(m.chat,global.SONG_DOWN)
-await ElisaBotMd.sendMessage(from, { react: { text: `🎧`, key: m.key }})
+//const up = await ThivaBotMd.sendText(m.chat,global.SONG_DOWN)
+await ThivaBotMd.sendMessage(from, { react: { text: `🎧`, key: m.key }})
   const vid = await yts(text)
-  await ElisaBotMd.sendMessage(from, { react: { text: `⬇️`, key: m.key }})
+  await ThivaBotMd.sendMessage(from, { react: { text: `⬇️`, key: m.key }})
 //  .then(async(vid) => {
   const { title, description, thumbnail, videoId } = vid
-  await ElisaBotMd.sendMessage(from, { react: { text: `⬆️`, key: m.key }})
+  await ThivaBotMd.sendMessage(from, { react: { text: `⬆️`, key: m.key }})
  // const url = 'https://www.youtube.com/watch?v=' + videoId
 const ytLink = `https://ytdl.tiodevhost.my.id/${vid.all[0].videoId}.mpeg?filter=audioonly&quality=lowestaudio&contenttype=audio/mpeg`
     
-var doc = await ElisaBotMd.sendMessage(m.chat, { document  : { url : ytLink }, mimetype: 'audio/mpeg', fileName: `${vid.all[0].title}.mp3` }, { quoted: m })
-await ElisaBotMd.sendMessage(from, { react: { text: `✅`, key: m.key }})
-await ElisaBotMd.sendMessage(from, { react: { text: `🎶`, key: doc.key }})
+var doc = await ThivaBotMd.sendMessage(m.chat, { document  : { url : ytLink }, mimetype: 'audio/mpeg', fileName: `${vid.all[0].title}.mp3` }, { quoted: m })
+await ThivaBotMd.sendMessage(from, { react: { text: `✅`, key: m.key }})
+await ThivaBotMd.sendMessage(from, { react: { text: `🎶`, key: doc.key }})
 
                       }
                           }
@@ -5261,46 +5261,46 @@ const yts = require("yt-search")
 //let handler = async (m, { conn, text }) => {
   if (!text) return reply( 'Please Give youtube link or song name.')
   if (text.includes('youtube')){
-  //await ElisaBotMd.sendMessage(from, { react: { text: `🎧`, key: m.key }})
+  //await ThivaBotMd.sendMessage(from, { react: { text: `🎧`, key: m.key }})
   const boltc = require('@bochilteam/scraper')
-  await ElisaBotMd.sendMessage(from, { react: { text: `⬇️`, key: m.key }})
+  await ThivaBotMd.sendMessage(from, { react: { text: `⬇️`, key: m.key }})
   const url_dl = text
-  const nima_url = await boltc.youtubedlv2(url_dl)
-  const buf = await getBuffer(nima_url.thumbnail)
-//  console.log(nima_url)
-  const dl_url = await nima_url.audio['128kbps'].download()
-  await ElisaBotMd.sendMessage(from, { react: { text: `⬆️`, key: m.key }})
-  var doc = await ElisaBotMd.sendMessage(m.chat, {document:{ url: dl_url }, mimetype:"audio/mpeg", fileName: `${nima_url.title}.mp3`,  quoted: m, contextInfo: { externalAdReply:{
-                title:`${nima_url.title}`,
+  const Thiva_url = await boltc.youtubedlv2(url_dl)
+  const buf = await getBuffer(Thiva_url.thumbnail)
+//  console.log(Thiva_url)
+  const dl_url = await Thiva_url.audio['128kbps'].download()
+  await ThivaBotMd.sendMessage(from, { react: { text: `⬆️`, key: m.key }})
+  var doc = await ThivaBotMd.sendMessage(m.chat, {document:{ url: dl_url }, mimetype:"audio/mpeg", fileName: `${Thiva_url.title}.mp3`,  quoted: m, contextInfo: { externalAdReply:{
+                title:`${Thiva_url.title}`,
                 body:"YOUTUBE MP3",
                 mediaType:2,
                 thumbnail:buf,
                 mediaUrl:`${text}`, 
                 sourceUrl: `${global.ytchannel}` }}}, {quoted:m})
-             //   await ElisaBotMd.sendMessage(m.chat, { delete: up.key })
-                                 // await ElisaBotMd.sendMessage(from, { react: { text: `🎶`, key: doc.key }})
-  await ElisaBotMd.sendMessage(from, { react: { text: `✅`, key: m.key }})
-  await ElisaBotMd.sendMessage(from, { react: { text: `🎶`, key: doc.key }})
+             //   await ThivaBotMd.sendMessage(m.chat, { delete: up.key })
+                                 // await ThivaBotMd.sendMessage(from, { react: { text: `🎶`, key: doc.key }})
+  await ThivaBotMd.sendMessage(from, { react: { text: `✅`, key: m.key }})
+  await ThivaBotMd.sendMessage(from, { react: { text: `🎶`, key: doc.key }})
 
                 
   } else {
 //  m_reply('_Proses..._')
-//const up = await ElisaBotMd.sendText(m.chat,global.SONG_DOWN)
-//await ElisaBotMd.sendMessage(from, { react: { text: `🎧`, key: m.key }})
-  await ElisaBotMd.sendMessage(from, { react: { text: `⬇️`, key: m.key }})
+//const up = await ThivaBotMd.sendText(m.chat,global.SONG_DOWN)
+//await ThivaBotMd.sendMessage(from, { react: { text: `🎧`, key: m.key }})
+  await ThivaBotMd.sendMessage(from, { react: { text: `⬇️`, key: m.key }})
   const vid = await yts(text)
 //  .then(async(vid) => {
   const { title, description, thumbnail, videoId } = vid
-  await ElisaBotMd.sendMessage(from, { react: { text: `⬆️`, key: m.key }})
+  await ThivaBotMd.sendMessage(from, { react: { text: `⬆️`, key: m.key }})
  // const url = 'https://www.youtube.com/watch?v=' + videoId
 const ytLink = `https://ytdl.tiodevhost.my.id/${vid.all[0].videoId}.mpeg?filter=audioonly&quality=lowestaudio&contenttype=audio/mpeg`
 const cap = `*🏷️ title :* ${vid.all[0].title}\n*👤 Author :* ${vid.all[0].author.name} \n*🖇️ Url :* ${vid.all[0].url} \n*🕜 Duration :* ${vid.all[0].duration}\n\n${global.cap}`
-var doc = await ElisaBotMd.sendMessage(m.chat, { document : { url : ytLink }, mimetype: 'audio/mpeg', caption : cap ,fileName: `${vid.all[0].title}.mp3` }, { quoted: m })
-await ElisaBotMd.sendMessage(from, { react: { text: `✅`, key: m.key }})
-await ElisaBotMd.sendMessage(from, { react: { text: `🎶`, key: doc.key }})
+var doc = await ThivaBotMd.sendMessage(m.chat, { document : { url : ytLink }, mimetype: 'audio/mpeg', caption : cap ,fileName: `${vid.all[0].title}.mp3` }, { quoted: m })
+await ThivaBotMd.sendMessage(from, { react: { text: `✅`, key: m.key }})
+await ThivaBotMd.sendMessage(from, { react: { text: `🎶`, key: doc.key }})
 
-//await ElisaBotMd.sendMessage(m.chat, { delete: up.key })
- // ElisaBotMd.sendMessage(m.chat, { document: { url: ytLink }, mimetype: 'audio/mpeg' }, { quoted: m })
+//await ThivaBotMd.sendMessage(m.chat, { delete: up.key })
+ // ThivaBotMd.sendMessage(m.chat, { document: { url: ytLink }, mimetype: 'audio/mpeg' }, { quoted: m })
 //handler.help = ['yta'].map(v => v + ' <url>')
 //handler.tags = ['downloader']
 //handler.command = /^(yta|ytaudio|ytmp3)$/i
@@ -5315,53 +5315,53 @@ const yts = require("yt-search")
 //let handler = async (m, { conn, text }) => {
   if (!text) return reply( 'Please Give youtube link or song name.')
   if (text.includes('youtube')){
-//  await ElisaBotMd.sendMessage(from, { react: { text: `🎧`, key: m.key }})
+//  await ThivaBotMd.sendMessage(from, { react: { text: `🎧`, key: m.key }})
   const boltc = require('@bochilteam/scraper')
-  await ElisaBotMd.sendMessage(from, { react: { text: `⬇️`, key: m.key }})
+  await ThivaBotMd.sendMessage(from, { react: { text: `⬇️`, key: m.key }})
   const url_dl = text
-  const nima_url = await boltc.youtubedlv2(url_dl)
-  const buf = await getBuffer(nima_url.thumbnail)
-  const title = nima_url.title
-//  console.log(nima_url)
-  const dl_url = await nima_url.audio['128kbps'].download()
-  await ElisaBotMd.sendMessage(from, { react: { text: `⬆️`, key: m.key }})
-var doc = await ElisaBotMd.sendMessage(m.chat, {audio:{ url: dl_url }, mimetype:"audio/mpeg", fileName: `${title}.mp3`,  quoted: m, contextInfo: { externalAdReply:{
-                title:`${nima_url.title}`,
+  const Thiva_url = await boltc.youtubedlv2(url_dl)
+  const buf = await getBuffer(Thiva_url.thumbnail)
+  const title = Thiva_url.title
+//  console.log(Thiva_url)
+  const dl_url = await Thiva_url.audio['128kbps'].download()
+  await ThivaBotMd.sendMessage(from, { react: { text: `⬆️`, key: m.key }})
+var doc = await ThivaBotMd.sendMessage(m.chat, {audio:{ url: dl_url }, mimetype:"audio/mpeg", fileName: `${title}.mp3`,  quoted: m, contextInfo: { externalAdReply:{
+                title:`${Thiva_url.title}`,
                 body:"YOUTUBE MP3",
                 mediaType:2,
                 thumbnail:buf,
                 mediaUrl:`${text}`, 
                 sourceUrl: `${global.ytchannel}` }}}, {quoted:m})
-  await ElisaBotMd.sendMessage(from, { react: { text: `✅`, key: m.key }})
-  await ElisaBotMd.sendMessage(from, { react: { text: `🎶`, key: doc.key }})
+  await ThivaBotMd.sendMessage(from, { react: { text: `✅`, key: m.key }})
+  await ThivaBotMd.sendMessage(from, { react: { text: `🎶`, key: doc.key }})
 
                 
   } else {
 //  m_reply('_Proses..._')
-//const up = await ElisaBotMd.sendText(m.chat,global.SONG_DOWN)
-//await ElisaBotMd.sendMessage(from, { react: { text: `🎧`, key: m.key }})
+//const up = await ThivaBotMd.sendText(m.chat,global.SONG_DOWN)
+//await ThivaBotMd.sendMessage(from, { react: { text: `🎧`, key: m.key }})
   const vid = await yts(text)
-  await ElisaBotMd.sendMessage(from, { react: { text: `⬇️`, key: m.key }})
+  await ThivaBotMd.sendMessage(from, { react: { text: `⬇️`, key: m.key }})
 //  .then(async(vid) => {
   const { title, description, thumbnail, videoId } = vid
-  await ElisaBotMd.sendMessage(from, { react: { text: `⬆️`, key: m.key }})
+  await ThivaBotMd.sendMessage(from, { react: { text: `⬆️`, key: m.key }})
  // const url = 'https://www.youtube.com/watch?v=' + videoId
 const ytLink = `https://ytdl.tiodevhost.my.id/${vid.all[0].videoId}.mpeg?filter=audioonly&quality=lowestaudio&contenttype=audio/mpeg`
     
-//var doc = await ElisaBotMd.sendMessage(m.chat, { audio : { url : ytLink }, mimetype: 'audio/mpeg', fileName: `${vid.all[0].title}.mp3` }, { quoted: m })
-var doc = await ElisaBotMd.sendMessage(m.chat, {audio :{ url: ytLink }, mimetype:"audio/mpeg", fileName: `${vid.all[0].title}.mp3`,  quoted: m, contextInfo: { externalAdReply:{
+//var doc = await ThivaBotMd.sendMessage(m.chat, { audio : { url : ytLink }, mimetype: 'audio/mpeg', fileName: `${vid.all[0].title}.mp3` }, { quoted: m })
+var doc = await ThivaBotMd.sendMessage(m.chat, {audio :{ url: ytLink }, mimetype:"audio/mpeg", fileName: `${vid.all[0].title}.mp3`,  quoted: m, contextInfo: { externalAdReply:{
                 title:`${title}`,
                 body:"YOUTUBE MP3",
                 mediaType:2,
                 thumbnail:buf,
-                mediaUrl:`http://tiktok.com/@mr_nima_._._x`, 
+                mediaUrl:`http://tiktok.com/@mr_Thiva_._._x`, 
                 sourceUrl: `${global.ytchannel}` }}}, {quoted:m})
 
-await ElisaBotMd.sendMessage(from, { react: { text: `✅`, key: m.key }})
-await ElisaBotMd.sendMessage(from, { react: { text: `🎶`, key: doc.key }})
+await ThivaBotMd.sendMessage(from, { react: { text: `✅`, key: m.key }})
+await ThivaBotMd.sendMessage(from, { react: { text: `🎶`, key: doc.key }})
 
-//await ElisaBotMd.sendMessage(m.chat, { delete: up.key })
- // ElisaBotMd.sendMessage(m.chat, { document: { url: ytLink }, mimetype: 'audio/mpeg' }, { quoted: m })
+//await ThivaBotMd.sendMessage(m.chat, { delete: up.key })
+ // ThivaBotMd.sendMessage(m.chat, { document: { url: ytLink }, mimetype: 'audio/mpeg' }, { quoted: m })
 //handler.help = ['yta'].map(v => v + ' <url>')
 //handler.tags = ['downloader']
 //handler.command = /^(yta|ytaudio|ytmp3)$/i
@@ -5376,7 +5376,7 @@ const rash = await fetchJson(`https://github.com/ThivankaOnline/ThivaBot/raw/mai
 const sdpid = rash.sddlid
 const hdmidpid = rash.sdmiddlid
 const hdpid = rash.hddlid
-                          await ElisaBotMd.sendMessage(from, { react: { text: `📽️`, key: m.key }})
+                          await ThivaBotMd.sendMessage(from, { react: { text: `📽️`, key: m.key }})
 
                               
                     YTMASS = `
@@ -5395,14 +5395,14 @@ const hdpid = rash.hddlid
                                           { buttonId: `${hdpid} ${text}`, buttonText: { displayText: '720p' }, type: 1 }
                                       
                                       ]
-                                      await ElisaBotMd.sendButtonText(m.chat, buttons, YTMASS, `𝙶𝙴𝙽𝙴𝚁𝙰𝚃𝙴𝙳 𝙱𝚈 𝚃𝙷𝙸𝚅𝙰𝙽𝙺𝙰 𝙱𝙾𝚃 ` ,m)
+                                      await ThivaBotMd.sendButtonText(m.chat, buttons, YTMASS, `𝙶𝙴𝙽𝙴𝚁𝙰𝚃𝙴𝙳 𝙱𝚈 𝚃𝙷𝙸𝚅𝙰𝙽𝙺𝙰 𝙱𝙾𝚃 ` ,m)
                                   }
                                   break
                                   case 'audioselecttypebutton': {  
                                   const rash = await fetchJson(`https://github.com/ThivankaOnline/ThivaBot/raw/main/SongVideo.jsons/songdl.json`)
 const audidd = rash.audcmd
 const docidd = rash.doccmd
-                          await ElisaBotMd.sendMessage(from, { react: { text: `🎧`, key: m.key }})
+                          await ThivaBotMd.sendMessage(from, { react: { text: `🎧`, key: m.key }})
 
                               
                     YTMASS = `
@@ -5419,34 +5419,34 @@ const docidd = rash.doccmd
                                           { buttonId: `${docidd} ${text}`, buttonText: { displayText: '📁 DOCUMENT 📁' }, type: 1 },
                                           { buttonId: `${audidd} ${text}`, buttonText: { displayText: '🎧 AUDIO 🎧' }, type: 1 }
                                       ]
-                                      await ElisaBotMd.sendButtonText(m.chat, buttons, YTMASS, `𝙶𝙴𝙽𝙴𝚁𝙰𝚃𝙴𝙳 𝙱𝚈 𝚃𝙷𝙸𝚅𝙰𝙽𝙺𝙰 𝙱𝙾𝚃 ` ,m)
+                                      await ThivaBotMd.sendButtonText(m.chat, buttons, YTMASS, `𝙶𝙴𝙽𝙴𝚁𝙰𝚃𝙴𝙳 𝙱𝚈 𝚃𝙷𝙸𝚅𝙰𝙽𝙺𝙰 𝙱𝙾𝚃 ` ,m)
                                   }
                                   break
                                   case 'ytmp4' : {
-                                  const thub = await fetchJson('https://github.com/ThivankaOnline/UPLOADS/raw/main/JSON/elisadetails.json')
+                                  const thub = await fetchJson('https://github.com/ThivankaOnline/UPLOADS/raw/main/JSON/Thivadetails.json')
                               const buf = await getBuffer(thub.YT_THUB)
                           if(!text) return reply('*👸💬 Need youtube url* \n'+'```ℹ️ Example .ytmp4 https://youtube.com/watch?v=WoWlWb6vbzA```')
                           if (!text.includes('https://youtu')) return reply('*👸💬 Need youtube url* \n'+'```ℹ️ Example .ytmp4 https://youtube.com/watch?v=WoWlWb6vbzA```')
-                          await ElisaBotMd.sendMessage(from, { react: { text: `⬇️`, key: m.key }})
-                          //await ElisaBotMd.sendText(m.chat,mess.wait)
+                          await ThivaBotMd.sendMessage(from, { react: { text: `⬇️`, key: m.key }})
+                          //await ThivaBotMd.sendText(m.chat,mess.wait)
                           let quality = args[1] ? args[1] : '360p'
                           //const yts = require("yt-search")
                          // const search = await yts(args[0])
                           const dltext = args[0]
                           let boltc = require('@bochilteam/scraper')
                           await boltc.youtubedlv2(dltext)
-                          .then(async(nima) => {
-                          const dl_url = await nima.video[quality].download()
-                          const size = nima.video[quality].fileSize
+                          .then(async(Thiva) => {
+                          const dl_url = await Thiva.video[quality].download()
+                          const size = Thiva.video[quality].fileSize
                           if(size >= 120000) return reply('*FILE SIZE IS SO BIG !!!*')
-                          await ElisaBotMd.sendMessage(from, { react: { text: `⬆️`, key: m.key }})
-                          const viddd = await ElisaBotMd.sendMessage(m.chat, { video: { url: dl_url }, mimetype: 'video/mp4', fileName: `${nima.title}.mp4`,jpegThumbnail:buf, caption: global.cap }, { quoted: m })
-                          await ElisaBotMd.sendMessage(from, { react: { text: `📽️`, key: viddd.key }})
-                          await ElisaBotMd.sendMessage(from, { react: { text: `✅`, key: m.key }})
-                        // await ElisaBotMd.sendMessage(from, { react: { text: ``, key: m.key }})
+                          await ThivaBotMd.sendMessage(from, { react: { text: `⬆️`, key: m.key }})
+                          const viddd = await ThivaBotMd.sendMessage(m.chat, { video: { url: dl_url }, mimetype: 'video/mp4', fileName: `${Thiva.title}.mp4`,jpegThumbnail:buf, caption: global.cap }, { quoted: m })
+                          await ThivaBotMd.sendMessage(from, { react: { text: `📽️`, key: viddd.key }})
+                          await ThivaBotMd.sendMessage(from, { react: { text: `✅`, key: m.key }})
+                        // await ThivaBotMd.sendMessage(from, { react: { text: ``, key: m.key }})
                          
-                          // await ElisaBotMd.sendMessage(m.chat, { video: { url: dl_url }, mimetype: 'video/mp4',jpegThumbnail:buf, caption: global.cap }, { quoted: m })
-                          //await ElisaBotMd.sendMessage(m.chat, { video: { url: dl_url }, mimetype: 'video/mp4', caption: `${global.cap}` }, { quoted: m })
+                          // await ThivaBotMd.sendMessage(m.chat, { video: { url: dl_url }, mimetype: 'video/mp4',jpegThumbnail:buf, caption: global.cap }, { quoted: m })
+                          //await ThivaBotMd.sendMessage(m.chat, { video: { url: dl_url }, mimetype: 'video/mp4', caption: `${global.cap}` }, { quoted: m })
                           }).catch((err) => reply(NOT_FOUND))
                       
                           }
@@ -5459,25 +5459,25 @@ const docidd = rash.doccmd
                                       ]
                                   let { yta } = require('./lib/y2mate')
                                   if (!text) throw `Example : ${prefix + command} https://Subscribe.com/watch?v=PtF6Tccag%27 320kbps`
-                                  const load = await ElisaBotMd.sendText(m.chat, `\n*🔄 Preparing ${m.pushName} your song...*\n`, m, )
+                                  const load = await ThivaBotMd.sendText(m.chat, `\n*🔄 Preparing ${m.pushName} your song...*\n`, m, )
                                   let quality = args[1] ? args[1] : '256kbps'
                                   let media = await yta(text, quality)
                                   if (media.filesize >= 150000) return reply('❗ Audio size is too big '+util.format(media))
-                                  var upload = await ElisaBotMd.sendButtonText(m.chat, buttons, AGAINTRY, `${m.pushName} Use this only if you have not received the request.` ,m)
-                                  ElisaBotMd.sendMessage(m.chat, { audio: { url: media.dl_link }, mimetype: 'audio/mpeg', fileName: `${media.title}.mp3` }, { quoted: m })
-                                   ElisaBotMd.sendMessage(m.chat, { delete: { remoteJid: m.chat, fromMe: true, id: upload.key.id, participant: m.quoted.sender } })
+                                  var upload = await ThivaBotMd.sendButtonText(m.chat, buttons, AGAINTRY, `${m.pushName} Use this only if you have not received the request.` ,m)
+                                  ThivaBotMd.sendMessage(m.chat, { audio: { url: media.dl_link }, mimetype: 'audio/mpeg', fileName: `${media.title}.mp3` }, { quoted: m })
+                                   ThivaBotMd.sendMessage(m.chat, { delete: { remoteJid: m.chat, fromMe: true, id: upload.key.id, participant: m.quoted.sender } })
                               }
                               break*/
                      
                               
                               case '22ytmp4': case '22ytvideo': {  
-                              await ElisaBotMd.sendMessage(from, { react: { text: `📽️`, key: m.key }})
-                              const thub = await fetchJson('https://github.com/ThivankaOnline/UPLOADS/raw/main/JSON/elisadetails.json')
+                              await ThivaBotMd.sendMessage(from, { react: { text: `📽️`, key: m.key }})
+                              const thub = await fetchJson('https://github.com/ThivankaOnline/UPLOADS/raw/main/JSON/Thivadetails.json')
                               buf = await getBuffer(thub.YT_THUB)
 
                                   let { ytv } = require('./lib/y2mate')
                                   if (!text) return reply( `${Lang.EXAMPLE}\n ${prefix + command} https://youtube.com/watch?v=on3sJ8OlH8M`)
-                                  const load = await ElisaBotMd.sendText(m.chat, mess.wait, m, )
+                                  const load = await ThivaBotMd.sendText(m.chat, mess.wait, m, )
                                   let quality = args[1] ? args[1] : '360p'
                                   await ytv(text, quality)
                                   .then(async (media) => { 
@@ -5501,20 +5501,20 @@ const docidd = rash.doccmd
                                   templateButtons: templateButtons
                                   }
 
-                                  return await ElisaBotMd.sendMessage(m.chat, templateMessage, { quoted: m })   
+                                  return await ThivaBotMd.sendMessage(m.chat, templateMessage, { quoted: m })   
 
                                  // return reply('❗ Video size is too big '+util.format(media)+'.mp4')
                                   }
-                                  await ElisaBotMd.sendMessage(from, { react: { text: `⬆️`, key: m.key }})
-                                  await ElisaBotMd.sendMessage(m.chat, { video: { url: media.dl_link }, mimetype: 'video/mp4', fileName: `${media.title}.mp4`,jpegThumbnail:buf, caption: global.cap }, { quoted: m })
+                                  await ThivaBotMd.sendMessage(from, { react: { text: `⬆️`, key: m.key }})
+                                  await ThivaBotMd.sendMessage(m.chat, { video: { url: media.dl_link }, mimetype: 'video/mp4', fileName: `${media.title}.mp4`,jpegThumbnail:buf, caption: global.cap }, { quoted: m })
                                   
                                   .catch((err) => m_reply('*Sorry, Can\'t Find your reqest 🥴*'))
-                                  await  ElisaBotMd.sendMessage(m.chat, { delete: load.key })}).catch((err) => m_reply(NOT_FOUND))
-                                  await ElisaBotMd.sendMessage(from, { react: { text: `✅`, key: m.key }})
+                                  await  ThivaBotMd.sendMessage(m.chat, { delete: load.key })}).catch((err) => m_reply(NOT_FOUND))
+                                  await ThivaBotMd.sendMessage(from, { react: { text: `✅`, key: m.key }})
                               }
                               break
                               case 'secytmp4': case 'secytvideo': {  
-                          await ElisaBotMd.sendMessage(from, { react: { text: `🎥`, key: m.key }})
+                          await ThivaBotMd.sendMessage(from, { react: { text: `🎥`, key: m.key }})
                               AGAINTRY = ` 💃 ENJOY YOUR VIDEO `
                               
                               buttons = [
@@ -5529,11 +5529,11 @@ const docidd = rash.doccmd
                               
                                   let { ytv } = require('./lib/y2mate')
                                   if (!text) throw `${Lang.EXAMPLE}\n : ${prefix + command} https://Subscribe.com/watch?v=PtFMhcag%27 360p`
-                                  const load = await ElisaBotMd.sendText(m.chat,mess.wait, m, )
+                                  const load = await ThivaBotMd.sendText(m.chat,mess.wait, m, )
                                   let quality = args[1] ? args[1] : '360p'
                                   await ytv(text, quality)
                                   .then(async (media) => { 
-                                  await ElisaBotMd.sendText(m.chat, ` *ʟᴏᴀᴅɪɴɢ ${m.pushName} ʏᴏᴜʀ ᴠɪᴅᴇᴏ... 🔄*`)
+                                  await ThivaBotMd.sendText(m.chat, ` *ʟᴏᴀᴅɪɴɢ ${m.pushName} ʏᴏᴜʀ ᴠɪᴅᴇᴏ... 🔄*`)
                                   if (media.filesize >= 100000)  {
                                   const msg = `*⛔ FILE SIZE UP TO 100MB ⛔*
                                   
@@ -5554,26 +5554,26 @@ const docidd = rash.doccmd
                                   templateButtons: templateButtons
                                   }
 
-                                  return await ElisaBotMd.sendMessage(m.chat, templateMessage, { quoted: m }) 
+                                  return await ThivaBotMd.sendMessage(m.chat, templateMessage, { quoted: m }) 
                                   }  
 //return reply('❗ Video size is too big '+util.format(media)+'.mp4')
-                                  await  ElisaBotMd.sendMessage(m.chat, { delete: load.key })
-                                  const upload = await ElisaBotMd.sendMessage(m.chat, buttonMessage , { quoted: m })
-                                  await ElisaBotMd.sendMessage(from, { react: { text: `⬆️`, key: m.key }})
-                                  ElisaBotMd.sendMessage(m.chat, { video: { url: media.dl_link }, mimetype: 'video/mp4', fileName: `${media.title}.mp4`, caption: global.cap }, { quoted: m })
-                                  await  ElisaBotMd.sendMessage(m.chat, { delete: upload.key })}).catch((err) => m_reply(NOT_FOUND))
-                                  await ElisaBotMd.sendMessage(from, { react: { text: `✅`, key: m.key }})
+                                  await  ThivaBotMd.sendMessage(m.chat, { delete: load.key })
+                                  const upload = await ThivaBotMd.sendMessage(m.chat, buttonMessage , { quoted: m })
+                                  await ThivaBotMd.sendMessage(from, { react: { text: `⬆️`, key: m.key }})
+                                  ThivaBotMd.sendMessage(m.chat, { video: { url: media.dl_link }, mimetype: 'video/mp4', fileName: `${media.title}.mp4`, caption: global.cap }, { quoted: m })
+                                  await  ThivaBotMd.sendMessage(m.chat, { delete: upload.key })}).catch((err) => m_reply(NOT_FOUND))
+                                  await ThivaBotMd.sendMessage(from, { react: { text: `✅`, key: m.key }})
                                   
                               }
                               break
                               case 'retryytmp4': case 'retrysecytvideo': {  
-                          await ElisaBotMd.sendMessage(from, { react: { text: `🔄`, key: m.key }})
+                          await ThivaBotMd.sendMessage(from, { react: { text: `🔄`, key: m.key }})
                               
                                   let { ytv } = require('./lib/y2mate')
                                   if (!text) throw `${Lang.EXAMPLE}\n : ${prefix + command} https://Subscribe.com/watch?v=PtFMhcag%27 360p`
                                   let quality = args[1] ? args[1] : '360p'
                                   let media = await ytv(text, quality)
-                                  await ElisaBotMd.sendText(m.chat, ` *ʟᴏᴀᴅɪɴɢ ${m.pushName} ʏᴏᴜʀ ᴠɪᴅᴇᴏ... 🔄*`)
+                                  await ThivaBotMd.sendText(m.chat, ` *ʟᴏᴀᴅɪɴɢ ${m.pushName} ʏᴏᴜʀ ᴠɪᴅᴇᴏ... 🔄*`)
                                   if (media.filesize >= 100000)  {
                                   const msg = `*⛔ FILE SIZE UP TO 100MB ⛔*
                                   
@@ -5593,20 +5593,20 @@ const docidd = rash.doccmd
                                   templateButtons: templateButtons
                                   }
 
-                                  return await ElisaBotMd.sendMessage(m.chat, templateMessage, { quoted: m })   
+                                  return await ThivaBotMd.sendMessage(m.chat, templateMessage, { quoted: m })   
                                   }
 //return reply('❗ Video size is too big '+util.format(media)+'.mp4')
-                                  var up = await ElisaBotMd.sendText(m.chat, `*ENJOY*`)
-                                  ElisaBotMd.sendMessage(m.chat, { video: { url: media.dl_link }, mimetype: 'video/mp4', fileName: `${media.title}.mp4`, caption: global.cap }, { quoted: m })
-                                  await ElisaBotMd.sendMessage(from, { react: { text: `✅`, key: m.key }})
+                                  var up = await ThivaBotMd.sendText(m.chat, `*ENJOY*`)
+                                  ThivaBotMd.sendMessage(m.chat, { video: { url: media.dl_link }, mimetype: 'video/mp4', fileName: `${media.title}.mp4`, caption: global.cap }, { quoted: m })
+                                  await ThivaBotMd.sendMessage(from, { react: { text: `✅`, key: m.key }})
                                   
                               }
                               break
                               case '360pvideo': case 'yt360pvideo': {  
-                          await ElisaBotMd.sendMessage(from, { react: { text: `📽️`, key: m.key }})
+                          await ThivaBotMd.sendMessage(from, { react: { text: `📽️`, key: m.key }})
                                   let { ytv } = require('./lib/y2mate')
                                   if (!text) throw `${Lang.EXAMPLE}\n : ${prefix + command} https://Subscribe.com/watch?v=PtFMhcag%27 360p`
-                                  const load = await ElisaBotMd.sendMessage(from, { react: { text: `🔄`, key: m.key }})
+                                  const load = await ThivaBotMd.sendMessage(from, { react: { text: `🔄`, key: m.key }})
                                   let quality = args[1] ? args[1] : '360p'
                                   let media = await ytv(text, quality)
                                   if (media.filesize >= 100000) {
@@ -5628,13 +5628,13 @@ const docidd = rash.doccmd
                                   templateButtons: templateButtons
                                   }
 
-                                  return await ElisaBotMd.sendMessage(m.chat, templateMessage, { quoted: m })   
+                                  return await ThivaBotMd.sendMessage(m.chat, templateMessage, { quoted: m })   
                                   }
 // return reply('❗ Video size is too big '+util.format(media)+'.mp4')
-                                  await ElisaBotMd.sendMessage(from, { react: { text: `⬆️`, key: m.key }})
-                                  await ElisaBotMd.sendMessage(m.chat, { video: { url: media.dl_link }, mimetype: 'video/mp4', fileName: `${media.title}.mp4`, caption: global.cap }, { quoted: m })
-                                 // await  ElisaBotMd.sendMessage(m.chat, { delete: load.key })
-                                  await ElisaBotMd.sendMessage(from, { react: { text: `✅`, key: m.key }})
+                                  await ThivaBotMd.sendMessage(from, { react: { text: `⬆️`, key: m.key }})
+                                  await ThivaBotMd.sendMessage(m.chat, { video: { url: media.dl_link }, mimetype: 'video/mp4', fileName: `${media.title}.mp4`, caption: global.cap }, { quoted: m })
+                                 // await  ThivaBotMd.sendMessage(m.chat, { delete: load.key })
+                                  await ThivaBotMd.sendMessage(from, { react: { text: `✅`, key: m.key }})
                               }
                               break
                               
@@ -5648,8 +5648,8 @@ const docidd = rash.doccmd
                                   let quality = args[1] ? args[1] : '320kbps'
                                   let media = await yta(urls[text - 1], quality)
                                   if (media.filesize >= 999999) return reply('Audio size is too big '+util.format(media))
-                                  ElisaBotMd.sendImage(m.chat, media.thumb, `🔮 𝗧𝗜𝗧𝗟𝗘 : ${media.title}\n🔮 𝗙𝗜𝗟𝗘 𝗦𝗜𝗭𝗘 : ${media.filesizeF}\n🔮 𝗨𝗥𝗟 : ${isUrl(text)}\n🔮 𝗘𝗫𝗧 : MP3\n🔮 𝗥𝗘𝗦𝗢𝗟𝗨𝗧𝗜𝗢𝗡 : ${args[1] || '320kbps'}`, m)
-                                  ElisaBotMd.sendMessage(m.chat, { audio: { url: media.dl_link }, mimetype: 'audio/mpeg', fileName: `${media.title}.mp3` }, { quoted: m }).catch((err) => m_reply('*Sorry, Can\'t Find your reqest 🥴*'))
+                                  ThivaBotMd.sendImage(m.chat, media.thumb, `🔮 𝗧𝗜𝗧𝗟𝗘 : ${media.title}\n🔮 𝗙𝗜𝗟𝗘 𝗦𝗜𝗭𝗘 : ${media.filesizeF}\n🔮 𝗨𝗥𝗟 : ${isUrl(text)}\n🔮 𝗘𝗫𝗧 : MP3\n🔮 𝗥𝗘𝗦𝗢𝗟𝗨𝗧𝗜𝗢𝗡 : ${args[1] || '320kbps'}`, m)
+                                  ThivaBotMd.sendMessage(m.chat, { audio: { url: media.dl_link }, mimetype: 'audio/mpeg', fileName: `${media.title}.mp3` }, { quoted: m }).catch((err) => m_reply('*Sorry, Can\'t Find your reqest 🥴*'))
                               }
                               break
                               case 'getvideo': {
@@ -5662,7 +5662,7 @@ const docidd = rash.doccmd
                                   let quality = args[1] ? args[1] : '360p'
                                   let media = await ytv(urls[text - 1], quality)
                                   if (media.filesize >= 100000) return reply('File Over Limit '+util.format(media))
-                                  ElisaBotMd.sendMessage(m.chat, { video: { url: media.dl_link }, mimetype: 'video/mp4', fileName: `${media.title}.mp4`, caption: `🔮 𝗧𝗜𝗧𝗟𝗘 : ${media.title}\n🔮 𝗙𝗜𝗟𝗘 𝗦𝗜𝗭𝗘 : ${media.filesizeF}\n🔮 𝗨𝗥𝗟 : ${isUrl(text)}\n🔮 𝗘𝗫𝗧 : MP3\n🔮 𝗥𝗘𝗦𝗢𝗟𝗨𝗧𝗜𝗢𝗡 : ${args[1] || '360p'}` }, { quoted: m }).catch((err) => m_reply('*Sorry, Can\'t Find your reqest 🥴*'))
+                                  ThivaBotMd.sendMessage(m.chat, { video: { url: media.dl_link }, mimetype: 'video/mp4', fileName: `${media.title}.mp4`, caption: `🔮 𝗧𝗜𝗧𝗟𝗘 : ${media.title}\n🔮 𝗙𝗜𝗟𝗘 𝗦𝗜𝗭𝗘 : ${media.filesizeF}\n🔮 𝗨𝗥𝗟 : ${isUrl(text)}\n🔮 𝗘𝗫𝗧 : MP3\n🔮 𝗥𝗘𝗦𝗢𝗟𝗨𝗧𝗜𝗢𝗡 : ${args[1] || '360p'}` }, { quoted: m }).catch((err) => m_reply('*Sorry, Can\'t Find your reqest 🥴*'))
                               }
                               break
                               case 'pinterest': {
@@ -5670,36 +5670,36 @@ const docidd = rash.doccmd
                                   let { pinterest } = require('./lib/scraper')
                                   anu = await pinterest(text)
                                   result = anu[Math.floor(Math.random() * anu.length)]
-                                  ElisaBotMd.sendMessage(m.chat, { image: { url: result }, caption: '🔮 Media Url : '+result }, { quoted: m })
+                                  ThivaBotMd.sendMessage(m.chat, { image: { url: result }, caption: '🔮 Media Url : '+result }, { quoted: m })
                               }
                               break
                               case 'sendme' : {
-                              if (!isNima) throw ('*This is only main owner command ☺*️')
-                              ElisaBotMd.sendText(m.chat,text)
+                              if (!isThiva) throw ('*This is only main owner command ☺*️')
+                              ThivaBotMd.sendText(m.chat,text)
                               }
                               break
                           case 'couplepp': case 'ppcouple': {  
-                          await ElisaBotMd.sendMessage(from, { react: { text: `💏`, key: m.key }})
+                          await ThivaBotMd.sendMessage(from, { react: { text: `💏`, key: m.key }})
                                   replay(mess.wait)
                                   let anu = await fetchJson('https://raw.githubusercontent.com/iamriz7/kopel_/main/kopel.json')
                                   let random = anu[Math.floor(Math.random() * anu.length)]
-                                  ElisaBotMd.sendMessage(m.chat, { image: { url: random.male }, caption: `Couple Male` }, { quoted: m })
-                                  ElisaBotMd.sendMessage(m.chat, { image: { url: random.female }, caption: `Couple Female` }, { quoted: m })
+                                  ThivaBotMd.sendMessage(m.chat, { image: { url: random.male }, caption: `Couple Male` }, { quoted: m })
+                                  ThivaBotMd.sendMessage(m.chat, { image: { url: random.female }, caption: `Couple Female` }, { quoted: m })
                               }
                           break
                               case 'coffee': case 'kopi': {  
-                          await ElisaBotMd.sendMessage(from, { react: { text: `☕`, key: m.key }})
+                          await ThivaBotMd.sendMessage(from, { react: { text: `☕`, key: m.key }})
                               let buttons = [
                                       {buttonId: `coffe`, buttonText: {displayText: 'NEXT PIC'}, type: 1}
                                   ]
                                   let buttonMessage = {
                                       image: { url: 'https://coffee.alexflipnote.dev/random' },
                                       caption: `Random Coffee`,
-                                      footer: ElisaBotMd.user.name,
+                                      footer: ThivaBotMd.user.name,
                                       buttons: buttons,
                                       headerType: 4
                                   }
-                                  ElisaBotMd.sendMessage(m.chat, buttonMessage, { quoted: m })
+                                  ThivaBotMd.sendMessage(m.chat, buttonMessage, { quoted: m })
                               }
                               break
                               case 'wallpaper': {
@@ -5713,11 +5713,11 @@ const docidd = rash.doccmd
                                   let buttonMessage = {
                                       image: { url: result.image[0] },
                                       caption: `🔮 𝗧𝗜𝗧𝗟𝗘 : ${result.title}\n🔮 𝗖𝗔𝗧𝗘𝗚𝗢𝗥𝗬 : ${result.type}\n🔮 𝗗𝗘𝗧𝗔𝗜𝗟 : ${result.source}\n🔮 𝗠𝗘𝗗𝗜𝗔 𝗨𝗥𝗟 : ${result.image[2] || result.image[1] || result.image[0]}`,
-                                      footer: ElisaBotMd.user.name,
+                                      footer: ThivaBotMd.user.name,
                                       buttons: buttons,
                                       headerType: 4
                                   }
-                                  ElisaBotMd.sendMessage(m.chat, buttonMessage, { quoted: m })
+                                  ThivaBotMd.sendMessage(m.chat, buttonMessage, { quoted: m })
                               }
                               break
                               case 'wikimedia': {
@@ -5731,11 +5731,11 @@ const docidd = rash.doccmd
                                   let buttonMessage = {
                                       image: { url: result.image },
                                       caption: `🔮 𝗧𝗜𝗧𝗟𝗘 : ${result.title}\n🔮 𝗦𝗢𝗨𝗥𝗖𝗘 : ${result.source}\n🔮 𝗠𝗘𝗗𝗜𝗔 𝗨𝗥𝗟 : ${result.image}`,
-                                      footer: ElisaBotMd.user.name,
+                                      footer: ThivaBotMd.user.name,
                                       buttons: buttons,
                                       headerType: 4
                                   }
-                                  ElisaBotMd.sendMessage(m.chat, buttonMessage, { quoted: m })
+                                  ThivaBotMd.sendMessage(m.chat, buttonMessage, { quoted: m })
                               }
                               break
                               case 'quotesanimekdksksksksk': case 'quoteanimexllzlzkl': {
@@ -5751,7 +5751,7 @@ const docidd = rash.doccmd
                                       buttons: buttons,
                                       headerType: 2
                                   }
-                                  ElisaBotMd.sendMessage(m.chat, buttonMessage, { quoted: m })
+                                  ThivaBotMd.sendMessage(m.chat, buttonMessage, { quoted: m })
                               }
                               break
                               case 'motivasi': case 'dilanquote': case 'bucinquote': case 'katasenja': case 'puisi': {
@@ -5765,7 +5765,7 @@ const docidd = rash.doccmd
                                       buttons: buttons,
                                       headerType: 2
                                   }
-                                  ElisaBotMd.sendMessage(m.chat, buttonMessage, { quoted: m })
+                                  ThivaBotMd.sendMessage(m.chat, buttonMessage, { quoted: m })
                               }
                               break
                               case 'logo' :{ 
@@ -5774,7 +5774,7 @@ if (global.LANG == 'SI') MAX= '```👸💬 කරුනාකර වචනයක
 if (global.LANG == 'EN') MAX= '```👸💬 Please give me a some words ...```\n_example .logo 𝗠𝗥 𝗧𝗛𝗜𝗩𝗔_'
 if (!text) return reply (MAX)
                               
- await ElisaBotMd.sendMessage(from, { react: { text: `1️⃣`, key: m.key }})     
+ await ThivaBotMd.sendMessage(from, { react: { text: `1️⃣`, key: m.key }})     
   
      	const desmsg = `╔═════════════════════☐
 
@@ -6114,7 +6114,7 @@ if (!text) return reply (MAX)
       }
    ]
 			
-     await ElisaBotMd.sendListMsg(m.chat, `${desmsg}`, `${global.botnma}`, `*🎨 LOGO PACK 1*`, `MAKE LOGO`, sections, m)
+     await ThivaBotMd.sendListMsg(m.chat, `${desmsg}`, `${global.botnma}`, `*🎨 LOGO PACK 1*`, `MAKE LOGO`, sections, m)
  	   	                	
   }
             break
@@ -6126,7 +6126,7 @@ if (!text) return reply (MAX)
   if (global.LANG == 'EN') GIVEE = `*👸💬 Please give me a some words* \n_ℹ️ example ${prefix + command} 𝗠𝗥 𝗧𝗛𝗜𝗩𝗔_`
   if (global.LANG == 'SI') GIVEE = `*👸💬 කරුනාකර වචනයක් ලබාදෙන්න* \n _ℹ️ උදාහරණ ${prefix + command} 𝗠𝗥 𝗧𝗛𝗜𝗩𝗔_`
      if(!text) return reply(GIVEE)
-     const logomaking = await ElisaBotMd.sendText(m.chat,LOGO_MAKING)
+     const logomaking = await ThivaBotMd.sendText(m.chat,LOGO_MAKING)
           
        let link      
        if (/eglitch/.test(command)) link = 'https://api.botcahx.biz.id/api/textpro/glitch?text='+text
@@ -6134,7 +6134,7 @@ if (!text) return reply (MAX)
        if (/eneon/.test(command)) link = 'https://api.botcahx.biz.id/api/textpro/neon?text='+text
        if (/ecrismas/.test(command)) link = 'https://api.botcahx.biz.id/api/textpro/3dchristmas?text='+text
        if (/ethunder/.test(command)) link = 'https://api.botcahx.biz.id/api/textpro/thunder?text='+text
-       if (/eninja/.test(command)) link = 'https://api.botcahx.biz.id/api/textpro/ninja-logo?text='+text+'&text2=ELISA BOT'
+       if (/eninja/.test(command)) link = 'https://api.botcahx.biz.id/api/textpro/ninja-logo?text='+text+'&text2=Thiva BOT'
        if (/eorange/.test(command)) link = 'https://api.botcahx.biz.id/api/textpro/3d-orange-juice?text='+text
        if (/ecake/.test(command)) link = 'https://api.botcahx.biz.id/api/textpro/chocolate-cake?text='+text
        if (/estrowberry/.test(command)) link = 'https://api.botcahx.biz.id/api/textpro/strawberry?text='+text
@@ -6146,8 +6146,8 @@ if (!text) return reply (MAX)
        if (/eilluminati/.test(command)) link = 'https://api.botcahx.biz.id/api/photooxy/illuminated-metallic?text='+text
        
     const img = await getBuffer(link)
-    await ElisaBotMd.sendMessage(m.chat, { image: img, caption: `${global.cap}\n\n*🗳️ ʀᴇǫᴜᴇsᴛᴇʀ -* ${m.pushName}` }, { quoted: m })
-    await ElisaBotMd.sendMessage(m.chat,{delete : logomaking.key })  
+    await ThivaBotMd.sendMessage(m.chat, { image: img, caption: `${global.cap}\n\n*🗳️ ʀᴇǫᴜᴇsᴛᴇʀ -* ${m.pushName}` }, { quoted: m })
+    await ThivaBotMd.sendMessage(m.chat,{delete : logomaking.key })  
            
 }
 break
@@ -6166,8 +6166,8 @@ case 'lava': case 'rock': case 'bloodglas': case 'halloween': case 'darkgold': c
   if (global.LANG == 'EN') MAKING = '*🌈 Take a moment to createing your textlogo...*'
   if (global.LANG == 'SI') MAKING = '*🌈 මදක් රැදීසිටින්න ඔබගේ textlogo සෑදමින් පවතී...*'
                           
-             if (!q) return reply(`${Lang.EXAMPLE}\n : ${prefix + command} Qeen Elisa`) 
-                await ElisaBotMd.sendMessage(from, { react: { text: `🎡`, key: m.key }})
+             if (!q) return reply(`${Lang.EXAMPLE}\n : ${prefix + command} Qeen Thiva`) 
+                await ThivaBotMd.sendMessage(from, { react: { text: `🎡`, key: m.key }})
              let link
              if (/candy/.test(command)) link = 'https://textpro.me/create-christmas-candy-cane-text-effect-1056.html'
              if (/christmas/.test(command)) link = 'https://textpro.me/christmas-tree-text-effect-online-free-1057.html'
@@ -6234,9 +6234,9 @@ case 'lava': case 'rock': case 'bloodglas': case 'halloween': case 'darkgold': c
              if (/potty/.test(command)) link = 'https://textpro.me/create-3d-pottery-text-effect-online-1088.html'
              
              let anu = await maker.textpro(link, q)
-             const logomaking = await ElisaBotMd.sendText(m.chat, MAKING )
-             await ElisaBotMd.sendMessage(m.chat, { image: { url: anu }, caption: `${global.cap}\n\n*🗳️ ʀᴇǫᴜᴇsᴛᴇʀ -* ${m.pushName}` }, { quoted: m })
-             await ElisaBotMd.sendMessage(m.chat,{delete : logomaking.key })  
+             const logomaking = await ThivaBotMd.sendText(m.chat, MAKING )
+             await ThivaBotMd.sendMessage(m.chat, { image: { url: anu }, caption: `${global.cap}\n\n*🗳️ ʀᴇǫᴜᴇsᴛᴇʀ -* ${m.pushName}` }, { quoted: m })
+             await ThivaBotMd.sendMessage(m.chat,{delete : logomaking.key })  
              }
              break
              
@@ -6244,22 +6244,22 @@ case 'lava': case 'rock': case 'bloodglas': case 'halloween': case 'darkgold': c
 case'glitch3':
    
 if(!q) return reply(`Use ${prefix + command} text|text`)
-await ElisaBotMd.sendText(m.chat,' *🌈 Take a moment to createing your textlogo...*' )
+await ThivaBotMd.sendText(m.chat,' *🌈 Take a moment to createing your textlogo...*' )
 teks1 = q.split("|")[0]
 teks2 = q.split("|")[1]
 maker.textpro("https://textpro.me/create-glitch-text-effect-style-tik-tok-983.html", [
     `${teks1}`,`${teks2}`])
-  .then((data) => ElisaBotMd.sendMessage(m.chat, { image: { url: data }, caption: `${global.cap}\n\n*🗳️ ʀᴇǫᴜᴇsᴛᴇʀ -* ${m.pushName}` }, { quoted: m }))
+  .then((data) => ThivaBotMd.sendMessage(m.chat, { image: { url: data }, caption: `${global.cap}\n\n*🗳️ ʀᴇǫᴜᴇsᴛᴇʀ -* ${m.pushName}` }, { quoted: m }))
   .catch((err) => console.log(err));
    break
 
 case '3dbox':
    
 if(!q) return reply(`Use ${prefix + command} text`)
-await ElisaBotMd.sendText(m.chat,' *🌈 Take a moment to createing your textlogo...*' )
+await ThivaBotMd.sendText(m.chat,' *🌈 Take a moment to createing your textlogo...*' )
 maker.textpro("https://textpro.me/3d-box-text-effect-online-880.html", [
     `${q}`,])
-.then((data) => ElisaBotMd.sendMessage(m.chat, { image: { url: data }, caption: `${global.cap}\n\n*🗳️ ʀᴇǫᴜᴇsᴛᴇʀ -* ${m.pushName}` }, { quoted: m }))
+.then((data) => ThivaBotMd.sendMessage(m.chat, { image: { url: data }, caption: `${global.cap}\n\n*🗳️ ʀᴇǫᴜᴇsᴛᴇʀ -* ${m.pushName}` }, { quoted: m }))
 .catch((err) => console.log(err));
 break
 
@@ -6267,10 +6267,10 @@ break
 case 'waterdrop':
    
 if(!q) return reply(`Use ${prefix + command} text`)
-await ElisaBotMd.sendText(m.chat,' *🌈 Take a moment to createing your textlogo...*' )
+await ThivaBotMd.sendText(m.chat,' *🌈 Take a moment to createing your textlogo...*' )
  maker.textpro("https://textpro.me/dropwater-text-effect-872.html", [
      `${q}`,])
-    .then((data) => ElisaBotMd.sendMessage(m.chat, { image: { url: data }, caption: `${global.cap}\n\n*🗳️ ʀᴇǫᴜᴇsᴛᴇʀ -* ${m.pushName}` }, { quoted: m }))
+    .then((data) => ThivaBotMd.sendMessage(m.chat, { image: { url: data }, caption: `${global.cap}\n\n*🗳️ ʀᴇǫᴜᴇsᴛᴇʀ -* ${m.pushName}` }, { quoted: m }))
     .catch((err) => console.log(err));
      break
 
@@ -6278,10 +6278,10 @@ await ElisaBotMd.sendText(m.chat,' *🌈 Take a moment to createing your textlog
 case 'lion2':
    
   if(!q) return reply(`Use ${prefix + command} text`)
-  await ElisaBotMd.sendText(m.chat,' *🌈 Take a moment to createing your textlogo...*' )
+  await ThivaBotMd.sendText(m.chat,' *🌈 Take a moment to createing your textlogo...*' )
   maker.textpro("https://textpro.me/create-lion-logo-mascot-online-938.html", [
       `${q}`,])
-     .then((data) => ElisaBotMd.sendMessage(m.chat, { image: { url: data }, caption: `${global.cap}\n\n*🗳️ ʀᴇǫᴜᴇsᴛᴇʀ -* ${m.pushName}` }, { quoted: m }))
+     .then((data) => ThivaBotMd.sendMessage(m.chat, { image: { url: data }, caption: `${global.cap}\n\n*🗳️ ʀᴇǫᴜᴇsᴛᴇʀ -* ${m.pushName}` }, { quoted: m }))
      .catch((err) => console.log(err));
      break
 
@@ -6289,10 +6289,10 @@ case 'lion2':
 case 'papercut':
    
       if(!q) return reply(`Use ${prefix + command} text`)
-      await ElisaBotMd.sendText(m.chat,' *🌈 Take a moment to createing your textlogo...*' )
+      await ThivaBotMd.sendText(m.chat,' *🌈 Take a moment to createing your textlogo...*' )
       maker.textpro("https://textpro.me/create-art-paper-cut-text-effect-online-1022.html", [
 `${q}`,])
-         .then((data) => ElisaBotMd.sendMessage(m.chat, { image: { url: data }, caption: `${global.cap}\n\n*🗳️ ʀᴇǫᴜᴇsᴛᴇʀ -* ${m.pushName}` }, { quoted: m }))
+         .then((data) => ThivaBotMd.sendMessage(m.chat, { image: { url: data }, caption: `${global.cap}\n\n*🗳️ ʀᴇǫᴜᴇsᴛᴇʀ -* ${m.pushName}` }, { quoted: m }))
          .catch((err) => console.log(err));
          break
 
@@ -6300,10 +6300,10 @@ case 'papercut':
 case 'transformers':
    
       if(!q) return reply(`Use ${prefix + command} text`)
-      await ElisaBotMd.sendText(m.chat,' *🌈 Take a moment to createing your textlogo...*' )
+      await ThivaBotMd.sendText(m.chat,' *🌈 Take a moment to createing your textlogo...*' )
       maker.textpro("https://textpro.me/create-a-transformer-text-effect-online-1035.html", [
 `${q}`,])
-.then((data) => ElisaBotMd.sendMessage(m.chat, { image: { url: data }, caption: `${global.cap}\n\n*🗳️ ʀᴇǫᴜᴇsᴛᴇʀ -* ${m.pushName}` }, { quoted: m }))
+.then((data) => ThivaBotMd.sendMessage(m.chat, { image: { url: data }, caption: `${global.cap}\n\n*🗳️ ʀᴇǫᴜᴇsᴛᴇʀ -* ${m.pushName}` }, { quoted: m }))
 .catch((err) => console.log(err));
 break
    
@@ -6311,12 +6311,12 @@ break
 case 'harrypot':
    
        if(!q) return reply(`Use ${prefix + command} text|text`)
-       await ElisaBotMd.sendText(m.chat,' *🌈 Take a moment to createing your textlogo...*' )
+       await ThivaBotMd.sendText(m.chat,' *🌈 Take a moment to createing your textlogo...*' )
        teks1 = q.split("|")[0]
        teks2 = q.split("|")[1]
        maker.textpro("https://textpro.me/create-harry-potter-text-effect-online-1025.html", [
  `${teks1}`,`${teks2}`])
- .then((data) => ElisaBotMd.sendMessage(m.chat, { image: { url: data }, caption: `${global.cap}\n\n*🗳️ ʀᴇǫᴜᴇsᴛᴇʀ -* ${m.pushName}` }, { quoted: m }))
+ .then((data) => ThivaBotMd.sendMessage(m.chat, { image: { url: data }, caption: `${global.cap}\n\n*🗳️ ʀᴇǫᴜᴇsᴛᴇʀ -* ${m.pushName}` }, { quoted: m }))
  .catch((err) => console.log(err));
  break
 
@@ -6324,10 +6324,10 @@ case 'harrypot':
 case 'neondevil':
    
       if(!q) return reply(`Use ${prefix + command} text`)
-      await ElisaBotMd.sendText(m.chat,' *🌈 Take a moment to createing your textlogo...*' )
+      await ThivaBotMd.sendText(m.chat,' *🌈 Take a moment to createing your textlogo...*' )
       maker.textpro("https://textpro.me/create-neon-devil-wings-text-effect-online-free-1014.html", [
 `${q}`,])
-         .then((data) => ElisaBotMd.sendMessage(m.chat, { image: { url: data }, caption: `${global.cap}\n\n*🗳️ ʀᴇǫᴜᴇsᴛᴇʀ -* ${m.pushName}` }, { quoted: m }))
+         .then((data) => ThivaBotMd.sendMessage(m.chat, { image: { url: data }, caption: `${global.cap}\n\n*🗳️ ʀᴇǫᴜᴇsᴛᴇʀ -* ${m.pushName}` }, { quoted: m }))
          .catch((err) => console.log(err));
          break
 
@@ -6335,10 +6335,10 @@ case 'neondevil':
 case '3dstone':
    
 if(!q) return reply(`Use ${prefix + command} text`)
-await ElisaBotMd.sendText(m.chat,' *🌈 Take a moment to createing your textlogo...*' )
+await ThivaBotMd.sendText(m.chat,' *🌈 Take a moment to createing your textlogo...*' )
 maker.textpro("https://textpro.me/3d-stone-cracked-cool-text-effect-1029.html", [
     `${q}`,])
-  .then((data) => ElisaBotMd.sendMessage(m.chat, { image: { url: data }, caption: `${global.cap}\n\n*🗳️ ʀᴇǫᴜᴇsᴛᴇʀ -* ${m.pushName}` }, { quoted: m }))
+  .then((data) => ThivaBotMd.sendMessage(m.chat, { image: { url: data }, caption: `${global.cap}\n\n*🗳️ ʀᴇǫᴜᴇsᴛᴇʀ -* ${m.pushName}` }, { quoted: m }))
   .catch((err) => console.log(err));
    break
 
@@ -6346,10 +6346,10 @@ maker.textpro("https://textpro.me/3d-stone-cracked-cool-text-effect-1029.html", 
 case '3davengers':
    
 if(!q) return reply(`Use ${prefix + command} text`)
-await ElisaBotMd.sendText(m.chat,' *🌈 Take a moment to createing your textlogo...*' )
+await ThivaBotMd.sendText(m.chat,' *🌈 Take a moment to createing your textlogo...*' )
 maker.textpro("https://textpro.me/create-3d-avengers-logo-online-974.html", [
     `${q}`,])
-  .then((data) => ElisaBotMd.sendMessage(m.chat, { image: { url: data }, caption: `${global.cap}\n\n*🗳️ ʀᴇǫᴜᴇsᴛᴇʀ -* ${m.pushName}` }, { quoted: m }))
+  .then((data) => ThivaBotMd.sendMessage(m.chat, { image: { url: data }, caption: `${global.cap}\n\n*🗳️ ʀᴇǫᴜᴇsᴛᴇʀ -* ${m.pushName}` }, { quoted: m }))
   .catch((err) => console.log(err));
    break
 
@@ -6357,10 +6357,10 @@ maker.textpro("https://textpro.me/create-3d-avengers-logo-online-974.html", [
 case 'thunder':
    
 if(!q) return reply(`Use ${prefix + command} text`)
-await ElisaBotMd.sendText(m.chat,' *🌈 Take a moment to createing your textlogo...*' )
+await ThivaBotMd.sendText(m.chat,' *🌈 Take a moment to createing your textlogo...*' )
 maker.textpro("https://textpro.me/online-thunder-text-effect-generator-1031.html", [
     `${q}`,])
-  .then((data) => ElisaBotMd.sendMessage(m.chat, { image: { url: data }, caption: `${global.cap}\n\n*🗳️ ʀᴇǫᴜᴇsᴛᴇʀ -* ${m.pushName}` }, { quoted: m }))
+  .then((data) => ThivaBotMd.sendMessage(m.chat, { image: { url: data }, caption: `${global.cap}\n\n*🗳️ ʀᴇǫᴜᴇsᴛᴇʀ -* ${m.pushName}` }, { quoted: m }))
   .catch((err) => console.log(err));
    break
    
@@ -6368,19 +6368,19 @@ maker.textpro("https://textpro.me/online-thunder-text-effect-generator-1031.html
 case 'window':
    
 if(!q) return reply(`Use ${prefix + command} text`)
-await ElisaBotMd.sendText(m.chat,' *🌈 Take a moment to createing your textlogo...*' )
+await ThivaBotMd.sendText(m.chat,' *🌈 Take a moment to createing your textlogo...*' )
 maker.textpro("https://textpro.me/write-text-on-foggy-window-online-free-1015.html", [
     `${q}`,])
-  .then((data) => ElisaBotMd.sendMessage(m.chat, { image: { url: data }, caption: `${global.cap}\n\n*🗳️ ʀᴇǫᴜᴇsᴛᴇʀ -* ${m.pushName}` }, { quoted: m }))
+  .then((data) => ThivaBotMd.sendMessage(m.chat, { image: { url: data }, caption: `${global.cap}\n\n*🗳️ ʀᴇǫᴜᴇsᴛᴇʀ -* ${m.pushName}` }, { quoted: m }))
   .catch((err) => console.log(err));
    break
    case 'blackpinkneon':
    
 if(!q) return reply(`Use ${prefix + command} text`)
-await ElisaBotMd.sendText(m.chat,' *🌈 Take a moment to createing your textlogo...*' )
+await ThivaBotMd.sendText(m.chat,' *🌈 Take a moment to createing your textlogo...*' )
 maker.textpro("https://textpro.me/create-neon-light-blackpink-logo-text-effect-online-1081.html", [
     `${q}`,])
-  .then((data) => ElisaBotMd.sendMessage(m.chat, { image: { url: data }, caption: `${global.cap}\n\n*🗳️ ʀᴇǫᴜᴇsᴛᴇʀ -* ${m.pushName}` }, { quoted: m }))
+  .then((data) => ThivaBotMd.sendMessage(m.chat, { image: { url: data }, caption: `${global.cap}\n\n*🗳️ ʀᴇǫᴜᴇsᴛᴇʀ -* ${m.pushName}` }, { quoted: m }))
   .catch((err) => console.log(err));
    break
 
@@ -6388,12 +6388,12 @@ case 'graffiti':
    case 'grafiti':
       
 if(!q) return reply(`Use ${prefix + command} text|text`)
-await ElisaBotMd.sendText(m.chat,' *🌈 Take a moment to createing your textlogo...*' )
+await ThivaBotMd.sendText(m.chat,' *🌈 Take a moment to createing your textlogo...*' )
 teks1 = q.split("|")[0]
 teks2 = q.split("|")[1]
 maker.textpro("https://textpro.me/create-a-cool-graffiti-text-on-the-wall-1010.html", [
     `${teks1}`,`${teks2}`])
-  .then((data) => ElisaBotMd.sendMessage(m.chat, { image: { url: data }, caption: `${global.cap}\n\n*🗳️ ʀᴇǫᴜᴇsᴛᴇʀ -* ${m.pushName}` }, { quoted: m }))
+  .then((data) => ThivaBotMd.sendMessage(m.chat, { image: { url: data }, caption: `${global.cap}\n\n*🗳️ ʀᴇǫᴜᴇsᴛᴇʀ -* ${m.pushName}` }, { quoted: m }))
   .catch((err) => console.log(err));
    break
 
@@ -6402,12 +6402,12 @@ maker.textpro("https://textpro.me/create-a-cool-graffiti-text-on-the-wall-1010.h
 case 'pornhub2':
    
 if(!q) return reply(`Use ${prefix + command} text`)
-await ElisaBotMd.sendText(m.chat,' *🌈 Take a moment to createing your textlogo...*' )
+await ThivaBotMd.sendText(m.chat,' *🌈 Take a moment to createing your textlogo...*' )
 teks1 = q.split("|")[0]
 teks2 = q.split("|")[1]
 maker.textpro("https://textpro.me/pornhub-style-logo-online-generator-free-977.html", [
     `${teks1}`,`${teks2}`])
-  .then((data) => ElisaBotMd.sendMessage(m.chat, { image: { url: data }, caption: `${global.cap}\n\n*🗳️ ʀᴇǫᴜᴇsᴛᴇʀ -* ${m.pushName}` }, { quoted: m }))
+  .then((data) => ThivaBotMd.sendMessage(m.chat, { image: { url: data }, caption: `${global.cap}\n\n*🗳️ ʀᴇǫᴜᴇsᴛᴇʀ -* ${m.pushName}` }, { quoted: m }))
   .catch((err) => console.log(err));
    break
 
@@ -6416,20 +6416,20 @@ maker.textpro("https://textpro.me/pornhub-style-logo-online-generator-free-977.h
 case 'blackpink2':
    
 if(!q) return reply(`Use ${prefix + command} text`)
-await ElisaBotMd.sendText(m.chat,' *🌈 Take a moment to createing your textlogo...*' )
+await ThivaBotMd.sendText(m.chat,' *🌈 Take a moment to createing your textlogo...*' )
 maker.textpro("https://textpro.me/create-blackpink-logo-style-online-1001.html", [
     `${q}`,])
-  .then((data) => ElisaBotMd.sendMessage(m.chat, { image: { url: data }, caption: `${global.cap}\n\n*🗳️ ʀᴇǫᴜᴇsᴛᴇʀ -* ${m.pushName}` }, { quoted: m }))
+  .then((data) => ThivaBotMd.sendMessage(m.chat, { image: { url: data }, caption: `${global.cap}\n\n*🗳️ ʀᴇǫᴜᴇsᴛᴇʀ -* ${m.pushName}` }, { quoted: m }))
   .catch((err) => console.log(err));
    break
 
 case 'glitch':
    
 if(!q) return reply(`Use ${prefix + command} text`)
-await ElisaBotMd.sendText(m.chat,' *🌈 Take a moment to createing your textlogo...*' )
+await ThivaBotMd.sendText(m.chat,' *🌈 Take a moment to createing your textlogo...*' )
 maker.textpro("https://textpro.me/create-impressive-glitch-text-effects-online-1027.html", [
     `${q}`,])
-  .then((data) => ElisaBotMd.sendMessage(m.chat, { image: { url: data }, caption: `${global.cap}\n\n*🗳️ ʀᴇǫᴜᴇsᴛᴇʀ -* ${m.pushName}` }, { quoted: m }))
+  .then((data) => ThivaBotMd.sendMessage(m.chat, { image: { url: data }, caption: `${global.cap}\n\n*🗳️ ʀᴇǫᴜᴇsᴛᴇʀ -* ${m.pushName}` }, { quoted: m }))
   .catch((err) => console.log(err));
    break
 
@@ -6438,12 +6438,12 @@ maker.textpro("https://textpro.me/create-impressive-glitch-text-effects-online-1
 case 'glitch2':
    
 if(!q) return reply(`Use ${prefix + command} text|text`)
-await ElisaBotMd.sendText(m.chat,' *🌈 Take a moment to createing your textlogo...*' )
+await ThivaBotMd.sendText(m.chat,' *🌈 Take a moment to createing your textlogo...*' )
 teks1 = q.split("|")[0]
 teks2 = q.split("|")[1]
 maker.textpro("https://textpro.me/create-a-glitch-text-effect-online-free-1026.html", [
     `${teks1}`,`${teks2}`])
-  .then((data) => ElisaBotMd.sendMessage(m.chat, { image: { url: data }, caption: `${global.cap}\n\n*🗳️ ʀᴇǫᴜᴇsᴛᴇʀ -* ${m.pushName}` }, { quoted: m }))
+  .then((data) => ThivaBotMd.sendMessage(m.chat, { image: { url: data }, caption: `${global.cap}\n\n*🗳️ ʀᴇǫᴜᴇsᴛᴇʀ -* ${m.pushName}` }, { quoted: m }))
   .catch((err) => console.log(err));
    break
 
@@ -6452,12 +6452,12 @@ maker.textpro("https://textpro.me/create-a-glitch-text-effect-online-free-1026.h
 case 'glitch3':
    
 if(!q) return reply(`Use ${prefix + command} text|text`)
-await ElisaBotMd.sendText(m.chat,' *🌈 Take a moment to createing your textlogo...*' )
+await ThivaBotMd.sendText(m.chat,' *🌈 Take a moment to createing your textlogo...*' )
 teks1 = q.split("|")[0]
 teks2 = q.split("|")[1]
 maker.textpro("https://textpro.me/create-glitch-text-effect-style-tik-tok-983.html", [
     `${teks1}`,`${teks2}`])
-  .then((data) => ElisaBotMd.sendMessage(m.chat, { image: { url: data }, caption: `${global.cap}\n\n*🗳️ ʀᴇǫᴜᴇsᴛᴇʀ -* ${m.pushName}` }, { quoted: m }))
+  .then((data) => ThivaBotMd.sendMessage(m.chat, { image: { url: data }, caption: `${global.cap}\n\n*🗳️ ʀᴇǫᴜᴇsᴛᴇʀ -* ${m.pushName}` }, { quoted: m }))
   .catch((err) => console.log(err));
    break
 
@@ -6466,12 +6466,12 @@ maker.textpro("https://textpro.me/create-glitch-text-effect-style-tik-tok-983.ht
 case '3dspace':
    
 if(!q) return reply(`Use ${prefix + command} text|text`)
-await ElisaBotMd.sendText(m.chat,' *🌈 Take a moment to createing your textlogo...*' )
+await ThivaBotMd.sendText(m.chat,' *🌈 Take a moment to createing your textlogo...*' )
 teks1 = q.split("|")[0]
 teks2 = q.split("|")[1]
 maker.textpro("https://textpro.me/create-space-3d-text-effect-online-985.html", [
     `${teks1}`,`${teks2}`])
-  .then((data) => ElisaBotMd.sendMessage(m.chat, { image: { url: data }, caption: `${global.cap}\n\n*🗳️ ʀᴇǫᴜᴇsᴛᴇʀ -* ${m.pushName}` }, { quoted: m }))
+  .then((data) => ThivaBotMd.sendMessage(m.chat, { image: { url: data }, caption: `${global.cap}\n\n*🗳️ ʀᴇǫᴜᴇsᴛᴇʀ -* ${m.pushName}` }, { quoted: m }))
   .catch((err) => console.log(err));
    break
 
@@ -6480,12 +6480,12 @@ maker.textpro("https://textpro.me/create-space-3d-text-effect-online-985.html", 
 case 'lion':
    
 if(!q) return reply(`Use ${prefix + command} text|text`)
-await ElisaBotMd.sendText(m.chat,' *🌈 Take a moment to createing your textlogo...*' )
+await ThivaBotMd.sendText(m.chat,' *🌈 Take a moment to createing your textlogo...*' )
 teks1 = q.split("|")[0]
 teks2 = q.split("|")[1]
 maker.textpro("https://textpro.me/create-lion-logo-mascot-online-938.html", [
     `${teks1}`,`${teks2}`])
-  .then((data) => ElisaBotMd.sendMessage(m.chat, { image: { url: data }, caption: `${global.cap}\n\n*🗳️ ʀᴇǫᴜᴇsᴛᴇʀ -* ${m.pushName}` }, { quoted: m }))
+  .then((data) => ThivaBotMd.sendMessage(m.chat, { image: { url: data }, caption: `${global.cap}\n\n*🗳️ ʀᴇǫᴜᴇsᴛᴇʀ -* ${m.pushName}` }, { quoted: m }))
   .catch((err) => console.log(err));
    break
 
@@ -6494,10 +6494,10 @@ maker.textpro("https://textpro.me/create-lion-logo-mascot-online-938.html", [
 case '3dneon':
    
 if(!q) return reply(`Use ${prefix + command} text`)
-await ElisaBotMd.sendText(m.chat,' *🌈 Take a moment to createing your textlogo...*' )
+await ThivaBotMd.sendText(m.chat,' *🌈 Take a moment to createing your textlogo...*' )
 maker.textpro("https://textpro.me/create-3d-neon-light-text-effect-online-1028.html", [
     `${q}`,])
-  .then((data) => ElisaBotMd.sendMessage(m.chat, { image: { url: data }, caption: `${global.cap}\n\n*🗳️ ʀᴇǫᴜᴇsᴛᴇʀ -* ${m.pushName}` }, { quoted: m }))
+  .then((data) => ThivaBotMd.sendMessage(m.chat, { image: { url: data }, caption: `${global.cap}\n\n*🗳️ ʀᴇǫᴜᴇsᴛᴇʀ -* ${m.pushName}` }, { quoted: m }))
   .catch((err) => console.log(err));
    break
 
@@ -6506,10 +6506,10 @@ maker.textpro("https://textpro.me/create-3d-neon-light-text-effect-online-1028.h
 case 'neon':
    
 if(!q) return reply(`Use ${prefix + command} text`)
-await ElisaBotMd.sendText(m.chat,' *🌈 Take a moment to createing your textlogo...*' )
+await ThivaBotMd.sendText(m.chat,' *🌈 Take a moment to createing your textlogo...*' )
 maker.textpro("https://textpro.me/neon-text-effect-online-879.html", [
     `${q}`,])
-  .then((data) => ElisaBotMd.sendMessage(m.chat, { image: { url: data }, caption: `${global.cap}\n\n*🗳️ ʀᴇǫᴜᴇsᴛᴇʀ -* ${m.pushName}` }, { quoted: m }))
+  .then((data) => ThivaBotMd.sendMessage(m.chat, { image: { url: data }, caption: `${global.cap}\n\n*🗳️ ʀᴇǫᴜᴇsᴛᴇʀ -* ${m.pushName}` }, { quoted: m }))
   .catch((err) => console.log(err));
    break
 
@@ -6518,10 +6518,10 @@ maker.textpro("https://textpro.me/neon-text-effect-online-879.html", [
 case 'greenneon':
    
 if(!q) return reply(`Use ${prefix + command} text`)
-await ElisaBotMd.sendText(m.chat,' *🌈 Take a moment to createing your textlogo...*' )
+await ThivaBotMd.sendText(m.chat,' *🌈 Take a moment to createing your textlogo...*' )
 maker.textpro("https://textpro.me/green-neon-text-effect-874.html", [
     `${q}`,])
-  .then((data) => ElisaBotMd.sendMessage(m.chat, { image: { url: data }, caption: `${global.cap}\n\n*🗳️ ʀᴇǫᴜᴇsᴛᴇʀ -* ${m.pushName}` }, { quoted: m }))
+  .then((data) => ThivaBotMd.sendMessage(m.chat, { image: { url: data }, caption: `${global.cap}\n\n*🗳️ ʀᴇǫᴜᴇsᴛᴇʀ -* ${m.pushName}` }, { quoted: m }))
   .catch((err) => console.log(err));
    break
    
@@ -6530,10 +6530,10 @@ maker.textpro("https://textpro.me/green-neon-text-effect-874.html", [
 case 'bokeh':
    
 if(!q) return reply(`Use ${prefix + command} text`)
-await ElisaBotMd.sendText(m.chat,' *🌈 Take a moment to createing your textlogo...*' )
+await ThivaBotMd.sendText(m.chat,' *🌈 Take a moment to createing your textlogo...*' )
 maker.textpro("https://textpro.me/bokeh-text-effect-876.html", [
     `${q}`,])
-  .then((data) => ElisaBotMd.sendMessage(m.chat, { image: { url: data }, caption: `${global.cap}\n\n*🗳️ ʀᴇǫᴜᴇsᴛᴇʀ -* ${m.pushName}` }, { quoted: m }))
+  .then((data) => ThivaBotMd.sendMessage(m.chat, { image: { url: data }, caption: `${global.cap}\n\n*🗳️ ʀᴇǫᴜᴇsᴛᴇʀ -* ${m.pushName}` }, { quoted: m }))
   .catch((err) => console.log(err));
    break
    
@@ -6542,10 +6542,10 @@ maker.textpro("https://textpro.me/bokeh-text-effect-876.html", [
 case 'holographic':
    
 if(!q) return reply(`Use ${prefix + command} text`)
-await ElisaBotMd.sendText(m.chat,' *🌈 Take a moment to createing your textlogo...*' )
+await ThivaBotMd.sendText(m.chat,' *🌈 Take a moment to createing your textlogo...*' )
 maker.textpro("https://textpro.me/holographic-3d-text-effect-975.html", [
     `${q}`,])
-  .then((data) => ElisaBotMd.sendMessage(m.chat, { image: { url: data }, caption: `${global.cap}\n\n*🗳️ ʀᴇǫᴜᴇsᴛᴇʀ -* ${m.pushName}` }, { quoted: m }))
+  .then((data) => ThivaBotMd.sendMessage(m.chat, { image: { url: data }, caption: `${global.cap}\n\n*🗳️ ʀᴇǫᴜᴇsᴛᴇʀ -* ${m.pushName}` }, { quoted: m }))
   .catch((err) => console.log(err));
    break
 
@@ -6554,12 +6554,12 @@ maker.textpro("https://textpro.me/holographic-3d-text-effect-975.html", [
 case 'bear':
    
 if(!q) return reply(`Use ${prefix + command} text`)
-await ElisaBotMd.sendText(m.chat,' *🌈 Take a moment to createing your textlogo...*' )
+await ThivaBotMd.sendText(m.chat,' *🌈 Take a moment to createing your textlogo...*' )
 teks1 = q.split("|")[0]
 teks2 = q.split("|")[1]
 maker.textpro("https://textpro.me/online-black-and-white-bear-mascot-logo-creation-1012.html", [
     `${teks1}`,`${teks2}`])
-  .then((data) => ElisaBotMd.sendMessage(m.chat, { image: { url: data }, caption: `${global.cap}\n\n*🗳️ ʀᴇǫᴜᴇsᴛᴇʀ -* ${m.pushName}` }, { quoted: m }))
+  .then((data) => ThivaBotMd.sendMessage(m.chat, { image: { url: data }, caption: `${global.cap}\n\n*🗳️ ʀᴇǫᴜᴇsᴛᴇʀ -* ${m.pushName}` }, { quoted: m }))
   .catch((err) => console.log(err));
    break
 
@@ -6568,12 +6568,12 @@ maker.textpro("https://textpro.me/online-black-and-white-bear-mascot-logo-creati
 case 'wolf':
    
 if(!q) return reply(`Use ${prefix + command} text`)
-await ElisaBotMd.sendText(m.chat,' *🌈 Take a moment to createing your textlogo...*' )
+await ThivaBotMd.sendText(m.chat,' *🌈 Take a moment to createing your textlogo...*' )
 teks1 = q.split("|")[0]
 teks2 = q.split("|")[1]
 maker.textpro("https://textpro.me/create-wolf-logo-galaxy-online-936.html", [
     `${teks1}`,`${teks2}`])
-  .then((data) => ElisaBotMd.sendMessage(m.chat, { image: { url: data }, caption: `${global.cap}\n\n*🗳️ ʀᴇǫᴜᴇsᴛᴇʀ -* ${m.pushName}` }, { quoted: m }))
+  .then((data) => ThivaBotMd.sendMessage(m.chat, { image: { url: data }, caption: `${global.cap}\n\n*🗳️ ʀᴇǫᴜᴇsᴛᴇʀ -* ${m.pushName}` }, { quoted: m }))
   .catch((err) => console.log(err));
    break
 
@@ -6583,10 +6583,10 @@ maker.textpro("https://textpro.me/create-wolf-logo-galaxy-online-936.html", [
 case 'joker':
    
 if(!q) return reply(`Use ${prefix + command} text`)
-await ElisaBotMd.sendText(m.chat,' *🌈 Take a moment to createing your textlogo...*' )
+await ThivaBotMd.sendText(m.chat,' *🌈 Take a moment to createing your textlogo...*' )
 maker.textpro("https://textpro.me/create-logo-joker-online-934.html", [
     `${q}`,])
-  .then((data) => ElisaBotMd.sendMessage(m.chat, { image: { url: data }, caption: `${global.cap}\n\n*🗳️ ʀᴇǫᴜᴇsᴛᴇʀ -* ${m.pushName}` }, { quoted: m }))
+  .then((data) => ThivaBotMd.sendMessage(m.chat, { image: { url: data }, caption: `${global.cap}\n\n*🗳️ ʀᴇǫᴜᴇsᴛᴇʀ -* ${m.pushName}` }, { quoted: m }))
   .catch((err) => console.log(err));
    break
 
@@ -6594,70 +6594,70 @@ maker.textpro("https://textpro.me/create-logo-joker-online-934.html", [
 case 'dropwater2':
    
 if(!q) return reply(`Use ${prefix + command} text`)
-await ElisaBotMd.sendText(m.chat,' *🌈 Take a moment to createing your textlogo...*' )
+await ThivaBotMd.sendText(m.chat,' *🌈 Take a moment to createing your textlogo...*' )
 maker.textpro("https://textpro.me/dropwater-text-effect-872.html", [
     `${q}`,])
-  .then((data) => ElisaBotMd.sendMessage(m.chat, { image: { url: data }, caption: `${global.cap}\n\n*🗳️ ʀᴇǫᴜᴇsᴛᴇʀ -* ${m.pushName}` }, { quoted: m }))
+  .then((data) => ThivaBotMd.sendMessage(m.chat, { image: { url: data }, caption: `${global.cap}\n\n*🗳️ ʀᴇǫᴜᴇsᴛᴇʀ -* ${m.pushName}` }, { quoted: m }))
   .catch((err) => console.log(err));
    break
    
    case 'summertime':
    
 if(!q) return reply(`Use ${prefix + command} text`)
-await ElisaBotMd.sendText(m.chat,' *🌈 Take a moment to createing your textlogo...*' )
+await ThivaBotMd.sendText(m.chat,' *🌈 Take a moment to createing your textlogo...*' )
 maker.textpro("https://textpro.me/create-a-summer-neon-light-text-effect-online-1076.html", [
     `${q}`,])
-  .then((data) => ElisaBotMd.sendMessage(m.chat, { image: { url: data }, caption: `${global.cap}\n\n*🗳️ ʀᴇǫᴜᴇsᴛᴇʀ -* ${m.pushName}` }, { quoted: m }))
+  .then((data) => ThivaBotMd.sendMessage(m.chat, { image: { url: data }, caption: `${global.cap}\n\n*🗳️ ʀᴇǫᴜᴇsᴛᴇʀ -* ${m.pushName}` }, { quoted: m }))
   .catch((err) => console.log(err));
    break
 
 case 'neonlight2':
    
 if(!q) return reply(`Use ${prefix + command} text`)
-await ElisaBotMd.sendText(m.chat,' *🌈 Take a moment to createing your textlogo...*' )
+await ThivaBotMd.sendText(m.chat,' *🌈 Take a moment to createing your textlogo...*' )
 maker.textpro("https://textpro.me/neon-light-text-effect-with-galaxy-style-981.html", [
     `${q}`,])
-  .then((data) => ElisaBotMd.sendMessage(m.chat, { image: { url: data }, caption: `${global.cap}\n\n*🗳️ ʀᴇǫᴜᴇsᴛᴇʀ -* ${m.pushName}` }, { quoted: m }))
+  .then((data) => ThivaBotMd.sendMessage(m.chat, { image: { url: data }, caption: `${global.cap}\n\n*🗳️ ʀᴇǫᴜᴇsᴛᴇʀ -* ${m.pushName}` }, { quoted: m }))
   .catch((err) => console.log(err));
    break
 
 case 'thewall':
    
 if(!q) return reply(`Use ${prefix + command} text`)
-await ElisaBotMd.sendText(m.chat,' *🌈 Take a moment to createing your textlogo...*' )
+await ThivaBotMd.sendText(m.chat,' *🌈 Take a moment to createing your textlogo...*' )
 maker.textpro("https://textpro.me/break-wall-text-effect-871.html", [
     `${q}`,])
-  .then((data) => ElisaBotMd.sendMessage(m.chat, { image: { url: data }, caption: `${global.cap}\n\n*🗳️ ʀᴇǫᴜᴇsᴛᴇʀ -* ${m.pushName}` }, { quoted: m }))
+  .then((data) => ThivaBotMd.sendMessage(m.chat, { image: { url: data }, caption: `${global.cap}\n\n*🗳️ ʀᴇǫᴜᴇsᴛᴇʀ -* ${m.pushName}` }, { quoted: m }))
   .catch((err) => console.log(err));
    break
    
 case 'natural':
    
 if(!q) return reply(`Use ${prefix + command} text`)
-await ElisaBotMd.sendText(m.chat,' *🌈 Take a moment to createing your textlogo...*' )
+await ThivaBotMd.sendText(m.chat,' *🌈 Take a moment to createing your textlogo...*' )
 maker.textpro("https://textpro.me/natural-leaves-text-effect-931.html", [
     `${q}`,])
-  .then((data) => ElisaBotMd.sendMessage(m.chat, { image: { url: data }, caption: `${global.cap}\n\n*🗳️ ʀᴇǫᴜᴇsᴛᴇʀ -* ${m.pushName}` }, { quoted: m }))
+  .then((data) => ThivaBotMd.sendMessage(m.chat, { image: { url: data }, caption: `${global.cap}\n\n*🗳️ ʀᴇǫᴜᴇsᴛᴇʀ -* ${m.pushName}` }, { quoted: m }))
   .catch((err) => console.log(err));
    break 
 
 case 'carbon':
    
 if(!q) return reply(`Use ${prefix + command} text`)
-await ElisaBotMd.sendText(m.chat,' *🌈 Take a moment to createing your textlogo...*' )
+await ThivaBotMd.sendText(m.chat,' *🌈 Take a moment to createing your textlogo...*' )
 maker.textpro("https://textpro.me/carbon-text-effect-833.html", [
     `${q}`,])
-  .then((data) => ElisaBotMd.sendMessage(m.chat, { image: { url: data }, caption: `${global.cap}\n\n*🗳️ ʀᴇǫᴜᴇsᴛᴇʀ -* ${m.pushName}` }, { quoted: m }))
+  .then((data) => ThivaBotMd.sendMessage(m.chat, { image: { url: data }, caption: `${global.cap}\n\n*🗳️ ʀᴇǫᴜᴇsᴛᴇʀ -* ${m.pushName}` }, { quoted: m }))
   .catch((err) => console.log(err));
    break
 
 case 'pencil':
    
 if(!q) return reply(`Use ${prefix + command} text`)
-await ElisaBotMd.sendText(m.chat,' *🌈 Take a moment to createing your textlogo...*' )
+await ThivaBotMd.sendText(m.chat,' *🌈 Take a moment to createing your textlogo...*' )
 maker.textpro("https://textpro.me/create-a-sketch-text-effect-online-1044.html", [
     `${q}`,])
-  .then((data) => ElisaBotMd.sendMessage(m.chat, { image: { url: data }, caption: `${global.cap}\n\n*🗳️ ʀᴇǫᴜᴇsᴛᴇʀ -* ${m.pushName}` }, { quoted: m }))
+  .then((data) => ThivaBotMd.sendMessage(m.chat, { image: { url: data }, caption: `${global.cap}\n\n*🗳️ ʀᴇǫᴜᴇsᴛᴇʀ -* ${m.pushName}` }, { quoted: m }))
   .catch((err) => console.log(err));
    break
    
@@ -6665,21 +6665,21 @@ maker.textpro("https://textpro.me/create-a-sketch-text-effect-online-1044.html",
 case 'lovemsg' :
 
 maker.photooxy("https://photooxy.com/logo-and-text-effects/create-a-picture-of-love-message-377.html", [`${q}`,] )
- .then((data) => ElisaBotMd.sendMessage(m.chat, { image: { url: data }, caption: `${global.cap}\n\n*🗳️ ʀᴇǫᴜᴇsᴛᴇʀ -* ${m.pushName}` }, { quoted: m }))
+ .then((data) => ThivaBotMd.sendMessage(m.chat, { image: { url: data }, caption: `${global.cap}\n\n*🗳️ ʀᴇǫᴜᴇsᴛᴇʀ -* ${m.pushName}` }, { quoted: m }))
   .catch((err) => console.log(err));
   
 break
 //https://photooxy.com/other-design/create-dark-metal-text-with-special-logo-160.html
 case 'darkmetal' :
 maker.photooxy("https://photooxy.com/other-design/create-dark-metal-text-with-special-logo-160.html", [`${q}`,] )
- .then((data) => ElisaBotMd.sendMessage(m.chat, { image: { url: data }, caption: `${global.cap}\n\n*🗳️ ʀᴇǫᴜᴇsᴛᴇʀ -* ${m.pushName}` }, { quoted: m }))
+ .then((data) => ThivaBotMd.sendMessage(m.chat, { image: { url: data }, caption: `${global.cap}\n\n*🗳️ ʀᴇǫᴜᴇsᴛᴇʀ -* ${m.pushName}` }, { quoted: m }))
   .catch((err) => console.log(err));
   
 break
 case 'qsteel': case 'qavenger' : case 'qpolugon' : case 'qhsteel' : case 'qwood' : case 'qlovely' : case 'qmetalic' : case 'qneon' : case 'qpubg' : case 'qfire' : case 'qhorr' : case 'qhalowin' : case 'qvideogame' :
 case 'qwolf' : case 'qninja' : case 'qreto' :  {
 
-const logomaking = await ElisaBotMd.sendText(m.chat, LOGO_MAKING )          
+const logomaking = await ThivaBotMd.sendText(m.chat, LOGO_MAKING )          
 
 
   text1 = q.split("|")[0]
@@ -6701,17 +6701,17 @@ const logomaking = await ElisaBotMd.sendText(m.chat, LOGO_MAKING )
    if (/qwolf/.test(command)) link = `https://api.akuari.my.id/textpro/scraper-2?text=${text1}&text2=${text2}&link=https://textpro.me/create-wolf-logo-galaxy-online-936.html`
    if (/qninja/.test(command)) link = `https://api.akuari.my.id/textpro/scraper-2?text=${text1}&text2=${text2}&link=https://textpro.me/create-ninja-logo-online-935.html`
    if (/reto/.test(command)) link = `https://api.akuari.my.id/textpro/scraper-2?text=${text1}&text2=${text2}&link=https://textpro.me/create-3d-retro-text-effect-online-free-106a5.html`
-   const nima = await fetchJson(link)
-   const data = nima.respon
-   //const logomaking = await ElisaBotMd.sendText(m.chat, LOGO_MAKING )          
-   await ElisaBotMd.sendMessage(m.chat, { image: { url: data }, caption: `${global.cap}\n\n*🗳️ ʀᴇǫᴜᴇsᴛᴇʀ -* ${m.pushName}` }, { quoted: m })
-   await ElisaBotMd.sendMessage(m.chat,{delete : logomaking.key })  
+   const Thiva = await fetchJson(link)
+   const data = Thiva.respon
+   //const logomaking = await ThivaBotMd.sendText(m.chat, LOGO_MAKING )          
+   await ThivaBotMd.sendMessage(m.chat, { image: { url: data }, caption: `${global.cap}\n\n*🗳️ ʀᴇǫᴜᴇsᴛᴇʀ -* ${m.pushName}` }, { quoted: m })
+   await ThivaBotMd.sendMessage(m.chat,{delete : logomaking.key })  
        
                   }
                   break
 case 'tlc' : case 'tls' : case 'tlm' : case 'tle' : case 'tlb': case 'mountain' :{
     
-   const logomaking = await ElisaBotMd.sendText(m.chat, LOGO_MAKING )          
+   const logomaking = await ThivaBotMd.sendText(m.chat, LOGO_MAKING )          
    text1 = q.split("|")[0]
    text2 = q.split("|")[1]
    var link 
@@ -6722,18 +6722,18 @@ case 'tlc' : case 'tls' : case 'tlm' : case 'tle' : case 'tlb': case 'mountain' 
    if (/tlb/.test(command)) link = `https://api.akuari.my.id/ephoto/team-logo-banteng?text=${text1}&text_2=${text2}`
    if (/mountain/.test(command)) link = `https://api.akuari.my.id/ephoto/mountain?text=${text1}&text_2=${text2}`
    
-   await ElisaBotMd.sendMessage(m.chat, { image: { url: link }, caption: `${global.cap}\n\n*🗳️ ʀᴇǫᴜᴇsᴛᴇʀ -* ${m.pushName}` }, { quoted: m })
-   await ElisaBotMd.sendMessage(m.chat,{delete : logomaking.key })  
+   await ThivaBotMd.sendMessage(m.chat, { image: { url: link }, caption: `${global.cap}\n\n*🗳️ ʀᴇǫᴜᴇsᴛᴇʀ -* ${m.pushName}` }, { quoted: m })
+   await ThivaBotMd.sendMessage(m.chat,{delete : logomaking.key })  
      
 }
 break
 case 'logo3' :{
 var MAX = ''
-if (global.LANG == 'SI') MAX= '```👸💬 කරුනාකර වචනයක් ලබාදෙන්න ...```\n_උදාහරණ .logo3 MR | NIMA_'
-if (global.LANG == 'EN') MAX= '```👸💬 Please give me a some words ...```\n_example .logo3 MR | NIMA_'
+if (global.LANG == 'SI') MAX= '```👸💬 කරුනාකර වචනයක් ලබාදෙන්න ...```\n_උදාහරණ .logo3 MR | Thiva_'
+if (global.LANG == 'EN') MAX= '```👸💬 Please give me a some words ...```\n_example .logo3 MR | Thiva_'
 if (!text && !text.includes('|')) return reply (MAX)
                               
- await ElisaBotMd.sendMessage(from, { react: { text: `3️⃣`, key: m.key }})     
+ await ThivaBotMd.sendMessage(from, { react: { text: `3️⃣`, key: m.key }})     
   
      	const desmsg = `╔═════════════════════☐
 
@@ -6874,7 +6874,7 @@ if (!text && !text.includes('|')) return reply (MAX)
           ]
         }
      ]
-     await ElisaBotMd.sendListMsg(m.chat, `${desmsg}`, `${global.botnma}`, `*🎨 LOGO PACK 3*`, `MAKE LOGO`, sections, m)
+     await ThivaBotMd.sendListMsg(m.chat, `${desmsg}`, `${global.botnma}`, `*🎨 LOGO PACK 3*`, `MAKE LOGO`, sections, m)
  
 }
 break
@@ -6884,7 +6884,7 @@ if (global.LANG == 'SI') MAX= '```👸💬 කරුනාකර වචනයක
 if (global.LANG == 'EN') MAX= '```👸💬 Please give me a some words ...```\n_example .logo4 𝗠𝗥 𝗧𝗛𝗜𝗩𝗔_'
 if (!text) return reply (MAX)
                               
- await ElisaBotMd.sendMessage(from, { react: { text: `4️⃣`, key: m.key }})     
+ await ThivaBotMd.sendMessage(from, { react: { text: `4️⃣`, key: m.key }})     
   
      	const desmsg = `╔═════════════════════☐
 
@@ -6963,7 +6963,7 @@ if (!text) return reply (MAX)
           ]
         }
      ]
-     await ElisaBotMd.sendListMsg(m.chat, `${desmsg}`, `${global.botnma}`, `*🎨 LOGO PACK 4*`, `MAKE LOGO`, sections, m)
+     await ThivaBotMd.sendListMsg(m.chat, `${desmsg}`, `${global.botnma}`, `*🎨 LOGO PACK 4*`, `MAKE LOGO`, sections, m)
  
 }
 break
@@ -6976,7 +6976,7 @@ case 'eglitch' : case 'eberry': case 'eneon' : case 'ecrismas' : case 'ethunder'
   if (global.LANG == 'SI') GIVEE = `*👸💬 කරුනාකර වචනයක් ලබාදෙන්න* \n _ℹ️ උදාහරණ ${prefix + command} 𝗠𝗥 𝗧𝗛𝗜𝗩𝗔_`
     
      if(!text) return reply('GIVEE')
-     await ElisaBotMd.sendMessage(from, { react: { text: `🥨`, key: m.key }})     
+     await ThivaBotMd.sendMessage(from, { react: { text: `🥨`, key: m.key }})     
       
        let link      
        if (/eglitch/.test(command)) link = 'https://api.tiodevhost.my.id/api/textpro/glitch?text='+text
@@ -6984,7 +6984,7 @@ case 'eglitch' : case 'eberry': case 'eneon' : case 'ecrismas' : case 'ethunder'
        if (/eneon/.test(command)) link = 'https://api.tiodevhost.my.id/api/textpro/neon?text='+text
        if (/ecrismas/.test(command)) link = 'https://api.tiodevhost.my.id/api/textpro/3dchristmas?text='+text
        if (/ethunder/.test(command)) link = 'https://api.tiodevhost.my.id/api/textpro/thunder?text='+text
-       if (/eninja/.test(command)) link = 'https://api.tiodevhost.my.id/api/textpro/ninja-logo?text='+text+'&text2=ELISA BOT'
+       if (/eninja/.test(command)) link = 'https://api.tiodevhost.my.id/api/textpro/ninja-logo?text='+text+'&text2=Thiva BOT'
        if (/eorange/.test(command)) link = 'https://api.tiodevhost.my.id/api/textpro/3d-orange-juice?text='+text
        if (/ecake/.test(command)) link = 'https://api.tiodevhost.my.id/api/textpro/chocolate-cake?text='+text
        if (/estrowberry/.test(command)) link = 'https://api.tiodevhost.my.id/api/textpro/strawberry?text='+text
@@ -6996,8 +6996,8 @@ case 'eglitch' : case 'eberry': case 'eneon' : case 'ecrismas' : case 'ethunder'
        if (/eilluminati/.test(command)) link = 'https://api.tiodevhost.my.id/api/photooxy/illuminated-metallic?text='+text
        
     const img = await getBuffer(link)
-    await ElisaBotMd.sendMessage(m.chat, { image: img, caption: `${global.cap}\n\n*🗳️ ʀᴇǫᴜᴇsᴛᴇʀ -* ${m.pushName}` }, { quoted: m })
-    //await ElisaBotMd.sendMessage(m.chat,{delete : logomaking.key })  
+    await ThivaBotMd.sendMessage(m.chat, { image: img, caption: `${global.cap}\n\n*🗳️ ʀᴇǫᴜᴇsᴛᴇʀ -* ${m.pushName}` }, { quoted: m })
+    //await ThivaBotMd.sendMessage(m.chat,{delete : logomaking.key })  
            
 }
 break
@@ -7006,7 +7006,7 @@ break
                                   let [nama, tgl, bln, thn] = text.split`,`
                                   let anu = await primbon.potensi_keberuntungan(nama, tgl, bln, thn)
                                   if (anu.status == false) return reply(anu.message)
-                                  ElisaBotMd.sendText(m.chat, `🔮 *𝗡𝗔𝗠𝗘 :* ${anu.message.nama}\n🔮 *𝗕𝗢𝗥𝗡 :* ${anu.message.tgl_lahir}\n🔮 *𝗥𝗘𝗦𝗨𝗟𝗧𝗦 :* ${anu.message.result}`, m)
+                                  ThivaBotMd.sendText(m.chat, `🔮 *𝗡𝗔𝗠𝗘 :* ${anu.message.nama}\n🔮 *𝗕𝗢𝗥𝗡 :* ${anu.message.tgl_lahir}\n🔮 *𝗥𝗘𝗦𝗨𝗟𝗧𝗦 :* ${anu.message.result}`, m)
                               }
                               break
                               case 'memancing1111': case 'fishing1111': {
@@ -7014,7 +7014,7 @@ break
                                   let [tgl, bln, thn] = text.split`,`
                                   let anu = await primbon.primbon_memancing_ikan(tgl, bln, thn)
                                   if (anu.status == false) return reply(anu.message)
-                                  ElisaBotMd.sendText(m.chat, `🔮 *𝗗𝗔𝗧𝗘 :* ${anu.message.tgl_memancing}\n🔮 *𝗥𝗘𝗦𝗨𝗟𝗧𝗦 :* ${anu.message.result}\n🔮 *𝗡𝗢𝗧𝗘𝗦 :* ${anu.message.catatan}`, m)
+                                  ThivaBotMd.sendText(m.chat, `🔮 *𝗗𝗔𝗧𝗘 :* ${anu.message.tgl_memancing}\n🔮 *𝗥𝗘𝗦𝗨𝗟𝗧𝗦 :* ${anu.message.result}\n🔮 *𝗡𝗢𝗧𝗘𝗦 :* ${anu.message.catatan}`, m)
                               }
                               break
                               case 'masasubur111111': case 'fertiletimekekskdk': {
@@ -7022,7 +7022,7 @@ break
                                   let [tgl, bln, thn, siklus] = text.split`,`
                                   let anu = await primbon.masa_subur(tgl, bln, thn, siklus)
                                   if (anu.status == false) return reply(anu.message)
-                                  ElisaBotMd.sendText(m.chat, `🔮 *𝗝𝗔𝗦𝗜𝗟 :* ${anu.message.result}\n🔮 *𝗡𝗢𝗧𝗘𝗦 :* ${anu.message.catatan}`, m)
+                                  ThivaBotMd.sendText(m.chat, `🔮 *𝗝𝗔𝗦𝗜𝗟 :* ${anu.message.result}\n🔮 *𝗡𝗢𝗧𝗘𝗦 :* ${anu.message.catatan}`, m)
                               }
                               break
                               case 'zodiakjfjdkkd': case 'zodiackckdkdk': {
@@ -7057,14 +7057,14 @@ break
                                   
                                   let anu = await primbon.zodiak(zodiac)
                                   if (anu.status == false) return reply(anu.message)
-                                  ElisaBotMd.sendText(m.chat, `🔮 *𝗭𝗢𝗗𝗜𝗔𝗖 :* ${anu.message.zodiak}\n🔮 *𝗡𝗨𝗠𝗕𝗘𝗥 :* ${anu.message.nomor_keberuntungan}\n🔮 *𝗔𝗥𝗢𝗠𝗔 :* ${anu.message.aroma_keberuntungan}\n🔮 *𝗣𝗟𝗔𝗡𝗘𝗧 :* ${anu.message.planet_yang_mengitari}\n🔮 *𝗙𝗟𝗢𝗪𝗘𝗥 :* ${anu.message.bunga_keberuntungan}\n🔮 *𝗖𝗢𝗟𝗢𝗥 :* ${anu.message.warna_keberuntungan}\n🔮 *𝗥𝗢𝗖𝗞 :* ${anu.message.batu_keberuntungan}\n🔮 *𝗘𝗟𝗘𝗠𝗘𝗡𝗧 :* ${anu.message.elemen_keberuntungan}\n🔮 *𝗭𝗢𝗗𝗜𝗔𝗖 𝗖𝗢𝗨𝗣𝗟𝗘 :* ${anu.message.pasangan_zodiak}\n🔮 *𝗡𝗢𝗧𝗘𝗦 :* ${anu.message.catatan}`, m)
+                                  ThivaBotMd.sendText(m.chat, `🔮 *𝗭𝗢𝗗𝗜𝗔𝗖 :* ${anu.message.zodiak}\n🔮 *𝗡𝗨𝗠𝗕𝗘𝗥 :* ${anu.message.nomor_keberuntungan}\n🔮 *𝗔𝗥𝗢𝗠𝗔 :* ${anu.message.aroma_keberuntungan}\n🔮 *𝗣𝗟𝗔𝗡𝗘𝗧 :* ${anu.message.planet_yang_mengitari}\n🔮 *𝗙𝗟𝗢𝗪𝗘𝗥 :* ${anu.message.bunga_keberuntungan}\n🔮 *𝗖𝗢𝗟𝗢𝗥 :* ${anu.message.warna_keberuntungan}\n🔮 *𝗥𝗢𝗖𝗞 :* ${anu.message.batu_keberuntungan}\n🔮 *𝗘𝗟𝗘𝗠𝗘𝗡𝗧 :* ${anu.message.elemen_keberuntungan}\n🔮 *𝗭𝗢𝗗𝗜𝗔𝗖 𝗖𝗢𝗨𝗣𝗟𝗘 :* ${anu.message.pasangan_zodiak}\n🔮 *𝗡𝗢𝗧𝗘𝗦 :* ${anu.message.catatan}`, m)
                               }
                               break
                               case 'shiondkskskso': {
                                   if (!text) throw `${Lang.EXAMPLE}\n : ${prefix + command} tikus\n\nNote : For Detail https://primbon.com/shio.htm`
                                   let anu = await primbon.shio(text)
                                   if (anu.status == false) return reply(anu.message)
-                                  ElisaBotMd.sendText(m.chat, `🔮 *𝗥𝗘𝗦𝗨𝗟𝗧𝗦 :* ${anu.message}`, m)
+                                  ThivaBotMd.sendText(m.chat, `🔮 *𝗥𝗘𝗦𝗨𝗟𝗧𝗦 :* ${anu.message}`, m)
                               }
                               break
                               
@@ -7072,42 +7072,42 @@ break
 //https://cakrayp.herokuapp.com/api/tiktok/video?url=https://www.tiktok.com/@imalka_venroy/video/7132747469271616794?is_from_webapp=1&sender_device=mobile&sender_web_id=7135844111252964866&apikey=cakrayp24Q6
 }*/
 case 'nowmtiktok': case 'nowm' : {
-const thub = await fetchJson('https://github.com/ThivankaOnline/UPLOADS/raw/main/JSON/elisadetails.json')
+const thub = await fetchJson('https://github.com/ThivankaOnline/UPLOADS/raw/main/JSON/Thivadetails.json')
   // //if 
    if (!text) throw '*Enter a Link Query!*'            
 //  var buf = await getBuffer('https://telegra.ph/file/f7470af04326c5522cbcb.jpg') 
-   const down = await ElisaBotMd.sendText(m.chat, '*📥 DOWNLOADING YOUR TIKTOK VIDEO ...*')
+   const down = await ThivaBotMd.sendText(m.chat, '*📥 DOWNLOADING YOUR TIKTOK VIDEO ...*')
    let bocil = require('@bochilteam/scraper')    
    if (!isUrl(args[0]) && !args[0].includes('tiktok.com')) throw '*The link you provided is not valid*'                
    bocil.tiktokdlv3(`${text}`).then(async (video) => {           
                        
      buf = await getBuffer(thub.TIKTOK_THUB)
-     await ElisaBotMd.sendMessage(m.chat,{delete : down.key })
-     const up = await ElisaBotMd.sendText(m.chat, '*📤 UPLOADING YOUR TIKTOK VIDEO ...*')
-     await ElisaBotMd.sendMessage(m.chat, { video: { url: video.video.no_watermark }, jpegThumbnail:buf,caption: `${global.cap}\n`}, { quoted: m })
-     //await ElisaBotMd.sendMessage(m.chat, { video: { url: video.video.no_watermark }, jpegThumbnail:buf, caption: `${global.cap}` }, { quoted: m })   
-     await ElisaBotMd.sendMessage(m.chat,{delete : up.key })  
+     await ThivaBotMd.sendMessage(m.chat,{delete : down.key })
+     const up = await ThivaBotMd.sendText(m.chat, '*📤 UPLOADING YOUR TIKTOK VIDEO ...*')
+     await ThivaBotMd.sendMessage(m.chat, { video: { url: video.video.no_watermark }, jpegThumbnail:buf,caption: `${global.cap}\n`}, { quoted: m })
+     //await ThivaBotMd.sendMessage(m.chat, { video: { url: video.video.no_watermark }, jpegThumbnail:buf, caption: `${global.cap}` }, { quoted: m })   
+     await ThivaBotMd.sendMessage(m.chat,{delete : up.key })  
      }).catch((err) => {
-       ElisaBotMd.sendText(m.chat, '*SORRY CAN\'T DOWNLOAD ❗*')})
+       ThivaBotMd.sendText(m.chat, '*SORRY CAN\'T DOWNLOAD ❗*')})
 }
 break
 case 'tiktok' : case 'tt' : {
-   if (!isUrl(args[0]) && !args[0].includes('tiktok.com')) throw '*The link you provided is not valid*\n Example : .tiktok https://www.tiktok.com/@mr_nima_._._x/video/7185424580108897563'
-await ElisaBotMd.sendMessage(from, { react: { text: `⬇️`, key: m.key }})
+   if (!isUrl(args[0]) && !args[0].includes('tiktok.com')) throw '*The link you provided is not valid*\n Example : .tiktok https://www.tiktok.com/@mr_Thiva_._._x/video/7185424580108897563'
+await ThivaBotMd.sendMessage(from, { react: { text: `⬇️`, key: m.key }})
 
 let boltc = require('@bochilteam/scraper')
 boltc.savefrom(text)
-.then(async(tknima) => {
-const url = tknima.url[0].url
+.then(async(tkThiva) => {
+const url = tkThiva.url[0].url
 const desc = `${global.cap}
 
-*🏷️ Title :* ${tknima.meta.title}
-*🖇️ Source :* ${tknima.meta.source}
-*🕜 Duration :* ${tknima.meta.duration}
+*🏷️ Title :* ${tkThiva.meta.title}
+*🖇️ Source :* ${tkThiva.meta.source}
+*🕜 Duration :* ${tkThiva.meta.duration}
 `
-const audio_link = tknima.url[1].url
-await ElisaBotMd.sendMessage(from, { react: { text: `⬆️`, key: m.key }})
-//const tkvid = await ElisaBotMd.sendMessage(m.chat, { video: { url: url } ,caption: `${desc}`}, { quoted: m })
+const audio_link = tkThiva.url[1].url
+await ThivaBotMd.sendMessage(from, { react: { text: `⬆️`, key: m.key }})
+//const tkvid = await ThivaBotMd.sendMessage(m.chat, { video: { url: url } ,caption: `${desc}`}, { quoted: m })
 const templateButtons = [
   {buttonId: `directmp3 ${audio_link}`, buttonText: {displayText: 'AUDIO'}, type: 1},
 
@@ -7120,10 +7120,10 @@ let buttonMessage = {
                     buttons: templateButtons,
                     headerType: 4
                 }
-               await ElisaBotMd.sendMessage(m.chat, buttonMessage, { quoted: m })
+               await ThivaBotMd.sendMessage(m.chat, buttonMessage, { quoted: m })
           
-await ElisaBotMd.sendMessage(from, { react: { text: `✅`, key: m.key }})
-//await ElisaBotMd.sendMessage(from, { react: { text: `🦋`, key: tkvid.key }})
+await ThivaBotMd.sendMessage(from, { react: { text: `✅`, key: m.key }})
+//await ThivaBotMd.sendMessage(from, { react: { text: `🦋`, key: tkvid.key }})
   }).catch((err) => reply(NOT_FOUND))
      
 
@@ -7131,18 +7131,18 @@ await ElisaBotMd.sendMessage(from, { react: { text: `✅`, key: m.key }})
 break 
 case 'tiktokwm' : {
 if (!text) return reply('Need tiktok url')
-const down = await ElisaBotMd.sendText(m.chat, '*📥 DOWNLOADING YOUR TIKTOK VIDEO ...*')
-await fetchJson('https://github.com/ThivankaOnline/UPLOADS/raw/main/JSON/elisadetails.json').then(async (thub) => { 
+const down = await ThivaBotMd.sendText(m.chat, '*📥 DOWNLOADING YOUR TIKTOK VIDEO ...*')
+await fetchJson('https://github.com/ThivankaOnline/UPLOADS/raw/main/JSON/Thivadetails.json').then(async (thub) => { 
 buf = await getBuffer(thub.TIKTOK_THUB)
-   //  await ElisaBotMd.sendMessage(m.chat,{delete : down.key })
+   //  await ThivaBotMd.sendMessage(m.chat,{delete : down.key })
      const viddd = await getBuffer(`https://api.akuari.my.id/downloader/tiktokwithwm?link=${text}`)
-     await ElisaBotMd.sendMessage(m.chat,{delete : down.key })
-     const up = await ElisaBotMd.sendText(m.chat, '*📤 UPLOADING YOUR TIKTOK VIDEO ...*')
-     await ElisaBotMd.sendMessage(m.chat, { video: viddd , jpegThumbnail:buf,caption: `${global.cap}\n`}, { quoted: m })
-     //await ElisaBotMd.sendMessage(m.chat, { video: { url: video.video.no_watermark }, jpegThumbnail:buf, caption: `${global.cap}` }, { quoted: m })   
-     await ElisaBotMd.sendMessage(m.chat,{delete : up.key })  
+     await ThivaBotMd.sendMessage(m.chat,{delete : down.key })
+     const up = await ThivaBotMd.sendText(m.chat, '*📤 UPLOADING YOUR TIKTOK VIDEO ...*')
+     await ThivaBotMd.sendMessage(m.chat, { video: viddd , jpegThumbnail:buf,caption: `${global.cap}\n`}, { quoted: m })
+     //await ThivaBotMd.sendMessage(m.chat, { video: { url: video.video.no_watermark }, jpegThumbnail:buf, caption: `${global.cap}` }, { quoted: m })   
+     await ThivaBotMd.sendMessage(m.chat,{delete : up.key })  
      }).catch((err) => {
-       ElisaBotMd.sendText(m.chat, NOT_FOUND)})
+       ThivaBotMd.sendText(m.chat, NOT_FOUND)})
 
 }
 break
@@ -7157,10 +7157,10 @@ case 'stelegram' :{
      if (!text) return reply('👸💬 Please give me a telegram sticker pack link')
      if (!text.includes('https://t.me/addstickers')) return reply('*👸💬 Please give me a correct link*\n _.stelegram https://t.me/addstickers/ViniProduction_by_MekathKalawak_')
      //if (!isUrl(args[0]) && !args[0].includes('https://t.me/addstickers')) throw '*The link you provided is not valid*'                
-    await ElisaBotMd.sendText(m.chat , '*Loading...*' )
+    await ThivaBotMd.sendText(m.chat , '*Loading...*' )
     await fetchJson(`https://api.tiodevhost.my.id/api/dowloader/telesticker?url=${text}`)
       .then(async (sticker) => {  
-  //  await ElisaBotMd.sendText(m.chat, util.format(sticker))
+  //  await ThivaBotMd.sendText(m.chat, util.format(sticker))
     const stik = sticker.result
     const img = stik[1].url
     const img2 = stik[2].url
@@ -7178,37 +7178,37 @@ case 'stelegram' :{
     const img14 = stik[14].url
     const img15 = stik[15].url
     
-    //await ElisaBotMd.sendMessage(m.chat ,{ sticker : { url : img }, packname: '𝑄𝑢𝑒𝑒𝑛 𝐸𝑙𝑖𝑠𝑎' })
-    await ElisaBotMd.sendImageAsSticker(m.chat, img, m, { packname: global.packname, author: '『© ǫᴜᴇᴇɴ ᴇʟɪsᴀ 』' })
-    await ElisaBotMd.sendImageAsSticker(m.chat, img2, m, { packname: global.packname, author: '『© ǫᴜᴇᴇɴ ᴇʟɪsᴀ 』' })
-    await ElisaBotMd.sendImageAsSticker(m.chat, img3, m, { packname: global.packname, author: '『© ǫᴜᴇᴇɴ ᴇʟɪsᴀ 』' })
-    await ElisaBotMd.sendImageAsSticker(m.chat, img4, m, { packname: global.packname, author: '『© ǫᴜᴇᴇɴ ᴇʟɪsᴀ 』' })
-    await ElisaBotMd.sendImageAsSticker(m.chat, img5, m, { packname: global.packname, author: '『© ǫᴜᴇᴇɴ ᴇʟɪsᴀ 』' })
-    await ElisaBotMd.sendImageAsSticker(m.chat, img6, m, { packname: global.packname, author: '『© ǫᴜᴇᴇɴ ᴇʟɪsᴀ 』' })
-    await ElisaBotMd.sendImageAsSticker(m.chat, img7, m, { packname: global.packname, author: '『© ǫᴜᴇᴇɴ ᴇʟɪsᴀ 』' })
-    await ElisaBotMd.sendImageAsSticker(m.chat, img8, m, { packname: global.packname, author: '『© ǫᴜᴇᴇɴ ᴇʟɪsᴀ 』' })
-    await ElisaBotMd.sendImageAsSticker(m.chat, img9, m, { packname: global.packname, author: '『© ǫᴜᴇᴇɴ ᴇʟɪsᴀ 』' })
-    await ElisaBotMd.sendImageAsSticker(m.chat, img10, m, { packname: global.packname, author: '『© ǫᴜᴇᴇɴ ᴇʟɪsᴀ 』' })
-    await ElisaBotMd.sendImageAsSticker(m.chat, img11, m, { packname: global.packname, author: '『© ǫᴜᴇᴇɴ ᴇʟɪsᴀ 』' })
-    await ElisaBotMd.sendImageAsSticker(m.chat, img12, m, { packname: global.packname, author: '『© ǫᴜᴇᴇɴ ᴇʟɪsᴀ 』' })
-    await ElisaBotMd.sendImageAsSticker(m.chat, img13, m, { packname: global.packname, author: '『© ǫᴜᴇᴇɴ ᴇʟɪsᴀ 』' })
-    await ElisaBotMd.sendImageAsSticker(m.chat, img14, m, { packname: global.packname, author: '『© ǫᴜᴇᴇɴ ᴇʟɪsᴀ 』' })
-    await ElisaBotMd.sendImageAsSticker(m.chat, img15, m, { packname: global.packname, author: '『© ǫᴜᴇᴇɴ ᴇʟɪsᴀ 』' })
+    //await ThivaBotMd.sendMessage(m.chat ,{ sticker : { url : img }, packname: '𝑄𝑢𝑒𝑒𝑛 𝐸𝑙𝑖𝑠𝑎' })
+    await ThivaBotMd.sendImageAsSticker(m.chat, img, m, { packname: global.packname, author: '『© ǫᴜᴇᴇɴ ᴇʟɪsᴀ 』' })
+    await ThivaBotMd.sendImageAsSticker(m.chat, img2, m, { packname: global.packname, author: '『© ǫᴜᴇᴇɴ ᴇʟɪsᴀ 』' })
+    await ThivaBotMd.sendImageAsSticker(m.chat, img3, m, { packname: global.packname, author: '『© ǫᴜᴇᴇɴ ᴇʟɪsᴀ 』' })
+    await ThivaBotMd.sendImageAsSticker(m.chat, img4, m, { packname: global.packname, author: '『© ǫᴜᴇᴇɴ ᴇʟɪsᴀ 』' })
+    await ThivaBotMd.sendImageAsSticker(m.chat, img5, m, { packname: global.packname, author: '『© ǫᴜᴇᴇɴ ᴇʟɪsᴀ 』' })
+    await ThivaBotMd.sendImageAsSticker(m.chat, img6, m, { packname: global.packname, author: '『© ǫᴜᴇᴇɴ ᴇʟɪsᴀ 』' })
+    await ThivaBotMd.sendImageAsSticker(m.chat, img7, m, { packname: global.packname, author: '『© ǫᴜᴇᴇɴ ᴇʟɪsᴀ 』' })
+    await ThivaBotMd.sendImageAsSticker(m.chat, img8, m, { packname: global.packname, author: '『© ǫᴜᴇᴇɴ ᴇʟɪsᴀ 』' })
+    await ThivaBotMd.sendImageAsSticker(m.chat, img9, m, { packname: global.packname, author: '『© ǫᴜᴇᴇɴ ᴇʟɪsᴀ 』' })
+    await ThivaBotMd.sendImageAsSticker(m.chat, img10, m, { packname: global.packname, author: '『© ǫᴜᴇᴇɴ ᴇʟɪsᴀ 』' })
+    await ThivaBotMd.sendImageAsSticker(m.chat, img11, m, { packname: global.packname, author: '『© ǫᴜᴇᴇɴ ᴇʟɪsᴀ 』' })
+    await ThivaBotMd.sendImageAsSticker(m.chat, img12, m, { packname: global.packname, author: '『© ǫᴜᴇᴇɴ ᴇʟɪsᴀ 』' })
+    await ThivaBotMd.sendImageAsSticker(m.chat, img13, m, { packname: global.packname, author: '『© ǫᴜᴇᴇɴ ᴇʟɪsᴀ 』' })
+    await ThivaBotMd.sendImageAsSticker(m.chat, img14, m, { packname: global.packname, author: '『© ǫᴜᴇᴇɴ ᴇʟɪsᴀ 』' })
+    await ThivaBotMd.sendImageAsSticker(m.chat, img15, m, { packname: global.packname, author: '『© ǫᴜᴇᴇɴ ᴇʟɪsᴀ 』' })
     }).catch((err) => m_reply('*මෙම telegram sticker Download කල නොහැක !!!*'))
-    /*await ElisaBotMd.sendMessage(m.chat ,{ sticker : { url : img2 }, packname: '𝑄𝑢𝑒𝑒𝑛 𝐸𝑙𝑖𝑠𝑎' })
-     await ElisaBotMd.sendMessage(m.chat ,{ sticker : { url : img3 }, packname: '𝑄𝑢𝑒𝑒𝑛 𝐸𝑙𝑖𝑠𝑎' })
-    await ElisaBotMd.sendMessage(m.chat ,{ sticker : { url : img4 }, packname: '𝑄𝑢𝑒𝑒𝑛 𝐸𝑙𝑖𝑠𝑎' })
-    await ElisaBotMd.sendMessage(m.chat ,{ sticker : { url : img5 }, packname: '𝑄𝑢𝑒𝑒𝑛 𝐸𝑙𝑖𝑠𝑎' })
-    await ElisaBotMd.sendMessage(m.chat ,{ sticker : { url : img6 }, packname: '𝑄𝑢𝑒𝑒𝑛 𝐸𝑙𝑖𝑠𝑎' })
-    await ElisaBotMd.sendMessage(m.chat ,{ sticker : { url : img7 }, packname: '𝑄𝑢𝑒𝑒𝑛 𝐸𝑙𝑖𝑠𝑎' })
-    await ElisaBotMd.sendMessage(m.chat ,{ sticker : { url : img8 }, packname: '𝑄𝑢𝑒𝑒𝑛 𝐸𝑙𝑖𝑠𝑎' })
-    await ElisaBotMd.sendMessage(m.chat ,{ sticker : { url : img9 }, packname: '𝑄𝑢𝑒𝑒𝑛 𝐸𝑙𝑖𝑠𝑎' })
-    await ElisaBotMd.sendMessage(m.chat ,{ sticker : { url : img10 }, packname: '𝑄𝑢𝑒𝑒𝑛 𝐸𝑙𝑖𝑠𝑎' })
-    await ElisaBotMd.sendMessage(m.chat ,{ sticker : { url : img11 }, packname: '𝑄𝑢𝑒𝑒𝑛 𝐸𝑙𝑖𝑠𝑎' })
-    await ElisaBotMd.sendMessage(m.chat ,{ sticker : { url : img12 }, packname: '𝑄𝑢𝑒𝑒𝑛 𝐸𝑙𝑖𝑠𝑎' })
-    await ElisaBotMd.sendMessage(m.chat ,{ sticker : { url : img13 }, packname: '𝑄𝑢𝑒𝑒𝑛 𝐸𝑙𝑖𝑠𝑎' })
-    await ElisaBotMd.sendMessage(m.chat ,{ sticker : { url : img14 }, packname: '𝑄𝑢𝑒𝑒𝑛 𝐸𝑙𝑖𝑠𝑎' })
-    await ElisaBotMd.sendMessage(m.chat ,{ sticker : { url : img15 }, packname: '𝑄𝑢𝑒𝑒𝑛 𝐸𝑙𝑖𝑠𝑎' })
+    /*await ThivaBotMd.sendMessage(m.chat ,{ sticker : { url : img2 }, packname: '𝑄𝑢𝑒𝑒𝑛 𝐸𝑙𝑖𝑠𝑎' })
+     await ThivaBotMd.sendMessage(m.chat ,{ sticker : { url : img3 }, packname: '𝑄𝑢𝑒𝑒𝑛 𝐸𝑙𝑖𝑠𝑎' })
+    await ThivaBotMd.sendMessage(m.chat ,{ sticker : { url : img4 }, packname: '𝑄𝑢𝑒𝑒𝑛 𝐸𝑙𝑖𝑠𝑎' })
+    await ThivaBotMd.sendMessage(m.chat ,{ sticker : { url : img5 }, packname: '𝑄𝑢𝑒𝑒𝑛 𝐸𝑙𝑖𝑠𝑎' })
+    await ThivaBotMd.sendMessage(m.chat ,{ sticker : { url : img6 }, packname: '𝑄𝑢𝑒𝑒𝑛 𝐸𝑙𝑖𝑠𝑎' })
+    await ThivaBotMd.sendMessage(m.chat ,{ sticker : { url : img7 }, packname: '𝑄𝑢𝑒𝑒𝑛 𝐸𝑙𝑖𝑠𝑎' })
+    await ThivaBotMd.sendMessage(m.chat ,{ sticker : { url : img8 }, packname: '𝑄𝑢𝑒𝑒𝑛 𝐸𝑙𝑖𝑠𝑎' })
+    await ThivaBotMd.sendMessage(m.chat ,{ sticker : { url : img9 }, packname: '𝑄𝑢𝑒𝑒𝑛 𝐸𝑙𝑖𝑠𝑎' })
+    await ThivaBotMd.sendMessage(m.chat ,{ sticker : { url : img10 }, packname: '𝑄𝑢𝑒𝑒𝑛 𝐸𝑙𝑖𝑠𝑎' })
+    await ThivaBotMd.sendMessage(m.chat ,{ sticker : { url : img11 }, packname: '𝑄𝑢𝑒𝑒𝑛 𝐸𝑙𝑖𝑠𝑎' })
+    await ThivaBotMd.sendMessage(m.chat ,{ sticker : { url : img12 }, packname: '𝑄𝑢𝑒𝑒𝑛 𝐸𝑙𝑖𝑠𝑎' })
+    await ThivaBotMd.sendMessage(m.chat ,{ sticker : { url : img13 }, packname: '𝑄𝑢𝑒𝑒𝑛 𝐸𝑙𝑖𝑠𝑎' })
+    await ThivaBotMd.sendMessage(m.chat ,{ sticker : { url : img14 }, packname: '𝑄𝑢𝑒𝑒𝑛 𝐸𝑙𝑖𝑠𝑎' })
+    await ThivaBotMd.sendMessage(m.chat ,{ sticker : { url : img15 }, packname: '𝑄𝑢𝑒𝑒𝑛 𝐸𝑙𝑖𝑠𝑎' })
     */
 // https://fatiharridho.herokuapp.com/api/downloader/telesticker?url=
   
@@ -7218,7 +7218,7 @@ case 'sendmsg' :{
      text1 = q.split(";")[0]
      text2 = q.split(";")[1]
      if (!text) throw '*👸💬 Please give me a recipient\'s number and your massage* \n _example .sendmsg'+global.owner+' ; Hello how are you_'
- await ElisaBotMd.sendText(text1+'@s.whatsapp.net', text2 || '*Hello I am THIVANKA Nirmal*\n\n _Join My Main Group_ \n  *https://chat.whatsapp.com/KnmiFeP48AX7fJbRH1anMc*')
+ await ThivaBotMd.sendText(text1+'@s.whatsapp.net', text2 || '*Hello I am THIVANKA Nirmal*\n\n _Join My Main Group_ \n  *https://chat.whatsapp.com/KnmiFeP48AX7fJbRH1anMc*')
 }
 break
 
@@ -7229,10 +7229,10 @@ if (global.LANG == 'EN') NEED = '*The link you provided is not valid* '
 if (global.LANG == 'SI') NEED = '*ඔබ ලබා දුන් සබැඳිය වලංගු නැත*'
 
 if (!text) throw NEED
-const load = await ElisaBotMd.sendText(m.chat,mess.wait)
+const load = await ThivaBotMd.sendText(m.chat,mess.wait)
 await getBuffer(`https://api.botcahx.biz.id/api/tools/ssweb?link=${text}`).then(async (imagee) => { 
-await ElisaBotMd.sendMessage(m.chat, { image: imagee, caption: global.CAPTION }, { quoted: m })
-await ElisaBotMd.sendMessage(m.chat, { delete: load.key }) 
+await ThivaBotMd.sendMessage(m.chat, { image: imagee, caption: global.CAPTION }, { quoted: m })
+await ThivaBotMd.sendMessage(m.chat, { delete: load.key }) 
    
     }).catch((err) => m_reply(NOT_FOUND))
 
@@ -7242,12 +7242,12 @@ break
 
 case 'vid2': {
 themeemoji ='📽️'
-const thub = await fetchJson('https://github.com/ThivankaOnline/UPLOADS/raw/main/JSON/elisadetails.json')
+const thub = await fetchJson('https://github.com/ThivankaOnline/UPLOADS/raw/main/JSON/Thivadetails.json')
 let { ytv } = require('./lib/y2mate')
 if (!text) return reply(`${Lang.EXAMPLE}\n : ${prefix + command} https://youtube.com/watch?v=RNa4thokVJ4 360p`)
 if (!isUrl(args[0]) && !args[0].includes('youtube.com')) return reply(`The link you provided is invalid!`)
-await ElisaBotMd.sendMessage(from, { react: { text: `📽️`, key: m.key }})
-const load = await ElisaBotMd.sendText(m.chat,mess.wait)
+await ThivaBotMd.sendMessage(from, { react: { text: `📽️`, key: m.key }})
+const load = await ThivaBotMd.sendText(m.chat,mess.wait)
 let quality = args[1] ? args[1] : '360p'
 let media = await ytv(text, quality)
 if (media.filesize >= 100000)  {
@@ -7270,54 +7270,54 @@ msg = `*⛔ FILE SIZE UP TO 100MB ⛔*
                                   templateButtons: templateButtons
                                   }
 
-                                  return await ElisaBotMd.sendMessage(m.chat, templateMessage, { quoted: m })   
+                                  return await ThivaBotMd.sendMessage(m.chat, templateMessage, { quoted: m })   
                                   }
                                   // reply('*File Over Limit* '+util.format(media))
 var capti = `*YOUTUBE VIDEO*\n\n*${themeemoji}Title* : ${media.title}\n*${themeemoji}File size* : ${media.filesizeF}\n*${themeemoji}Url* : ${isUrl(text)}\n*${themeemoji}Ext* : Mp4\n*${themeemoji}Resoultion* : ${args[1] || '360p'}`
 var buf = await getBuffer(thub.YT_THUB)
-await ElisaBotMd.sendMessage(from, { react: { text: `⬆️`, key: m.key }})
-await ElisaBotMd.sendMessage(m.chat, { video: { url: media.dl_link }, jpegThumbnail:buf, mimetype: 'video/mp4', fileName: `${media.title}.mp4`, caption: `${global.cap}` }, { quoted: m }).catch((err) => reply(mess.error))
-await  ElisaBotMd.sendMessage(m.chat, { delete: load.key })
-await ElisaBotMd.sendMessage(from, { react: { text: `✅`, key: m.key }}) 
+await ThivaBotMd.sendMessage(from, { react: { text: `⬆️`, key: m.key }})
+await ThivaBotMd.sendMessage(m.chat, { video: { url: media.dl_link }, jpegThumbnail:buf, mimetype: 'video/mp4', fileName: `${media.title}.mp4`, caption: `${global.cap}` }, { quoted: m }).catch((err) => reply(mess.error))
+await  ThivaBotMd.sendMessage(m.chat, { delete: load.key })
+await ThivaBotMd.sendMessage(from, { react: { text: `✅`, key: m.key }}) 
 }
 break
 case 'pemoji' : {  
-                          await ElisaBotMd.sendMessage(from, { react: { text: `🛠️`, key: m.key }})
+                          await ThivaBotMd.sendMessage(from, { react: { text: `🛠️`, key: m.key }})
 var NEED = ''
 if (global.LANG == 'EN') NEED = '*Please Give me a imoji* \nExample *.pemoji 🤠*'
 if (global.LANG == 'SI') NEED = '*කරුනාකර මට ඉමෝජියක් ලබාදෙන්න*\nඋදා : *.pemoji 🤠*'
      if (!text) throw NEED
    const imoji =  await fetchJson(`https://fatiharridho.herokuapp.com/api/tools/emojipedia?emoji=${encodeURIComponent(text)}`)
-  // await ElisaBotMd.sendText(m.chat,util.format(imoji))
+  // await ThivaBotMd.sendText(m.chat,util.format(imoji))
    const img = imoji.result.image[0].image
-   await ElisaBotMd.sendMessage(m.chat, { image: { url: img },  caption: `${global.cap}`}, { quoted: m })
+   await ThivaBotMd.sendMessage(m.chat, { image: { url: img },  caption: `${global.cap}`}, { quoted: m })
    
 
 }
 break
 case 'pemoji2' :{
 if (!text) return reply(`*👸💬 Please Give me a imoji*\nExample - .${command}👸`)
-                          await ElisaBotMd.sendMessage(from, { react: { text: `✨`, key: m.key }})
+                          await ThivaBotMd.sendMessage(from, { react: { text: `✨`, key: m.key }})
 
-await ElisaBotMd.sendMessage(m.chat, { image: { url:`https://api.botcahx.biz.id/api/emoji/facebook?emoji=${encodeURIComponent(text)} `},  caption: `${global.cap}`}, { quoted: m })
+await ThivaBotMd.sendMessage(m.chat, { image: { url:`https://api.botcahx.biz.id/api/emoji/facebook?emoji=${encodeURIComponent(text)} `},  caption: `${global.cap}`}, { quoted: m })
    
 
 }
 break
 case 'pemoji3' :{
 if (!text) return reply(`*👸💬 Please Give me a imoji*\nExample - .${command}👸`)
-                          await ElisaBotMd.sendMessage(from, { react: { text: `✨`, key: m.key }})
+                          await ThivaBotMd.sendMessage(from, { react: { text: `✨`, key: m.key }})
 
-await ElisaBotMd.sendMessage(m.chat, { image: { url: `https://api.botcahx.biz.id/api/emoji/samsung?emoji=${encodeURIComponent(text)}` },  caption: `${global.cap}`}, { quoted: m })
+await ThivaBotMd.sendMessage(m.chat, { image: { url: `https://api.botcahx.biz.id/api/emoji/samsung?emoji=${encodeURIComponent(text)}` },  caption: `${global.cap}`}, { quoted: m })
    
 
 }
 break
 case 'emostick' :{
 if (!text) return reply(`*👸💬 Please Give me a imoji*\nExample - .${command}👸`)
-                          await ElisaBotMd.sendMessage(from, { react: { text: `✨`, key: m.key }})
+                          await ThivaBotMd.sendMessage(from, { react: { text: `✨`, key: m.key }})
 
-await ElisaBotMd.sendMedia(m.chat, `https://api.botcahx.biz.id/api/emoji/skype?emoji=${encodeURIComponent(text)}` , '𝚃𝙷𝙸𝚅𝙰𝙽𝙺𝙰 𝙽𝙸𝚁𝙼𝙰𝙻', '𝙱𝙾𝚃', m, {asSticker: true}).catch((err) => reply(err))
+await ThivaBotMd.sendMedia(m.chat, `https://api.botcahx.biz.id/api/emoji/skype?emoji=${encodeURIComponent(text)}` , '𝚃𝙷𝙸𝚅𝙰𝙽𝙺𝙰 𝙽𝙸𝚁𝙼𝙰𝙻', '𝙱𝙾𝚃', m, {asSticker: true}).catch((err) => reply(err))
 
 }
 break
@@ -7441,30 +7441,30 @@ if (global.LANG == 'SI') MAX= '```✨ පරිවර්තනය කරමි�
 var MDAX = ''
 if (global.LANG == 'EN') MDAX= '*👸💬 Please give me a text and select language*\n _example - .trt ආයුබෝවන්;en_\n\n*✨ Translete language codes ✨*\n\n'+'```'+Tssst+'```'
 if (global.LANG == 'SI') MDAX= '*👸💬 කරූනාකර වචනයක් සමග භාශාව තෝරන්න*\nඋදාහරණ - .trt good morning;si\n\n*✨ පරිවර්තනය අවශ්‍ය බාශා කෙටිනාම ✨*\n\n'+'```'+Tssst+'```'
-var NimaLang = ''
-if (global.LANG == 'EN') NimaLang = '*👸💬 Sorry can\'t translete become a error !*'
-if (global.LANG == 'SI') NimaLang = '*👸💬 කනගාටුයි පරිවර්තනය සිදුකළ නොහැක !*'                           
+var ThivaLang = ''
+if (global.LANG == 'EN') ThivaLang = '*👸💬 Sorry can\'t translete become a error !*'
+if (global.LANG == 'SI') ThivaLang = '*👸💬 කනගාටුයි පරිවර්තනය සිදුකළ නොහැක !*'                           
                               
 //if (!quoted) return reply(MAX)
 if (!text) return reply (MDAX) 
 text1 = text.split(";")[0]
 text2 = text.split(";")[1]
-//const wokwol = await ElisaBotMd.serializeM(await m.getQuotedObj())
+//const wokwol = await ThivaBotMd.serializeM(await m.getQuotedObj())
 //if (!wokwol.quoted)                       
- const nima = await fetchJson(`https://api.tiodevhost.my.id/api/info/translate?text=${text1}&lang=${text2}`)
- if (nima.stetus === 'false') return reply(NimaLang)
- const msg = nima.result
- //await ElisaBotMd.sendText(m.chat,`${MAX}`)
- await ElisaBotMd.sendText(m.chat, `${nima.result}`)
- //m_reply(nima.result)
+ const Thiva = await fetchJson(`https://api.tiodevhost.my.id/api/info/translate?text=${text1}&lang=${text2}`)
+ if (Thiva.stetus === 'false') return reply(ThivaLang)
+ const msg = Thiva.result
+ //await ThivaBotMd.sendText(m.chat,`${MAX}`)
+ await ThivaBotMd.sendText(m.chat, `${Thiva.result}`)
+ //m_reply(Thiva.result)
 // m_reply(msg)
 }
 break
 /*case 'animestory' : {  
-                          await ElisaBotMd.sendMessage(from, { react: { text: `📡`, key: m.key }})
+                          await ThivaBotMd.sendMessage(from, { react: { text: `📡`, key: m.key }})
 
      const story = 'https://fatiharridho.herokuapp.com/api/anime/storyanime'
-     await ElisaBotMd.sendMessage(m.chat, { video: { url: story },  caption: `${global.cap}`}, { quoted: m })
+     await ThivaBotMd.sendMessage(m.chat, { video: { url: story },  caption: `${global.cap}`}, { quoted: m })
 
 }*/
 break
@@ -7479,7 +7479,7 @@ if (!regex1.test(args[0])) throw 'link!'
     let filename = (await fetch(url, {method: 'HEAD'})).headers.get('content-disposition').match(/attachment; filename=(.*)/)[1]
     // 'attachment; filenameq=ZidniGanz.zip'
     reply(`*Please wait, sending repository..*`)
-    ElisaBotMd.sendMessage(m.chat, { document: { url: url }, fileName: filename+'.zip', mimetype: 'application/zip' , quoted: m,contextInfo: { externalAdReply:{
+    ThivaBotMd.sendMessage(m.chat, { document: { url: url }, fileName: filename+'.zip', mimetype: 'application/zip' , quoted: m,contextInfo: { externalAdReply:{
       title:"THIVANKA Nirmal V2",
       body:"SUB 𝗠𝗥 𝗧𝗛𝗜𝗩𝗔",
       showAdAttribution: true,
@@ -7490,9 +7490,9 @@ if (!regex1.test(args[0])) throw 'link!'
       }}
       })*/
 case 'pic' : {  
-                          await ElisaBotMd.sendMessage(from, { react: { text: `🌝`, key: m.key }})
+                          await ThivaBotMd.sendMessage(from, { react: { text: `🌝`, key: m.key }})
 
-     ElisaBotMd.sendText(m.chat,` *Please enter pic name*
+     ThivaBotMd.sendText(m.chat,` *Please enter pic name*
      
      ▶ *.picjeni*
      ▶ *.picrose*
@@ -7502,49 +7502,49 @@ case 'pic' : {
 }
 break
 case 'picjeni' :{  
-                          await ElisaBotMd.sendMessage(from, { react: { text: `👱‍♀️`, key: m.key }})
+                          await ThivaBotMd.sendMessage(from, { react: { text: `👱‍♀️`, key: m.key }})
          
          const img = 'https://betabotz-api.herokuapp.com/api/cecan/jeni?apikey=BetaBotz'
-         await ElisaBotMd.sendMessage(m.chat, { image: { url: img },  caption: `${global.cap}`}, { quoted: m })
+         await ThivaBotMd.sendMessage(m.chat, { image: { url: img },  caption: `${global.cap}`}, { quoted: m })
 
 }
 break
 case 'picrose' :{  
-                          await ElisaBotMd.sendMessage(from, { react: { text: `👱‍♀️`, key: m.key }})
+                          await ThivaBotMd.sendMessage(from, { react: { text: `👱‍♀️`, key: m.key }})
          
          const img = 'https://betabotz-api.herokuapp.com/api/cecan/rose?apikey=BetaBotz'
-         await ElisaBotMd.sendMessage(m.chat, { image: { url: img },  caption: `${global.cap}\n*ᴘɪᴄ ʀᴏsᴇ*`}, { quoted: m })
+         await ThivaBotMd.sendMessage(m.chat, { image: { url: img },  caption: `${global.cap}\n*ᴘɪᴄ ʀᴏsᴇ*`}, { quoted: m })
 
 }
 break
 case 'picjiso' :{  
-                          await ElisaBotMd.sendMessage(from, { react: { text: `👱‍♀️`, key: m.key }})
+                          await ThivaBotMd.sendMessage(from, { react: { text: `👱‍♀️`, key: m.key }})
          
          const img = 'https://betabotz-api.herokuapp.com/api/cecan/jiso?apikey=BetaBotz'
-         await ElisaBotMd.sendMessage(m.chat, { image: { url: img },  caption: `${global.cap}\n*ᴊɪsᴏ ɪᴍᴀɢᴇ*`}, { quoted: m })
+         await ThivaBotMd.sendMessage(m.chat, { image: { url: img },  caption: `${global.cap}\n*ᴊɪsᴏ ɪᴍᴀɢᴇ*`}, { quoted: m })
 
 }
 break
 case 'picryujin' :{  
-                          await ElisaBotMd.sendMessage(from, { react: { text: `👱‍♀️`, key: m.key }})
+                          await ThivaBotMd.sendMessage(from, { react: { text: `👱‍♀️`, key: m.key }})
          
          const img = 'https://betabotz-api.herokuapp.com/api/cecan/ryujin?apikey=BetaBotz'
-         await ElisaBotMd.sendMessage(m.chat, { image: { url: img },  caption: `${global.cap}\n*ʀʏᴜᴊɪɴ ɪᴍᴀɢᴇ*`}, { quoted: m })
+         await ThivaBotMd.sendMessage(m.chat, { image: { url: img },  caption: `${global.cap}\n*ʀʏᴜᴊɪɴ ɪᴍᴀɢᴇ*`}, { quoted: m })
 
 }
 break
 case 'pichijaber' :{  
-                          await ElisaBotMd.sendMessage(from, { react: { text: `👩‍🦰`, key: m.key }})
+                          await ThivaBotMd.sendMessage(from, { react: { text: `👩‍🦰`, key: m.key }})
          
          const img = 'https://betabotz-api.herokuapp.com/api/cecan/hijaber?apikey=BetaBotz'
-         await ElisaBotMd.sendMessage(m.chat, { image: { url: img },  caption: `${global.cap}\n*ʜɪᴊᴀʙᴇʀ ɪᴍᴀɢᴇs*`}, { quoted: m })
+         await ThivaBotMd.sendMessage(m.chat, { image: { url: img },  caption: `${global.cap}\n*ʜɪᴊᴀʙᴇʀ ɪᴍᴀɢᴇs*`}, { quoted: m })
 
 }
 break
                               case 'tiktok2': case 'ttk': {
                               if (!text) throw `Use ${Lang.EXAMPLE}\n ${prefix + command} https://www.tiktok.com/@omagadsus/video/7025456384175017243`
                               if (!isUrl(args[0]) && !args[0].includes('tiktok.com')) throw '*The link you provided is not valid*'
-                              const load = await ElisaBotMd.sendText(m.chat, ` ʟᴏᴀᴅɪɴɢ ʏᴏᴜʀ ${m.pushName} ᴛɪᴋᴛᴏᴋ ᴠɪᴅᴇᴏ... 🔄`)
+                              const load = await ThivaBotMd.sendText(m.chat, ` ʟᴏᴀᴅɪɴɢ ʏᴏᴜʀ ${m.pushName} ᴛɪᴋᴛᴏᴋ ᴠɪᴅᴇᴏ... 🔄`)
 
                               anu = await fetchJson(`https://ravindumanoj-sew-api.herokuapp.com/main/download/tiktok?url=${text}&apikey=RavinduManoj`)
 
@@ -7556,7 +7556,7 @@ break
 └───────● `
                               buf = await getBuffer(`https://i.ibb.co/MhqzZj8/Darkmekcersilverownerfrofilepgoto.jpg`)
                               buf2 = await getBuffer(anu.result.nowm)
-                              let message = await prepareWAMessageMedia({ video: buf2, gifPlayback:false }, { upload: ElisaBotMd.waUploadToServer })
+                              let message = await prepareWAMessageMedia({ video: buf2, gifPlayback:false }, { upload: ThivaBotMd.waUploadToServer })
                               const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                               templateMessage: {
                               hydratedTemplate: {
@@ -7574,7 +7574,7 @@ break
                               }
                               }
                               }), { userJid: m.chat, quoted: m })
-                              ElisaBotMd.relayMessage(m.chat, template.message, { messageId: template.key.id })
+                              ThivaBotMd.relayMessage(m.chat, template.message, { messageId: template.key.id })
                               }
                               break
 /// TEXT LOGO 2
@@ -7584,7 +7584,7 @@ if (global.LANG == 'SI') MAX= '```👸💬 කරුනාකර වචනයක
 if (global.LANG == 'EN') MAX= '```👸💬 Please give me a some words ...```\n_example .logo 𝗠𝗥 𝗧𝗛𝗜𝗩𝗔_'
 if (!text) return reply (MAX)
 
-await ElisaBotMd.sendMessage(from, { react: { text: `2️⃣️`, key: m.key }})             	
+await ThivaBotMd.sendMessage(from, { react: { text: `2️⃣️`, key: m.key }})             	
                
                let sections = [{ 
                     "title": `𝚃𝙷𝙸𝚅𝙰𝙽𝙺𝙰 𝙽𝙸𝚁𝙼𝙰𝙻 𝚅2 𝙻𝙾𝙶𝙾 𝙻𝙸𝚂𝚃 - 2 𝚂𝙴𝙻𝙴𝙲𝚃 𝚈𝙾𝚄𝚁 𝙻𝙾𝙶𝙾 `,
@@ -7813,7 +7813,7 @@ await ElisaBotMd.sendMessage(from, { react: { text: `2️⃣️`, key: m.key }})
 								
 								}
 							]
-     await ElisaBotMd.sendListMsg(m.chat, `╔═════════════════════☐
+     await ThivaBotMd.sendListMsg(m.chat, `╔═════════════════════☐
 
      *_𝚃𝚑𝚒𝚟𝚊𝚗𝚔𝚊 𝙽𝚒𝚛𝚖𝚊𝚕 𝙻𝚘𝚐𝚘 𝙻𝚒𝚜𝚝 2_*
 
@@ -7830,18 +7830,18 @@ await ElisaBotMd.sendMessage(from, { react: { text: `2️⃣️`, key: m.key }})
 
 case 'lofg3' : {
 
-     const logomaking = await ElisaBotMd.sendText(m.chat, LOGO_MAKING )
+     const logomaking = await ThivaBotMd.sendText(m.chat, LOGO_MAKING )
      const logo = `https://api.violetics.pw/api/ephoto360/azzenka-league-of-kings?apikey=${global.fbapi}&text=${text}`
-     await await ElisaBotMd.sendMessage(m.chat ,{ image :{ url : logo } , caption : `${global.cap}`})
+     await await ThivaBotMd.sendMessage(m.chat ,{ image :{ url : logo } , caption : `${global.cap}`})
 
 }
 break
 
 case 'gamin' : {
      
-     const logomaking = await ElisaBotMd.sendText(m.chat, LOGO_MAKING )
+     const logomaking = await ThivaBotMd.sendText(m.chat, LOGO_MAKING )
      const logo = `https://api.violetics.pw/api/ephoto360/yasuo?apikey=7518-b675-9944&text=${text}`
-     await ElisaBotMd.sendMessage(m.chat ,{ image :{ url : logo } , caption : `${global.cap}`})
+     await ThivaBotMd.sendMessage(m.chat ,{ image :{ url : logo } , caption : `${global.cap}`})
 
 }
 break
@@ -7850,9 +7850,9 @@ break
 case 'horr' : {
 
              const logo = `https://api.violetics.pw/api/ephoto360/Horror-Gift?apikey=${global.fbapi}&text=${text}`
-             const logomaking = await ElisaBotMd.sendText(m.chat, LOGO_MAKING )
-             await ElisaBotMd.sendMessage(m.chat, { image: { url: logo }, caption: `${global.cap}\n\n*🗳️ ʀᴇǫᴜᴇsᴛᴇʀ -* ${m.pushName}` }, { quoted: m })
-             await ElisaBotMd.sendMessage(m.chat,{delete : logomaking.key })  
+             const logomaking = await ThivaBotMd.sendText(m.chat, LOGO_MAKING )
+             await ThivaBotMd.sendMessage(m.chat, { image: { url: logo }, caption: `${global.cap}\n\n*🗳️ ʀᴇǫᴜᴇsᴛᴇʀ -* ${m.pushName}` }, { quoted: m })
+             await ThivaBotMd.sendMessage(m.chat,{delete : logomaking.key })  
              }
 break
 
@@ -7860,217 +7860,217 @@ break
 case 'lofg2' :{
 
              const logo = `https://api.violetics.pw/api/ephoto360/Kahlii-Arena-Of-Valor?apikey=${global.fbapi}&text=${text}`
-             const logomaking = await ElisaBotMd.sendText(m.chat, LOGO_MAKING )
-             await ElisaBotMd.sendMessage(m.chat, { image: { url: logo }, caption: `${global.cap}\n\n*🗳️ ʀᴇǫᴜᴇsᴛᴇʀ -* ${m.pushName}` }, { quoted: m })
-             await ElisaBotMd.sendMessage(m.chat,{delete : logomaking.key })  
+             const logomaking = await ThivaBotMd.sendText(m.chat, LOGO_MAKING )
+             await ThivaBotMd.sendMessage(m.chat, { image: { url: logo }, caption: `${global.cap}\n\n*🗳️ ʀᴇǫᴜᴇsᴛᴇʀ -* ${m.pushName}` }, { quoted: m })
+             await ThivaBotMd.sendMessage(m.chat,{delete : logomaking.key })  
              }
 break
 case 'lofg1' : {
 
              const logo = `https://api.violetics.pw/api/ephoto360/Kaisa-League-Of-Legends?apikey=${global.fbapi}&text=${text}`
-             const logomaking = await ElisaBotMd.sendText(m.chat, LOGO_MAKING )
-             await ElisaBotMd.sendMessage(m.chat, { image: { url: logo }, caption: `${global.cap}\n\n*🗳️ ʀᴇǫᴜᴇsᴛᴇʀ -* ${m.pushName}` }, { quoted: m })
-             await ElisaBotMd.sendMessage(m.chat,{delete : logomaking.key })  
+             const logomaking = await ThivaBotMd.sendText(m.chat, LOGO_MAKING )
+             await ThivaBotMd.sendMessage(m.chat, { image: { url: logo }, caption: `${global.cap}\n\n*🗳️ ʀᴇǫᴜᴇsᴛᴇʀ -* ${m.pushName}` }, { quoted: m })
+             await ThivaBotMd.sendMessage(m.chat,{delete : logomaking.key })  
              }
 break
 case 'light' : {
 
              const logo = `https://api.violetics.pw/api/ephoto360/Light-Effect?apikey=${global.fbapi}&text=${text}`
-             const logomaking = await ElisaBotMd.sendText(m.chat, LOGO_MAKING )
-             await ElisaBotMd.sendMessage(m.chat, { image: { url: logo }, caption: `${global.cap}\n\n*🗳️ ʀᴇǫᴜᴇsᴛᴇʀ -* ${m.pushName}` }, { quoted: m })
-             await ElisaBotMd.sendMessage(m.chat,{delete : logomaking.key })  
+             const logomaking = await ThivaBotMd.sendText(m.chat, LOGO_MAKING )
+             await ThivaBotMd.sendMessage(m.chat, { image: { url: logo }, caption: `${global.cap}\n\n*🗳️ ʀᴇǫᴜᴇsᴛᴇʀ -* ${m.pushName}` }, { quoted: m })
+             await ThivaBotMd.sendMessage(m.chat,{delete : logomaking.key })  
              }
 break
 case 'ninja' : {
 
              const logo = `https://api.violetics.pw/api/ephoto360/Ninja-Mascot?apikey=${global.fbapi}&text=${text}`
-             const logomaking = await ElisaBotMd.sendText(m.chat, LOGO_MAKING )
-             await ElisaBotMd.sendMessage(m.chat, { image: { url: logo }, caption: `${global.cap}\n\n*🗳️ ʀᴇǫᴜᴇsᴛᴇʀ -* ${m.pushName}` }, { quoted: m })
-             await ElisaBotMd.sendMessage(m.chat,{delete : logomaking.key })  
+             const logomaking = await ThivaBotMd.sendText(m.chat, LOGO_MAKING )
+             await ThivaBotMd.sendMessage(m.chat, { image: { url: logo }, caption: `${global.cap}\n\n*🗳️ ʀᴇǫᴜᴇsᴛᴇʀ -* ${m.pushName}` }, { quoted: m })
+             await ThivaBotMd.sendMessage(m.chat,{delete : logomaking.key })  
              }
 break
 case 'neon5' : {
 
              const logo = `https://api.violetics.pw/api/ephoto360/Neon-Brightblue?apikey=${global.fbapi}&text=${text}`
-             const logomaking = await ElisaBotMd.sendText(m.chat, LOGO_MAKING )
-             await ElisaBotMd.sendMessage(m.chat, { image: { url: logo }, caption: `${global.cap}\n\n*🗳️ ʀᴇǫᴜᴇsᴛᴇʀ -* ${m.pushName}` }, { quoted: m })
-             await ElisaBotMd.sendMessage(m.chat,{delete : logomaking.key })  
+             const logomaking = await ThivaBotMd.sendText(m.chat, LOGO_MAKING )
+             await ThivaBotMd.sendMessage(m.chat, { image: { url: logo }, caption: `${global.cap}\n\n*🗳️ ʀᴇǫᴜᴇsᴛᴇʀ -* ${m.pushName}` }, { quoted: m })
+             await ThivaBotMd.sendMessage(m.chat,{delete : logomaking.key })  
              }
 break
 case 'neon4' :{
 
              const logo = `https://api.violetics.pw/api/ephoto360/Neon-Devilwing?apikey=${global.fbapi}&text=${text}`
-             const logomaking = await ElisaBotMd.sendText(m.chat, LOGO_MAKING )
-             await ElisaBotMd.sendMessage(m.chat, { image: { url: logo }, caption: `${global.cap}\n\n*🗳️ ʀᴇǫᴜᴇsᴛᴇʀ -* ${m.pushName}` }, { quoted: m })
-             await ElisaBotMd.sendMessage(m.chat,{delete : logomaking.key })  
+             const logomaking = await ThivaBotMd.sendText(m.chat, LOGO_MAKING )
+             await ThivaBotMd.sendMessage(m.chat, { image: { url: logo }, caption: `${global.cap}\n\n*🗳️ ʀᴇǫᴜᴇsᴛᴇʀ -* ${m.pushName}` }, { quoted: m })
+             await ThivaBotMd.sendMessage(m.chat,{delete : logomaking.key })  
              }
 break
 case 'neon3' : {
 
              const logo = `https://api.violetics.pw/api/ephoto360/Neon-Satin?apikey=${global.fbapi}&text=${text}`
-             const logomaking = await ElisaBotMd.sendText(m.chat, LOGO_MAKING )
-             await ElisaBotMd.sendMessage(m.chat, { image: { url: logo }, caption: `${global.cap}\n\n*🗳️ ʀᴇǫᴜᴇsᴛᴇʀ -* ${m.pushName}` }, { quoted: m })
-             await ElisaBotMd.sendMessage(m.chat,{delete : logomaking.key })  
+             const logomaking = await ThivaBotMd.sendText(m.chat, LOGO_MAKING )
+             await ThivaBotMd.sendMessage(m.chat, { image: { url: logo }, caption: `${global.cap}\n\n*🗳️ ʀᴇǫᴜᴇsᴛᴇʀ -* ${m.pushName}` }, { quoted: m })
+             await ThivaBotMd.sendMessage(m.chat,{delete : logomaking.key })  
              }
 break
 case 'neon2' : {
 
              const logo = `https://api.violetics.pw/api/ephoto360/Neon-Valentine?apikey=${global.fbapi}&text=${text}`
-             const logomaking = await ElisaBotMd.sendText(m.chat, LOGO_MAKING )
-             await ElisaBotMd.sendMessage(m.chat, { image: { url: logo }, caption: `${global.cap}\n\n*🗳️ ʀᴇǫᴜᴇsᴛᴇʀ -* ${m.pushName}` }, { quoted: m })
-             await ElisaBotMd.sendMessage(m.chat,{delete : logomaking.key })  
+             const logomaking = await ThivaBotMd.sendText(m.chat, LOGO_MAKING )
+             await ThivaBotMd.sendMessage(m.chat, { image: { url: logo }, caption: `${global.cap}\n\n*🗳️ ʀᴇǫᴜᴇsᴛᴇʀ -* ${m.pushName}` }, { quoted: m })
+             await ThivaBotMd.sendMessage(m.chat,{delete : logomaking.key })  
              }
 break
 case 'neon1' : {
 
              const logo = `https://api.violetics.pw/api/ephoto360/Neonlight-Galaxy?apikey=${global.fbapi}&text=${text}`
-             const logomaking = await ElisaBotMd.sendText(m.chat, LOGO_MAKING )
-             await ElisaBotMd.sendMessage(m.chat, { image: { url: logo }, caption: `${global.cap}\n\n*🗳️ ʀᴇǫᴜᴇsᴛᴇʀ -* ${m.pushName}` }, { quoted: m })
-             await ElisaBotMd.sendMessage(m.chat,{delete : logomaking.key })  
+             const logomaking = await ThivaBotMd.sendText(m.chat, LOGO_MAKING )
+             await ThivaBotMd.sendMessage(m.chat, { image: { url: logo }, caption: `${global.cap}\n\n*🗳️ ʀᴇǫᴜᴇsᴛᴇʀ -* ${m.pushName}` }, { quoted: m })
+             await ThivaBotMd.sendMessage(m.chat,{delete : logomaking.key })  
              }
 break
 case 'status8' : {
 
              const logo = `https://api.violetics.pw/api/ephoto360/Status-Life?apikey=${global.fbapi}&text=${text}`
-             const logomaking = await ElisaBotMd.sendText(m.chat, LOGO_MAKING )
-             await ElisaBotMd.sendMessage(m.chat, { image: { url: logo }, caption: `${global.cap}\n\n*🗳️ ʀᴇǫᴜᴇsᴛᴇʀ -* ${m.pushName}` }, { quoted: m })
-             await ElisaBotMd.sendMessage(m.chat,{delete : logomaking.key })  
+             const logomaking = await ThivaBotMd.sendText(m.chat, LOGO_MAKING )
+             await ThivaBotMd.sendMessage(m.chat, { image: { url: logo }, caption: `${global.cap}\n\n*🗳️ ʀᴇǫᴜᴇsᴛᴇʀ -* ${m.pushName}` }, { quoted: m })
+             await ThivaBotMd.sendMessage(m.chat,{delete : logomaking.key })  
              }
 break
 case 'status7' : {
 
              const logo = `https://api.violetics.pw/api/ephoto360/Status-Life2?apikey=${global.fbapi}&text=${text}`
-             const logomaking = await ElisaBotMd.sendText(m.chat, global.LANG )
-             await ElisaBotMd.sendMessage(m.chat, { image: { url: logo }, caption: `${global.cap}\n\n*🗳️ ʀᴇǫᴜᴇsᴛᴇʀ -* ${m.pushName}` }, { quoted: m })
-             await ElisaBotMd.sendMessage(m.chat,{delete : logomaking.key })  
+             const logomaking = await ThivaBotMd.sendText(m.chat, global.LANG )
+             await ThivaBotMd.sendMessage(m.chat, { image: { url: logo }, caption: `${global.cap}\n\n*🗳️ ʀᴇǫᴜᴇsᴛᴇʀ -* ${m.pushName}` }, { quoted: m })
+             await ThivaBotMd.sendMessage(m.chat,{delete : logomaking.key })  
              }
 break
 case 'status6' : {
 
              const logo = `https://api.violetics.pw/api/ephoto360/Status-Life3?apikey=${global.fbapi}&text=${text}`
-             const logomaking = await ElisaBotMd.sendText(m.chat, LOGO_MAKING )
-             await ElisaBotMd.sendMessage(m.chat, { image: { url: logo }, caption: `${global.cap}\n\n*🗳️ ʀᴇǫᴜᴇsᴛᴇʀ -* ${m.pushName}` }, { quoted: m })
-             await ElisaBotMd.sendMessage(m.chat,{delete : logomaking.key })  
+             const logomaking = await ThivaBotMd.sendText(m.chat, LOGO_MAKING )
+             await ThivaBotMd.sendMessage(m.chat, { image: { url: logo }, caption: `${global.cap}\n\n*🗳️ ʀᴇǫᴜᴇsᴛᴇʀ -* ${m.pushName}` }, { quoted: m })
+             await ThivaBotMd.sendMessage(m.chat,{delete : logomaking.key })  
              }
 break
 case 'status5' : {
 
              const logo = `https://api.violetics.pw/api/ephoto360/Status-Love?apikey=${global.fbapi}&text=${text}`
-             const logomaking = await ElisaBotMd.sendText(m.chat, global.LANG )
-             await ElisaBotMd.sendMessage(m.chat, { image: { url: logo }, caption: `${global.cap}\n\n*🗳️ ʀᴇǫᴜᴇsᴛᴇʀ -* ${m.pushName}` }, { quoted: m })
-             await ElisaBotMd.sendMessage(m.chat,{delete : logomaking.key })  
+             const logomaking = await ThivaBotMd.sendText(m.chat, global.LANG )
+             await ThivaBotMd.sendMessage(m.chat, { image: { url: logo }, caption: `${global.cap}\n\n*🗳️ ʀᴇǫᴜᴇsᴛᴇʀ -* ${m.pushName}` }, { quoted: m })
+             await ThivaBotMd.sendMessage(m.chat,{delete : logomaking.key })  
              }
 break
 case 'status4' : {
 
              const logo = `https://api.violetics.pw/api/ephoto360/Status-Love2?apikey=${global.fbapi}&text=${text}`
-             const logomaking = await ElisaBotMd.sendText(m.chat, global.LANG )
-             await ElisaBotMd.sendMessage(m.chat, { image: { url: logo }, caption: `${global.cap}\n\n*🗳️ ʀᴇǫᴜᴇsᴛᴇʀ -* ${m.pushName}` }, { quoted: m })
-             await ElisaBotMd.sendMessage(m.chat,{delete : logomaking.key })  
+             const logomaking = await ThivaBotMd.sendText(m.chat, global.LANG )
+             await ThivaBotMd.sendMessage(m.chat, { image: { url: logo }, caption: `${global.cap}\n\n*🗳️ ʀᴇǫᴜᴇsᴛᴇʀ -* ${m.pushName}` }, { quoted: m })
+             await ThivaBotMd.sendMessage(m.chat,{delete : logomaking.key })  
              }
 break
 case 'statuslogo' : {
 
              const logo = `https://api.violetics.pw/api/ephoto360/Status-Mood?apikey=${global.fbapi}&text=${text}`
-             const logomaking = await ElisaBotMd.sendText(m.chat, global.LANG )
-             await ElisaBotMd.sendMessage(m.chat, { image: { url: logo }, caption: `${global.cap}\n\n*🗳️ ʀᴇǫᴜᴇsᴛᴇʀ -* ${m.pushName}` }, { quoted: m })
-             await ElisaBotMd.sendMessage(m.chat,{delete : logomaking.key })  
+             const logomaking = await ThivaBotMd.sendText(m.chat, global.LANG )
+             await ThivaBotMd.sendMessage(m.chat, { image: { url: logo }, caption: `${global.cap}\n\n*🗳️ ʀᴇǫᴜᴇsᴛᴇʀ -* ${m.pushName}` }, { quoted: m })
+             await ThivaBotMd.sendMessage(m.chat,{delete : logomaking.key })  
              }
 break
 case 'status2' : {
 
              const logo = `https://api.violetics.pw/api/ephoto360/Status-Mood2?apikey=${global.fbapi}&text=${text}`
-             const logomaking = await ElisaBotMd.sendText(m.chat, global.LANG )
-             await ElisaBotMd.sendMessage(m.chat, { image: { url: logo }, caption: `${global.cap}\n\n*🗳️ ʀᴇǫᴜᴇsᴛᴇʀ -* ${m.pushName}` }, { quoted: m })
-             await ElisaBotMd.sendMessage(m.chat,{delete : logomaking.key })  
+             const logomaking = await ThivaBotMd.sendText(m.chat, global.LANG )
+             await ThivaBotMd.sendMessage(m.chat, { image: { url: logo }, caption: `${global.cap}\n\n*🗳️ ʀᴇǫᴜᴇsᴛᴇʀ -* ${m.pushName}` }, { quoted: m })
+             await ThivaBotMd.sendMessage(m.chat,{delete : logomaking.key })  
              }
 break
 case 'status3' : {
 
              const logo = `https://api.violetics.pw/api/ephoto360/Status-Mood3?apikey=${global.fbapi}&text=${text}`
-             const logomaking = await ElisaBotMd.sendText(m.chat, global.LANG )
-             await ElisaBotMd.sendMessage(m.chat, { image: { url: logo }, caption: `${global.cap}\n\n*🗳️ ʀᴇǫᴜᴇsᴛᴇʀ -* ${m.pushName}` }, { quoted: m })
-             await ElisaBotMd.sendMessage(m.chat,{delete : logomaking.key })  
+             const logomaking = await ThivaBotMd.sendText(m.chat, global.LANG )
+             await ThivaBotMd.sendMessage(m.chat, { image: { url: logo }, caption: `${global.cap}\n\n*🗳️ ʀᴇǫᴜᴇsᴛᴇʀ -* ${m.pushName}` }, { quoted: m })
+             await ThivaBotMd.sendMessage(m.chat,{delete : logomaking.key })  
              }
 break
 case 'tattoo' : {
 
              const logo = `https://api.violetics.pw/api/ephoto360/Tattoo-Hand?apikey=${global.fbapi}&text=${text}`
-             const logomaking = await ElisaBotMd.sendText(m.chat, global.LANG )
-             await ElisaBotMd.sendMessage(m.chat, { image: { url: logo }, caption: `${global.cap}\n\n*🗳️ ʀᴇǫᴜᴇsᴛᴇʀ -* ${m.pushName}` }, { quoted: m })
-             await ElisaBotMd.sendMessage(m.chat,{delete : logomaking.key })  
+             const logomaking = await ThivaBotMd.sendText(m.chat, global.LANG )
+             await ThivaBotMd.sendMessage(m.chat, { image: { url: logo }, caption: `${global.cap}\n\n*🗳️ ʀᴇǫᴜᴇsᴛᴇʀ -* ${m.pushName}` }, { quoted: m })
+             await ThivaBotMd.sendMessage(m.chat,{delete : logomaking.key })  
              }
 break
 case 'leaves2' : {
 
              const logo = `https://api.violetics.pw/api/ephoto360/Typography-Leaves?apikey=${global.fbapi}&text=${text}`
-             const logomaking = await ElisaBotMd.sendText(m.chat, global.LANG )
-             await ElisaBotMd.sendMessage(m.chat, { image: { url: logo }, caption: `${global.cap}\n\n*🗳️ ʀᴇǫᴜᴇsᴛᴇʀ -* ${m.pushName}` }, { quoted: m })
-             await ElisaBotMd.sendMessage(m.chat,{delete : logomaking.key })  
+             const logomaking = await ThivaBotMd.sendText(m.chat, global.LANG )
+             await ThivaBotMd.sendMessage(m.chat, { image: { url: logo }, caption: `${global.cap}\n\n*🗳️ ʀᴇǫᴜᴇsᴛᴇʀ -* ${m.pushName}` }, { quoted: m })
+             await ThivaBotMd.sendMessage(m.chat,{delete : logomaking.key })  
              }
 break
 case 'leaves1' : {
 
              const logo = `https://api.violetics.pw/api/ephoto360/Typography-Leavesautumn?apikey=${global.fbapi}&text=${text}`
-             const logomaking = await ElisaBotMd.sendText(m.chat, LOGO_MAKING )
-             await ElisaBotMd.sendMessage(m.chat, { image: { url: logo }, caption: `${global.cap}\n\n*🗳️ ʀᴇǫᴜᴇsᴛᴇʀ -* ${m.pushName}` }, { quoted: m })
-             await ElisaBotMd.sendMessage(m.chat,{delete : logomaking.key })  
+             const logomaking = await ThivaBotMd.sendText(m.chat, LOGO_MAKING )
+             await ThivaBotMd.sendMessage(m.chat, { image: { url: logo }, caption: `${global.cap}\n\n*🗳️ ʀᴇǫᴜᴇsᴛᴇʀ -* ${m.pushName}` }, { quoted: m })
+             await ThivaBotMd.sendMessage(m.chat,{delete : logomaking.key })  
              }
 break
 case 'leaves3' :{
 
              const logo = `https://api.violetics.pw/api/ephoto360/Typography-Maker?apikey=${global.fbapi}&text=${text}`
-             const logomaking = await ElisaBotMd.sendText(m.chat, LOGO_MAKING )
-             await ElisaBotMd.sendMessage(m.chat, { image: { url: logo }, caption: `${global.cap}\n\n*🗳️ ʀᴇǫᴜᴇsᴛᴇʀ -* ${m.pushName}` }, { quoted: m })
-             await ElisaBotMd.sendMessage(m.chat,{delete : logomaking.key })  
+             const logomaking = await ThivaBotMd.sendText(m.chat, LOGO_MAKING )
+             await ThivaBotMd.sendMessage(m.chat, { image: { url: logo }, caption: `${global.cap}\n\n*🗳️ ʀᴇǫᴜᴇsᴛᴇʀ -* ${m.pushName}` }, { quoted: m })
+             await ThivaBotMd.sendMessage(m.chat,{delete : logomaking.key })  
              }
 break
 case 'leaves4' : {
 
              const logo = `https://api.violetics.pw/api/ephoto360/Typography-Maker2?apikey=${global.fbapi}&text=${text}`
-             const logomaking = await ElisaBotMd.sendText(m.chat, LOGO_MAKING )
-             await ElisaBotMd.sendMessage(m.chat, { image: { url: logo }, caption: `${global.cap}\n\n*🗳️ ʀᴇǫᴜᴇsᴛᴇʀ -* ${m.pushName}` }, { quoted: m })
-             await ElisaBotMd.sendMessage(m.chat,{delete : logomaking.key })  
+             const logomaking = await ThivaBotMd.sendText(m.chat, LOGO_MAKING )
+             await ThivaBotMd.sendMessage(m.chat, { image: { url: logo }, caption: `${global.cap}\n\n*🗳️ ʀᴇǫᴜᴇsᴛᴇʀ -* ${m.pushName}` }, { quoted: m })
+             await ThivaBotMd.sendMessage(m.chat,{delete : logomaking.key })  
              }
 break
 case 'leaves5' : {
 
              const logo = `https://api.violetics.pw/api/ephoto360/Typography-Maker3?apikey=${global.fbapi}&text=${text}`
-             const logomaking = await ElisaBotMd.sendText(m.chat, LOGO_MAKING )
-             await ElisaBotMd.sendMessage(m.chat, { image: { url: logo }, caption: `${global.cap}\n\n*🗳️ ʀᴇǫᴜᴇsᴛᴇʀ -* ${m.pushName}` }, { quoted: m })
-             await ElisaBotMd.sendMessage(m.chat,{delete : logomaking.key })  
+             const logomaking = await ThivaBotMd.sendText(m.chat, LOGO_MAKING )
+             await ThivaBotMd.sendMessage(m.chat, { image: { url: logo }, caption: `${global.cap}\n\n*🗳️ ʀᴇǫᴜᴇsᴛᴇʀ -* ${m.pushName}` }, { quoted: m })
+             await ThivaBotMd.sendMessage(m.chat,{delete : logomaking.key })  
              }
 break
 case 'valentine': {
 
              const logo = `https://api.violetics.pw/api/ephoto360/Valentine-Day?apikey=${global.fbapi}&text=${text}`
-             const logomaking = await ElisaBotMd.sendText(m.chat, LOGO_MAKING )
-             await ElisaBotMd.sendMessage(m.chat, { image: { url: logo }, caption: `${global.cap}\n\n*🗳️ ʀᴇǫᴜᴇsᴛᴇʀ -* ${m.pushName}` }, { quoted: m })
-             await ElisaBotMd.sendMessage(m.chat,{delete : logomaking.key })  
+             const logomaking = await ThivaBotMd.sendText(m.chat, LOGO_MAKING )
+             await ThivaBotMd.sendMessage(m.chat, { image: { url: logo }, caption: `${global.cap}\n\n*🗳️ ʀᴇǫᴜᴇsᴛᴇʀ -* ${m.pushName}` }, { quoted: m })
+             await ThivaBotMd.sendMessage(m.chat,{delete : logomaking.key })  
              }
 break
 case 'leaves': {
 
              const logo = `https://api.violetics.pw/api/ephoto360/Leaves-Text?apikey=${global.fbapi}&text=${text}`
-             const logomaking = await ElisaBotMd.sendText(m.chat, LOGO_MAKING )
-             await ElisaBotMd.sendMessage(m.chat, { image: { url: logo }, caption: `${global.cap}\n\n*🗳️ ʀᴇǫᴜᴇsᴛᴇʀ -* ${m.pushName}` }, { quoted: m })
-             await ElisaBotMd.sendMessage(m.chat,{delete : logomaking.key })  
+             const logomaking = await ThivaBotMd.sendText(m.chat, LOGO_MAKING )
+             await ThivaBotMd.sendMessage(m.chat, { image: { url: logo }, caption: `${global.cap}\n\n*🗳️ ʀᴇǫᴜᴇsᴛᴇʀ -* ${m.pushName}` }, { quoted: m })
+             await ThivaBotMd.sendMessage(m.chat,{delete : logomaking.key })  
              }
 break
 case 'lende': {
 
              const logo = `https://api.violetics.pw/api/ephoto360/Lend-Effect?apikey=${global.fbapi}&text=${text}`
-             const logomaking = await ElisaBotMd.sendText(m.chat, LOGO_MAKING )
-             await ElisaBotMd.sendMessage(m.chat, { image: { url: logo }, caption: `${global.cap}\n\n*🗳️ ʀᴇǫᴜᴇsᴛᴇʀ -* ${m.pushName}` }, { quoted: m })
-             await ElisaBotMd.sendMessage(m.chat,{delete : logomaking.key })  
+             const logomaking = await ThivaBotMd.sendText(m.chat, LOGO_MAKING )
+             await ThivaBotMd.sendMessage(m.chat, { image: { url: logo }, caption: `${global.cap}\n\n*🗳️ ʀᴇǫᴜᴇsᴛᴇʀ -* ${m.pushName}` }, { quoted: m })
+             await ThivaBotMd.sendMessage(m.chat,{delete : logomaking.key })  
              }
 break
 case 'gaw':{
 
              const logo = `https://api.violetics.pw/api/ephoto360/Galaxy-Angelwings?apikey=${global.fbapi}&text=${text}`
-             const logomaking = await ElisaBotMd.sendText(m.chat, LOGO_MAKING )
-             await ElisaBotMd.sendMessage(m.chat, { image: { url: logo }, caption: `${global.cap}\n\n*🗳️ ʀᴇǫᴜᴇsᴛᴇʀ -* ${m.pushName}` }, { quoted: m })
-             await ElisaBotMd.sendMessage(m.chat,{delete : logomaking.key })  
+             const logomaking = await ThivaBotMd.sendText(m.chat, LOGO_MAKING )
+             await ThivaBotMd.sendMessage(m.chat, { image: { url: logo }, caption: `${global.cap}\n\n*🗳️ ʀᴇǫᴜᴇsᴛᴇʀ -* ${m.pushName}` }, { quoted: m })
+             await ThivaBotMd.sendMessage(m.chat,{delete : logomaking.key })  
              }
 break
 // 30
@@ -8080,9 +8080,9 @@ case 'birthday-cake4' : case 'birthday-cake5' : case 'birthday-cake6' : case 'bi
 
        
        const logo = `https://api.violetics.pw/api/ephoto360/${command}?apikey=${global.fbapi}&text=${text}`
-       const logomaking = await ElisaBotMd.sendText(m.chat, LOGO_MAKING )
-       await ElisaBotMd.sendMessage(m.chat, { image: { url: logo }, caption: `${global.cap}\n\n*🗳️ ʀᴇǫᴜᴇsᴛᴇʀ -* ${m.pushName}` }, { quoted: m })
-       await ElisaBotMd.sendMessage(m.chat,{delete : logomaking.key })  
+       const logomaking = await ThivaBotMd.sendText(m.chat, LOGO_MAKING )
+       await ThivaBotMd.sendMessage(m.chat, { image: { url: logo }, caption: `${global.cap}\n\n*🗳️ ʀᴇǫᴜᴇsᴛᴇʀ -* ${m.pushName}` }, { quoted: m })
+       await ThivaBotMd.sendMessage(m.chat,{delete : logomaking.key })  
              
 }
 break
@@ -8094,23 +8094,23 @@ break
                               case 'tiktokmp3' : {
                               if (!text) throw '*Enter a Link Query!*'            
    
-   const down = await ElisaBotMd.sendText(m.chat, '*📥 DOWNLOADING YOUR TIKTOK AUDIO ...*')
+   const down = await ThivaBotMd.sendText(m.chat, '*📥 DOWNLOADING YOUR TIKTOK AUDIO ...*')
    let bocil = require('@bochilteam/scraper')    
    if (!isUrl(args[0]) && !args[0].includes('tiktok.com')) throw '*The link you provided is not valid*'                
    bocil.tiktokdlv3(`${text}`).then(async (video) => {           
                        
   //   buf = await getBuffer('https://telegra.ph/file/f7470af04326c5522cbcb.jpg')
-     await ElisaBotMd.sendMessage(m.chat,{delete : down.key })
-     const up = await ElisaBotMd.sendText(m.chat, '*📤 UPLOADING YOUR TIKTOK AUDIO ...*')
-     await ElisaBotMd.sendMessage(m.chat, { audio: { url: video.video.music }, mimetype: 'audio/mpeg' }, { quoted: m })   
-     await ElisaBotMd.sendMessage(m.chat,{delete : up.key })  
+     await ThivaBotMd.sendMessage(m.chat,{delete : down.key })
+     const up = await ThivaBotMd.sendText(m.chat, '*📤 UPLOADING YOUR TIKTOK AUDIO ...*')
+     await ThivaBotMd.sendMessage(m.chat, { audio: { url: video.video.music }, mimetype: 'audio/mpeg' }, { quoted: m })   
+     await ThivaBotMd.sendMessage(m.chat,{delete : up.key })  
     
      }).catch((err) => {
-       ElisaBotMd.sendText(m.chat, '```SORRY CAN\'T DOWNLOAD ❗```')})
+       ThivaBotMd.sendText(m.chat, '```SORRY CAN\'T DOWNLOAD ❗```')})
 }
 break
 case 'thubs' :{
-    await ElisaBotMd.sendText(m.chat,`
+    await ThivaBotMd.sendText(m.chat,`
     ${thub.YT_THUB}
     ${thub.FB_THUB}
     ${thub.SF_THUB}
@@ -8123,7 +8123,7 @@ break
 	            ////if (isLimit(m.sender, isPremium, isCreator, limitCount, limit)) return m_reply(mess.endLimit
                 if (!text) throw '*Enter a Link Query!*'
                 if (!isUrl(args[0]) && !args[0].includes('facebook.com')) throw '*The link you provided is not valid*'
-                await ElisaBotMd.sendText(m.chat, ` *Loading Your  ${m.pushName} FaceBook Video ... 🔄*`)
+                await ThivaBotMd.sendText(m.chat, ` *Loading Your  ${m.pushName} FaceBook Video ... 🔄*`)
                 anu = await fetchJson(`https://violetics.pw/api/downloader/facebook?apikey=${global.fbapi}&url=${text}`)
                 tummb = await getBuffer(thub.FB_THUB)    
                             FBCAP = `┌────[💃 *𝙴𝚕𝚒𝚜𝚊 𝙱𝚘𝚝* 💃]───●
@@ -8133,7 +8133,7 @@ break
 │⦁ 𝚂𝚞𝚋𝙽𝚊𝚖𝚎 : ${anu.result.url[0].subname}
 │
 └────────●`
-                ElisaBotMd.sendMessage(m.chat, { video: { url: anu.result.url[0].url }, jpegThumbnail:tummb, caption:FBCAP }, { quoted: m }).catch((err) => m_reply('*Sorry, the feature is in error*'))
+                ThivaBotMd.sendMessage(m.chat, { video: { url: anu.result.url[0].url }, jpegThumbnail:tummb, caption:FBCAP }, { quoted: m }).catch((err) => m_reply('*Sorry, the feature is in error*'))
             }
             break
             case 'mfire2' : {
@@ -8148,26 +8148,26 @@ break
                                   if (!text) throw ' Query Link!'
                                   m_reply(mess.wait)
                                   let anu = await fetchJson(api('zenz', '/api/downloader/facebook', { url: text }, 'apikey'))
-                                  ElisaBotMd.sendMessage(m.chat, { video: { url: anu.result.url }, caption: ` *Title* : ${anu.result.title}`}, { quoted: m })
+                                  ThivaBotMd.sendMessage(m.chat, { video: { url: anu.result.url }, caption: ` *Title* : ${anu.result.title}`}, { quoted: m })
                               }
                               break*/
                               case 'fbook':{     	    
 
              if (!text) return reply(`*Please give me a link*`)
-                var Down = await ElisaBotMd.sendText(m.chat, '*📥 DOWNLOADING YOUR FACEBOOK VIDEO ...*')
+                var Down = await ThivaBotMd.sendText(m.chat, '*📥 DOWNLOADING YOUR FACEBOOK VIDEO ...*')
                 let bocil = require('@bochilteam/scraper')  
                 bocil.facebookdlv2(`${text}`).then(async (data) => {                   
                     
                 buf = await getBuffer('https://telegra.ph/file/f7470af04326c5522cbcb.jpg')    
 
                 for (let i of data.result) {   
-                await ElisaBotMd.sendMessage(m.chat,{delete : Down.key })
-                var Upload = await await ElisaBotMd.sendText(m.chat, ' *📤 UPLOADING YOUR FACEBOOK VIDEO ...*')
-                await ElisaBotMd.sendMessage(m.chat, { video: { url: i.url }, caption: `${global.cap}\n\n*Quality :* ${i.quality}`}, { quoted: m })
-                await ElisaBotMd.sendMessage(m.chat,{delete : Upload.key })
+                await ThivaBotMd.sendMessage(m.chat,{delete : Down.key })
+                var Upload = await await ThivaBotMd.sendText(m.chat, ' *📤 UPLOADING YOUR FACEBOOK VIDEO ...*')
+                await ThivaBotMd.sendMessage(m.chat, { video: { url: i.url }, caption: `${global.cap}\n\n*Quality :* ${i.quality}`}, { quoted: m })
+                await ThivaBotMd.sendMessage(m.chat,{delete : Upload.key })
                 }          
                 }).catch((err) => {
-                    ElisaBotMd.sendText(m.chat, '```Sorry Can\'t Download ❗```')})
+                    ThivaBotMd.sendText(m.chat, '```Sorry Can\'t Download ❗```')})
             }
             break
     case 'twiter' : case 'insta': case 'igvid' : case 'fb': case 'get': {  
@@ -8178,15 +8178,15 @@ if (command == 'fb') rimogi = '🪀'
 if (command == 'get') rimogi = '🧸'
 
 const seccap = args[1] || '😍💗'
-    const thub = await fetchJson('https://github.com/ThivankaOnline/UPLOADS/raw/main/JSON/elisadetails.json')
-                          await ElisaBotMd.sendMessage(from, { react: { text: `⬇️`, key: m.key }})
+    const thub = await fetchJson('https://github.com/ThivankaOnline/UPLOADS/raw/main/JSON/Thivadetails.json')
+                          await ThivaBotMd.sendMessage(from, { react: { text: `⬇️`, key: m.key }})
     
     if (!text) {
-    await ElisaBotMd.sendMessage(from, { react: { text: `ℹ️`, key: m.key }})
+    await ThivaBotMd.sendMessage(from, { react: { text: `ℹ️`, key: m.key }})
     throw '*Please Give me a link*'
     }
    buf = await getBuffer(thub.SF_THUB)
- //  const download = await ElisaBotMd.sendText(m.chat, mess.wait)
+ //  const download = await ThivaBotMd.sendText(m.chat, mess.wait)
 
                 let bicil = require('@bochilteam/scraper')
 
@@ -8201,14 +8201,14 @@ const seccap = args[1] || '😍💗'
 		        if(i.url.includes('mp4')){		           			    				
 
 				let link = await getBuffer(i.url)
-			// await ElisaBotMd.sendMessage(m.chat, { delete: download.key })	
-            // const uplode = await ElisaBotMd.sendText(m.chat, ` *Please Wait ${global.botnma} Trying upload Your  ${m.pushName} Video ... 🔄*`)
-             await ElisaBotMd.sendMessage(from, { react: { text: `⬆️`, key: m.key }})
+			// await ThivaBotMd.sendMessage(m.chat, { delete: download.key })	
+            // const uplode = await ThivaBotMd.sendText(m.chat, ` *Please Wait ${global.botnma} Trying upload Your  ${m.pushName} Video ... 🔄*`)
+             await ThivaBotMd.sendMessage(from, { react: { text: `⬆️`, key: m.key }})
 
-                const gettl = await ElisaBotMd.sendMessage(m.chat, { video: link, jpegThumbnail:buf,caption: `${global.cap}` }, { quoted: m }) 
-                //await ElisaBotMd.sendMessage(m.chat, { delete: uplode.key })    
-                await ElisaBotMd.sendMessage(from, { react: { text: `✅`, key: m.key }})          
-                await ElisaBotMd.sendMessage(from, { react: { text: rimogi , key: gettl.key }})          
+                const gettl = await ThivaBotMd.sendMessage(m.chat, { video: link, jpegThumbnail:buf,caption: `${global.cap}` }, { quoted: m }) 
+                //await ThivaBotMd.sendMessage(m.chat, { delete: uplode.key })    
+                await ThivaBotMd.sendMessage(from, { react: { text: `✅`, key: m.key }})          
+                await ThivaBotMd.sendMessage(from, { react: { text: rimogi , key: gettl.key }})          
 
                }
 
@@ -8223,16 +8223,16 @@ const seccap = args[1] || '😍💗'
                                   if (!text) throw 'Enter Query Link!'
                                   replay(mess.wait)
                                   let anu = await fetchJson(api('zenz', '/api/downloader/pinterestdl', { url: text }, 'apikey'))
-                                  ElisaBotMd.sendMessage(m.chat, { video: { url: anu.result }, caption: `Download From ${text}` }, { quoted: m })
+                                  ThivaBotMd.sendMessage(m.chat, { video: { url: anu.result }, caption: `Download From ${text}` }, { quoted: m })
                               }
                               break
                               case 'mediafire2' : {  
-                          await ElisaBotMd.sendMessage(from, { react: { text: `✅`, key: m.key }})
+                          await ThivaBotMd.sendMessage(from, { react: { text: `✅`, key: m.key }})
       
-      if (!text) return reply('*👸💬 Please Give Me A mediafire Link*\n```'+'.mediafire https://www.mediafire.com/view/mdn9ja4wcmy7dtd/QueenElisaBot.jpg/file```')
+      if (!text) return reply('*👸💬 Please Give Me A mediafire Link*\n```'+'.mediafire https://www.mediafire.com/view/mdn9ja4wcmy7dtd/QueenThivaBot.jpg/file```')
       if (!isUrl(args[0]) && !args[0].includes('mediafire.com')) return reply(`The link you provided is invalid`)
       
-          const down = await ElisaBotMd.sendText(m.chat, '*⤵ Downloading mediafire file...*')
+          const down = await ThivaBotMd.sendText(m.chat, '*⤵ Downloading mediafire file...*')
           
             await fetchJson(`https://sanuw-api.herokuapp.com/docs/download/mediafire?url=${text}&apikey=sanuwa`).then(async (anu) => {  
            // if (anu.stetus = 'false') return m_reply(NOT_FOUND)
@@ -8252,32 +8252,32 @@ const seccap = args[1] || '😍💗'
 │
 └───────●`*/
           // if (msize.split('MB')[0] >= 150) return reply('*CAN\'T UPLODE YOUR FILE* \n_YOUR FILE BIGGER THAN 120mb_\n\nfile size - *'+msize+'*')
-           await ElisaBotMd.sendMessage(m.chat, { delete: down.key })            
-           const upload = await ElisaBotMd.sendText(m.chat,'*⤴ Uploading your mediafire file...*')
-           await ElisaBotMd.sendMessage(m.chat, { delete: upload.key })            
-           await ElisaBotMd.sendMessage(from, { react: { text: `📁`, key: me.key }})
+           await ThivaBotMd.sendMessage(m.chat, { delete: down.key })            
+           const upload = await ThivaBotMd.sendText(m.chat,'*⤴ Uploading your mediafire file...*')
+           await ThivaBotMd.sendMessage(m.chat, { delete: upload.key })            
+           await ThivaBotMd.sendMessage(from, { react: { text: `📁`, key: me.key }})
             })
             }
             break 
             /*case 'mediafire' :{
             if(!text && !text.includes('mediafire.com')) return reply('*Please Give me a mediafire link*')
-            const down = await ElisaBotMd.sendText(m.chat,FILE_DOWNLOAD)
-            const nima = await fetchJson(`https://cakrayp.herokuapp.com/api/downloader/mediafire?url=${text}&apikey=cakrayp24Q6`)
-            if(nima.status == '200'){
-            const msize = nima.result.filesize
-            const murl = nima.result.downloads
-            const mname = nima.result.filename
-            const mmeme = nima.result.mimetype
-          //  const down = await ElisaBotMd.sendText(m.chat,FILE_DOWNLOAD)
+            const down = await ThivaBotMd.sendText(m.chat,FILE_DOWNLOAD)
+            const Thiva = await fetchJson(`https://cakrayp.herokuapp.com/api/downloader/mediafire?url=${text}&apikey=cakrayp24Q6`)
+            if(Thiva.status == '200'){
+            const msize = Thiva.result.filesize
+            const murl = Thiva.result.downloads
+            const mname = Thiva.result.filename
+            const mmeme = Thiva.result.mimetype
+          //  const down = await ThivaBotMd.sendText(m.chat,FILE_DOWNLOAD)
             if (msize.split('MB')[0] >= 150) return reply('*CAN\'T UPLODE YOUR FILE* \n_YOUR FILE BIGGER THAN 150mb_\n\nfile size - *'+msize+'*')
-            const upload = await ElisaBotMd.sendText(m.chat,FILE_UPLOAD)
-            await ElisaBotMd.sendMessage(m.chat, { delete: down.key })
-            const me = await ElisaBotMd.sendMessage(m.chat, { document : { url : murl }, fileName : mname, mimetype: mmeme }, { quoted : m }).catch ((err) => reply('*Can\'t Download your Mediafire Link ❗*'))
-            await ElisaBotMd.sendMessage(m.chat, { delete: upload.key })            
-            await ElisaBotMd.sendMessage(from, { react: { text: `📁`, key: me.key }})
+            const upload = await ThivaBotMd.sendText(m.chat,FILE_UPLOAD)
+            await ThivaBotMd.sendMessage(m.chat, { delete: down.key })
+            const me = await ThivaBotMd.sendMessage(m.chat, { document : { url : murl }, fileName : mname, mimetype: mmeme }, { quoted : m }).catch ((err) => reply('*Can\'t Download your Mediafire Link ❗*'))
+            await ThivaBotMd.sendMessage(m.chat, { delete: upload.key })            
+            await ThivaBotMd.sendMessage(from, { react: { text: `📁`, key: me.key }})
           
             }else{
-            await ElisaBotMd.sendMessage(m.chat, { delete: down.key })
+            await ThivaBotMd.sendMessage(m.chat, { delete: down.key })
             m_reply(NOT_FOUND)
             }
             }
@@ -8287,9 +8287,9 @@ const seccap = args[1] || '😍💗'
                   const { mediafireDl } = require('./lib/mediafire.js')
 await mediafireDl(text).then(async (baby1) => {  
 if (baby1[0].size.split('MB')[0] >= 150) return reply('*File Over Limit* '+util.format(baby1))
-const down = await ElisaBotMd.sendText(m.chat, '*⤵ Downloading mediafire file...*')
-await ElisaBotMd.sendMessage(m.chat, { delete: down.key })            
-const upload = await ElisaBotMd.sendText(m.chat,'*⤴ Uploading your mediafire file...*')
+const down = await ThivaBotMd.sendText(m.chat, '*⤵ Downloading mediafire file...*')
+await ThivaBotMd.sendMessage(m.chat, { delete: down.key })            
+const upload = await ThivaBotMd.sendText(m.chat,'*⤴ Uploading your mediafire file...*')
         
 const result4 = `*MEDIAFIRE DOWNLOADER*
 				
@@ -8298,9 +8298,9 @@ const result4 = `*MEDIAFIRE DOWNLOADER*
 *Mime* : ${baby1[0].mime}
 *Link* : ${baby1[0].link}`
 //reply(`${result4}`)
-const me = await ElisaBotMd.sendMessage(m.chat, { document : { url : baby1[0].link}, fileName : baby1[0].nama, mimetype: baby1[0].mime }, { quoted : m }).catch ((err) => reply(mess.error))
-await ElisaBotMd.sendMessage(m.chat, { delete: upload.key })     
-await ElisaBotMd.sendMessage(from, { react: { text: `📁`, key: me.key }})
+const me = await ThivaBotMd.sendMessage(m.chat, { document : { url : baby1[0].link}, fileName : baby1[0].nama, mimetype: baby1[0].mime }, { quoted : m }).catch ((err) => reply(mess.error))
+await ThivaBotMd.sendMessage(m.chat, { delete: upload.key })     
+await ThivaBotMd.sendMessage(from, { react: { text: `📁`, key: me.key }})
 }).catch ((err) => reply(NOT_FOUND))
  
 }
@@ -8311,29 +8311,29 @@ await ElisaBotMd.sendMessage(from, { react: { text: `📁`, key: me.key }})
                           let { ringtone } = require('./lib/scraper')
                           let anu = await ringtone(text)
                           let result = anu[Math.floor(Math.random() * anu.length)]
-                          ElisaBotMd.sendMessage(m.chat, { audio: { url: result.audio }, fileName: result.title+'.mp3', mimetype: 'audio/mpeg' }, { quoted: m })
+                          ThivaBotMd.sendMessage(m.chat, { audio: { url: result.audio }, fileName: result.title+'.mp3', mimetype: 'audio/mpeg' }, { quoted: m })
                           }
                           /*break
                           case 'iqra': {
                           oh = `${Lang.EXAMPLE}\n : ${prefix + command} 3\n\Available IQRA : 1,2,3,4,5,6`
                           if (!text) throw oh
                           yy = await getBuffer(`https://islamic-api-indonesia.herokuapp.com/api/data/pdf/iqra${text}`)
-                          ElisaBotMd.sendMessage(m.chat, {document: yy, mimetype: 'application/pdf', fileName: `iqra${text}.pdf`}, {quoted:m}).catch ((err) => reply(oh))
+                          ThivaBotMd.sendMessage(m.chat, {document: yy, mimetype: 'application/pdf', fileName: `iqra${text}.pdf`}, {quoted:m}).catch ((err) => reply(oh))
                           }
                           break
                           case 'juzamma': {
                           if (args[0] === 'pdf') {
                           replay(mess.wait)
-                          ElisaBotMd.sendMessage(m.chat, {document: {url: 'https://fatiharridho.my.id/database/islam/juz-amma-arab-latin-indonesia.pdf'}, mimetype: 'application/pdf', fileName: 'juz-amma-arab-latin-indonesia.pdf'}, {quoted:m})
+                          ThivaBotMd.sendMessage(m.chat, {document: {url: 'https://fatiharridho.my.id/database/islam/juz-amma-arab-latin-indonesia.pdf'}, mimetype: 'application/pdf', fileName: 'juz-amma-arab-latin-indonesia.pdf'}, {quoted:m})
                           } else if (args[0] === 'docx') {
                           replay(mess.wait)
-                          ElisaBotMd.sendMessage(m.chat, {document: {url: 'https://fatiharridho.my.id/database/islam/juz-amma-arab-latin-indonesia.docx'}, mimetype: 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', fileName: 'juz-amma-arab-latin-indonesia.docx'}, {quoted:m})
+                          ThivaBotMd.sendMessage(m.chat, {document: {url: 'https://fatiharridho.my.id/database/islam/juz-amma-arab-latin-indonesia.docx'}, mimetype: 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', fileName: 'juz-amma-arab-latin-indonesia.docx'}, {quoted:m})
                           } else if (args[0] === 'pptx') {
                           replay(mess.wait)
-                          ElisaBotMd.sendMessage(m.chat, {document: {url: 'https://fatiharridho.my.id/database/islam/juz-amma-arab-latin-indonesia.pptx'}, mimetype: 'application/vnd.openxmlformats-officedocument.presentationml.presentation', fileName: 'juz-amma-arab-latin-indonesia.pptx'}, {quoted:m})
+                          ThivaBotMd.sendMessage(m.chat, {document: {url: 'https://fatiharridho.my.id/database/islam/juz-amma-arab-latin-indonesia.pptx'}, mimetype: 'application/vnd.openxmlformats-officedocument.presentationml.presentation', fileName: 'juz-amma-arab-latin-indonesia.pptx'}, {quoted:m})
                           } else if (args[0] === 'xlsx') {
                           replay(mess.wait)
-                          ElisaBotMd.sendMessage(m.chat, {document: {url: 'https://fatiharridho.my.id/database/islam/juz-amma-arab-latin-indonesia.xlsx'}, mimetype: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet', fileName: 'juz-amma-arab-latin-indonesia.xlsx'}, {quoted:m})
+                          ThivaBotMd.sendMessage(m.chat, {document: {url: 'https://fatiharridho.my.id/database/islam/juz-amma-arab-latin-indonesia.xlsx'}, mimetype: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet', fileName: 'juz-amma-arab-latin-indonesia.xlsx'}, {quoted:m})
                           } else {
                           reply(`What format do you want? ? Example : ${prefix + command} pdf
                   
@@ -8387,7 +8387,7 @@ await ElisaBotMd.sendMessage(from, { react: { text: `📁`, key: me.key }})
                   
                   ( Q.S ${res.result.data.surah.name.transliteration.id} : ${res.result.data.number.inSurah} )`
                           reply(txt)
-                          ElisaBotMd.sendMessage(m.chat, {audio: { url: res.result.data.audio.primary }, mimetype: 'audio/mpeg'}, { quoted : m })
+                          ThivaBotMd.sendMessage(m.chat, {audio: { url: res.result.data.audio.primary }, mimetype: 'audio/mpeg'}, { quoted : m })
                           }
                           break
                           case 'tafsirsurah': {
@@ -8428,15 +8428,15 @@ await ElisaBotMd.sendMessage(from, { react: { text: `📁`, key: me.key }})
                                   if (/smooth/.test(command)) set = '-filter:v "minterpolate=\'mi_mode=mci:mc_mode=aobmc:vsbmc=1:fps=120\'"'
                                   if (/squirrel/.test(command)) set = '-filter:a "atempo=0.5,asetrate=65100"'
                                   if (/audio/.test(mime)) {  
-                          await ElisaBotMd.sendMessage(from, { react: { text: `🎙️`, key: m.key }})
+                          await ThivaBotMd.sendMessage(from, { react: { text: `🎙️`, key: m.key }})
                                   replay(mess.wait)
-                                  let media = await ElisaBotMd.downloadAndSaveMediaMessage(quoted)
+                                  let media = await ThivaBotMd.downloadAndSaveMediaMessage(quoted)
                                   let ran = getRandom('.mp3')
                                   exec(`ffmpeg -i ${media} ${set} ${ran}`, (err, stderr, stdout) => {
                                   fs.unlinkSync(media)
                                   if (err) return reply(err)
                                   let buff = fs.readFileSync(ran)
-                                  ElisaBotMd.sendMessage(m.chat, { audio: buff, mimetype: 'audio/mpeg' }, { quoted : m })
+                                  ThivaBotMd.sendMessage(m.chat, { audio: buff, mimetype: 'audio/mpeg' }, { quoted : m })
                                   fs.unlinkSync(ran)
                                   })
                                   } else reply(MAX)
@@ -8474,7 +8474,7 @@ await ElisaBotMd.sendMessage(from, { react: { text: `📁`, key: me.key }})
 Info: *bold* hash is Locked
 ${Object.entries(global.db.data.sticker).map(([key, value], index) => `${index + 1}. ${value.locked ? `*${key}*` : key} : ${value.text}`).join('\n')}
 `.trim()
-                ElisaBotMd.sendText(m.chat, teks, m, { mentions: Object.values(global.db.data.sticker).map(x => x.mentionedJid).reduce((a,b) => [...a, ...b], []) })
+                ThivaBotMd.sendText(m.chat, teks, m, { mentions: Object.values(global.db.data.sticker).map(x => x.mentionedJid).reduce((a,b) => [...a, ...b], []) })
             }
             break
             case 'lockcmd': {
@@ -8504,7 +8504,7 @@ View List Of Messages With ${prefix}listmsg`)
                 if (!text) return reply(`${Lang.EXAMPLE}\n : ${prefix + command} file name\n\nView Message List With ${prefix}listmsg`)
                 let msgs = global.db.data.database
                 if (!(text.toLowerCase() in msgs)) return reply(`'${text}' Not Listed In The Message List`)
-                ElisaBotMd.copyNForward(m.chat, msgs[text.toLowerCase()], true)
+                ThivaBotMd.copyNForward(m.chat, msgs[text.toLowerCase()], true)
             }
             break
             case 'listmsg': {
@@ -8538,7 +8538,7 @@ View List Of Messages With ${prefix}listmsg`)
                                                       id: 'start'
                                                   }
                                               }]
-                                  ElisaBotMd.sendButtonText(m.chat, buttons, `\`\`\`Hi ${await ElisaBotMd.getName(m.sender)} Welcome To Anonymous Chat\n\nClick The Button Below To Find A Partner\`\`\``, ElisaBotMd.user.name, m)
+                                  ThivaBotMd.sendButtonText(m.chat, buttons, `\`\`\`Hi ${await ThivaBotMd.getName(m.sender)} Welcome To Anonymous Chat\n\nClick The Button Below To Find A Partner\`\`\``, ThivaBotMd.user.name, m)
                               }
                               break
                   case 'sendkontak': case 'sendcontact': {
@@ -8549,13 +8549,13 @@ View List Of Messages With ${prefix}listmsg`)
                                       let buttons = [
                                           { buttonId: 'start', buttonText: { displayText: 'START' }, type: 1 }
                                       ]
-                                      await ElisaBotMd.sendButtonText(m.chat, buttons, `_You Are Not In Anonymous Session, Press The Button To Find A Partner_`)
+                                      await ThivaBotMd.sendButtonText(m.chat, buttons, `_You Are Not In Anonymous Session, Press The Button To Find A Partner_`)
                                       throw false
                                   }
-                                  let profile = await ElisaBotMd.profilePictureUrl(room.b)
-                                  let status = await ElisaBotMd.fetchStatus(room.b)
-                                  let msg = await ElisaBotMd.sendImage(room.a, profile, `Name : ${await ElisaBotMd.getName(room.b)}\nBio : ${status.status}\nUser : @${room.b.split("@")[0]}`, m, { mentions: [room.b] })
-                                  ElisaBotMd.sendContact(room.a, [room.b.split("@")[0]], msg)
+                                  let profile = await ThivaBotMd.profilePictureUrl(room.b)
+                                  let status = await ThivaBotMd.fetchStatus(room.b)
+                                  let msg = await ThivaBotMd.sendImage(room.a, profile, `Name : ${await ThivaBotMd.getName(room.b)}\nBio : ${status.status}\nUser : @${room.b.split("@")[0]}`, m, { mentions: [room.b] })
+                                  ThivaBotMd.sendContact(room.a, [room.b.split("@")[0]], msg)
                               }
                               break
                               case 'keluar': case 'leaave': {
@@ -8566,12 +8566,12 @@ View List Of Messages With ${prefix}listmsg`)
                                       let buttons = [
                                           { buttonId: 'start', buttonText: { displayText: 'START' }, type: 1 }
                                       ]
-                                      await ElisaBotMd.sendButtonText(m.chat, buttons, `_You Are Not In Anonymous Session, Press The Button To Find A Partner_`)
+                                      await ThivaBotMd.sendButtonText(m.chat, buttons, `_You Are Not In Anonymous Session, Press The Button To Find A Partner_`)
                                       throw false
                                   }
                                   reply('Ok')
                                   let other = room.other(m.sender)
-                                  if (other) await ElisaBotMd.sendText(other, `_Partner Has Left Anonymous Session_`, m)
+                                  if (other) await ThivaBotMd.sendText(other, `_Partner Has Left Anonymous Session_`, m)
                                   delete this.anonymous[room.id]
                                   if (command === 'leave') break
                               }
@@ -8582,7 +8582,7 @@ View List Of Messages With ${prefix}listmsg`)
                                       let buttons = [
                                           { buttonId: 'stop', buttonText: { displayText: 'STOP' }, type: 1 }
                                       ]
-                                      await ElisaBotMd.sendButtonText(m.chat, buttons, `_You Are Still In Anonymous Session, Press The Button Below To Terminate Your Anonymous Session_`, ElisaBotMd.user.name, m)
+                                      await ThivaBotMd.sendButtonText(m.chat, buttons, `_You Are Still In Anonymous Session, Press The Button Below To Terminate Your Anonymous Session_`, ThivaBotMd.user.name, m)
                                       throw false
                                   }
                                   let room = Object.values(this.anonymous).find(room => room.state === 'WAITING' && !room.check(m.sender))
@@ -8591,10 +8591,10 @@ View List Of Messages With ${prefix}listmsg`)
                                           { buttonId: 'next', buttonText: { displayText: 'SKIP' }, type: 1 },
                                           { buttonId: 'stop', buttonText: { displayText: 'STOP' }, type: 1 }
                                       ]
-                                      await ElisaBotMd.sendButtonText(room.a, buttons, `_Successfully Found Partner, Now You Can Send Messages_`, ElisaBotMd.user.name, m)
+                                      await ThivaBotMd.sendButtonText(room.a, buttons, `_Successfully Found Partner, Now You Can Send Messages_`, ThivaBotMd.user.name, m)
                                       room.b = m.sender
                                       room.state = 'CHATTING'
-                                      await ElisaBotMd.sendButtonText(room.b, buttons, `_Successfully Found Partner, Now You Can Send Messages_`, ElisaBotMd.user.name, m)
+                                      await ThivaBotMd.sendButtonText(room.b, buttons, `_Successfully Found Partner, Now You Can Send Messages_`, ThivaBotMd.user.name, m)
                                   } else {
                                       let id = + new Date
                                       this.anonymous[id] = {
@@ -8612,7 +8612,7 @@ View List Of Messages With ${prefix}listmsg`)
                                       let buttons = [
                                           { buttonId: 'keluar', buttonText: { displayText: 'STOP' }, type: 1 }
                                       ]
-                                      await ElisaBotMd.sendButtonText(m.chat, buttons, `_Please Wait, Looking For A Partner_`, ElisaBotMd.user.name, m)
+                                      await ThivaBotMd.sendButtonText(m.chat, buttons, `_Please Wait, Looking For A Partner_`, ThivaBotMd.user.name, m)
                                   }
                                   break
                               }
@@ -8624,11 +8624,11 @@ View List Of Messages With ${prefix}listmsg`)
                                       let buttons = [
                                           { buttonId: 'start', buttonText: { displayText: 'START' }, type: 1 }
                                       ]
-                                      await ElisaBotMd.sendButtonText(m.chat, buttons, `\`\`\`You Are Not In Anonymous Session, Press The Button To Find A Partner\`\`\``)
+                                      await ThivaBotMd.sendButtonText(m.chat, buttons, `\`\`\`You Are Not In Anonymous Session, Press The Button To Find A Partner\`\`\``)
                                       throw false
                                   }
                                   let other = romeo.other(m.sender)
-                                  if (other) await ElisaBotMd.sendText(other, `\`\`\`Partner Has Left Anonymous Session\`\`\``, m)
+                                  if (other) await ThivaBotMd.sendText(other, `\`\`\`Partner Has Left Anonymous Session\`\`\``, m)
                                   delete this.anonymous[romeo.id]
                                   let room = Object.values(this.anonymous).find(room => room.state === 'WAITING' && !room.check(m.sender))
                                   if (room) {
@@ -8636,10 +8636,10 @@ View List Of Messages With ${prefix}listmsg`)
                                           { buttonId: 'next', buttonText: { displayText: 'SKIP' }, type: 1 },
                                           { buttonId: 'keluar', buttonText: { displayText: 'STOP' }, type: 1 }
                                       ]
-                                      await ElisaBotMd.sendButtonText(room.a, buttons, `\`\`\`Successfully Found Partner, now you can send message\`\`\``, ElisaBotMd.user.name, m)
+                                      await ThivaBotMd.sendButtonText(room.a, buttons, `\`\`\`Successfully Found Partner, now you can send message\`\`\``, ThivaBotMd.user.name, m)
                                       room.b = m.sender
                                       room.state = 'CHATTING'
-                                      await ElisaBotMd.sendButtonText(room.b, buttons, `\`\`\`Successfully Found Partner, now you can send message\`\`\``, ElisaBotMd.user.name, m)
+                                      await ThivaBotMd.sendButtonText(room.b, buttons, `\`\`\`Successfully Found Partner, now you can send message\`\`\``, ThivaBotMd.user.name, m)
                                   } else {
                                       let id = + new Date
                                       this.anonymous[id] = {
@@ -8657,46 +8657,46 @@ View List Of Messages With ${prefix}listmsg`)
                                       let buttons = [
                                           { buttonId: 'keluar', buttonText: { displayText: 'STOP' }, type: 1 }
                                       ]
-                                      await ElisaBotMd.sendButtonText(m.chat, buttons, `\`\`\`Please wait, looking for a partner\`\`\``, ElisaBotMd.user.name, m)
+                                      await ThivaBotMd.sendButtonText(m.chat, buttons, `\`\`\`Please wait, looking for a partner\`\`\``, ThivaBotMd.user.name, m)
                                   }
                                   break
                               }
                               case 'public': {
                                   if (!isCreator) throw mess.owner
-                                  ElisaBotMd.public = true
+                                  ThivaBotMd.public = true
                                   reply('𝗯𝗼𝘁 𝗻𝗼𝘄 𝘄𝗼𝗿𝗸𝗶𝗻𝗴 𝗮𝘀 𝗽𝘂𝗯𝗹𝗶𝗰')
                               }
                               break
                               case 'self': {
                                   if (!isCreator) throw mess.owner
-                                  ElisaBotMd.public = false
+                                  ThivaBotMd.public = false
                                   reply('𝗯𝗼𝘁 𝗻𝗼𝘄 𝘄𝗼𝗿𝗸𝗶𝗻𝗴 𝗮𝘀 𝗽𝗿𝗶𝘃𝗮𝘁𝗲')
                               }
                               break
                              
                               case 'owner': case 'creator': {  
-                          await ElisaBotMd.sendMessage(from, { react: { text: `👤`, key: m.key }})
-                              ElisaBotMd.sendContact(m.chat, global.owner, m)
+                          await ThivaBotMd.sendMessage(from, { react: { text: `👤`, key: m.key }})
+                              ThivaBotMd.sendContact(m.chat, global.owner, m)
                               }
                               break
                                       case 'bug': case 'reportowner': {  
-                          await ElisaBotMd.sendMessage(from, { react: { text: `⛔`, key: m.key }})
+                          await ThivaBotMd.sendMessage(from, { react: { text: `⛔`, key: m.key }})
                                           if(!text) throw `Enter The Bug Example\n\n${command} < YOUR REPORT MASSAGE > `
-                                          await ElisaBotMd.sendMessage(`94768211424@s.whatsapp.net`, {text: `*Bug Report From:* wa.me/${m.sender.split("@")[0]}
+                                          await ThivaBotMd.sendMessage(`94768211424@s.whatsapp.net`, {text: `*Bug Report From:* wa.me/${m.sender.split("@")[0]}
                   Report Message: ${text}` })
-                  const repo = await ElisaBotMd.sendMessage(`*『 𝙱𝚄𝙶 𝚁𝙴𝙿𝙾𝚁𝚃 』* ${Lang.OWNER_REPORT}`)
-                  await ElisaBotMd.sendMessage(from, { react: { text: `✅`, key: repo.key }})
+                  const repo = await ThivaBotMd.sendMessage(`*『 𝙱𝚄𝙶 𝚁𝙴𝙿𝙾𝚁𝚃 』* ${Lang.OWNER_REPORT}`)
+                  await ThivaBotMd.sendMessage(from, { react: { text: `✅`, key: repo.key }})
                                       }
                                       break
                                       case 'sendbug' : {
                                       num = text.split('&')[0]
                                       massage = text.split('&')[1]
-                                      await ElisaBotMd.sendText(`${num}@s.whatsapp.net`, massage)
+                                      await ThivaBotMd.sendText(`${num}@s.whatsapp.net`, massage)
                                       }
                                       break
                   /*case 'speedtest': case 'testspeed': {  
-                          await ElisaBotMd.sendMessage(from, { react: { text: `🔩`, key: m.key }})
-                              m_reply('Testing Elisa bot Speed...')
+                          await ThivaBotMd.sendMessage(from, { react: { text: `🔩`, key: m.key }})
+                              m_reply('Testing Thiva bot Speed...')
                               let cp = require('child_process')
                               let { promisify } = require('util')
                               let exec = promisify(cp.exec).bind(cp)
@@ -8713,11 +8713,11 @@ View List Of Messages With ${prefix}listmsg`)
                               }
                               break*/
                               case 'cry':case 'kill':case 'hug':case 'pat':case 'lick':case 'kiss':case 'bite':case 'yeet':case 'neko':case 'bully':case 'bonk':case 'wink':case 'poke':case 'nom':case 'slap':case 'smile':case 'wave':case 'awoo':case 'blush':case 'smug':case 'glomp':case 'happy':case 'dance':case 'cringe':case 'cuddle':case 'highfive':case 'shinobu':case 'megumin':case 'handhold':  
-                          await ElisaBotMd.sendMessage(from, { react: { text: `🧝‍♀️`, key: m.key }})
+                          await ThivaBotMd.sendMessage(from, { react: { text: `🧝‍♀️`, key: m.key }})
                                       reply3(mess.wait)
                                       axios.get(`https://api.waifu.pics/sfw/${command}`)
                                       .then(({data}) => {
-                                      ElisaBotMd.sendVideoAsSticker(m.chat, data.url, m, { packname: global.packname, author: global.author })
+                                      ThivaBotMd.sendVideoAsSticker(m.chat, data.url, m, { packname: global.packname, author: global.author })
                                       
                                       })
                                       break
@@ -8752,14 +8752,14 @@ break
                                       reply(mess.wait)
                                       axios.get(`https://api.waifu.pics/sfw/waifu`)
                                       .then(({data}) => {
-                                      ElisaBotMd.sendImage(m.chat, data.url, mess.success, m)
+                                      ThivaBotMd.sendImage(m.chat, data.url, mess.success, m)
                                       })
                                       break
 case 'thiva': case 'hello': case 'tda':{
-  const anu = await fetchJson ('https://github.com/ThivankaOnline/UPLOADS/raw/main/JSON/elisadetails.json')
-  const NIMAMSG = anu.MENU_NOTE
+  const anu = await fetchJson ('https://github.com/ThivankaOnline/UPLOADS/raw/main/JSON/Thivadetails.json')
+  const ThivaMSG = anu.MENU_NOTE
   const start = new Date().getTime()
-  await ElisaBotMd.sendMessage(from, { react: { text: `👨‍💻`, key: m.key }})
+  await ThivaBotMd.sendMessage(from, { react: { text: `👨‍💻`, key: m.key }})
   const end = new Date().getTime()
   const ping = end - start
   const menuimg = ['https://telegra.ph/file/f7470af04326c5522cbcb.jpg','https://telegra.ph/file/f7470af04326c5522cbcb.jpg','https://telegra.ph/file/f7470af04326c5522cbcb.jpg','https://telegra.ph/file/f7470af04326c5522cbcb.jpg','https://telegra.ph/file/f7470af04326c5522cbcb.jpg','https://telegra.ph/file/f7470af04326c5522cbcb.jpg']
@@ -8772,13 +8772,13 @@ case 'thiva': case 'hello': case 'tda':{
            var time = new Date().toLocaleString('HI', { timeZone: TIME_ZONE }).split(' ')[1]
            const biography = '*📅 ᴛᴏᴅᴀʏ ɪs :* ' + utch + '\n*⌚ ɴᴏᴡ ᴛɪᴍᴇ :* ' + time
 
-                                 message = await prepareWAMessageMedia({ image : { url: global.alivelogo} }, { upload:   ElisaBotMd.waUploadToServer })
+                                 message = await prepareWAMessageMedia({ image : { url: global.alivelogo} }, { upload:   ThivaBotMd.waUploadToServer })
 
        const MENUMSG = `*Hi ${m.pushName} I am Thivanka's digitel assistent.*
 
 Please inform your problem via info@thivanka.lk or you can solve your problem using www.thivanka.lk.
 
-${NIMAMSG}
+${ThivaMSG}
 
 *Use This Menu Fix your Problems* 👇
 
@@ -9019,7 +9019,7 @@ ${NIMAMSG}
                                               hydratedButtons: [{
                                                   urlButton: {
                                                       displayText: 'ɢɪᴛʜᴜʙ',
-                                                      url: `https://github.com/DarkMakerofc/Queen-Elisa-Md-V2`
+                                                      url: `https://github.com/DarkMakerofc/Queen-Thiva-Md-V2`
                                                   }
                                               },{
                                                   urlButton: {
@@ -9045,7 +9045,7 @@ ${NIMAMSG}
                                               }]
 {buttonId: `command`, buttonText: {displayText: '☰ ʟɪsᴛ ᴍᴇɴᴜ ☰'}, type: 1},
 {buttonId: `owner`, buttonText: {displayText: '🧑‍💻 ᴏᴡɴᴇʀ 🧑‍💻️'}, type: 1},
-{buttonId: `elisaallmenu`, buttonText: {displayText: '⚙ ᴀʟʟ ᴍᴇɴᴜ ️⚙️'}, type: 1}
+{buttonId: `Thivaallmenu`, buttonText: {displayText: '⚙ ᴀʟʟ ᴍᴇɴᴜ ️⚙️'}, type: 1}
             
   {quickReplyButton: {displayText: 'ʟɪsᴛ ᴍᴇɴᴜ', id: 'list'}},
     {quickReplyButton: {displayText: 'ᴏᴡɴᴇʀ', id: 'owner'}},
@@ -9053,7 +9053,7 @@ ${NIMAMSG}
                                         }
                                       }
                                   }), { userJid: m.chat, quoted: m })
-                                  ElisaBotMd.send5ButImg(m.chat, template.message, { messageId: template.key.id })*/
+                                  ThivaBotMd.send5ButImg(m.chat, template.message, { messageId: template.key.id })*/
 const templateButtons = [
   {buttonId: `list`, buttonText: {displayText: 'ʟɪsᴛ ᴍᴇɴᴜ'}, type: 1},
   {buttonId: `owner`, buttonText: {displayText: 'ᴏᴡɴᴇʀ‍️'}, type: 1},
@@ -9069,21 +9069,21 @@ let buttonMessage = {
                     buttons: templateButtons,
                     headerType: 4
                 }
-               ElisaBotMd.sendMessage(m.chat, buttonMessage, { quoted: fakestatus })
+               ThivaBotMd.sendMessage(m.chat, buttonMessage, { quoted: fakestatus })
          
      
-     //await ElisaBotMd.sendMessage(m.chat, templateMessage, { quoted: fakestatus })   
+     //await ThivaBotMd.sendMessage(m.chat, templateMessage, { quoted: fakestatus })   
 
                               }
                               break
 
 case 'alive1' : {
-ElisaBotMd.readMessages([m.key])
-await ElisaBotMd.sendPresenceUpdate('recording', m.chat) 
-await ElisaBotMd.sendMessage(m.chat, { audio: {url :'https://github.com/ThivankaOnline/UPLOADS/raw/main/VOICE/alive.mp3'}, mimetype: 'audio/mp4', ptt: true }, { quoted: m }) 
+ThivaBotMd.readMessages([m.key])
+await ThivaBotMd.sendPresenceUpdate('recording', m.chat) 
+await ThivaBotMd.sendMessage(m.chat, { audio: {url :'https://github.com/ThivankaOnline/UPLOADS/raw/main/VOICE/alive.mp3'}, mimetype: 'audio/mp4', ptt: true }, { quoted: m }) 
            
 if (global.db.data.settings[botNumber].alive){
-await ElisaBotMd.sendMessage(from, { react: { text: `👋`, key: m.key }})
+await ThivaBotMd.sendMessage(from, { react: { text: `👋`, key: m.key }})
                  
                                  let buttons = [
                     {buttonId: `menu`, buttonText: {displayText: '𝙼𝙴𝙽𝚄'}, type: 1},
@@ -9098,13 +9098,13 @@ await ElisaBotMd.sendMessage(from, { react: { text: `👋`, key: m.key }})
                     buttons: buttons,
                     headerType: 4
                 }
-              await ElisaBotMd.sendMessage(m.chat, buttonMessage, { quoted: m })
+              await ThivaBotMd.sendMessage(m.chat, buttonMessage, { quoted: m })
       
 //reply(global.db.data.settings[botNumber].MASSAGE + '\n' + global.db.data.settings[botNumber].LOGO)
 } else {
 //reply('Default Alive')
 const ita = '```'
-              await ElisaBotMd.sendMessage(from, { react: { text: `👋`, key: m.key }})
+              await ThivaBotMd.sendMessage(from, { react: { text: `👋`, key: m.key }})
               
                  let buttons = [
                     {buttonId: `menu`, buttonText: {displayText: 'menu'}, type: 1},
@@ -9124,7 +9124,7 @@ ${ita}💗 welcome again 💗${ita}
                     buttons: buttons,
                     headerType: 4
                 }
-              await ElisaBotMd.sendMessage(m.chat, buttonMessage, { quoted: m })
+              await ThivaBotMd.sendMessage(m.chat, buttonMessage, { quoted: m })
          
 
 }
@@ -9185,7 +9185,7 @@ const desmsg = `*Please Select What Do you*
           ]
         }
      ]
-     await ElisaBotMd.sendListMsg(m.chat, `${desmsg}`, `${global.botnma}`, `*BOT SETTINGS*`, `SELECT`, sections, m)
+     await ThivaBotMd.sendListMsg(m.chat, `${desmsg}`, `${global.botnma}`, `*BOT SETTINGS*`, `SELECT`, sections, m)
  
 }
 }
@@ -9216,7 +9216,7 @@ reply(mess.success)
 } else if ( args[0] == 'leave' ){
 global.db.data.settings[botNumber].leavemessage = m.quoted.text
 } else {
-await ElisaBotMd.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/b1343c61f7fcb88abfcee.jpg' }, caption: `*❗ Please Give me message*
+await ThivaBotMd.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/b1343c61f7fcb88abfcee.jpg' }, caption: `*❗ Please Give me message*
 _kick , add , promote , demote , block , unblock , leave_
 *ℹ️ Example : _.setmessage kick_*` }, { quoted: m })
 //m_reply(`<`)
@@ -9228,7 +9228,7 @@ if(!isCreator) throw mess.admin
 if (!quoted) throw '```Please reply Photo Massage```'
 const { UploadFileUgu, webp2mp4File, TelegraPh } = require('./lib/uploader')
 if (!/image/.test(mime)) throw '```Please reply Photo Massage```'
-const media = await ElisaBotMd.downloadAndSaveMediaMessage(quoted)
+const media = await ThivaBotMd.downloadAndSaveMediaMessage(quoted)
 const anu = await TelegraPh(media)
 await fs.unlinkSync(media)
 global.db.data.settings[botNumber] = {
@@ -9284,7 +9284,7 @@ const desmsg = ` *Please Select What Do you*
           ]
         }
      ]
-     await ElisaBotMd.sendListMsg(m.chat, `${desmsg}`, `${global.botnma}`, `*BOT SETTINGS*`, `SELECT`, sections, m)
+     await ThivaBotMd.sendListMsg(m.chat, `${desmsg}`, `${global.botnma}`, `*BOT SETTINGS*`, `SELECT`, sections, m)
  
 }
 }
@@ -9294,7 +9294,7 @@ if(!isCreator) throw mess.admin
 if (!quoted) throw '```Please reply Photo Massage```'
 const { UploadFileUgu, webp2mp4File, TelegraPh } = require('./lib/uploader')
 if (!/image/.test(mime)) throw '```Please reply Photo Massage```'
-const media = await ElisaBotMd.downloadAndSaveMediaMessage(quoted)
+const media = await ThivaBotMd.downloadAndSaveMediaMessage(quoted)
 const anu = await TelegraPh(media)
 await fs.unlinkSync(media)
 global.db.data.chats[m.chat] = {
@@ -9312,7 +9312,7 @@ if(!isCreator) throw mess.admin
 if (!quoted) throw '```Please reply Photo Massage```'
 const { UploadFileUgu, webp2mp4File, TelegraPh } = require('./lib/uploader')
 if (!/image/.test(mime)) throw '```Please reply Photo Massage```'
-const media = await ElisaBotMd.downloadAndSaveMediaMessage(quoted)
+const media = await ThivaBotMd.downloadAndSaveMediaMessage(quoted)
 const anu = await TelegraPh(media)
 await fs.unlinkSync(media)
 global.db.data.chats[m.chat] = {
@@ -9354,19 +9354,19 @@ let buttons = [
       { buttonId: 'welcome on', buttonText: { displayText: 'On' }, type: 1 },
       { buttonId: 'welcome off', buttonText: { displayText: 'Off' }, type: 1 }
         ]
-   ElisaBotMd.sendButtonText(m.chat, buttons, msg , ElisaBotMd.user.name, m)
+   ThivaBotMd.sendButtonText(m.chat, buttons, msg , ThivaBotMd.user.name, m)
 }
                        
 }
 break
               /*   case 'alive': case 'bot':{  
                  // Push Message To Console && Auto Read
-                         ElisaBotMd.readMessages([m.key])
+                         ThivaBotMd.readMessages([m.key])
             
-                // await ElisaBotMd.sendReadReceipt(from, m.sender, [m.key.id])
-                          ElisaBotMd.readMessages([m.key])
-                          await ElisaBotMd.sendPresenceUpdate('recording', m.chat) 
-                          await ElisaBotMd.sendMessage(m.chat, { audio: {url :'https://github.com/ThivankaOnline/UPLOADS/raw/main/VOICE/alive.mp3'}, mimetype: 'audio/mp4', ptt: true }, { quoted: m }) 
+                // await ThivaBotMd.sendReadReceipt(from, m.sender, [m.key.id])
+                          ThivaBotMd.readMessages([m.key])
+                          await ThivaBotMd.sendPresenceUpdate('recording', m.chat) 
+                          await ThivaBotMd.sendMessage(m.chat, { audio: {url :'https://github.com/ThivankaOnline/UPLOADS/raw/main/VOICE/alive.mp3'}, mimetype: 'audio/mp4', ptt: true }, { quoted: m }) 
               if (global.alive === 'default') {
               
  
@@ -9375,7 +9375,7 @@ break
   }
                               break*/
                   /* case 'command': case 'list' : case 'cmmd' : {  
-                          await ElisaBotMd.sendMessage(from, { react: { text: `🗒️`, key: m.key }})
+                          await ThivaBotMd.sendMessage(from, { react: { text: `🗒️`, key: m.key }})
                    var time = new Date().toLocaleString('HI', { timeZone: TIME_ZONE }).split(' ')[1]
                    ram0 = `${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(require('os').totalmem / 1024 / 1024)}MB`
                   let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObject({
@@ -9419,17 +9419,17 @@ break
                                                       {
                                                           "title": "❰❰⦁ 𝗠𝗘𝗡𝗨 𝗖𝗠𝗗 ⦁❱❱",
                                                           "description": Lang.ALL_CMD ,
-                                                          "rowId": `${prefix}elisaallmenu`
+                                                          "rowId": `${prefix}Thivaallmenu`
                                                       },
                                                       {
                                                           "title": "❰❰⦁ 𝗗𝗢𝗪𝗡𝗟𝗢𝗔𝗗 𝗖𝗠𝗗 ⦁❱❱",
                                                           "description": Lang.DOWNLOAD_CMD ,
-                                                          "rowId": `${prefix}elisadownloadmenu`
+                                                          "rowId": `${prefix}Thivadownloadmenu`
                                                       },
                                                       {
                                                           "title": "❰❰⦁ 𝗦𝗘𝗔𝗥𝗖𝗛 𝗖𝗠𝗗 ⦁❱❱",
                                                           "description": Lang.SEARCH_CMD ,
-                                                          "rowId": `${prefix}elisasearchmenu`
+                                                          "rowId": `${prefix}Thivasearchmenu`
                                                       },
                                                           {
                                                               "title": "❰❰⦁ 𝗙𝗨𝗡 𝗖𝗠𝗗 ⦁❱❱",
@@ -9439,22 +9439,22 @@ break
                                                           {
                                                               "title": "❰❰⦁ 𝗖𝗢𝗡𝗩𝗘𝗥𝗧 𝗖𝗠𝗗 ⦁❱❱",
                                                           "description": Lang.CONVERT_CMD ,
-                                                          "rowId": `${prefix}elisaconvertmenu`
+                                                          "rowId": `${prefix}Thivaconvertmenu`
                                                           },
                                                           {
                                                               "title": "❰❰⦁ 𝗥𝗔𝗡𝗗𝗢𝗠 𝗔𝗡𝗜𝗠𝗘 𝗖𝗠𝗗 ⦁❱❱",
                                                           "description": Lang.RANDOM_ANIME ,
-                                                          "rowId": `${prefix}elisaranimemenu`
+                                                          "rowId": `${prefix}Thivaranimemenu`
                                                           },
                                                           {
                                                           "title": "❰❰⦁ 𝗠𝗜𝗦𝗖 𝗖𝗠𝗗 ⦁❱❱",
                                                           "description": Lang.MISC_CMD ,
-                                                          "rowId": `${prefix}elisanocategorymenu`
+                                                          "rowId": `${prefix}Thivanocategorymenu`
                                                           },
                                                           {
                                                               "title": "❰❰⦁ 𝗗𝗔𝗧𝗔𝗕𝗔𝗦𝗘 𝗖𝗠𝗗 ⦁❱❱",
                                                           "description": Lang.DATABASE_CMD ,
-                                                          "rowId": `${prefix}elisadatabasemenu`
+                                                          "rowId": `${prefix}Thivadatabasemenu`
                                                           },
                                                           {
                                                               "title": "❰❰⦁ 𝙇𝙊𝙂𝙊 𝙈𝙀𝙉𝙐 ⦁❱❱",
@@ -9464,7 +9464,7 @@ break
                                                           {
                                                               "title": "❰❰⦁ 𝗩𝗢𝗜𝗖𝗘 𝗖𝗠𝗗 ⦁❱❱",
                                                           "description": Lang.VOICE_CMD ,
-                                                          "rowId": `${prefix}elisavoicemenu`
+                                                          "rowId": `${prefix}Thivavoicemenu`
                                                           }
                                                   ]
                                               },
@@ -9474,7 +9474,7 @@ break
                                                       {
                                                           "title": "❰❰⦁ 𝗔𝗡𝗢𝗡𝗬𝗠𝗢𝗨𝗦 𝗖𝗠𝗗 ⦁❱❱",
                                                           "description": Lang.ABOUT_CMD ,
-                                                          "rowId": `${prefix}elisaanonymouschatmenu`
+                                                          "rowId": `${prefix}Thivaanonymouschatmenu`
                                                       }
                                                   ]
                                               },
@@ -9502,12 +9502,12 @@ break
                             listType: 1
                                   }
                               }), {})
-                              ElisaBotMd.relayMessage(m.chat, template.message, { messageId: template.key.id })
+                              ThivaBotMd.relayMessage(m.chat, template.message, { messageId: template.key.id })
                               }
                               break*/
 case 'command': case 'list' : case 'cmd' : { 
 const sendListMsg = require('@adiwajshing/baileys')
- await ElisaBotMd.sendMessage(from, { react: { text: `🗒️`, key: m.key }})
+ await ThivaBotMd.sendMessage(from, { react: { text: `🗒️`, key: m.key }})
                   const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }
                   var date = new Date().toLocaleDateString( get_localized_date)
                   var time = new Date().toLocaleString('HI', { timeZone: TIME_ZONE }).split(' ')[1]
@@ -9534,12 +9534,12 @@ desmsg = `Please use this codes fix your problems 👇`
                                                       {
                                                           "title": "▷ DOWNLOAD MENU ◁",
                                                           "description": Lang.DOWNLOAD_CMD ,
-                                                          "rowId": `${prefix}elisadownloadmenu`
+                                                          "rowId": `${prefix}Thivadownloadmenu`
                                                       },
                                                       {
                                                           "title": "▷ SEARCH MENU ◁",
                                                           "description": Lang.SEARCH_CMD ,
-                                                          "rowId": `${prefix}elisasearchmenu`
+                                                          "rowId": `${prefix}Thivasearchmenu`
                                                       },
                                                           {
                                                               "title": "▷ FUN MENU ◁",
@@ -9549,17 +9549,17 @@ desmsg = `Please use this codes fix your problems 👇`
                                                           {
                                                               "title": "▷ CONVERT MENU ◁",
                                                           "description": Lang.CONVERT_CMD ,
-                                                          "rowId": `${prefix}elisaconvertmenu`
+                                                          "rowId": `${prefix}Thivaconvertmenu`
                                                           },
                                                           {
                                                               "title": "▷ RANDOM ANIME MENU ◁",
                                                           "description": Lang.RANDOM_ANIME ,
-                                                          "rowId": `${prefix}elisaranimemenu`
+                                                          "rowId": `${prefix}Thivaranimemenu`
                                                           },
                                                           {
                                                           "title": "▷ MISC MENU ◁",
                                                           "description": Lang.MISC_CMD ,
-                                                          "rowId": `${prefix}elisanocategorymenu`
+                                                          "rowId": `${prefix}Thivanocategorymenu`
                                                           },
                                                           {
                                                               "title": "▷ TEXT TO LOGO ◁",
@@ -9574,7 +9574,7 @@ desmsg = `Please use this codes fix your problems 👇`
                                                           {
                                                               "title": "▷ VOICE MENU ◁",
                                                           "description": Lang.VOICE_CMD ,
-                                                          "rowId": `${prefix}elisavoicemenu`
+                                                          "rowId": `${prefix}Thivavoicemenu`
                                                           }
                                                   ]
                                               },
@@ -9604,18 +9604,18 @@ desmsg = `Please use this codes fix your problems 👇`
                                                     ]
 							}
 						]
-						await ElisaBotMd.sendListMsg(m.chat, `${desmsg}`, `${global.botnma}`, `    `, `ALL MENU`, sections, m)
+						await ThivaBotMd.sendListMsg(m.chat, `${desmsg}`, `${global.botnma}`, `    `, `ALL MENU`, sections, m)
                 }
             
             break
                   case 'grpmenu': {  
   const start = new Date().getTime()
-  await ElisaBotMd.sendMessage(from, { react: { text: `♥️`, key: m.key }})
+  await ThivaBotMd.sendMessage(from, { react: { text: `♥️`, key: m.key }})
   const end = new Date().getTime()
   const ping = (end - start) + ' *_ᴍs_*' 
   const time = new Date().toLocaleString('HI', { timeZone: TIME_ZONE }).split(' ')[1]
 
-                          await ElisaBotMd.sendMessage(from, { react: { text: `📜`, key: m.key }})
+                          await ThivaBotMd.sendMessage(from, { react: { text: `📜`, key: m.key }})
 
 var GRPDES = ''
 if (global.LANG == 'EN') GRPDES = '```Get Group link```'
@@ -9688,7 +9688,7 @@ back = Lang.BACK_BUTTON
 footer = global.botnma
                  buttons = [
                     {buttonId: `list`, buttonText: {displayText: back}, type: 1},
-                    {buttonId: `elisadownloadmenu`, buttonText: {displayText: next}, type: 1}
+                    {buttonId: `Thivadownloadmenu`, buttonText: {displayText: next}, type: 1}
                     
                 ]
                 let buttonMessage = {
@@ -9698,9 +9698,9 @@ footer = global.botnma
                     buttons: buttons,
                     headerType: 4
                 }
-               ElisaBotMd.sendMessage(m.chat, buttonMessage, { quoted: m })
+               ThivaBotMd.sendMessage(m.chat, buttonMessage, { quoted: m })
           
-                   /* message = await prepareWAMessageMedia({ image : { url: 'https://telegra.ph/file/f7470af04326c5522cbcb.jpg' } }, { upload:   ElisaBotMd.waUploadToServer })
+                   /* message = await prepareWAMessageMedia({ image : { url: 'https://telegra.ph/file/f7470af04326c5522cbcb.jpg' } }, { upload:   ThivaBotMd.waUploadToServer })
                                   template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                                       templateMessage: {
                                           hydratedTemplate: {
@@ -9720,18 +9720,18 @@ footer = global.botnma
                                                   },  {
                                                   quickReplyButton: {
                                                       displayText: `${next}` ,
-                                                      id: 'elisadownloadmenu'
+                                                      id: 'Thivadownloadmenu'
                                                       }
                                               }]
                                           }
                                       }
                                   }), { userJid: m.chat, quoted: m })
-                                    ElisaBotMd.relayMessage(m.chat, template.message, { messageId: template.key.id })
+                                    ThivaBotMd.relayMessage(m.chat, template.message, { messageId: template.key.id })
                              */
 }
                   break
 case 'helpers' : {
-  await ElisaBotMd.sendText(m.chat,`   *👸 𝙷𝙴𝙻𝙿𝙴𝚁𝚂 👸*
+  await ThivaBotMd.sendText(m.chat,`   *👸 𝙷𝙴𝙻𝙿𝙴𝚁𝚂 👸*
   
 💞 𝚂𝙻 𝚁𝙴𝙰𝙻 𝚃𝙴𝙲𝙷 
 💞 𝙳𝙰𝚁𝙺 𝙰𝙻𝙿𝙷𝙰
@@ -9741,14 +9741,14 @@ case 'helpers' : {
 `)
 }
 break
-                  case 'elisadownloadmenu': {  
+                  case 'Thivadownloadmenu': {  
 const start = new Date().getTime()
-  await ElisaBotMd.sendMessage(from, { react: { text: `♥️`, key: m.key }})
+  await ThivaBotMd.sendMessage(from, { react: { text: `♥️`, key: m.key }})
   const end = new Date().getTime()
   const ping = (end - start) + ' *_ᴍs_*' 
   const time = new Date().toLocaleString('HI', { timeZone: TIME_ZONE }).split(' ')[1]
 
-await ElisaBotMd.sendMessage(from, { react: { text: `📥`, key: m.key }})
+await ThivaBotMd.sendMessage(from, { react: { text: `📥`, key: m.key }})
 var TIKTOK = ''
 if (global.LANG == 'EN') TIKTOK = '```Download Your Tiktok Link video```'
 if (global.LANG == 'SI') TIKTOK = '```ඔබගේ ටික්ටොක් වීඩියෝ ලින්කුව බාගතකරයි```'
@@ -9863,7 +9863,7 @@ back = Lang.BACK_BUTTON
       footer = global.botnma
                  buttons = [
                     {buttonId: `grpmenu`, buttonText: {displayText: back}, type: 1},
-                    {buttonId: `elisasearchmenu`, buttonText: {displayText: next}, type: 1}
+                    {buttonId: `Thivasearchmenu`, buttonText: {displayText: next}, type: 1}
                     
                 ]
                 let buttonMessage = {
@@ -9873,9 +9873,9 @@ back = Lang.BACK_BUTTON
                     buttons: buttons,
                     headerType: 4
                 }
-               ElisaBotMd.sendMessage(m.chat, buttonMessage, { quoted: m })
+               ThivaBotMd.sendMessage(m.chat, buttonMessage, { quoted: m })
           
-                   /* message = await prepareWAMessageMedia({ image : { url: 'https://telegra.ph/file/f7470af04326c5522cbcb.jpg' } }, { upload:   ElisaBotMd.waUploadToServer })
+                   /* message = await prepareWAMessageMedia({ image : { url: 'https://telegra.ph/file/f7470af04326c5522cbcb.jpg' } }, { upload:   ThivaBotMd.waUploadToServer })
                                   template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                                       templateMessage: {
                                           hydratedTemplate: {
@@ -9891,24 +9891,24 @@ back = Lang.BACK_BUTTON
                                                   },  {
                                                   quickReplyButton: {
                                                       displayText: `${next}` ,
-                                                      id: 'elisasearchmenu'
+                                                      id: 'Thivasearchmenu'
                                                       }
                                               }]
                                           }
                                       }
                                   }), { userJid: m.chat, quoted: m })
-                                    ElisaBotMd.relayMessage(m.chat, template.message, { messageId: template.key.id })
+                                    ThivaBotMd.relayMessage(m.chat, template.message, { messageId: template.key.id })
                              */
 }
                               break 
-                              case 'elisasearchmenu': { 
+                              case 'Thivasearchmenu': { 
 const start = new Date().getTime()
-  await ElisaBotMd.sendMessage(from, { react: { text: `♥️`, key: m.key }})
+  await ThivaBotMd.sendMessage(from, { react: { text: `♥️`, key: m.key }})
   const end = new Date().getTime()
   const ping = (end - start) + ' *_ᴍs_*' 
   const time = new Date().toLocaleString('HI', { timeZone: TIME_ZONE }).split(' ')[1]
 
-                          await ElisaBotMd.sendMessage(from, { react: { text: `🔍`, key: m.key }})
+                          await ThivaBotMd.sendMessage(from, { react: { text: `🔍`, key: m.key }})
 var PLAY = ''
 if (global.LANG == 'EN') PLAY = '```Search youtube and download```'
 if (global.LANG == 'SI') PLAY = '```යූටියුබ් හි සර්ච් කර Download කරයි```'
@@ -9961,7 +9961,7 @@ back = Lang.BACK_BUTTON
                     
                     footer = global.botnma
                  buttons = [
-                    {buttonId: `elisadownloadmenu`, buttonText: {displayText: back}, type: 1},
+                    {buttonId: `Thivadownloadmenu`, buttonText: {displayText: back}, type: 1},
                     {buttonId: `randommenu`, buttonText: {displayText: next}, type: 1}
                     
                 ]
@@ -9972,9 +9972,9 @@ back = Lang.BACK_BUTTON
                     buttons: buttons,
                     headerType: 4
                 }
-               ElisaBotMd.sendMessage(m.chat, buttonMessage, { quoted: m })
+               ThivaBotMd.sendMessage(m.chat, buttonMessage, { quoted: m })
           
-                    /*message = await prepareWAMessageMedia({ image : { url: 'https://telegra.ph/file/f7470af04326c5522cbcb.jpg' } }, { upload:   ElisaBotMd.waUploadToServer })
+                    /*message = await prepareWAMessageMedia({ image : { url: 'https://telegra.ph/file/f7470af04326c5522cbcb.jpg' } }, { upload:   ThivaBotMd.waUploadToServer })
                                   template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                                       templateMessage: {
                                           hydratedTemplate: {
@@ -9989,7 +9989,7 @@ back = Lang.BACK_BUTTON
                                               }, {
                                                   quickReplyButton: {
                                                       displayText: `${back}` ,
-                                                      id: 'elisadownloadmenu'
+                                                      id: 'Thivadownloadmenu'
                                                       }
                                                   },  {
                                                   quickReplyButton: {
@@ -10000,18 +10000,18 @@ back = Lang.BACK_BUTTON
                                           }
                                       }
                                   }), { userJid: m.chat, quoted: m })
-                                    ElisaBotMd.relayMessage(m.chat, template.message, { messageId: template.key.id })
+                                    ThivaBotMd.relayMessage(m.chat, template.message, { messageId: template.key.id })
                               */
 }
                   break
                   case 'randommenu': { 
 const start = new Date().getTime()
-  await ElisaBotMd.sendMessage(from, { react: { text: `📥`, key: m.key }})
+  await ThivaBotMd.sendMessage(from, { react: { text: `📥`, key: m.key }})
   const end = new Date().getTime()
   const ping = (end - start) + ' *_ᴍs_*' 
   const time = new Date().toLocaleString('HI', { timeZone: TIME_ZONE }).split(' ')[1]
 
-                          await ElisaBotMd.sendMessage(from, { react: { text: `🗳️`, key: m.key }})
+                          await ThivaBotMd.sendMessage(from, { react: { text: `🗳️`, key: m.key }})
 var COFFY = ''
 if (global.LANG == 'EN') COFFY = '```Send random coffee image```'
 if (global.LANG == 'SI') COFFY = '```අහබු ලෙස coffee ජායාරූප එවයි.```'
@@ -10037,7 +10037,7 @@ back = Lang.BACK_BUTTON
 
 footer = global.botnma
                  buttons = [
-                    {buttonId: `elisasearchmenu`, buttonText: {displayText: back}, type: 1},
+                    {buttonId: `Thivasearchmenu`, buttonText: {displayText: back}, type: 1},
                     {buttonId: `funmenu`, buttonText: {displayText: next}, type: 1}
                     
                 ]
@@ -10048,10 +10048,10 @@ footer = global.botnma
                     buttons: buttons,
                     headerType: 4
                 }
-               ElisaBotMd.sendMessage(m.chat, buttonMessage, { quoted: m })
+               ThivaBotMd.sendMessage(m.chat, buttonMessage, { quoted: m })
           
           
-                   /* message = await prepareWAMessageMedia({ image : { url: 'https://telegra.ph/file/f7470af04326c5522cbcb.jpg' } }, { upload:   ElisaBotMd.waUploadToServer })
+                   /* message = await prepareWAMessageMedia({ image : { url: 'https://telegra.ph/file/f7470af04326c5522cbcb.jpg' } }, { upload:   ThivaBotMd.waUploadToServer })
                                   template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                                       templateMessage: {
                                           hydratedTemplate: {
@@ -10066,7 +10066,7 @@ footer = global.botnma
                                               }, {
                                                   quickReplyButton: {
                                                       displayText: `${back}` ,
-                                                      id: 'elisasearchmenu'
+                                                      id: 'Thivasearchmenu'
                                                       }
                                                   },  {
                                                   quickReplyButton: {
@@ -10077,18 +10077,18 @@ footer = global.botnma
                                           }
                                       }
                                   }), { userJid: m.chat, quoted: m })
-                                    ElisaBotMd.relayMessage(m.chat, template.message, { messageId: template.key.id })
+                                    ThivaBotMd.relayMessage(m.chat, template.message, { messageId: template.key.id })
                              */
 }
                   break
                   case 'funmenu': {  
 const start = new Date().getTime()
-  await ElisaBotMd.sendMessage(from, { react: { text: `📥`, key: m.key }})
+  await ThivaBotMd.sendMessage(from, { react: { text: `📥`, key: m.key }})
   const end = new Date().getTime()
   const ping = (end - start) + ' *_ᴍs_*' 
   const time = new Date().toLocaleString('HI', { timeZone: TIME_ZONE }).split(' ')[1]
 
-                          await ElisaBotMd.sendMessage(from, { react: { text: `🤪`, key: m.key }})
+                          await ThivaBotMd.sendMessage(from, { react: { text: `🤪`, key: m.key }})
                       
 var COPLE = ''
 if (global.LANG == 'EN') COPLE = '```Choose two members from the group.```'
@@ -10121,7 +10121,7 @@ back = Lang.BACK_BUTTON
                    footer = global.botnma
                  buttons = [
                     {buttonId: `randommenu`, buttonText: {displayText: back}, type: 1},
-                    {buttonId: `elisavoicemenu`, buttonText: {displayText: next}, type: 1}
+                    {buttonId: `Thivavoicemenu`, buttonText: {displayText: next}, type: 1}
                     
                 ]
                 let buttonMessage = {
@@ -10131,9 +10131,9 @@ back = Lang.BACK_BUTTON
                     buttons: buttons,
                     headerType: 4
                 }
-               ElisaBotMd.sendMessage(m.chat, buttonMessage, { quoted: m })
+               ThivaBotMd.sendMessage(m.chat, buttonMessage, { quoted: m })
           
-                    /* message = await prepareWAMessageMedia({ image : { url: 'https://telegra.ph/file/f7470af04326c5522cbcb.jpg' } }, { upload:   ElisaBotMd.waUploadToServer })
+                    /* message = await prepareWAMessageMedia({ image : { url: 'https://telegra.ph/file/f7470af04326c5522cbcb.jpg' } }, { upload:   ThivaBotMd.waUploadToServer })
                                   template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                                       templateMessage: {
                                           hydratedTemplate: {
@@ -10153,24 +10153,24 @@ back = Lang.BACK_BUTTON
                                                   },  {
                                                   quickReplyButton: {
                                                       displayText: `${next}` ,
-                                                      id: 'elisavoicemenu'
+                                                      id: 'Thivavoicemenu'
                                                       }
                                               }]
                                           }
                                       }
                                   }), { userJid: m.chat, quoted: m })
-                                    ElisaBotMd.relayMessage(m.chat, template.message, { messageId: template.key.id })
+                                    ThivaBotMd.relayMessage(m.chat, template.message, { messageId: template.key.id })
                              */
 }
                   break
-                  case 'elisavoicemenu': {  
+                  case 'Thivavoicemenu': {  
 const start = new Date().getTime()
-  await ElisaBotMd.sendMessage(from, { react: { text: `📥`, key: m.key }})
+  await ThivaBotMd.sendMessage(from, { react: { text: `📥`, key: m.key }})
   const end = new Date().getTime()
   const ping = (end - start) + ' *_ᴍs_*' 
   const time = new Date().toLocaleString('HI', { timeZone: TIME_ZONE }).split(' ')[1]
                   
-                          await ElisaBotMd.sendMessage(from, { react: { text: `🎙️`, key: m.key }})
+                          await ThivaBotMd.sendMessage(from, { react: { text: `🎙️`, key: m.key }})
                   
 var VOICEDESC = ''
 if (global.LANG == 'EN') VOICEDESC= '*💬 About Voice changer cmd*\n ```When you reply to one of your voice messages and use the following command, the corresponding voice has been changed.```'
@@ -10204,7 +10204,7 @@ back = Lang.BACK_BUTTON
 footer = global.botnma
                  buttons = [
                     {buttonId: `funmenu`, buttonText: {displayText: back}, type: 1},
-                    {buttonId: `elisaconvertmenu`, buttonText: {displayText: next}, type: 1}
+                    {buttonId: `Thivaconvertmenu`, buttonText: {displayText: next}, type: 1}
                     
                 ]
                 let buttonMessage = {
@@ -10214,10 +10214,10 @@ footer = global.botnma
                     buttons: buttons,
                     headerType: 4
                 }
-               ElisaBotMd.sendMessage(m.chat, buttonMessage, { quoted: m })
+               ThivaBotMd.sendMessage(m.chat, buttonMessage, { quoted: m })
           
           
-                   /* message = await prepareWAMessageMedia({ image : { url: 'https://telegra.ph/file/f7470af04326c5522cbcb.jpg' } }, { upload:   ElisaBotMd.waUploadToServer })
+                   /* message = await prepareWAMessageMedia({ image : { url: 'https://telegra.ph/file/f7470af04326c5522cbcb.jpg' } }, { upload:   ThivaBotMd.waUploadToServer })
                                   template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                                       templateMessage: {
                                           hydratedTemplate: {
@@ -10237,13 +10237,13 @@ footer = global.botnma
                                                   },  {
                                                   quickReplyButton: {
                                                       displayText: `${next}` ,
-                                                      id: 'elisaconvertmenu'
+                                                      id: 'Thivaconvertmenu'
                                                       }
                                               }]
                                           }
                                       }
                                   }), { userJid: m.chat, quoted: m })
-                                    ElisaBotMd.relayMessage(m.chat, template.message, { messageId: template.key.id })
+                                    ThivaBotMd.relayMessage(m.chat, template.message, { messageId: template.key.id })
                              */
 }
                   break
@@ -10261,7 +10261,7 @@ footer = global.botnma
                                           hydratedTemplate: {
                                               hydratedContentText: anu,
                                               locationMessage: {
-                                              jpegThumbnail: fs.readFileSync('./media/image/Elisa.jpg')},
+                                              jpegThumbnail: fs.readFileSync('./media/image/Thiva.jpg')},
                                               hydratedFooterText: `𝚃𝚑𝚒𝚟𝚊𝚗𝚔𝚊 𝙽𝚒𝚛𝚖𝚊𝚕 𝙿𝚞𝚋𝚕𝚒𝚌 𝙴𝚍𝚒𝚝𝚒𝚘𝚗 `,
                                               hydratedButtons: [{
                                                   urlButton: {
@@ -10277,7 +10277,7 @@ footer = global.botnma
                                           }
                                       }
                                   }), { userJid: m.chat })
-                                  ElisaBotMd.relayMessage(m.chat, template.message, { messageId: template.key.id })
+                                  ThivaBotMd.relayMessage(m.chat, template.message, { messageId: template.key.id })
                               }
                   break
                   case 'horoscopemenuxxxxxxx': {
@@ -10319,7 +10319,7 @@ footer = global.botnma
                                           hydratedTemplate: {
                                               hydratedContentText: anu,
                                               locationMessage: {
-                                              jpegThumbnail: fs.readFileSync('./media/image/Elisa.jpg')},
+                                              jpegThumbnail: fs.readFileSync('./media/image/Thiva.jpg')},
                                               hydratedFooterText: `𝚃𝚑𝚒𝚟𝚊𝚗𝚔𝚊 𝙽𝚒𝚛𝚖𝚊𝚕 𝙿𝚞𝚋𝚕𝚒𝚌 𝙴𝚍𝚒𝚝𝚒𝚘𝚗 `,
                                               hydratedButtons: [{
                                                   urlButton: {
@@ -10335,17 +10335,17 @@ footer = global.botnma
                                           }
                                       }
                                   }), { userJid: m.chat })
-                                  ElisaBotMd.relayMessage(m.chat, template.message, { messageId: template.key.id })
+                                  ThivaBotMd.relayMessage(m.chat, template.message, { messageId: template.key.id })
                               }
                   break
-                  case 'elisaconvertmenu': {  
+                  case 'Thivaconvertmenu': {  
 const start = new Date().getTime()
-  await ElisaBotMd.sendMessage(from, { react: { text: `⚙️`, key: m.key }})
+  await ThivaBotMd.sendMessage(from, { react: { text: `⚙️`, key: m.key }})
   const end = new Date().getTime()
   const ping = (end - start) + ' *_ᴍs_*' 
   const time = new Date().toLocaleString('HI', { timeZone: TIME_ZONE }).split(' ')[1]
 
-                        //  await ElisaBotMd.sendMessage(from, { react: { text: `🛠️`, key: m.key }})
+                        //  await ThivaBotMd.sendMessage(from, { react: { text: `🛠️`, key: m.key }})
                   prefix = '.'
 var IMG = ''
 if (global.LANG == 'EN' ) IMG= '```Sticker convert to photo.```'
@@ -10360,10 +10360,10 @@ var EMOJIMIX = ''
 if (global.LANG == 'EN' ) EMOJIMIX= '```Mix 2 imoji and make sticker```'
 if (global.LANG == 'SI' ) EMOJIMIX= '```ඉමෝජි 2ක් එකතු කර ස්ටිකර් සාදයි```'
 var TOVIDEO = ''
-if (global.LANG == 'EN' ) TOVIDEO= '```Animation sticker convert to video```'
+if (global.LANG == 'EN' ) TOVIDEO= '```AThivation sticker convert to video```'
 if (global.LANG == 'SI' ) TOVIDEO= '```ඇනිමේශන් ස්ටිකර් වීඩියෝ බවට හැරවීම```'
 var GIF = ''
-if (global.LANG == 'EN' ) GIF= '```Animation Sticker Convert to Gif```'
+if (global.LANG == 'EN' ) GIF= '```AThivation Sticker Convert to Gif```'
 if (global.LANG == 'SI' ) GIF= '```ඇනිමේශන් ස්ටිකර් GIF බවට පත්කිරීම```'
 var URL = ''
 if (global.LANG == 'EN' ) URL= '```Get url your image / video```'
@@ -10402,8 +10402,8 @@ back = Lang.BACK_BUTTON
 
     footer = global.botnma
                  buttons = [
-                    {buttonId: `elisavoicemenu`, buttonText: {displayText: back}, type: 1},
-                    {buttonId: `elisaranimemenu`, buttonText: {displayText: next}, type: 1}
+                    {buttonId: `Thivavoicemenu`, buttonText: {displayText: back}, type: 1},
+                    {buttonId: `Thivaranimemenu`, buttonText: {displayText: next}, type: 1}
                     
                 ]
                 let buttonMessage = {
@@ -10413,9 +10413,9 @@ back = Lang.BACK_BUTTON
                     buttons: buttons,
                     headerType: 4
                 }
-               ElisaBotMd.sendMessage(m.chat, buttonMessage, { quoted: m })
+               ThivaBotMd.sendMessage(m.chat, buttonMessage, { quoted: m })
           
-                    /*message = await prepareWAMessageMedia({ image : { url: 'https://telegra.ph/file/f7470af04326c5522cbcb.jpg' } }, { upload:   ElisaBotMd.waUploadToServer })
+                    /*message = await prepareWAMessageMedia({ image : { url: 'https://telegra.ph/file/f7470af04326c5522cbcb.jpg' } }, { upload:   ThivaBotMd.waUploadToServer })
                                   template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                                       templateMessage: {
                                           hydratedTemplate: {
@@ -10430,29 +10430,29 @@ back = Lang.BACK_BUTTON
                                               }, {
                                                   quickReplyButton: {
                                                       displayText: `${back}` ,
-                                                      id: 'elisavoicemenu'
+                                                      id: 'Thivavoicemenu'
                                                       }
                                                   },  {
                                                   quickReplyButton: {
                                                       displayText: `${next}` ,
-                                                      id: 'elisaranimemenu'
+                                                      id: 'Thivaranimemenu'
                                                       }
                                               }]
                                           }
                                       }
                                   }), { userJid: m.chat, quoted: m })
-                                    ElisaBotMd.relayMessage(m.chat, template.message, { messageId: template.key.id })
+                                    ThivaBotMd.relayMessage(m.chat, template.message, { messageId: template.key.id })
                              */
 }
                   break
-                  case 'elisaranimemenu': {  
+                  case 'Thivaranimemenu': {  
 const start = new Date().getTime()
-  await ElisaBotMd.sendMessage(from, { react: { text: `📥`, key: m.key }})
+  await ThivaBotMd.sendMessage(from, { react: { text: `📥`, key: m.key }})
   const end = new Date().getTime()
   const ping = (end - start) + ' *_ᴍs_*' 
   const time = new Date().toLocaleString('HI', { timeZone: TIME_ZONE }).split(' ')[1]
 
-                         // await ElisaBotMd.sendMessage(from, { react: { text: `🌝`, key: m.key }})
+                         // await ThivaBotMd.sendMessage(from, { react: { text: `🌝`, key: m.key }})
 
 next = Lang.NEXT_BUTTON
 back = Lang.BACK_BUTTON
@@ -10523,8 +10523,8 @@ ${M_E} ${prefix}cringe
 
 footer = global.botnma
                  buttons = [
-                    {buttonId: `elisaconvertmenu`, buttonText: {displayText: back}, type: 1},
-                    {buttonId: `elisanocategorymenu`, buttonText: {displayText: next}, type: 1}
+                    {buttonId: `Thivaconvertmenu`, buttonText: {displayText: back}, type: 1},
+                    {buttonId: `Thivanocategorymenu`, buttonText: {displayText: next}, type: 1}
                     
                 ]
                 let buttonMessage = {
@@ -10534,9 +10534,9 @@ footer = global.botnma
                     buttons: buttons,
                     headerType: 4
                 }
-               ElisaBotMd.sendMessage(m.chat, buttonMessage, { quoted: m })
+               ThivaBotMd.sendMessage(m.chat, buttonMessage, { quoted: m })
           
-                 /* message = await prepareWAMessageMedia({ image : { url: 'https://telegra.ph/file/f7470af04326c5522cbcb.jpg' } }, { upload:   ElisaBotMd.waUploadToServer })
+                 /* message = await prepareWAMessageMedia({ image : { url: 'https://telegra.ph/file/f7470af04326c5522cbcb.jpg' } }, { upload:   ThivaBotMd.waUploadToServer })
                                   template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                                       templateMessage: {
                                           hydratedTemplate: {
@@ -10551,29 +10551,29 @@ footer = global.botnma
                                               }, {
                                                   quickReplyButton: {
                                                       displayText: `${back}` ,
-                                                      id: 'elisaconvertmenu'
+                                                      id: 'Thivaconvertmenu'
                                                       }
                                                   },  {
                                                   quickReplyButton: {
                                                       displayText: `${next}` ,
-                                                      id: 'elisanocategorymenu'
+                                                      id: 'Thivanocategorymenu'
                                                       }
                                               }]
                                           }
                                       }
                                   }), { userJid: m.chat, quoted: m })
-                                    ElisaBotMd.relayMessage(m.chat, template.message, { messageId: template.key.id })
+                                    ThivaBotMd.relayMessage(m.chat, template.message, { messageId: template.key.id })
                              */
 }
                   break
-                  case 'elisanocategorymenu': {  
+                  case 'Thivanocategorymenu': {  
 const start = new Date().getTime()
-  await ElisaBotMd.sendMessage(from, { react: { text: `🎗️`, key: m.key }})
+  await ThivaBotMd.sendMessage(from, { react: { text: `🎗️`, key: m.key }})
   const end = new Date().getTime()
   const ping = (end - start) + ' *_ᴍs_*' 
   const time = new Date().toLocaleString('HI', { timeZone: TIME_ZONE }).split(' ')[1]
 
-                        //  await ElisaBotMd.sendMessage(from, { react: { text: `⚙️`, key: m.key }})
+                        //  await ThivaBotMd.sendMessage(from, { react: { text: `⚙️`, key: m.key }})
                   prefix = '.'
 
 next = Lang.NEXT_BUTTON
@@ -10642,7 +10642,7 @@ ${M_E} *${prefix}report*
 `
                     footer = global.botnma
                  buttons = [
-                    {buttonId: `elisaranimemenu`, buttonText: {displayText: back}, type: 1},
+                    {buttonId: `Thivaranimemenu`, buttonText: {displayText: back}, type: 1},
                     {buttonId: `textlogo`, buttonText: {displayText: next}, type: 1}
                     
                 ]
@@ -10653,9 +10653,9 @@ ${M_E} *${prefix}report*
                     buttons: buttons,
                     headerType: 4
                 }
-               ElisaBotMd.sendMessage(m.chat, buttonMessage, { quoted: m })
+               ThivaBotMd.sendMessage(m.chat, buttonMessage, { quoted: m })
           
-                    /*message = await prepareWAMessageMedia({ image : { url: 'https://telegra.ph/file/f7470af04326c5522cbcb.jpg' } }, { upload:   ElisaBotMd.waUploadToServer })
+                    /*message = await prepareWAMessageMedia({ image : { url: 'https://telegra.ph/file/f7470af04326c5522cbcb.jpg' } }, { upload:   ThivaBotMd.waUploadToServer })
                                   template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                                       templateMessage: {
                                           hydratedTemplate: {
@@ -10670,29 +10670,29 @@ ${M_E} *${prefix}report*
                                               }, {
                                                   quickReplyButton: {
                                                       displayText: `${back}` ,
-                                                      id: 'elisaranimemenu'
+                                                      id: 'Thivaranimemenu'
                                                       }
                                                   },  {
                                                   quickReplyButton: {
                                                       displayText: `${next}` ,
-                                                      id: 'elisadatabasemenu'
+                                                      id: 'Thivadatabasemenu'
                                                       }
                                               }]
                                           }
                                       }
                                   }), { userJid: m.chat, quoted: m })
-                                    ElisaBotMd.relayMessage(m.chat, template.message, { messageId: template.key.id })
+                                    ThivaBotMd.relayMessage(m.chat, template.message, { messageId: template.key.id })
                               */
 }
                   break
                   case 'textlogo': { 
 const start = new Date().getTime()
-  await ElisaBotMd.sendMessage(from, { react: { text: `👻`, key: m.key }})
+  await ThivaBotMd.sendMessage(from, { react: { text: `👻`, key: m.key }})
   const end = new Date().getTime()
   const ping = (end - start) + ' *_ᴍs_*' 
   const time = new Date().toLocaleString('HI', { timeZone: TIME_ZONE }).split(' ')[1]
 
-                          await ElisaBotMd.sendMessage(from, { react: { text: `⚧️️`, key: m.key }})
+                          await ThivaBotMd.sendMessage(from, { react: { text: `⚧️️`, key: m.key }})
 prefix = '.'
                       anu = `*◯───────[ TEXT TO LOGO MENU ]───────◯*
 
@@ -10725,7 +10725,7 @@ back = Lang.BACK_BUTTON
 
 footer = global.botnma
                  buttons = [
-                    {buttonId: `elisanocategorymenu`, buttonText: {displayText: back}, type: 1},
+                    {buttonId: `Thivanocategorymenu`, buttonText: {displayText: back}, type: 1},
                     {buttonId: `logomenu`, buttonText: {displayText: next}, type: 1}
                     
                 ]
@@ -10736,9 +10736,9 @@ footer = global.botnma
                     buttons: buttons,
                     headerType: 4
                 }
-               ElisaBotMd.sendMessage(m.chat, buttonMessage, { quoted: m })
+               ThivaBotMd.sendMessage(m.chat, buttonMessage, { quoted: m })
           
-                    /*message = await prepareWAMessageMedia({ image : { url: 'https://telegra.ph/file/f7470af04326c5522cbcb.jpg' } }, { upload:   ElisaBotMd.waUploadToServer })
+                    /*message = await prepareWAMessageMedia({ image : { url: 'https://telegra.ph/file/f7470af04326c5522cbcb.jpg' } }, { upload:   ThivaBotMd.waUploadToServer })
                                   template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                                       templateMessage: {
                                           hydratedTemplate: {
@@ -10753,22 +10753,22 @@ footer = global.botnma
                                               }, {
                                                   quickReplyButton: {
                                                       displayText: `${back}` ,
-                                                      id: 'elisanocategorymenu'
+                                                      id: 'Thivanocategorymenu'
                                                       }
                                                   },  {
                                                   quickReplyButton: {
                                                       displayText: `${next}` ,
-                                                      id: 'elisaanonymouschatmenu'
+                                                      id: 'Thivaanonymouschatmenu'
                                                       }
                                               }]
                                           }
                                       }
                                   }), { userJid: m.chat, quoted: m })
-                                    ElisaBotMd.relayMessage(m.chat, template.message, { messageId: template.key.id })
+                                    ThivaBotMd.relayMessage(m.chat, template.message, { messageId: template.key.id })
                               */
 }
                   break
-                  case 'elisaanonymouschatmenu': {
+                  case 'Thivaanonymouschatmenu': {
 next = Lang.NEXT_BUTTON
 back = Lang.BACK_BUTTON
                       anu = `
@@ -10779,7 +10779,7 @@ back = Lang.BACK_BUTTON
                       `
                       footer = global.botnma
                  buttons = [
-                    {buttonId: `elisadatabasemenu`, buttonText: {displayText: back}, type: 1},
+                    {buttonId: `Thivadatabasemenu`, buttonText: {displayText: back}, type: 1},
                     {buttonId: `logomenu`, buttonText: {displayText: next}, type: 1}
                     
                 ]
@@ -10790,18 +10790,18 @@ back = Lang.BACK_BUTTON
                     buttons: buttons,
                     headerType: 4
                 }
-               ElisaBotMd.sendMessage(m.chat, buttonMessage, { quoted: m })
+               ThivaBotMd.sendMessage(m.chat, buttonMessage, { quoted: m })
          
 }
                   break
                   case 'logomenu': {  
 const start = new Date().getTime()
-  await ElisaBotMd.sendMessage(from, { react: { text: `♥️`, key: m.key }})
+  await ThivaBotMd.sendMessage(from, { react: { text: `♥️`, key: m.key }})
   const end = new Date().getTime()
   const ping = (end - start) + ' *_ᴍs_*' 
   const time = new Date().toLocaleString('HI', { timeZone: TIME_ZONE }).split(' ')[1]
 
-                          await ElisaBotMd.sendMessage(from, { react: { text: `🌸`, key: m.key }})
+                          await ThivaBotMd.sendMessage(from, { react: { text: `🌸`, key: m.key }})
 
 prefix = '.'
 var LOGODESC = ''
@@ -10836,8 +10836,8 @@ back = Lang.BACK_BUTTON
 
 footer = global.botnma
                  buttons = [
-                    {buttonId: `elisanocategorymenu`, buttonText: {displayText: back}, type: 1},
-                    {buttonId: `elisasistemmenu`, buttonText: {displayText: next}, type: 1}
+                    {buttonId: `Thivanocategorymenu`, buttonText: {displayText: back}, type: 1},
+                    {buttonId: `Thivasistemmenu`, buttonText: {displayText: next}, type: 1}
                     
                 ]
                 let buttonMessage = {
@@ -10847,9 +10847,9 @@ footer = global.botnma
                     buttons: buttons,
                     headerType: 4
                 }
-               ElisaBotMd.sendMessage(m.chat, buttonMessage, { quoted: m })
+               ThivaBotMd.sendMessage(m.chat, buttonMessage, { quoted: m })
           
-                   /* message = await prepareWAMessageMedia({ image : { url: 'https://telegra.ph/file/f7470af04326c5522cbcb.jpg' } }, { upload:   ElisaBotMd.waUploadToServer })
+                   /* message = await prepareWAMessageMedia({ image : { url: 'https://telegra.ph/file/f7470af04326c5522cbcb.jpg' } }, { upload:   ThivaBotMd.waUploadToServer })
                                   template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                                       templateMessage: {
                                           hydratedTemplate: {
@@ -10864,7 +10864,7 @@ footer = global.botnma
                                               }, {
                                                   quickReplyButton: {
                                                       displayText: `${back}` ,
-                                                      id: 'elisadatabasemenu'
+                                                      id: 'Thivadatabasemenu'
                                                       }
                                                   },  {
                                                   quickReplyButton: {
@@ -10875,13 +10875,13 @@ footer = global.botnma
                                           }
                                       }
                                   }), { userJid: m.chat, quoted: m })
-                                    ElisaBotMd.relayMessage(m.chat, template.message, { messageId: template.key.id })
+                                    ThivaBotMd.relayMessage(m.chat, template.message, { messageId: template.key.id })
                             */
                               }
                   break
-                  case 'elisasistemmenu': {
+                  case 'Thivasistemmenu': {
 const start = new Date().getTime()
-  await ElisaBotMd.sendMessage(from, { react: { text: `🧬`, key: m.key }})
+  await ThivaBotMd.sendMessage(from, { react: { text: `🧬`, key: m.key }})
   const end = new Date().getTime()
   const ping = (end - start) + ' *_ᴍs_*' 
   const time = new Date().toLocaleString('HI', { timeZone: TIME_ZONE }).split(' ')[1]
@@ -10911,14 +10911,14 @@ ${M_E} ${prefix}blockgc
                     buttons: buttons,
                     headerType: 4
                 }
-               ElisaBotMd.sendMessage(m.chat, buttonMessage, { quoted: m })
+               ThivaBotMd.sendMessage(m.chat, buttonMessage, { quoted: m })
           
                  /* const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                                       templateMessage: {
                                           hydratedTemplate: {
                                               hydratedContentText: anu,
                                               locationMessage: {
-                                              jpegThumbnail: fs.readFileSync('./media/image/Elisa.jpg')},
+                                              jpegThumbnail: fs.readFileSync('./media/image/Thiva.jpg')},
                                               hydratedFooterText: `𝚃𝚑𝚒𝚟𝚊𝚗𝚔𝚊 𝙽𝚒𝚛𝚖𝚊𝚕 𝙿𝚞𝚋𝚕𝚒𝚌 𝙴𝚍𝚒𝚝𝚒𝚘𝚗 `,
                                               hydratedButtons: [{
                                                   urlButton: {
@@ -10934,17 +10934,17 @@ ${M_E} ${prefix}blockgc
                                           }
                                       }
                                   }), { userJid: m.chat })
-                                  ElisaBotMd.relayMessage(m.chat, template.message, { messageId: template.key.id })
+                                  ThivaBotMd.relayMessage(m.chat, template.message, { messageId: template.key.id })
                              */ }
                   break
                     case 'ownermenu': {  
 const start = new Date().getTime()
-  await ElisaBotMd.sendMessage(from, { react: { text: `⚜️️`, key: m.key }})
+  await ThivaBotMd.sendMessage(from, { react: { text: `⚜️️`, key: m.key }})
   const end = new Date().getTime()
   const ping = (end - start) + ' *_ᴍs_*' 
   const time = new Date().toLocaleString('HI', { timeZone: TIME_ZONE }).split(' ')[1]
 
-                         // await ElisaBotMd.sendMessage(from, { react: { text: `🎭`, key: m.key }})
+                         // await ThivaBotMd.sendMessage(from, { react: { text: `🎭`, key: m.key }})
 
 var JOIN = ''
 if (global.LANG == 'EN') JOIN= '```Join yousing invite link```'
@@ -11029,7 +11029,7 @@ back = Lang.BACK_BUTTON
    
    footer = global.botnma
                  buttons = [
-                    {buttonId: `elisasistemmenu`, buttonText: {displayText: back}, type: 1},
+                    {buttonId: `Thivasistemmenu`, buttonText: {displayText: back}, type: 1},
                     {buttonId: `about `, buttonText: {displayText: 'ǫᴜᴇᴇɴ ᴇʟɪsᴀ'}, type: 1}
                     
                 ]
@@ -11040,9 +11040,9 @@ back = Lang.BACK_BUTTON
                     buttons: buttons,
                     headerType: 4
                 }
-               ElisaBotMd.sendMessage(m.chat, buttonMessage, { quoted: m })
+               ThivaBotMd.sendMessage(m.chat, buttonMessage, { quoted: m })
           
-                   /* message = await prepareWAMessageMedia({ image : { url: 'https://telegra.ph/file/f7470af04326c5522cbcb.jpg' } }, { upload:   ElisaBotMd.waUploadToServer })
+                   /* message = await prepareWAMessageMedia({ image : { url: 'https://telegra.ph/file/f7470af04326c5522cbcb.jpg' } }, { upload:   ThivaBotMd.waUploadToServer })
                                   template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                                       templateMessage: {
                                           hydratedTemplate: {
@@ -11068,11 +11068,11 @@ back = Lang.BACK_BUTTON
                                           }
                                       }
                                   }), { userJid: m.chat, quoted: m })
-                                    ElisaBotMd.relayMessage(m.chat, template.message, { messageId: template.key.id })
+                                    ThivaBotMd.relayMessage(m.chat, template.message, { messageId: template.key.id })
                             */  }
                   break
-         /*  case 'elisaallmenu': {  
-                    await ElisaBotMd.sendMessage(from, { react: { text: `🗒`️, key: m.key }})
+         /*  case 'Thivaallmenu': {  
+                    await ThivaBotMd.sendMessage(from, { react: { text: `🗒`️, key: m.key }})
  const anu = `
 ┏━━━━━━━━━━━━✿
 ┃⦁ 𝐐𝐮𝐞𝐞𝐧 𝐄𝐥𝐢𝐬𝐚 𝐏𝐮𝐛𝐥𝐢𝐜 
@@ -11366,7 +11366,7 @@ const buttonMessage = {
     image: {url: 'https://telegra.ph/file/f7470af04326c5522cbcb.jpg'}
 }
 
-const sendMsg = await ElisaBotMd.sendMessage(m.chat, templateMessage)
+const sendMsg = await ThivaBotMd.sendMessage(m.chat, templateMessage)
     
     
     
@@ -11403,13 +11403,13 @@ const buttonMessage = {
     image: {url: 'https://telegra.ph/file/f7470af04326c5522cbcb.jpg'}
 }
 
-const sendMsg = await ElisaBotMd.sendMessage(m.chat, buttonMessage)
+const sendMsg = await ThivaBotMd.sendMessage(m.chat, buttonMessage)
     
       }     */ 
                   case 'about': {
-                  anu = await fetchJson('https://github.com/ThivankaOnline/UPLOADS/raw/main/JSON/elisadetails.json')
+                  anu = await fetchJson('https://github.com/ThivankaOnline/UPLOADS/raw/main/JSON/Thivadetails.json')
                     G_LINK = anu.PUBLIC_GROUP
-                 //const anu2 = await axios.get(`https://github.com/ThivankaOnline/UPLOADS/raw/main/JSON/elisadetails.json`)
+                 //const anu2 = await axios.get(`https://github.com/ThivankaOnline/UPLOADS/raw/main/JSON/Thivadetails.json`)
                  
                  
 const msg = `*👸 My About 👸*
@@ -11448,7 +11448,7 @@ const templateMessage = {
     templateButtons: templateButtons
 }
 
-const sendｍsg = await ElisaBotMd.sendMessage(m.chat, templateMessage, { quoted: m })   
+const sendｍsg = await ThivaBotMd.sendMessage(m.chat, templateMessage, { quoted: m })   
 
 }
                   break
@@ -11513,15 +11513,15 @@ const sendｍsg = await ElisaBotMd.sendMessage(m.chat, templateMessage, { quoted
 		    if (m.isBaileys) return
 		    let msgs = global.db.data.database
 		    if (!(budy.toLowerCase() in msgs)) return
-		    ElisaBotMd.copyNForward(m.chat, msgs[budy.toLowerCase()], true)
+		    ThivaBotMd.copyNForward(m.chat, msgs[budy.toLowerCase()], true)
 		}
         }
         
 
     }
     catch (err) {
-       await ElisaBotMd.sendMessage(m.chat, { text : `${err}` })
-       await ElisaBotMd.sendMessage(mek.key.remoteJid , { react: { text: `⚠️`, key: m.key }})          
+       await ThivaBotMd.sendMessage(m.chat, { text : `${err}` })
+       await ThivaBotMd.sendMessage(mek.key.remoteJid , { react: { text: `⚠️`, key: m.key }})          
      
        //m_reply(err)
        
@@ -11536,4 +11536,4 @@ fs.watchFile(file, () => {
 	delete require.cache[file]
 	require(file)
 })
-// ttdownnima@gmail.com - 7518-b675-9944 (tiktok download api)
+// ttdownThiva@gmail.com - 7518-b675-9944 (tiktok download api)

@@ -127,8 +127,8 @@ global.APIKeys = {
 	'https://zenzapi.xyz': '01ABEB1E11', //Kalau habis beli sendiri
 }
 
-global.thumb = fs.readFileSync('./Media/image/Elisa.jpg')
-global.imgalive = fs.readFileSync('./Media/image/Elisa.jpg')
+global.thumb = fs.readFileSync('./Media/image/Thiva.jpg')
+global.imgalive = fs.readFileSync('./Media/image/Thiva.jpg')
 let file = require.resolve(__filename)
 fs.watchFile(file, () => {
 	fs.unwatchFile(file)
