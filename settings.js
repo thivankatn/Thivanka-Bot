@@ -38,7 +38,7 @@ global.WELCOME_MSG = ''
 //👇 You Good Bye Massage 
 global.GOODBYE_MSG = ''
 //👇 Inbox Block Massage 
-global.INBOX_BLOCK_MSG = 'BLOCK !!!'
+global.INBOX_BLOCK_MSG = 'This Is Personal Account - BLOCK !!!'
 //👇 Send welcome and goodbye massage 
 global.SEND_WELCOME = 'true'
 //👇 Owner React Imoji
