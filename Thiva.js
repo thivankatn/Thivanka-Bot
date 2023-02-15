@@ -4307,7 +4307,7 @@ break
                               case 'git': case 'gitclone': {
            
                               let regex1 = /(?:https|git)(?::\/\/|@)github\.com[\/:]([^\/:]+)\/(.+)/i
-                              if (!args[0]) reply(`Use ${prefix}gitclone repo link\n${Lang.EXAMPLE}\n: https://github.com/darkmaker/Queen-Thiva-Md-V2`)
+                              if (!args[0]) reply(`Use ${prefix}gitclone repo link\n${Lang.EXAMPLE}\n: https://github.com/darkmaker/Mr-Thiva-Md-V2`)
                               if (!regex1.test(args[0])) return reply('link')
                               let [, user, repo] = args[0].match(regex1) || []
                               repo = repo.replace(/.git$/, '')
@@ -4337,7 +4337,7 @@ break
                               break
                               case 'directapk' : {
                               await ThivaBotMd.sendMessage(from, { react: { text: `🔄`, key: m.key }})
-                              await ThivaBotMd.sendMessage(m.chat, { document: { url: text }, mimetype: 'application/vnd.android.package-archive', fileName: `QueenThiva.apk`}, { quoted: m })
+                              await ThivaBotMd.sendMessage(m.chat, { document: { url: text }, mimetype: 'application/vnd.android.package-archive', fileName: `MrThiva.apk`}, { quoted: m })
              
                               }
                               break
@@ -4345,7 +4345,7 @@ break
                               if(!isCreator) throw mess.owner
                               await ThivaBotMd.sendMessage(from, { react: { text: `🔄`, key: m.key }})
                               await ThivaBotMd.sendText(m.chat,'```🔄 Please Wait Connecting Thiva Bot Sever ....```')
-                              await ThivaBotMd.sendMessage(m.chat, { image: { url: 'https://Mr-Thiva-Test.gahakola.repl.co' }, caption: '```🧑‍💻 Download Qr Code And Scan Qr || Code More > Linked device ||```\n\n *▷ Deploy https://github.com/DarkMakerofc/Queen-Thiva-Md-V2* ' }, { quoted: m })
+                              await ThivaBotMd.sendMessage(m.chat, { image: { url: 'https://Mr-Thiva-Test.gahakola.repl.co' }, caption: '```🧑‍💻 Download Qr Code And Scan Qr || Code More > Linked device ||```\n\n *▷ Deploy https://github.com/DarkMakerofc/Mr-Thiva-Md-V2* ' }, { quoted: m })
                                
                               }
                               break
@@ -8229,7 +8229,7 @@ const seccap = args[1] || '😍💗'
                               case 'mediafire2' : {  
                           await ThivaBotMd.sendMessage(from, { react: { text: `✅`, key: m.key }})
       
-      if (!text) return reply('*👸💬 Please Give Me A mediafire Link*\n```'+'.mediafire https://www.mediafire.com/view/mdn9ja4wcmy7dtd/QueenThivaBot.jpg/file```')
+      if (!text) return reply('*👸💬 Please Give Me A mediafire Link*\n```'+'.mediafire https://www.mediafire.com/view/mdn9ja4wcmy7dtd/MrThivaBot.jpg/file```')
       if (!isUrl(args[0]) && !args[0].includes('mediafire.com')) return reply(`The link you provided is invalid`)
       
           const down = await ThivaBotMd.sendText(m.chat, '*⤵ Downloading mediafire file...*')
@@ -9019,7 +9019,7 @@ ${ThivaMSG}
                                               hydratedButtons: [{
                                                   urlButton: {
                                                       displayText: 'ɢɪᴛʜᴜʙ',
-                                                      url: `https://github.com/DarkMakerofc/Queen-Thiva-Md-V2`
+                                                      url: `https://github.com/DarkMakerofc/Mr-Thiva-Md-V2`
                                                   }
                                               },{
                                                   urlButton: {
